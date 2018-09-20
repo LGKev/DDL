@@ -2,3 +2,7 @@
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.attachLaunchType=org.eclipse.cdt.dsf.gdb.launch.attachCLaunch,debug,;
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.postmortemLaunchType=org.eclipse.cdt.dsf.gdb.launch.coreCLaunch,debug,;
 eclipse.preferences.version=1
+<<<<<<< HEAD
+=======
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="timer32_0_counter"/>\r\n</watchExpressions>\r\n
+>>>>>>> 3d03fa7f2a1b0546f908e8cd1236935a920409e8

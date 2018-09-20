@@ -5,6 +5,7 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+<<<<<<< HEAD
 			<item value="/usr/local/mcuxpressoide-10.2.1_795/ide/Examples/CodeBundles"/>
 			<item value=""/>
 		</list>
@@ -15,5 +16,16 @@
 	</section>
 	<section name="com.crt.quickstart.views.wizards.examples.QSExampleSelectionPage">
 		<item value="/usr/local/mcuxpressoide-10.2.1_795/ide/Examples/CodeBundles" key="dirname"/>
+=======
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\dell\Desktop\asm_xample11.zip"/>
+			<item value="C:\Users\dell\Downloads\NXP_LPC1100_Examples_V2.0.zip"/>
+		</list>
+	</section>
+	<section name="com.crt.quickstart.views.wizards.examples.QSExampleSelectionPage">
+		<item value="C:\Users\dell\Desktop" key="dirname"/>
+>>>>>>> 3d03fa7f2a1b0546f908e8cd1236935a920409e8
 	</section>
 </section>
