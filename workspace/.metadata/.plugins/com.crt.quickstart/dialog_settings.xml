@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/usr/local/mcuxpressoide-10.2.1_795/ide/Examples/CodeBundles"/>
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/usr/local/mcuxpressoide-10.2.1_795/ide/Examples/CodeBundles/LPC812_Example_Code_Bundle_LPCXpresso_r1.00.00.zip"/>
+			<item value="/usr/local/mcuxpressoide-10.2.1_795/ide/Examples/LPCOpen/lpcopen_v2_00a_lpcxpresso_nxp_lpcxpresso_11c24.zip"/>
+		</list>
+	</section>
+	<section name="com.crt.quickstart.views.wizards.examples.QSExampleSelectionPage">
+		<item value="/usr/local/mcuxpressoide-10.2.1_795/ide/Examples/CodeBundles" key="dirname"/>
+	</section>
+</section>
