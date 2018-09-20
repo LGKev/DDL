@@ -1,0 +1,543 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+                              ./startup/cr_startup_lpc11.o (__main)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+                              ./cmsis/system_LPC11xx.o (__aeabi_uidiv)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+                              /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o) (__aeabi_idiv0)
+
+Allocating common symbols
+Common symbol       size              file
+
+I2CReadLength       0x4               ./driver/i2cslave.o
+I2CWrBuffer         0x6               ./driver/i2cslave.o
+I2CMode             0x4               ./driver/i2cslave.o
+I2CWriteLength      0x4               ./driver/i2cslave.o
+I2CRdBuffer         0x6               ./driver/i2cslave.o
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc ./startup/cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./startup/cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./startup/cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./startup/cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./startup/cr_startup_lpc11.o
+ .text          0x0000000000000000        0x0 ./startup/cr_startup_lpc11.o
+ .data          0x0000000000000000        0x0 ./startup/cr_startup_lpc11.o
+ .bss           0x0000000000000000        0x0 ./startup/cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./src/i2cslave_main.o
+ .text          0x0000000000000000        0x0 ./src/i2cslave_main.o
+ .data          0x0000000000000000        0x0 ./src/i2cslave_main.o
+ .bss           0x0000000000000000        0x0 ./src/i2cslave_main.o
+ .debug_macro   0x0000000000000000      0xa54 ./src/i2cslave_main.o
+ .debug_macro   0x0000000000000000       0x10 ./src/i2cslave_main.o
+ .debug_macro   0x0000000000000000      0x12d ./src/i2cslave_main.o
+ .debug_macro   0x0000000000000000      0x5b2 ./src/i2cslave_main.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .text          0x0000000000000000        0x0 ./driver/can.o
+ .data          0x0000000000000000        0x0 ./driver/can.o
+ .bss           0x0000000000000000        0x0 ./driver/can.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/can.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/can.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./driver/can.o
+ .debug_macro   0x0000000000000000       0x70 ./driver/can.o
+ .debug_macro   0x0000000000000000      0xa54 ./driver/can.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/can.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/can.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/can.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/can.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/can.o
+ .debug_macro   0x0000000000000000      0x37a ./driver/can.o
+ .debug_macro   0x0000000000000000       0x8d ./driver/can.o
+ .debug_macro   0x0000000000000000      0x123 ./driver/can.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/can.o
+ .debug_line    0x0000000000000000      0x145 ./driver/can.o
+ .debug_str     0x0000000000000000     0x629d ./driver/can.o
+ .comment       0x0000000000000000       0x7f ./driver/can.o
+ .ARM.attributes
+                0x0000000000000000       0x31 ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .text          0x0000000000000000        0x0 ./driver/crp.o
+ .data          0x0000000000000000        0x0 ./driver/crp.o
+ .bss           0x0000000000000000        0x0 ./driver/crp.o
+ .debug_macro   0x0000000000000000      0xa54 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x37a ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x8d ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x123 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/gpio.o
+ .text          0x0000000000000000        0x0 ./driver/gpio.o
+ .data          0x0000000000000000        0x0 ./driver/gpio.o
+ .bss           0x0000000000000000        0x0 ./driver/gpio.o
+ .rodata.LPC_GPIO
+                0x0000000000000000       0x10 ./driver/gpio.o
+ .text.GPIOInit
+                0x0000000000000000       0x20 ./driver/gpio.o
+ .text.GPIOSetInterrupt
+                0x0000000000000000      0x2f8 ./driver/gpio.o
+ .text.GPIOIntEnable
+                0x0000000000000000       0x9c ./driver/gpio.o
+ .text.GPIOIntDisable
+                0x0000000000000000       0xa4 ./driver/gpio.o
+ .text.GPIOIntStatus
+                0x0000000000000000       0xac ./driver/gpio.o
+ .text.GPIOIntClear
+                0x0000000000000000       0x9c ./driver/gpio.o
+ .text.GPIOSetValue
+                0x0000000000000000       0x34 ./driver/gpio.o
+ .text.GPIOSetDir
+                0x0000000000000000       0x78 ./driver/gpio.o
+ .debug_info    0x0000000000000000      0x786 ./driver/gpio.o
+ .debug_abbrev  0x0000000000000000      0x1e9 ./driver/gpio.o
+ .debug_aranges
+                0x0000000000000000       0x58 ./driver/gpio.o
+ .debug_ranges  0x0000000000000000       0x48 ./driver/gpio.o
+ .debug_macro   0x0000000000000000       0x79 ./driver/gpio.o
+ .debug_macro   0x0000000000000000      0xa54 ./driver/gpio.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/gpio.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/gpio.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/gpio.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/gpio.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/gpio.o
+ .debug_macro   0x0000000000000000      0x37a ./driver/gpio.o
+ .debug_macro   0x0000000000000000       0x8d ./driver/gpio.o
+ .debug_macro   0x0000000000000000      0x123 ./driver/gpio.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/gpio.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/gpio.o
+ .debug_line    0x0000000000000000      0x25f ./driver/gpio.o
+ .debug_str     0x0000000000000000     0x662f ./driver/gpio.o
+ .comment       0x0000000000000000       0x7f ./driver/gpio.o
+ .debug_frame   0x0000000000000000      0x10c ./driver/gpio.o
+ .ARM.attributes
+                0x0000000000000000       0x31 ./driver/gpio.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .text          0x0000000000000000        0x0 ./driver/i2cslave.o
+ .data          0x0000000000000000        0x0 ./driver/i2cslave.o
+ .bss           0x0000000000000000        0x0 ./driver/i2cslave.o
+ .bss.I2CMasterState
+                0x0000000000000000        0x4 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0xa54 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0x37a ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x8d ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0x123 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0xbe ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./cmsis/core_cm0.o
+ .group         0x0000000000000000        0xc ./cmsis/core_cm0.o
+ .group         0x0000000000000000        0xc ./cmsis/core_cm0.o
+ .group         0x0000000000000000        0xc ./cmsis/core_cm0.o
+ .text          0x0000000000000000        0x0 ./cmsis/core_cm0.o
+ .data          0x0000000000000000        0x0 ./cmsis/core_cm0.o
+ .bss           0x0000000000000000        0x0 ./cmsis/core_cm0.o
+ .text.__get_PSP
+                0x0000000000000000        0x8 ./cmsis/core_cm0.o
+ .text.__set_PSP
+                0x0000000000000000        0x6 ./cmsis/core_cm0.o
+ .text.__get_MSP
+                0x0000000000000000        0x8 ./cmsis/core_cm0.o
+ .text.__set_MSP
+                0x0000000000000000        0x6 ./cmsis/core_cm0.o
+ .text.__get_PRIMASK
+                0x0000000000000000        0x6 ./cmsis/core_cm0.o
+ .text.__set_PRIMASK
+                0x0000000000000000        0x6 ./cmsis/core_cm0.o
+ .text.__get_CONTROL
+                0x0000000000000000        0x6 ./cmsis/core_cm0.o
+ .text.__set_CONTROL
+                0x0000000000000000        0x6 ./cmsis/core_cm0.o
+ .text.__REV    0x0000000000000000        0x4 ./cmsis/core_cm0.o
+ .text.__REV16  0x0000000000000000        0x4 ./cmsis/core_cm0.o
+ .text.__REVSH  0x0000000000000000        0x4 ./cmsis/core_cm0.o
+ .debug_info    0x0000000000000000      0x2be ./cmsis/core_cm0.o
+ .debug_abbrev  0x0000000000000000       0xf7 ./cmsis/core_cm0.o
+ .debug_loc     0x0000000000000000      0x13c ./cmsis/core_cm0.o
+ .debug_aranges
+                0x0000000000000000       0x70 ./cmsis/core_cm0.o
+ .debug_ranges  0x0000000000000000       0x60 ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000       0x48 ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000      0xa5a ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000       0x10 ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000      0x12d ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000      0x5b2 ./cmsis/core_cm0.o
+ .debug_line    0x0000000000000000      0x1c2 ./cmsis/core_cm0.o
+ .debug_str     0x0000000000000000     0x4450 ./cmsis/core_cm0.o
+ .comment       0x0000000000000000       0x7f ./cmsis/core_cm0.o
+ .debug_frame   0x0000000000000000       0xc0 ./cmsis/core_cm0.o
+ .ARM.attributes
+                0x0000000000000000       0x31 ./cmsis/core_cm0.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .text          0x0000000000000000        0x0 ./cmsis/system_LPC11xx.o
+ .data          0x0000000000000000        0x0 ./cmsis/system_LPC11xx.o
+ .bss           0x0000000000000000        0x0 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000      0xa5a ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000       0x10 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000      0x12d ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000      0x5b2 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000       0x1c ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000       0x8d ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000      0x123 ./cmsis/system_LPC11xx.o
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash32         0x0000000000000000 0x0000000000008000 xr
+RamLoc8          0x0000000010000000 0x0000000000002000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./startup/cr_startup_lpc11.o
+LOAD ./src/i2cslave_main.o
+LOAD ./driver/can.o
+LOAD ./driver/crp.o
+LOAD ./driver/gpio.o
+LOAD ./driver/i2cslave.o
+LOAD ./cmsis/core_cm0.o
+LOAD ./cmsis/system_LPC11xx.o
+START GROUP
+LOAD /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a
+LOAD /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_semihost.a
+LOAD /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a
+END GROUP
+                0x0000000000008000                __top_MFlash32 = 0x8000
+                0x0000000010002000                __top_RamLoc8 = 0x10002000
+
+.text           0x0000000000000000      0x78c
+ FILL mask 0xff
+ *(.isr_vector)
+ .isr_vector    0x0000000000000000       0xc0 ./startup/cr_startup_lpc11.o
+                0x0000000000000000                g_pfnVectors
+ *(.text.Reset_Handler .text.SystemInit)
+ .text.SystemInit
+                0x00000000000000c0       0xac ./cmsis/system_LPC11xx.o
+                0x00000000000000c0                SystemInit
+                0x00000000000002fc                . = 0x2fc
+ *fill*         0x000000000000016c      0x190 ff
+ *(.crp)
+ .crp           0x00000000000002fc        0x4 ./driver/crp.o
+                0x00000000000002fc                CRP_WORD
+ *(.text*)
+ .text.ResetISR
+                0x0000000000000300       0x60 ./startup/cr_startup_lpc11.o
+                0x0000000000000300                ResetISR
+ .text.NMI_Handler
+                0x0000000000000360        0x6 ./startup/cr_startup_lpc11.o
+                0x0000000000000360                NMI_Handler
+ .text.HardFault_Handler
+                0x0000000000000366        0x6 ./startup/cr_startup_lpc11.o
+                0x0000000000000366                HardFault_Handler
+ .text.SVCall_Handler
+                0x000000000000036c        0x6 ./startup/cr_startup_lpc11.o
+                0x000000000000036c                SVCall_Handler
+ .text.PendSV_Handler
+                0x0000000000000372        0x6 ./startup/cr_startup_lpc11.o
+                0x0000000000000372                PendSV_Handler
+ .text.SysTick_Handler
+                0x0000000000000378        0x6 ./startup/cr_startup_lpc11.o
+                0x0000000000000378                SysTick_Handler
+ .text.IntDefaultHandler
+                0x000000000000037e        0x6 ./startup/cr_startup_lpc11.o
+                0x000000000000037e                TIMER16_0_IRQHandler
+                0x000000000000037e                UART_IRQHandler
+                0x000000000000037e                TIMER32_0_IRQHandler
+                0x000000000000037e                TIMER32_1_IRQHandler
+                0x000000000000037e                IntDefaultHandler
+                0x000000000000037e                PIOINT1_IRQHandler
+                0x000000000000037e                CAN_IRQHandler
+                0x000000000000037e                SSP0_IRQHandler
+                0x000000000000037e                TIMER16_1_IRQHandler
+                0x000000000000037e                ADC_IRQHandler
+                0x000000000000037e                SSP1_IRQHandler
+                0x000000000000037e                PIOINT2_IRQHandler
+                0x000000000000037e                BOD_IRQHandler
+                0x000000000000037e                WAKEUP_IRQHandler
+                0x000000000000037e                PIOINT0_IRQHandler
+                0x000000000000037e                WDT_IRQHandler
+                0x000000000000037e                PIOINT3_IRQHandler
+ .text.main     0x0000000000000384       0x44 ./src/i2cslave_main.o
+                0x0000000000000384                main
+ .text.NVIC_EnableIRQ
+                0x00000000000003c8       0x2c ./driver/i2cslave.o
+ .text.I2C_IRQHandler
+                0x00000000000003f4      0x168 ./driver/i2cslave.o
+                0x00000000000003f4                I2C_IRQHandler
+ .text.I2CSlaveInit
+                0x000000000000055c       0xb4 ./driver/i2cslave.o
+                0x000000000000055c                I2CSlaveInit
+ .text.SystemCoreClockUpdate
+                0x0000000000000610       0xb8 ./cmsis/system_LPC11xx.o
+                0x0000000000000610                SystemCoreClockUpdate
+ .text.__weak_main
+                0x00000000000006c8        0x8 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+                0x00000000000006c8                __main
+                0x00000000000006c8                __weak_main
+ .text.__aeabi_division_idivmod
+                0x00000000000006d0       0x78 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+                0x00000000000006d0                __aeabi_idiv
+                0x00000000000006d0                __aeabi_idivmod
+                0x00000000000006d6                __aeabi_uidiv
+                0x00000000000006d6                __aeabi_uidivmod
+ .text.__aeabi_division_idiv0
+                0x0000000000000748        0x2 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000000748                __aeabi_idiv0
+ *(.rodata*)
+ *fill*         0x000000000000074a        0x2 ff
+ .rodata.CSWTCH.5
+                0x000000000000074c       0x40 ./cmsis/system_LPC11xx.o
+
+.glue_7         0x000000000000078c        0x0
+ .glue_7        0x000000000000078c        0x0 linker stubs
+
+.glue_7t        0x000000000000078c        0x0
+ .glue_7t       0x000000000000078c        0x0 linker stubs
+
+.vfp11_veneer   0x000000000000078c        0x0
+ .vfp11_veneer  0x000000000000078c        0x0 linker stubs
+
+.v4_bx          0x000000000000078c        0x0
+ .v4_bx         0x000000000000078c        0x0 linker stubs
+
+.iplt           0x000000000000078c        0x0
+ .iplt          0x000000000000078c        0x0 ./startup/cr_startup_lpc11.o
+
+.rel.dyn        0x000000000000078c        0x0
+ .rel.iplt      0x000000000000078c        0x0 ./startup/cr_startup_lpc11.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x000000000000078c                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x000000000000078c                __exidx_end = .
+                0x000000000000078c                _etext = .
+
+.data           0x0000000010000000        0x4 load address 0x000000000000078c
+                0x0000000010000000                _data = .
+ *(vtable)
+ *(.data*)
+ .data.SystemCoreClock
+                0x0000000010000000        0x4 ./cmsis/system_LPC11xx.o
+                0x0000000010000000                SystemCoreClock
+                0x0000000010000004                _edata = .
+
+.igot.plt       0x0000000010000004        0x0 load address 0x0000000000000790
+ .igot.plt      0x0000000010000004        0x0 ./startup/cr_startup_lpc11.o
+
+.bss            0x0000000010000004       0x26 load address 0x0000000000000790
+                0x0000000010000004                _bss = .
+ *(.bss*)
+ .bss.I2CSlaveState
+                0x0000000010000004        0x4 ./driver/i2cslave.o
+                0x0000000010000004                I2CSlaveState
+ .bss.RdIndex   0x0000000010000008        0x4 ./driver/i2cslave.o
+                0x0000000010000008                RdIndex
+ .bss.WrIndex   0x000000001000000c        0x4 ./driver/i2cslave.o
+                0x000000001000000c                WrIndex
+ *(COMMON)
+ COMMON         0x0000000010000010       0x1a ./driver/i2cslave.o
+                0x0000000010000010                I2CReadLength
+                0x0000000010000014                I2CWrBuffer
+                0x000000001000001c                I2CMode
+                0x0000000010000020                I2CWriteLength
+                0x0000000010000024                I2CRdBuffer
+                0x000000001000002a                _ebss = .
+
+.cr_heap        0x000000001000002a        0x0 load address 0x0000000000000790
+                0x000000001000002a                end = .
+                0x000000001000002a                _pvHeapStart = .
+                0x0000000010002000                _vRamTop = __top_RamLoc8
+                0x0000000010002000                _vStackTop = _vRamTop
+OUTPUT(i2c.axf elf32-littlearm)
+
+.debug_info     0x0000000000000000     0x1371
+ .debug_info    0x0000000000000000      0x1c5 ./startup/cr_startup_lpc11.o
+ .debug_info    0x00000000000001c5      0x13e ./src/i2cslave_main.o
+ .debug_info    0x0000000000000303       0xc9 ./driver/crp.o
+ .debug_info    0x00000000000003cc      0xa90 ./driver/i2cslave.o
+ .debug_info    0x0000000000000e5c      0x515 ./cmsis/system_LPC11xx.o
+
+.debug_abbrev   0x0000000000000000      0x510
+ .debug_abbrev  0x0000000000000000       0xcb ./startup/cr_startup_lpc11.o
+ .debug_abbrev  0x00000000000000cb       0xb3 ./src/i2cslave_main.o
+ .debug_abbrev  0x000000000000017e       0x8e ./driver/crp.o
+ .debug_abbrev  0x000000000000020c      0x1ac ./driver/i2cslave.o
+ .debug_abbrev  0x00000000000003b8      0x158 ./cmsis/system_LPC11xx.o
+
+.debug_aranges  0x0000000000000000       0xe0
+ .debug_aranges
+                0x0000000000000000       0x50 ./startup/cr_startup_lpc11.o
+ .debug_aranges
+                0x0000000000000050       0x20 ./src/i2cslave_main.o
+ .debug_aranges
+                0x0000000000000070       0x18 ./driver/crp.o
+ .debug_aranges
+                0x0000000000000088       0x30 ./driver/i2cslave.o
+ .debug_aranges
+                0x00000000000000b8       0x28 ./cmsis/system_LPC11xx.o
+
+.debug_ranges   0x0000000000000000       0x88
+ .debug_ranges  0x0000000000000000       0x40 ./startup/cr_startup_lpc11.o
+ .debug_ranges  0x0000000000000040       0x10 ./src/i2cslave_main.o
+ .debug_ranges  0x0000000000000050       0x20 ./driver/i2cslave.o
+ .debug_ranges  0x0000000000000070       0x18 ./cmsis/system_LPC11xx.o
+
+.debug_macro    0x0000000000000000     0x1ea6
+ .debug_macro   0x0000000000000000       0x57 ./startup/cr_startup_lpc11.o
+ .debug_macro   0x0000000000000057      0xa54 ./startup/cr_startup_lpc11.o
+ .debug_macro   0x0000000000000aab       0x10 ./startup/cr_startup_lpc11.o
+ .debug_macro   0x0000000000000abb      0x12d ./startup/cr_startup_lpc11.o
+ .debug_macro   0x0000000000000be8      0x5b2 ./startup/cr_startup_lpc11.o
+ .debug_macro   0x000000000000119a       0x87 ./startup/cr_startup_lpc11.o
+ .debug_macro   0x0000000000001221       0x86 ./src/i2cslave_main.o
+ .debug_macro   0x00000000000012a7       0x1c ./src/i2cslave_main.o
+ .debug_macro   0x00000000000012c3       0x22 ./src/i2cslave_main.o
+ .debug_macro   0x00000000000012e5      0x37a ./src/i2cslave_main.o
+ .debug_macro   0x000000000000165f       0x8d ./src/i2cslave_main.o
+ .debug_macro   0x00000000000016ec      0x123 ./src/i2cslave_main.o
+ .debug_macro   0x000000000000180f       0x22 ./src/i2cslave_main.o
+ .debug_macro   0x0000000000001831       0x1c ./src/i2cslave_main.o
+ .debug_macro   0x000000000000184d       0xbe ./src/i2cslave_main.o
+ .debug_macro   0x000000000000190b       0x88 ./driver/crp.o
+ .debug_macro   0x0000000000001993       0x28 ./driver/crp.o
+ .debug_macro   0x00000000000019bb       0x28 ./driver/crp.o
+ .debug_macro   0x00000000000019e3       0x82 ./driver/i2cslave.o
+ .debug_macro   0x0000000000001a65       0xa9 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000001b0e      0x398 ./cmsis/system_LPC11xx.o
+
+.debug_line     0x0000000000000000      0x85d
+ .debug_line    0x0000000000000000      0x1cd ./startup/cr_startup_lpc11.o
+ .debug_line    0x00000000000001cd      0x1ad ./src/i2cslave_main.o
+ .debug_line    0x000000000000037a      0x14e ./driver/crp.o
+ .debug_line    0x00000000000004c8      0x1d0 ./driver/i2cslave.o
+ .debug_line    0x0000000000000698      0x1c5 ./cmsis/system_LPC11xx.o
+
+.debug_str      0x0000000000000000     0x7095
+ .debug_str     0x0000000000000000     0x45bb ./startup/cr_startup_lpc11.o
+                                       0x4646 (size before relaxing)
+ .debug_str     0x00000000000045bb     0x204a ./src/i2cslave_main.o
+                                       0x6576 (size before relaxing)
+ .debug_str     0x0000000000006605       0xbf ./driver/crp.o
+                                       0x634c (size before relaxing)
+ .debug_str     0x00000000000066c4      0x6f1 ./driver/i2cslave.o
+                                       0x6c55 (size before relaxing)
+ .debug_str     0x0000000000006db5      0x2e0 ./cmsis/system_LPC11xx.o
+                                       0x66af (size before relaxing)
+
+.comment        0x0000000000000000       0x7e
+ .comment       0x0000000000000000       0x7e ./startup/cr_startup_lpc11.o
+                                         0x7f (size before relaxing)
+ .comment       0x000000000000007e       0x7f ./src/i2cslave_main.o
+ .comment       0x000000000000007e       0x7f ./driver/crp.o
+ .comment       0x000000000000007e       0x7f ./driver/i2cslave.o
+ .comment       0x000000000000007e       0x7f ./cmsis/system_LPC11xx.o
+ .comment       0x000000000000007e       0x7f /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x31 ./startup/cr_startup_lpc11.o
+ .ARM.attributes
+                0x0000000000000031       0x31 ./src/i2cslave_main.o
+ .ARM.attributes
+                0x0000000000000062       0x31 ./driver/crp.o
+ .ARM.attributes
+                0x0000000000000093       0x31 ./driver/i2cslave.o
+ .ARM.attributes
+                0x00000000000000c4       0x31 ./cmsis/system_LPC11xx.o
+ .ARM.attributes
+                0x00000000000000f5       0x31 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .ARM.attributes
+                0x0000000000000126       0x21 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .ARM.attributes
+                0x0000000000000147       0x21 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+
+.debug_frame    0x0000000000000000      0x1b8
+ .debug_frame   0x0000000000000000       0xd8 ./startup/cr_startup_lpc11.o
+ .debug_frame   0x00000000000000d8       0x30 ./src/i2cslave_main.o
+ .debug_frame   0x0000000000000108       0x6c ./driver/i2cslave.o
+ .debug_frame   0x0000000000000174       0x44 ./cmsis/system_LPC11xx.o
+
+.debug_loc      0x0000000000000000       0x9c
+ .debug_loc     0x0000000000000000       0x9c ./cmsis/system_LPC11xx.o

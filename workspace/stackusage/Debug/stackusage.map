@@ -1,0 +1,743 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+                              ./driver/debug_printf.o (printf_format_nofloat)
+/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+                              /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o) (prints)
+/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+                              ./driver/debug_printf.o (small_strlen)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memcpy.o)
+                              ./src/stackusage_main.o (memcpy)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__init_alloc.o)
+                              ./src/stack.o (__heaps)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+                              ./config/stackusage_cr_startup_lpc11.o (__main)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+                              ./driver/debug_printf.o (__aeabi_idivmod)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+                              /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o) (__aeabi_idiv0)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+                              /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o) (__aeabi_dsub)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+                              /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o) (__aeabi_lmul)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+                              /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memcpy.o) (__aeabi_memcpy)
+
+Allocating common symbols
+Common symbol       size              file
+
+fseek               0x4               ./driver/debug_printf.o
+fclose              0x4               ./driver/debug_printf.o
+g_bs                0x124             ./src/stackusage_main.o
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc ./src/stack.o
+ .text          0x0000000000000000        0x0 ./src/stack.o
+ .data          0x0000000000000000        0x0 ./src/stack.o
+ .bss           0x0000000000000000        0x0 ./src/stack.o
+ .rodata.stackinitconst
+                0x0000000000000000        0x4 ./src/stack.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./src/stackusage_main.o
+ .text          0x0000000000000000        0x0 ./src/stackusage_main.o
+ .data          0x0000000000000000        0x0 ./src/stackusage_main.o
+ .bss           0x0000000000000000        0x0 ./src/stackusage_main.o
+ .bss.i.4314    0x0000000000000000        0x4 ./src/stackusage_main.o
+ .debug_macro   0x0000000000000000      0xa54 ./src/stackusage_main.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .text          0x0000000000000000        0x0 ./driver/crp.o
+ .data          0x0000000000000000        0x0 ./driver/crp.o
+ .bss           0x0000000000000000        0x0 ./driver/crp.o
+ .debug_macro   0x0000000000000000      0xa54 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x37a ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x8d ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x123 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x16 ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./driver/debug_printf.o
+ .text          0x0000000000000000        0x0 ./driver/debug_printf.o
+ .data          0x0000000000000000        0x0 ./driver/debug_printf.o
+ .bss           0x0000000000000000        0x0 ./driver/debug_printf.o
+ .bss.debug_read_buf
+                0x0000000000000000       0x16 ./driver/debug_printf.o
+ .text._debug_getstr
+                0x0000000000000000       0x58 ./driver/debug_printf.o
+ .text._debug_puts
+                0x0000000000000000       0x2e ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000      0xa54 ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000       0x22 ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000      0x37a ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000       0x8d ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000      0x123 ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000       0x16 ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000       0x16 ./driver/debug_printf.o
+ .debug_macro   0x0000000000000000       0x40 ./driver/debug_printf.o
+ COMMON         0x0000000000000000        0x8 ./driver/debug_printf.o
+ .group         0x0000000000000000        0xc ./config/stackusage_cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./config/stackusage_cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./config/stackusage_cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./config/stackusage_cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./config/stackusage_cr_startup_lpc11.o
+ .text          0x0000000000000000        0x0 ./config/stackusage_cr_startup_lpc11.o
+ .data          0x0000000000000000        0x0 ./config/stackusage_cr_startup_lpc11.o
+ .bss           0x0000000000000000        0x0 ./config/stackusage_cr_startup_lpc11.o
+ .debug_macro   0x0000000000000000      0xa54 ./config/stackusage_cr_startup_lpc11.o
+ .debug_macro   0x0000000000000000       0x10 ./config/stackusage_cr_startup_lpc11.o
+ .debug_macro   0x0000000000000000      0x12d ./config/stackusage_cr_startup_lpc11.o
+ .debug_macro   0x0000000000000000      0x5b2 ./config/stackusage_cr_startup_lpc11.o
+ .group         0x0000000000000000        0xc ./cmsis/core_cm0.o
+ .group         0x0000000000000000        0xc ./cmsis/core_cm0.o
+ .group         0x0000000000000000        0xc ./cmsis/core_cm0.o
+ .group         0x0000000000000000        0xc ./cmsis/core_cm0.o
+ .text          0x0000000000000000        0x0 ./cmsis/core_cm0.o
+ .data          0x0000000000000000        0x0 ./cmsis/core_cm0.o
+ .bss           0x0000000000000000        0x0 ./cmsis/core_cm0.o
+ .text.__get_PSP
+                0x0000000000000000       0x10 ./cmsis/core_cm0.o
+ .text.__set_PSP
+                0x0000000000000000        0xa ./cmsis/core_cm0.o
+ .text.__get_MSP
+                0x0000000000000000       0x10 ./cmsis/core_cm0.o
+ .text.__set_MSP
+                0x0000000000000000        0xa ./cmsis/core_cm0.o
+ .text.__get_PRIMASK
+                0x0000000000000000       0x1a ./cmsis/core_cm0.o
+ .text.__set_PRIMASK
+                0x0000000000000000       0x16 ./cmsis/core_cm0.o
+ .text.__get_CONTROL
+                0x0000000000000000       0x1a ./cmsis/core_cm0.o
+ .text.__set_CONTROL
+                0x0000000000000000       0x16 ./cmsis/core_cm0.o
+ .text.__REV    0x0000000000000000       0x1c ./cmsis/core_cm0.o
+ .text.__REV16  0x0000000000000000       0x22 ./cmsis/core_cm0.o
+ .text.__REVSH  0x0000000000000000       0x22 ./cmsis/core_cm0.o
+ .debug_info    0x0000000000000000      0x2b4 ./cmsis/core_cm0.o
+ .debug_abbrev  0x0000000000000000       0xe8 ./cmsis/core_cm0.o
+ .debug_aranges
+                0x0000000000000000       0x70 ./cmsis/core_cm0.o
+ .debug_ranges  0x0000000000000000       0x60 ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000       0x48 ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000      0xa54 ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000       0x10 ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000      0x12d ./cmsis/core_cm0.o
+ .debug_macro   0x0000000000000000      0x5b2 ./cmsis/core_cm0.o
+ .debug_line    0x0000000000000000      0x1c8 ./cmsis/core_cm0.o
+ .debug_str     0x0000000000000000     0x443b ./cmsis/core_cm0.o
+ .comment       0x0000000000000000       0x7f ./cmsis/core_cm0.o
+ .debug_frame   0x0000000000000000      0x130 ./cmsis/core_cm0.o
+ .ARM.attributes
+                0x0000000000000000       0x31 ./cmsis/core_cm0.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc ./cmsis/system_LPC11xx.o
+ .text          0x0000000000000000        0x0 ./cmsis/system_LPC11xx.o
+ .data          0x0000000000000000        0x0 ./cmsis/system_LPC11xx.o
+ .bss           0x0000000000000000        0x0 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000       0x10 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000      0x12d ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000      0x5b2 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000       0x1c ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000       0x8d ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000000000      0x123 ./cmsis/system_LPC11xx.o
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .text          0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .data          0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .bss           0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .text.func_printf_nofloat
+                0x0000000000000000       0x16 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .text.nsprintf
+                0x0000000000000000       0x24 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_macro   0x0000000000000000       0x10 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_macro   0x0000000000000000      0x12d /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_macro   0x0000000000000000      0x5b2 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_macro   0x0000000000000000       0x1c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_macro   0x0000000000000000       0x16 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_macro   0x0000000000000000       0x16 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .text          0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .data          0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .bss           0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .text.nsprintf_write_init
+                0x0000000000000000       0x1c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .text.nsprintf_write
+                0x0000000000000000       0x30 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .bss.nsprintf_buffer
+                0x0000000000000000        0x4 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .bss.nsprintf_buffer_index
+                0x0000000000000000        0x4 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .bss.nsprintf_buffer_length
+                0x0000000000000000        0x4 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .debug_macro   0x0000000000000000      0xa54 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .debug_macro   0x0000000000000000       0x10 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .debug_macro   0x0000000000000000      0x12d /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .debug_macro   0x0000000000000000      0x5b2 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .debug_macro   0x0000000000000000       0x1c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .debug_macro   0x0000000000000000       0x16 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .debug_macro   0x0000000000000000       0x16 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .text          0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .data          0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .bss           0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .text.small_strlen
+                0x0000000000000000       0x10 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .text.small_strcmp
+                0x0000000000000000       0x1a /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .text.small_stricmp
+                0x0000000000000000       0x34 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .text.small_strim
+                0x0000000000000000       0x38 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .text.gethex   0x0000000000000000       0x30 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .text.small_fmodf
+                0x0000000000000000       0x5e /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_info    0x0000000000000000      0x1b9 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_abbrev  0x0000000000000000      0x10b /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_loc     0x0000000000000000      0x214 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_aranges
+                0x0000000000000000       0x48 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_ranges  0x0000000000000000       0x38 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_macro   0x0000000000000000       0x21 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_macro   0x0000000000000000      0xa54 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_line    0x0000000000000000      0x155 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_str     0x0000000000000000     0x2d69 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .comment       0x0000000000000000       0x7f /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .debug_frame   0x0000000000000000       0x98 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_utils.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memcpy.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memcpy.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__init_alloc.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__init_alloc.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__init_alloc.o)
+ .text._init_alloc
+                0x0000000000000000       0x14 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__init_alloc.o)
+ .bss.__end_of_heap
+                0x0000000000000000        0x4 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__init_alloc.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dmul
+                0x0000000000000000      0x184 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_ddiv
+                0x0000000000000000      0x148 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dsub
+                0x0000000000000000      0x1bc /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dadd
+                0x0000000000000000      0x128 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_drsub
+                0x0000000000000000       0x14 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dneg
+                0x0000000000000000        0xc /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_d2f
+                0x0000000000000000       0x60 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_d2iz
+                0x0000000000000000       0x44 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_d2uiz
+                0x0000000000000000       0x34 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_d2lz
+                0x0000000000000000       0x7c /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_d2ulz
+                0x0000000000000000       0x58 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__bhs_ui2d
+                0x0000000000000000       0x5e /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__bhs_ul2d
+                0x0000000000000000       0xb4 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_i2d
+                0x0000000000000000       0x18 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_ui2d
+                0x0000000000000000        0xc /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_l2d
+                0x0000000000000000       0x22 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_ul2d
+                0x0000000000000000        0xc /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dcmpeq
+                0x0000000000000000       0x30 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dcmplt
+                0x0000000000000000       0x5c /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dcmpgt
+                0x0000000000000000       0x5c /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dcmple
+                0x0000000000000000       0x5c /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dcmpge
+                0x0000000000000000       0x60 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_dcmpun
+                0x0000000000000000       0x18 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_cdcmple
+                0x0000000000000000       0x2e /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text.__aeabi_cdrcmple
+                0x0000000000000000       0x14 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .comment       0x0000000000000000       0x7f /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .ARM.attributes
+                0x0000000000000000       0x31 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_lmul
+                0x0000000000000000       0x2e /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_llsl
+                0x0000000000000000       0x18 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_llsr
+                0x0000000000000000       0x18 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_lasr
+                0x0000000000000000       0x18 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_lcmp
+                0x0000000000000000       0x14 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_ulcmp
+                0x0000000000000000       0x10 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .ARM.attributes
+                0x0000000000000000       0x21 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+ .text.__aeabi_memmove
+                0x0000000000000000       0x1c /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+ .text.__aeabi_memset_lowlevel
+                0x0000000000000000       0x2a /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+ .text.__aeabi_memclr
+                0x0000000000000000        0x6 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+ .text.__aeabi_memset
+                0x0000000000000000        0x8 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash32         0x0000000000000000 0x0000000000008000 xr
+RamLoc8          0x0000000010000000 0x0000000000002000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./src/stack.o
+LOAD ./src/stackusage_main.o
+LOAD ./driver/crp.o
+LOAD ./driver/debug_printf.o
+LOAD ./config/stackusage_cr_startup_lpc11.o
+LOAD ./cmsis/core_cm0.o
+LOAD ./cmsis/system_LPC11xx.o
+LOAD /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a
+START GROUP
+LOAD /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a
+LOAD /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_semihost.a
+LOAD /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a
+END GROUP
+                0x0000000000008000                __top_MFlash32 = 0x8000
+                0x0000000010002000                __top_RamLoc8 = 0x10002000
+
+.text           0x0000000000000000      0xc27
+ FILL mask 0xff
+ *(.isr_vector)
+ .isr_vector    0x0000000000000000       0xc0 ./config/stackusage_cr_startup_lpc11.o
+                0x0000000000000000                g_pfnVectors
+ *(.text.Reset_Handler .text.SystemInit)
+ .text.SystemInit
+                0x00000000000000c0       0xac ./cmsis/system_LPC11xx.o
+                0x00000000000000c0                SystemInit
+                0x00000000000002fc                . = 0x2fc
+ *fill*         0x000000000000016c      0x190 ff
+ *(.crp)
+ .crp           0x00000000000002fc        0x4 ./driver/crp.o
+                0x00000000000002fc                CRP_WORD
+ *(.text*)
+ .text.StackHeapInit
+                0x0000000000000300       0x30 ./src/stack.o
+                0x0000000000000300                StackHeapInit
+ .text.StackHeapFree
+                0x0000000000000330       0x50 ./src/stack.o
+                0x0000000000000330                StackHeapFree
+ .text.StackHeapMinFree
+                0x0000000000000380       0x98 ./src/stack.o
+                0x0000000000000380                StackHeapMinFree
+ .text.callme   0x0000000000000418       0xb4 ./src/stackusage_main.o
+                0x0000000000000418                callme
+ .text.main     0x00000000000004cc       0xa4 ./src/stackusage_main.o
+                0x00000000000004cc                main
+ .text._debug_printf_flush
+                0x0000000000000570       0xa4 ./driver/debug_printf.o
+                0x0000000000000570                _debug_printf_flush
+ .text._debug_putchar
+                0x0000000000000614       0x8c ./driver/debug_printf.o
+                0x0000000000000614                _debug_putchar
+ .text._debug_printf
+                0x00000000000006a0       0x2c ./driver/debug_printf.o
+                0x00000000000006a0                _debug_printf
+ .text.ResetISR
+                0x00000000000006cc       0x64 ./config/stackusage_cr_startup_lpc11.o
+                0x00000000000006cc                ResetISR
+ .text.NMI_Handler
+                0x0000000000000730        0x6 ./config/stackusage_cr_startup_lpc11.o
+                0x0000000000000730                NMI_Handler
+ .text.HardFault_Handler
+                0x0000000000000736        0x6 ./config/stackusage_cr_startup_lpc11.o
+                0x0000000000000736                HardFault_Handler
+ .text.SVCall_Handler
+                0x000000000000073c        0x6 ./config/stackusage_cr_startup_lpc11.o
+                0x000000000000073c                SVCall_Handler
+ .text.PendSV_Handler
+                0x0000000000000742        0x6 ./config/stackusage_cr_startup_lpc11.o
+                0x0000000000000742                PendSV_Handler
+ .text.SysTick_Handler
+                0x0000000000000748        0x6 ./config/stackusage_cr_startup_lpc11.o
+                0x0000000000000748                SysTick_Handler
+ .text.IntDefaultHandler
+                0x000000000000074e        0x6 ./config/stackusage_cr_startup_lpc11.o
+                0x000000000000074e                TIMER16_0_IRQHandler
+                0x000000000000074e                UART_IRQHandler
+                0x000000000000074e                TIMER32_0_IRQHandler
+                0x000000000000074e                TIMER32_1_IRQHandler
+                0x000000000000074e                IntDefaultHandler
+                0x000000000000074e                PIOINT1_IRQHandler
+                0x000000000000074e                CAN_IRQHandler
+                0x000000000000074e                SSP0_IRQHandler
+                0x000000000000074e                TIMER16_1_IRQHandler
+                0x000000000000074e                ADC_IRQHandler
+                0x000000000000074e                SSP1_IRQHandler
+                0x000000000000074e                PIOINT2_IRQHandler
+                0x000000000000074e                BOD_IRQHandler
+                0x000000000000074e                WAKEUP_IRQHandler
+                0x000000000000074e                PIOINT0_IRQHandler
+                0x000000000000074e                I2C_IRQHandler
+                0x000000000000074e                WDT_IRQHandler
+                0x000000000000074e                PIOINT3_IRQHandler
+ .text.SystemCoreClockUpdate
+                0x0000000000000754       0xb8 ./cmsis/system_LPC11xx.o
+                0x0000000000000754                SystemCoreClockUpdate
+ .text.printf_format_nofloat
+                0x000000000000080c      0x16c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+                0x000000000000080c                printf_format_nofloat
+ .text.prints   0x0000000000000978       0x7c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+                0x0000000000000978                prints
+ .text.printi   0x00000000000009f4       0x94 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+                0x00000000000009f4                printi
+ .text.memcpy   0x0000000000000a88        0x8 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memcpy.o)
+                0x0000000000000a88                memcpy
+ .text.__weak_main
+                0x0000000000000a90        0x8 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+                0x0000000000000a90                __main
+                0x0000000000000a90                __weak_main
+ .text.__aeabi_division_idivmod
+                0x0000000000000a98       0x78 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+                0x0000000000000a98                __aeabi_idiv
+                0x0000000000000a98                __aeabi_idivmod
+                0x0000000000000a9e                __aeabi_uidiv
+                0x0000000000000a9e                __aeabi_uidivmod
+ .text.__aeabi_division_idiv0
+                0x0000000000000b10        0x2 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000000b10                __aeabi_idiv0
+ .text.__aeabi_memcpy
+                0x0000000000000b12       0x2c /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+                0x0000000000000b12                __aeabi_memcpy
+                0x0000000000000b12                __aeabi_memcpy4
+                0x0000000000000b12                __aeabi_memcpy8
+ *(.rodata*)
+ *fill*         0x0000000000000b3e        0x2 ff
+ .rodata        0x0000000000000b40       0x9f ./src/stackusage_main.o
+ *fill*         0x0000000000000bdf        0x1 ff
+ .rodata.CSWTCH.5
+                0x0000000000000be0       0x40 ./cmsis/system_LPC11xx.o
+ .rodata.printf_format_nofloat.str1.1
+                0x0000000000000c20        0x7 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+
+.glue_7         0x0000000000000c28        0x0
+ .glue_7        0x0000000000000c28        0x0 linker stubs
+
+.glue_7t        0x0000000000000c28        0x0
+ .glue_7t       0x0000000000000c28        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000000c28        0x0
+ .vfp11_veneer  0x0000000000000c28        0x0 linker stubs
+
+.v4_bx          0x0000000000000c28        0x0
+ .v4_bx         0x0000000000000c28        0x0 linker stubs
+
+.iplt           0x0000000000000c28        0x0
+ .iplt          0x0000000000000c28        0x0 ./src/stack.o
+
+.rel.dyn        0x0000000000000c28        0x0
+ .rel.iplt      0x0000000000000c28        0x0 ./src/stack.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000000000c28                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0000000000000c28                __exidx_end = .
+                0x0000000000000c28                _etext = .
+
+.data           0x0000000010000000        0x4 load address 0x0000000000000c27
+                0x0000000010000000                _data = .
+ *(vtable)
+ *(.data*)
+ .data.SystemCoreClock
+                0x0000000010000000        0x4 ./cmsis/system_LPC11xx.o
+                0x0000000010000000                SystemCoreClock
+                0x0000000010000004                _edata = .
+
+.igot.plt       0x0000000010000004        0x0 load address 0x0000000000000c2b
+ .igot.plt      0x0000000010000004        0x0 ./src/stack.o
+
+.bss            0x0000000010000004      0x180 load address 0x0000000000000c2b
+                0x0000000010000004                _bss = .
+ *(.bss*)
+ .bss.callcount
+                0x0000000010000004        0x4 ./src/stackusage_main.o
+ .bss.debug_write_buf
+                0x0000000010000008       0x52 ./driver/debug_printf.o
+ .bss.debug_buf_read_index
+                0x000000001000005a        0x1 ./driver/debug_printf.o
+ .bss.debug_buf_write_index
+                0x000000001000005b        0x1 ./driver/debug_printf.o
+ .bss.__heaps   0x000000001000005c        0x4 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__init_alloc.o)
+                0x000000001000005c                __heaps
+ *(COMMON)
+ COMMON         0x0000000010000060      0x124 ./src/stackusage_main.o
+                0x0000000010000060                g_bs
+                0x0000000010000184                _ebss = .
+
+.cr_heap        0x0000000010000184        0x0 load address 0x0000000000000c2b
+                0x0000000010000184                end = .
+                0x0000000010000184                _pvHeapStart = .
+                0x0000000010002000                _vRamTop = __top_RamLoc8
+                0x0000000010002000                _vStackTop = _vRamTop
+OUTPUT(stackusage.axf elf32-littlearm)
+
+.debug_info     0x0000000000000000     0x13d4
+ .debug_info    0x0000000000000000      0x133 ./src/stack.o
+ .debug_info    0x0000000000000133      0x1ad ./src/stackusage_main.o
+ .debug_info    0x00000000000002e0       0xc9 ./driver/crp.o
+ .debug_info    0x00000000000003a9      0x282 ./driver/debug_printf.o
+ .debug_info    0x000000000000062b      0x1d2 ./config/stackusage_cr_startup_lpc11.o
+ .debug_info    0x00000000000007fd      0x515 ./cmsis/system_LPC11xx.o
+ .debug_info    0x0000000000000d12      0x364 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_info    0x0000000000001076      0x35e /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+
+.debug_abbrev   0x0000000000000000      0x965
+ .debug_abbrev  0x0000000000000000       0x97 ./src/stack.o
+ .debug_abbrev  0x0000000000000097      0x130 ./src/stackusage_main.o
+ .debug_abbrev  0x00000000000001c7       0x8e ./driver/crp.o
+ .debug_abbrev  0x0000000000000255      0x154 ./driver/debug_printf.o
+ .debug_abbrev  0x00000000000003a9       0xe1 ./config/stackusage_cr_startup_lpc11.o
+ .debug_abbrev  0x000000000000048a      0x158 ./cmsis/system_LPC11xx.o
+ .debug_abbrev  0x00000000000005e2      0x1d9 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_abbrev  0x00000000000007bb      0x1aa /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+
+.debug_aranges  0x0000000000000000      0x190
+ .debug_aranges
+                0x0000000000000000       0x30 ./src/stack.o
+ .debug_aranges
+                0x0000000000000030       0x28 ./src/stackusage_main.o
+ .debug_aranges
+                0x0000000000000058       0x18 ./driver/crp.o
+ .debug_aranges
+                0x0000000000000070       0x40 ./driver/debug_printf.o
+ .debug_aranges
+                0x00000000000000b0       0x50 ./config/stackusage_cr_startup_lpc11.o
+ .debug_aranges
+                0x0000000000000100       0x28 ./cmsis/system_LPC11xx.o
+ .debug_aranges
+                0x0000000000000128       0x30 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_aranges
+                0x0000000000000158       0x38 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+
+.debug_ranges   0x0000000000000000      0x130
+ .debug_ranges  0x0000000000000000       0x20 ./src/stack.o
+ .debug_ranges  0x0000000000000020       0x18 ./src/stackusage_main.o
+ .debug_ranges  0x0000000000000038       0x30 ./driver/debug_printf.o
+ .debug_ranges  0x0000000000000068       0x40 ./config/stackusage_cr_startup_lpc11.o
+ .debug_ranges  0x00000000000000a8       0x18 ./cmsis/system_LPC11xx.o
+ .debug_ranges  0x00000000000000c0       0x20 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_ranges  0x00000000000000e0       0x50 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+
+.debug_macro    0x0000000000000000     0x3489
+ .debug_macro   0x0000000000000000       0x11 ./src/stack.o
+ .debug_macro   0x0000000000000011      0xa54 ./src/stack.o
+ .debug_macro   0x0000000000000a65       0xa9 ./src/stackusage_main.o
+ .debug_macro   0x0000000000000b0e       0x1c ./src/stackusage_main.o
+ .debug_macro   0x0000000000000b2a       0x22 ./src/stackusage_main.o
+ .debug_macro   0x0000000000000b4c       0x10 ./src/stackusage_main.o
+ .debug_macro   0x0000000000000b5c      0x12d ./src/stackusage_main.o
+ .debug_macro   0x0000000000000c89      0x5b2 ./src/stackusage_main.o
+ .debug_macro   0x000000000000123b      0x37a ./src/stackusage_main.o
+ .debug_macro   0x00000000000015b5       0x8d ./src/stackusage_main.o
+ .debug_macro   0x0000000000001642      0x123 ./src/stackusage_main.o
+ .debug_macro   0x0000000000001765       0x16 ./src/stackusage_main.o
+ .debug_macro   0x000000000000177b       0x22 ./src/stackusage_main.o
+ .debug_macro   0x000000000000179d       0x1c ./src/stackusage_main.o
+ .debug_macro   0x00000000000017b9       0x16 ./src/stackusage_main.o
+ .debug_macro   0x00000000000017cf       0x40 ./src/stackusage_main.o
+ .debug_macro   0x000000000000180f       0x1c ./src/stackusage_main.o
+ .debug_macro   0x000000000000182b       0x88 ./driver/crp.o
+ .debug_macro   0x00000000000018b3       0x1c ./driver/crp.o
+ .debug_macro   0x00000000000018cf       0x28 ./driver/crp.o
+ .debug_macro   0x00000000000018f7       0xaa ./driver/debug_printf.o
+ .debug_macro   0x00000000000019a1       0x16 ./driver/debug_printf.o
+ .debug_macro   0x00000000000019b7       0x57 ./config/stackusage_cr_startup_lpc11.o
+ .debug_macro   0x0000000000001a0e       0x87 ./config/stackusage_cr_startup_lpc11.o
+ .debug_macro   0x0000000000001a95       0xa9 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000001b3e      0xa5a ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000002598      0x398 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000002930       0x76 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_macro   0x00000000000029a6      0xa54 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_macro   0x00000000000033fa       0x10 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_macro   0x000000000000340a       0x7f /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+
+.debug_line     0x0000000000000000      0xece
+ .debug_line    0x0000000000000000       0x7e ./src/stack.o
+ .debug_line    0x000000000000007e      0x23d ./src/stackusage_main.o
+ .debug_line    0x00000000000002bb      0x14e ./driver/crp.o
+ .debug_line    0x0000000000000409      0x290 ./driver/debug_printf.o
+ .debug_line    0x0000000000000699      0x1ce ./config/stackusage_cr_startup_lpc11.o
+ .debug_line    0x0000000000000867      0x1c5 ./cmsis/system_LPC11xx.o
+ .debug_line    0x0000000000000a2c      0x23f /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_line    0x0000000000000c6b      0x263 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+
+.debug_str      0x0000000000000000     0x6fc8
+ .debug_str     0x0000000000000000     0x2cd2 ./src/stack.o
+                                       0x2cfe (size before relaxing)
+ .debug_str     0x0000000000002cd2     0x38e1 ./src/stackusage_main.o
+                                       0x65d1 (size before relaxing)
+ .debug_str     0x00000000000065b3       0xbf ./driver/crp.o
+                                       0x6307 (size before relaxing)
+ .debug_str     0x0000000000006672      0x10d ./driver/debug_printf.o
+                                       0x65cf (size before relaxing)
+ .debug_str     0x000000000000677f      0x112 ./config/stackusage_cr_startup_lpc11.o
+                                       0x4660 (size before relaxing)
+ .debug_str     0x0000000000006891      0x57f ./cmsis/system_LPC11xx.o
+                                       0x66b1 (size before relaxing)
+ .debug_str     0x0000000000006e10      0x11c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+                                       0x45a5 (size before relaxing)
+ .debug_str     0x0000000000006f2c       0x9c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+                                       0x45b1 (size before relaxing)
+
+.comment        0x0000000000000000       0x7e
+ .comment       0x0000000000000000       0x7e ./src/stack.o
+                                         0x7f (size before relaxing)
+ .comment       0x000000000000007e       0x7f ./src/stackusage_main.o
+ .comment       0x000000000000007e       0x7f ./driver/crp.o
+ .comment       0x000000000000007e       0x7f ./driver/debug_printf.o
+ .comment       0x000000000000007e       0x7f ./config/stackusage_cr_startup_lpc11.o
+ .comment       0x000000000000007e       0x7f ./cmsis/system_LPC11xx.o
+ .comment       0x000000000000007e       0x7f /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .comment       0x000000000000007e       0x7f /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .comment       0x000000000000007e       0x7f /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memcpy.o)
+ .comment       0x000000000000007e       0x7f /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__init_alloc.o)
+ .comment       0x000000000000007e       0x7f /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x31 ./src/stack.o
+ .ARM.attributes
+                0x0000000000000031       0x31 ./src/stackusage_main.o
+ .ARM.attributes
+                0x0000000000000062       0x31 ./driver/crp.o
+ .ARM.attributes
+                0x0000000000000093       0x31 ./driver/debug_printf.o
+ .ARM.attributes
+                0x00000000000000c4       0x31 ./config/stackusage_cr_startup_lpc11.o
+ .ARM.attributes
+                0x00000000000000f5       0x31 ./cmsis/system_LPC11xx.o
+ .ARM.attributes
+                0x0000000000000126       0x31 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .ARM.attributes
+                0x0000000000000157       0x31 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+ .ARM.attributes
+                0x0000000000000188       0x31 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(memcpy.o)
+ .ARM.attributes
+                0x00000000000001b9       0x31 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__init_alloc.o)
+ .ARM.attributes
+                0x00000000000001ea       0x31 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .ARM.attributes
+                0x000000000000021b       0x21 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .ARM.attributes
+                0x000000000000023c       0x21 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .ARM.attributes
+                0x000000000000025d       0x21 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(memcpy.o)
+
+.debug_frame    0x0000000000000000      0x384
+ .debug_frame   0x0000000000000000       0x70 ./src/stack.o
+ .debug_frame   0x0000000000000070       0x5c ./src/stackusage_main.o
+ .debug_frame   0x00000000000000cc       0xb0 ./driver/debug_printf.o
+ .debug_frame   0x000000000000017c       0xd8 ./config/stackusage_cr_startup_lpc11.o
+ .debug_frame   0x0000000000000254       0x44 ./cmsis/system_LPC11xx.o
+ .debug_frame   0x0000000000000298       0x6c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_frame   0x0000000000000304       0x80 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
+
+.debug_loc      0x0000000000000000      0x89e
+ .debug_loc     0x0000000000000000       0x9c ./cmsis/system_LPC11xx.o
+ .debug_loc     0x000000000000009c      0x3d3 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_nofloat.o)
+ .debug_loc     0x000000000000046f      0x42f /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace/lib_small_printf_m0/Lib/liblib_small_printf_m0.a(small_printf_support.o)
