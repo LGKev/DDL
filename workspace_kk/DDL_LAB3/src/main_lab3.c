@@ -76,15 +76,26 @@ int main (void)
 
 	uint8_t 	nth_Fib_number; // ie. 1 is 1 and 3 is 5
 	uint32_t	delay = 0;
-	while(1)
-	{
+#define betterDemo
+#ifdef betterDemo
+	while(1){
+		morse(fibArray[nth_Fib_number]);
+	}
+#endif
+
+#ifdef easyDemo
+	while(1){
 	for(nth_Fib_number=1; nth_Fib_number <=20; nth_Fib_number++	){
 		morse(fibArray[nth_Fib_number]);
-	for(delay = 0; delay< DASH_DOT_DELAY*3; delay++);
+	for(delay = 0; delay< DASH_DOT_DELAY*5; delay++);
 	}
+	}
+#endif
 
 //#define blink2seconds
 #ifdef blink2seconds
+
+	while(1){
 		if(timer32_0_counter > 200){
 			GPIOSetValue(LED_PORT_B, LED_BIT_B, LED_ON);	
 
@@ -93,9 +104,9 @@ int main (void)
 			GPIOSetValue(LED_PORT_B, LED_BIT_B, LED_OFF);	
 			timer32_0_counter=0;
 		}
-#endif
-
 	}
+		#endif
+
 } //end of main
 
 /* ============================================================================================================  */
@@ -132,69 +143,67 @@ void morse(uint16_t fib)
 		fib = fib/10;
 		incr++;
 	}
-	while(incr != 0)// at this point we start with incr=4
-	{
+	while(incr != 0)// at this point we start with incr at end of the current number
+		{
 		switch(digitArray[incr -1])
 		{
 			case 0:
-				// *_ _ _ _
-				dot(1);
-				dash(4);		
+				// _ _ _ _ _
+				dash(5);
 				break;
 
 			case 1:
-				// ** _ _ _
-				dot(2);
-				dash(3);
+				// *_ _ _ _
+				dot(1);
+				dash(4);
 				break;
 
 			case 2:
-				// *** _ _
-				dot(3);
-				dash(2);
+				// ** _ _ _
+				dot(2);
+				dash(3);
 
 				break;
 
 			case 3:
-				//**** _
-				dot(4);
-				dash(1);
+				//*** _ _
+				dot(3);
+				dash(2);
 				break;
 
 			case 4:
-				//*****
+				//**** _
 				dot(5);
+				dash(1);
 				break;
 
 			case 5:
-				//_ * * * * *
-				dot(1);
-				dash(4);
-
+				//* * * * *
+				dot(5);
 				break;
 
 			case 6:
-				// _ _ * * * 
+				// _ * * * *
+				dash(1);
+				dot(4);
+				break;
+
+			case 7:
+				//_  _  * * *
 				dash(2);
 				dot(3);
 				break;
 
-			case 7:
-				//_ _ _ * *
+			case 8:
+				// _ _  _ * *
 				dash(3);
 				dot(2);
 				break;
 
-			case 8:
-				// _ _ _ _ *
-				dash(4);
-				dot(1);
-				break;
-
 			case 9:
-				// _ _ _ _ _  
+				// _ _ _  _ *
 				dash(5);
-
+				dot(1);
 				break;
 
 			default:

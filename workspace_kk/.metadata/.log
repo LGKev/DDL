@@ -8485,3 +8485,26 @@ java.lang.NullPointerException
 
 !ENTRY com.crt.dsfdebug 1 0 2018-09-20 18:30:35.637
 !MESSAGE Telnet session connected on port 3330->58652 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-09-20 18:35:08.503
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-09-20 18:35:08.507
+!MESSAGE RedlinkServer telnet session connected on port 3025->39986 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-09-20 18:35:10.137
+!MESSAGE Telnet session connected on port 3330->58664 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-09-20 18:42:13.274
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@70d8bb91): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-09-20 18:42:13.274
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-09-20 18:42:32.512
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-09-20 18:42:32.513
+!MESSAGE RedlinkServer telnet session connected on port 3025->39996 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-09-20 18:42:34.207
+!MESSAGE Telnet session connected on port 3330->58674 @ 127.0.0.1
