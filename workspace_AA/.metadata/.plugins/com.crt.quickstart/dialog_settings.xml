@@ -8,11 +8,12 @@
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\Examples\Legacy\CMSIS_CORE\CMSIS_CORE_Latest.zip"/>
 			<item value="C:\Users\dell\Desktop\asm_xample11.zip"/>
 			<item value="C:\Users\dell\Downloads\NXP_LPC1100_Examples_V2.0.zip"/>
 		</list>
 	</section>
 	<section name="com.crt.quickstart.views.wizards.examples.QSExampleSelectionPage">
-		<item value="C:\Users\dell\Desktop" key="dirname"/>
+		<item value="C:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\Examples\Legacy\CMSIS_CORE" key="dirname"/>
 	</section>
 </section>
