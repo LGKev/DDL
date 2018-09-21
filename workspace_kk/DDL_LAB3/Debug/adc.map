@@ -305,7 +305,7 @@ END GROUP
                 0x0000000000008000                __top_MFlash32 = 0x8000
                 0x0000000010002000                __top_RamLoc8 = 0x10002000
 
-.text           0x0000000000000000      0xc3c
+.text           0x0000000000000000      0xca0
  FILL mask 0xff
  *(.isr_vector)
  .isr_vector    0x0000000000000000       0xc0 ./startup/cr_startup_lpc11.o
@@ -356,91 +356,91 @@ END GROUP
                 0x000000000000037e                I2C_IRQHandler
                 0x000000000000037e                WDT_IRQHandler
                 0x000000000000037e                PIOINT3_IRQHandler
- .text.main     0x0000000000000384       0xc0 ./src/main_lab3.o
+ .text.main     0x0000000000000384       0xe4 ./src/main_lab3.o
                 0x0000000000000384                main
- .text.getFib   0x0000000000000444       0x8c ./src/main_lab3.o
-                0x0000000000000444                getFib
- .text.morse    0x00000000000004d0      0x11c ./src/main_lab3.o
-                0x00000000000004d0                morse
- .text.dash     0x00000000000005ec       0x88 ./src/main_lab3.o
-                0x00000000000005ec                dash
- .text.dot      0x0000000000000674       0x84 ./src/main_lab3.o
-                0x0000000000000674                dot
+ .text.getFib   0x0000000000000468       0x8c ./src/main_lab3.o
+                0x0000000000000468                getFib
+ .text.morse    0x00000000000004f4      0x15c ./src/main_lab3.o
+                0x00000000000004f4                morse
+ .text.dash     0x0000000000000650       0x88 ./src/main_lab3.o
+                0x0000000000000650                dash
+ .text.dot      0x00000000000006d8       0x84 ./src/main_lab3.o
+                0x00000000000006d8                dot
  .text.ADC_IRQHandler
-                0x00000000000006f8       0xe4 ./driver/adc.o
-                0x00000000000006f8                ADC_IRQHandler
+                0x000000000000075c       0xe4 ./driver/adc.o
+                0x000000000000075c                ADC_IRQHandler
  .text.GPIOInit
-                0x00000000000007dc       0x20 ./driver/gpio.o
-                0x00000000000007dc                GPIOInit
+                0x0000000000000840       0x20 ./driver/gpio.o
+                0x0000000000000840                GPIOInit
  .text.GPIOSetValue
-                0x00000000000007fc       0x34 ./driver/gpio.o
-                0x00000000000007fc                GPIOSetValue
+                0x0000000000000860       0x34 ./driver/gpio.o
+                0x0000000000000860                GPIOSetValue
  .text.GPIOSetDir
-                0x0000000000000830       0x78 ./driver/gpio.o
-                0x0000000000000830                GPIOSetDir
+                0x0000000000000894       0x78 ./driver/gpio.o
+                0x0000000000000894                GPIOSetDir
  .text.NVIC_EnableIRQ
-                0x00000000000008a8       0x2c ./driver/timer32.o
+                0x000000000000090c       0x2c ./driver/timer32.o
  .text.TIMER32_0_IRQHandler
-                0x00000000000008d4       0x4c ./driver/timer32.o
-                0x00000000000008d4                TIMER32_0_IRQHandler
+                0x0000000000000938       0x4c ./driver/timer32.o
+                0x0000000000000938                TIMER32_0_IRQHandler
  .text.enable_timer32
-                0x0000000000000920       0x34 ./driver/timer32.o
-                0x0000000000000920                enable_timer32
+                0x0000000000000984       0x34 ./driver/timer32.o
+                0x0000000000000984                enable_timer32
  .text.init_timer32
-                0x0000000000000954      0x134 ./driver/timer32.o
-                0x0000000000000954                init_timer32
+                0x00000000000009b8      0x134 ./driver/timer32.o
+                0x00000000000009b8                init_timer32
  .text.SystemCoreClockUpdate
-                0x0000000000000a88       0xb8 ./cmsis/system_LPC11xx.o
-                0x0000000000000a88                SystemCoreClockUpdate
+                0x0000000000000aec       0xb8 ./cmsis/system_LPC11xx.o
+                0x0000000000000aec                SystemCoreClockUpdate
  .text.__weak_main
-                0x0000000000000b40        0x8 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
-                0x0000000000000b40                __main
-                0x0000000000000b40                __weak_main
+                0x0000000000000ba4        0x8 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+                0x0000000000000ba4                __main
+                0x0000000000000ba4                __weak_main
  .text.__aeabi_division_idivmod
-                0x0000000000000b48       0x78 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
-                0x0000000000000b48                __aeabi_idiv
-                0x0000000000000b48                __aeabi_idivmod
-                0x0000000000000b4e                __aeabi_uidiv
-                0x0000000000000b4e                __aeabi_uidivmod
+                0x0000000000000bac       0x78 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+                0x0000000000000bac                __aeabi_idiv
+                0x0000000000000bac                __aeabi_idivmod
+                0x0000000000000bb2                __aeabi_uidiv
+                0x0000000000000bb2                __aeabi_uidivmod
  .text.__aeabi_division_idiv0
-                0x0000000000000bc0        0x2 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
-                0x0000000000000bc0                __aeabi_idiv0
+                0x0000000000000c24        0x2 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000000c24                __aeabi_idiv0
  *(.rodata*)
- *fill*         0x0000000000000bc2        0x2 ff
- .rodata.morse  0x0000000000000bc4       0x28 ./src/main_lab3.o
+ *fill*         0x0000000000000c26        0x2 ff
+ .rodata.morse  0x0000000000000c28       0x28 ./src/main_lab3.o
  .rodata.LPC_GPIO
-                0x0000000000000bec       0x10 ./driver/gpio.o
+                0x0000000000000c50       0x10 ./driver/gpio.o
  .rodata.CSWTCH.5
-                0x0000000000000bfc       0x40 ./cmsis/system_LPC11xx.o
+                0x0000000000000c60       0x40 ./cmsis/system_LPC11xx.o
 
-.glue_7         0x0000000000000c3c        0x0
- .glue_7        0x0000000000000c3c        0x0 linker stubs
+.glue_7         0x0000000000000ca0        0x0
+ .glue_7        0x0000000000000ca0        0x0 linker stubs
 
-.glue_7t        0x0000000000000c3c        0x0
- .glue_7t       0x0000000000000c3c        0x0 linker stubs
+.glue_7t        0x0000000000000ca0        0x0
+ .glue_7t       0x0000000000000ca0        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000c3c        0x0
- .vfp11_veneer  0x0000000000000c3c        0x0 linker stubs
+.vfp11_veneer   0x0000000000000ca0        0x0
+ .vfp11_veneer  0x0000000000000ca0        0x0 linker stubs
 
-.v4_bx          0x0000000000000c3c        0x0
- .v4_bx         0x0000000000000c3c        0x0 linker stubs
+.v4_bx          0x0000000000000ca0        0x0
+ .v4_bx         0x0000000000000ca0        0x0 linker stubs
 
-.iplt           0x0000000000000c3c        0x0
- .iplt          0x0000000000000c3c        0x0 ./startup/cr_startup_lpc11.o
+.iplt           0x0000000000000ca0        0x0
+ .iplt          0x0000000000000ca0        0x0 ./startup/cr_startup_lpc11.o
 
-.rel.dyn        0x0000000000000c3c        0x0
- .rel.iplt      0x0000000000000c3c        0x0 ./startup/cr_startup_lpc11.o
+.rel.dyn        0x0000000000000ca0        0x0
+ .rel.iplt      0x0000000000000ca0        0x0 ./startup/cr_startup_lpc11.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000000c3c                __exidx_start = .
+                0x0000000000000ca0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000000000c3c                __exidx_end = .
-                0x0000000000000c3c                _etext = .
+                0x0000000000000ca0                __exidx_end = .
+                0x0000000000000ca0                _etext = .
 
-.data           0x0000000010000000        0x4 load address 0x0000000000000c3c
+.data           0x0000000010000000        0x4 load address 0x0000000000000ca0
                 0x0000000010000000                _data = .
  *(vtable)
  *(.data*)
@@ -449,10 +449,10 @@ END GROUP
                 0x0000000010000000                SystemCoreClock
                 0x0000000010000004                _edata = .
 
-.igot.plt       0x0000000010000004        0x0 load address 0x0000000000000c40
+.igot.plt       0x0000000010000004        0x0 load address 0x0000000000000ca4
  .igot.plt      0x0000000010000004        0x0 ./startup/cr_startup_lpc11.o
 
-.bss            0x0000000010000004       0x30 load address 0x0000000000000c40
+.bss            0x0000000010000004       0x30 load address 0x0000000000000ca4
                 0x0000000010000004                _bss = .
  *(.bss*)
  .bss.ADCIntDone
@@ -472,21 +472,21 @@ END GROUP
                 0x0000000010000014                ADCValue
                 0x0000000010000034                _ebss = .
 
-.cr_heap        0x0000000010000034        0x0 load address 0x0000000000000c40
+.cr_heap        0x0000000010000034        0x0 load address 0x0000000000000ca4
                 0x0000000010000034                end = .
                 0x0000000010000034                _pvHeapStart = .
                 0x0000000010002000                _vRamTop = __top_RamLoc8
                 0x0000000010002000                _vStackTop = _vRamTop
 OUTPUT(adc.axf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0x2868
+.debug_info     0x0000000000000000     0x2876
  .debug_info    0x0000000000000000      0x1c5 ./startup/cr_startup_lpc11.o
- .debug_info    0x00000000000001c5      0x3be ./src/main_lab3.o
- .debug_info    0x0000000000000583      0x9fe ./driver/adc.o
- .debug_info    0x0000000000000f81       0xc9 ./driver/crp.o
- .debug_info    0x000000000000104a      0x786 ./driver/gpio.o
- .debug_info    0x00000000000017d0      0xb83 ./driver/timer32.o
- .debug_info    0x0000000000002353      0x515 ./cmsis/system_LPC11xx.o
+ .debug_info    0x00000000000001c5      0x3cc ./src/main_lab3.o
+ .debug_info    0x0000000000000591      0x9fe ./driver/adc.o
+ .debug_info    0x0000000000000f8f       0xc9 ./driver/crp.o
+ .debug_info    0x0000000000001058      0x786 ./driver/gpio.o
+ .debug_info    0x00000000000017de      0xb83 ./driver/timer32.o
+ .debug_info    0x0000000000002361      0x515 ./cmsis/system_LPC11xx.o
 
 .debug_abbrev   0x0000000000000000      0xa6e
  .debug_abbrev  0x0000000000000000       0xcb ./startup/cr_startup_lpc11.o
@@ -548,14 +548,14 @@ OUTPUT(adc.axf elf32-littlearm)
  .debug_macro   0x0000000000001ba6       0xa9 ./cmsis/system_LPC11xx.o
  .debug_macro   0x0000000000001c4f      0x398 ./cmsis/system_LPC11xx.o
 
-.debug_line     0x0000000000000000      0xea1
+.debug_line     0x0000000000000000      0xebf
  .debug_line    0x0000000000000000      0x1cd ./startup/cr_startup_lpc11.o
- .debug_line    0x00000000000001cd      0x294 ./src/main_lab3.o
- .debug_line    0x0000000000000461      0x20e ./driver/adc.o
- .debug_line    0x000000000000066f      0x14e ./driver/crp.o
- .debug_line    0x00000000000007bd      0x25f ./driver/gpio.o
- .debug_line    0x0000000000000a1c      0x2c0 ./driver/timer32.o
- .debug_line    0x0000000000000cdc      0x1c5 ./cmsis/system_LPC11xx.o
+ .debug_line    0x00000000000001cd      0x2b2 ./src/main_lab3.o
+ .debug_line    0x000000000000047f      0x20e ./driver/adc.o
+ .debug_line    0x000000000000068d      0x14e ./driver/crp.o
+ .debug_line    0x00000000000007db      0x25f ./driver/gpio.o
+ .debug_line    0x0000000000000a3a      0x2c0 ./driver/timer32.o
+ .debug_line    0x0000000000000cfa      0x1c5 ./cmsis/system_LPC11xx.o
 
 .debug_str      0x0000000000000000     0x7316
  .debug_str     0x0000000000000000     0x45be ./startup/cr_startup_lpc11.o

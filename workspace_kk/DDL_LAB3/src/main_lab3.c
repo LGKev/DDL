@@ -51,15 +51,23 @@ int main (void)
 	init_timer32(0, TIME_INTERVAL); //60Mhz gives 10ms
 	enable_timer32(0); //will use later to calculate the frequency. 
 	GPIOInit();
+
+	//indicator for DASHES
 	GPIOSetDir(LED_PORT_B, LED_BIT_B, 1);
 	GPIOSetValue(LED_PORT_B, LED_BIT_B, LED_OFF);
 
+	//indicator for DOTS
 	GPIOSetDir(LED_PORT_R, LED_BIT_R, 1);
 	GPIOSetValue(LED_PORT_R, LED_BIT_R, LED_OFF);
 
+	//indicator between digits
+	GPIOSetDir(LED_PORT_G, LED_BIT_G, 1);
+	GPIOSetValue(LED_PORT_G, LED_BIT_G, LED_OFF);
+
+
 
 	uint16_t fibArray[20];
-	uint8_t nth_fib;
+	uint8_t nth_fib =6;
 	uint16_t fibNum;
 
 	//fill up an array of pre-calculated fib numbers
@@ -74,7 +82,7 @@ int main (void)
 
 //	morse(10); test used to verify the parsing of numbers to digits worked. it did.
 
-	uint8_t 	nth_Fib_number; // ie. 1 is 1 and 3 is 5
+	uint8_t 	nth_Fib_number = 6; // ie. 1 is 1 and 3 is 5 6th fib is 13. I want to see 2 digits and 1 green led flash
 	uint32_t	delay = 0;
 #define betterDemo
 #ifdef betterDemo
@@ -131,6 +139,7 @@ uint16_t getFib(uint8_t n)
 
 void morse(uint16_t fib)
 {
+	uint32_t delay;
 	uint8_t incr = 0;
 	uint8_t digitArray[4]; //array holding up to 4 digit numbers, numbers will be stored in reverse. to read correctly we must read backwards.
 	//we could also fill the array backwards. 
@@ -210,8 +219,12 @@ void morse(uint16_t fib)
 				return;
 		}
 		incr--;
+	GPIOSetValue(LED_PORT_G, LED_BIT_G, LED_ON);
+	for(delay=0; delay< DASH_DOT_DELAY*2; delay++);
+	GPIOSetValue(LED_PORT_G, LED_BIT_G, LED_OFF);
+	for(delay=0; delay< DASH_DOT_DELAY*2; delay++);
+		}
 	}
-}
 
 
 void dash(uint8_t numberOfDashes){
