@@ -72,24 +72,18 @@ int main (void)
 	}
 
 
-	morse(10);
+//	morse(10); test used to verify the parsing of numbers to digits worked. it did.
 
-
+	uint8_t 	nth_Fib_number; // ie. 1 is 1 and 3 is 5
+	uint32_t	delay = 0;
 	while(1)
 	{
+	for(nth_Fib_number=1; nth_Fib_number <=20; nth_Fib_number++	){
+		morse(fibArray[nth_Fib_number]);
+	for(delay = 0; delay< DASH_DOT_DELAY*3; delay++);
+	}
 
-		//	dash(3);
-		dot(1);
-		//#define demo1
-#ifdef demo1
-		if( adcValue >= HALF_VCC_ADC_512) {
-			GPIOSetValue(LED_PORT_B, LED_BIT_B, LED_ON);
-		}
-		GPIOSetValue(LED_PORT_B, LED_BIT_B, LED_OFF);
-#endif
-
-
-		//#define blink2seconds
+//#define blink2seconds
 #ifdef blink2seconds
 		if(timer32_0_counter > 200){
 			GPIOSetValue(LED_PORT_B, LED_BIT_B, LED_ON);	
@@ -156,57 +150,50 @@ void morse(uint16_t fib)
 
 			case 2:
 				// *** _ _
-				dot(2);
-				dash(3);
+				dot(3);
+				dash(2);
 
 				break;
 
 			case 3:
 				//**** _
-				dot(2);
-				dash(3);
+				dot(4);
+				dash(1);
 				break;
 
 			case 4:
 				//*****
-				dot(2);
-				dash(3);
-
-
+				dot(5);
 				break;
 
 			case 5:
 				//_ * * * * *
-				dot(2);
-				dash(3);
+				dot(1);
+				dash(4);
 
 				break;
 
 			case 6:
 				// _ _ * * * 
-				dot(2);
-				dash(3);
-
+				dash(2);
+				dot(3);
 				break;
 
 			case 7:
 				//_ _ _ * *
-				dot(2);
 				dash(3);
-
+				dot(2);
 				break;
 
 			case 8:
 				// _ _ _ _ *
-				dot(2);
-				dash(3);
-
+				dash(4);
+				dot(1);
 				break;
 
 			case 9:
 				// _ _ _ _ _  
-				dot(2);
-				dash(3);
+				dash(5);
 
 				break;
 
