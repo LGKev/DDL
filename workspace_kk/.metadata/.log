@@ -8727,3 +8727,8 @@ Caused by: java.lang.IllegalArgumentException: Argument not valid
 
 !ENTRY com.crt.dsfdebug 1 0 2018-09-20 18:56:11.250
 !MESSAGE Telnet session connected on port 3330->58716 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-09-20 18:59:10.075
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@614a5299): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-09-20 18:59:10.075
+!MESSAGE Invalid context type.
