@@ -1,4 +1,802 @@
-13:08:29 **** Clean-only build of configuration Debug for project asm_xample11 ****
-make -r -j2 clean 
-rm -rf  ./src/asm_sum_cm0.o ./src/cr_startup_lpc11.o ./src/main.o  ./src/cr_startup_lpc11.d ./src/main.d  asm_xample11.axf
+18:34:47 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+18:34:49 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../src/main_lab3.c
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:78:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:63:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+../src/main_lab3.c:82:3: warning: 'nth_Fib_number' is used uninitialized in this function [-Wuninitialized]
+   morse(fibArray[nth_Fib_number]);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../src/main_lab3.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../driver/timer32.c
+ 
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3132	      4	     48	   3184	    c70	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:34:55 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+18:34:56 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+18:35:00 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Building file: ../src/main_lab3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:78:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:63:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+../src/main_lab3.c:82:3: warning: 'nth_Fib_number' is used uninitialized in this function [-Wuninitialized]
+   morse(fibArray[nth_Fib_number]);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../src/main_lab3.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3132	      4	     48	   3184	    c70	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:42:17 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+18:42:19 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Building file: ../src/main_lab3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:78:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:63:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+../src/main_lab3.c:82:3: warning: 'nth_Fib_number' is used uninitialized in this function [-Wuninitialized]
+   morse(fibArray[nth_Fib_number]);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main_lab3.c
+ 
+Building file: ../driver/crp.c
+Finished building: ../driver/adc.c
+Invoking: MCU C Compiler
+ 
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Finished building: ../cmsis/core_cm0.c
+ 
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3132	      4	     48	   3184	    c70	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:42:24 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Building file: ../src/main_lab3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:78:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:63:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+../src/main_lab3.c:82:3: warning: 'nth_Fib_number' is used uninitialized in this function [-Wuninitialized]
+   morse(fibArray[nth_Fib_number]);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../src/main_lab3.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3132	      4	     48	   3184	    c70	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:52:03 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+18:52:05 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Building file: ../src/main_lab3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:86:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:71:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+../src/main_lab3.c:90:3: warning: 'nth_Fib_number' is used uninitialized in this function [-Wuninitialized]
+   morse(fibArray[nth_Fib_number]);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../src/main_lab3.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3196	      4	     48	   3248	    cb0	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:52:09 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../src/main_lab3.c
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:86:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:71:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+../src/main_lab3.c:90:3: warning: 'nth_Fib_number' is used uninitialized in this function [-Wuninitialized]
+   morse(fibArray[nth_Fib_number]);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../src/main_lab3.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3196	      4	     48	   3248	    cb0	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:53:23 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+18:53:30 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+18:53:32 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../src/main_lab3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:86:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:71:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+../src/main_lab3.c:90:3: warning: 'nth_Fib_number' is used uninitialized in this function [-Wuninitialized]
+   morse(fibArray[nth_Fib_number]);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main_lab3.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3196	      4	     48	   3248	    cb0	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:53:35 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../src/main_lab3.c
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:86:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:71:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+../src/main_lab3.c:90:3: warning: 'nth_Fib_number' is used uninitialized in this function [-Wuninitialized]
+   morse(fibArray[nth_Fib_number]);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main_lab3.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+Finished building: ../driver/adc.c
+ 
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/gpio.c
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3196	      4	     48	   3248	    cb0	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:55:01 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+18:55:04 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../src/main_lab3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:86:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:71:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+Finished building: ../src/main_lab3.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3212	      4	     48	   3264	    cc0	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:55:07 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Building file: ../src/main_lab3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:86:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:71:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../src/main_lab3.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3212	      4	     48	   3264	    cc0	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:55:56 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+18:55:58 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../src/main_lab3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:86:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:71:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+Finished building: ../src/main_lab3.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3232	      4	     48	   3284	    cd4	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+18:56:02 **** Incremental Build of configuration Debug for project DDL_LAB3 ****
+make -r -j2 all 
+Building file: ../src/main_lab3.c
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main_lab3.d" -MT"src/main_lab3.o" -MT"src/main_lab3.d" -o "src/main_lab3.o" "../src/main_lab3.c"
+../src/main_lab3.c: In function 'main':
+../src/main_lab3.c:86:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay = 0;
+           ^~~~~
+../src/main_lab3.c:71:11: warning: variable 'fibNum' set but not used [-Wunused-but-set-variable]
+  uint16_t fibNum;
+           ^~~~~~
+../src/main_lab3.c:48:11: warning: unused variable 'elapsedTimeMiliSeconds' [-Wunused-variable]
+  uint32_t elapsedTimeMiliSeconds = 0;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/main_lab3.c:47:11: warning: unused variable 'elapsedTimeTicks' [-Wunused-variable]
+  uint32_t elapsedTimeTicks = 0;
+           ^~~~~~~~~~~~~~~~
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+Finished building: ../src/main_lab3.c
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/main_lab3.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1115_303 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3232	      4	     48	   3284	    cd4	adc.axf
+Written checksum 0xefffd637 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
  
