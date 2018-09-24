@@ -1,6 +1,35 @@
-22:13:36 **** Incremental Build of configuration Debug for project adc ****
+14:28:14 **** Incremental Build of configuration Debug for project adc ****
 make -r all 
-make: Nothing to be done for `all'.
+Building file: ../DDL/workspace_kk/wdt/src/wdt_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"DDL/workspace_kk/wdt/src/wdt_main.d" -MT"DDL/workspace_kk/wdt/src/wdt_main.o" -MT"DDL/workspace_kk/wdt/src/wdt_main.d" -o "DDL/workspace_kk/wdt/src/wdt_main.o" "../DDL/workspace_kk/wdt/src/wdt_main.c"
+../DDL/workspace_kk/wdt/src/wdt_main.c: In function 'main':
+../DDL/workspace_kk/wdt/src/wdt_main.c:38:3: warning: implicit declaration of function 'WDTInit' [-Wimplicit-function-declaration]
+   WDTInit();
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:3: warning: implicit declaration of function 'init_timer16' [-Wimplicit-function-declaration]
+   init_timer16( 0, TIME_INTERVALmS * 10 );
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:20: error: 'TIME_INTERVALmS' undeclared (first use in this function)
+   init_timer16( 0, TIME_INTERVALmS * 10 );
+                    ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:20: note: each undeclared identifier is reported only once for each function it appears in
+../DDL/workspace_kk/wdt/src/wdt_main.c:41:3: warning: implicit declaration of function 'enable_timer16' [-Wimplicit-function-declaration]
+   enable_timer16( 0 );
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:44:15: error: 'LED_PORT' undeclared (first use in this function)
+   GPIOSetDir( LED_PORT, LED_BIT, 1 );
+               ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:44:25: error: 'LED_BIT' undeclared (first use in this function)
+   GPIOSetDir( LED_PORT, LED_BIT, 1 );
+                         ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:54:60: error: 'FAST_LED_TOGGLE_TICKS' undeclared (first use in this function)
+      if ( (timer16_0_counter > 0) && (timer16_0_counter <= FAST_LED_TOGGLE_TICKS/2) )
+                                                            ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:74:58: error: 'LED_TOGGLE_TICKS' undeclared (first use in this function)
+    if ( (timer16_0_counter > 0) && (timer16_0_counter <= LED_TOGGLE_TICKS/2) )
+                                                          ^
+make: *** [DDL/workspace_kk/wdt/src/wdt_main.o] Error 1
 
-22:13:36 Build Finished (took 133ms)
+14:28:15 Build Finished (took 717ms)
 

@@ -1491,3 +1491,456 @@ make: Nothing to be done for `all'.
 13:58:56 **** Incremental Build of configuration Debug for project asm_xample11 ****
 make -r all 
 make: Nothing to be done for `all'.
+11:39:42 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+11:39:48 **** Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+11:40:42 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:40:44 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+11:41:17 **** Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+Building file: ../src/small_printf_float.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_printf_float.d" -MT"src/small_printf_float.o" -MT"src/small_printf_float.d" -o "src/small_printf_float.o" "../src/small_printf_float.c"
+Finished building: ../src/small_printf_float.c
+ 
+Building file: ../src/small_printf_nofloat.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_printf_nofloat.d" -MT"src/small_printf_nofloat.o" -MT"src/small_printf_nofloat.d" -o "src/small_printf_nofloat.o" "../src/small_printf_nofloat.c"
+Finished building: ../src/small_printf_nofloat.c
+ 
+Building file: ../src/small_printf_support.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_printf_support.d" -MT"src/small_printf_support.o" -MT"src/small_printf_support.d" -o "src/small_printf_support.o" "../src/small_printf_support.c"
+Finished building: ../src/small_printf_support.c
+ 
+Building file: ../src/small_utils.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_utils.d" -MT"src/small_utils.o" -MT"src/small_utils.d" -o "src/small_utils.o" "../src/small_utils.c"
+Finished building: ../src/small_utils.c
+ 
+Building target: liblib_small_printf_m0.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblib_small_printf_m0.a"  ./src/small_printf_float.o ./src/small_printf_nofloat.o ./src/small_printf_support.o ./src/small_utils.o   
+Finished building target: liblib_small_printf_m0.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size liblib_small_printf_m0.a ; # arm-none-eabi-objdump -h -S liblib_small_printf_m0.a >liblib_small_printf_m0.lss
+   text	   data	    bss	    dec	    hex	filename
+    861	      0	     81	    942	    3ae	small_printf_float.o (ex liblib_small_printf_m0.a)
+    437	      0	      0	    437	    1b5	small_printf_nofloat.o (ex liblib_small_printf_m0.a)
+    370	      0	     12	    382	    17e	small_printf_support.o (ex liblib_small_printf_m0.a)
+    296	      0	      0	    296	    128	small_utils.o (ex liblib_small_printf_m0.a)
+ 
+11:41:23 **** Build of configuration Debug for project adc ****
+make -r all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.o" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:109:8: warning: unused variable 'Vcc' [-Wunused-variable]
+  float Vcc = (3.3/1023)*(float)ADCValue[0];
+        ^
+Finished building: ../src/adc_main.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../DDL/workspace_kk/wdt/startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"DDL/workspace_kk/wdt/startup/cr_startup_lpc11.d" -MT"DDL/workspace_kk/wdt/startup/cr_startup_lpc11.o" -MT"DDL/workspace_kk/wdt/startup/cr_startup_lpc11.d" -o "DDL/workspace_kk/wdt/startup/cr_startup_lpc11.o" "../DDL/workspace_kk/wdt/startup/cr_startup_lpc11.c"
+Finished building: ../DDL/workspace_kk/wdt/startup/cr_startup_lpc11.c
+ 
+Building file: ../DDL/workspace_kk/wdt/src/wdt_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"DDL/workspace_kk/wdt/src/wdt_main.d" -MT"DDL/workspace_kk/wdt/src/wdt_main.o" -MT"DDL/workspace_kk/wdt/src/wdt_main.d" -o "DDL/workspace_kk/wdt/src/wdt_main.o" "../DDL/workspace_kk/wdt/src/wdt_main.c"
+../DDL/workspace_kk/wdt/src/wdt_main.c: In function 'main':
+../DDL/workspace_kk/wdt/src/wdt_main.c:38:3: warning: implicit declaration of function 'WDTInit' [-Wimplicit-function-declaration]
+   WDTInit();
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:3: warning: implicit declaration of function 'init_timer16' [-Wimplicit-function-declaration]
+   init_timer16( 0, TIME_INTERVALmS * 10 );
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:20: error: 'TIME_INTERVALmS' undeclared (first use in this function)
+   init_timer16( 0, TIME_INTERVALmS * 10 );
+                    ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:20: note: each undeclared identifier is reported only once for each function it appears in
+../DDL/workspace_kk/wdt/src/wdt_main.c:41:3: warning: implicit declaration of function 'enable_timer16' [-Wimplicit-function-declaration]
+   enable_timer16( 0 );
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:44:15: error: 'LED_PORT' undeclared (first use in this function)
+   GPIOSetDir( LED_PORT, LED_BIT, 1 );
+               ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:44:25: error: 'LED_BIT' undeclared (first use in this function)
+   GPIOSetDir( LED_PORT, LED_BIT, 1 );
+                         ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:54:60: error: 'FAST_LED_TOGGLE_TICKS' undeclared (first use in this function)
+      if ( (timer16_0_counter > 0) && (timer16_0_counter <= FAST_LED_TOGGLE_TICKS/2) )
+                                                            ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:74:58: error: 'LED_TOGGLE_TICKS' undeclared (first use in this function)
+    if ( (timer16_0_counter > 0) && (timer16_0_counter <= LED_TOGGLE_TICKS/2) )
+                                                          ^
+make: *** [DDL/workspace_kk/wdt/src/wdt_main.o] Error 1
+11:43:11 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:43:12 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+11:43:21 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:43:22 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+11:43:24 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+11:44:15 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:44:16 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+11:48:30 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:48:31 **** Clean-only build of configuration Debug for project lab_3 ****
+make -r clean 
+rm -rf  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  lab_3.axf
+ 
+11:48:32 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+11:49:26 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:49:27 **** Clean-only build of configuration Debug for project lab_3 ****
+make -r clean 
+rm -rf  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/can.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer16.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
+ 
+11:49:28 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+11:51:07 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:51:08 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+14:22:37 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:22:39 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+14:24:50 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:24:51 **** Clean-only build of configuration Debug for project lab_3 ****
+make -r clean 
+rm -rf  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/can.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer16.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
+ 
+14:24:52 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+14:26:01 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:26:01 **** Clean-only build of configuration Debug for project lab_3 ****
+make -r clean 
+rm -rf  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
+ 
+14:26:02 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+14:26:07 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:26:08 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+14:27:34 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for `all'.
+14:27:37 **** Incremental Build of configuration Debug for project adc ****
+make -r all 
+Building file: ../DDL/workspace_kk/wdt/src/wdt_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"DDL/workspace_kk/wdt/src/wdt_main.d" -MT"DDL/workspace_kk/wdt/src/wdt_main.o" -MT"DDL/workspace_kk/wdt/src/wdt_main.d" -o "DDL/workspace_kk/wdt/src/wdt_main.o" "../DDL/workspace_kk/wdt/src/wdt_main.c"
+../DDL/workspace_kk/wdt/src/wdt_main.c: In function 'main':
+../DDL/workspace_kk/wdt/src/wdt_main.c:38:3: warning: implicit declaration of function 'WDTInit' [-Wimplicit-function-declaration]
+   WDTInit();
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:3: warning: implicit declaration of function 'init_timer16' [-Wimplicit-function-declaration]
+   init_timer16( 0, TIME_INTERVALmS * 10 );
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:20: error: 'TIME_INTERVALmS' undeclared (first use in this function)
+   init_timer16( 0, TIME_INTERVALmS * 10 );
+                    ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:20: note: each undeclared identifier is reported only once for each function it appears in
+../DDL/workspace_kk/wdt/src/wdt_main.c:41:3: warning: implicit declaration of function 'enable_timer16' [-Wimplicit-function-declaration]
+   enable_timer16( 0 );
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:44:15: error: 'LED_PORT' undeclared (first use in this function)
+   GPIOSetDir( LED_PORT, LED_BIT, 1 );
+               ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:44:25: error: 'LED_BIT' undeclared (first use in this function)
+   GPIOSetDir( LED_PORT, LED_BIT, 1 );
+                         ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:54:60: error: 'FAST_LED_TOGGLE_TICKS' undeclared (first use in this function)
+      if ( (timer16_0_counter > 0) && (timer16_0_counter <= FAST_LED_TOGGLE_TICKS/2) )
+                                                            ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:74:58: error: 'LED_TOGGLE_TICKS' undeclared (first use in this function)
+    if ( (timer16_0_counter > 0) && (timer16_0_counter <= LED_TOGGLE_TICKS/2) )
+                                                          ^
+make: *** [DDL/workspace_kk/wdt/src/wdt_main.o] Error 1
+14:28:12 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for `all'.
+14:28:14 **** Incremental Build of configuration Debug for project adc ****
+make -r all 
+Building file: ../DDL/workspace_kk/wdt/src/wdt_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"DDL/workspace_kk/wdt/src/wdt_main.d" -MT"DDL/workspace_kk/wdt/src/wdt_main.o" -MT"DDL/workspace_kk/wdt/src/wdt_main.d" -o "DDL/workspace_kk/wdt/src/wdt_main.o" "../DDL/workspace_kk/wdt/src/wdt_main.c"
+../DDL/workspace_kk/wdt/src/wdt_main.c: In function 'main':
+../DDL/workspace_kk/wdt/src/wdt_main.c:38:3: warning: implicit declaration of function 'WDTInit' [-Wimplicit-function-declaration]
+   WDTInit();
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:3: warning: implicit declaration of function 'init_timer16' [-Wimplicit-function-declaration]
+   init_timer16( 0, TIME_INTERVALmS * 10 );
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:20: error: 'TIME_INTERVALmS' undeclared (first use in this function)
+   init_timer16( 0, TIME_INTERVALmS * 10 );
+                    ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:40:20: note: each undeclared identifier is reported only once for each function it appears in
+../DDL/workspace_kk/wdt/src/wdt_main.c:41:3: warning: implicit declaration of function 'enable_timer16' [-Wimplicit-function-declaration]
+   enable_timer16( 0 );
+   ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:44:15: error: 'LED_PORT' undeclared (first use in this function)
+   GPIOSetDir( LED_PORT, LED_BIT, 1 );
+               ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:44:25: error: 'LED_BIT' undeclared (first use in this function)
+   GPIOSetDir( LED_PORT, LED_BIT, 1 );
+                         ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:54:60: error: 'FAST_LED_TOGGLE_TICKS' undeclared (first use in this function)
+      if ( (timer16_0_counter > 0) && (timer16_0_counter <= FAST_LED_TOGGLE_TICKS/2) )
+                                                            ^
+../DDL/workspace_kk/wdt/src/wdt_main.c:74:58: error: 'LED_TOGGLE_TICKS' undeclared (first use in this function)
+    if ( (timer16_0_counter > 0) && (timer16_0_counter <= LED_TOGGLE_TICKS/2) )
+                                                          ^
+make: *** [DDL/workspace_kk/wdt/src/wdt_main.o] Error 1
+14:28:23 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r clean 
+rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
+ 
+14:28:23 **** Clean-only build of configuration Debug for project lab_3 ****
+make -r clean 
+rm -rf  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
+ 
+14:28:31 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+14:28:32 **** Clean-only build of configuration Debug for project lab_3 ****
+make -r clean 
+rm -rf  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
+ 
+14:28:33 **** Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1
+14:30:49 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:30:50 **** Clean-only build of configuration Debug for project lab_3 ****
+make -r clean 
+rm -rf  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
+ 
+14:30:51 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:18:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [src/main.o] Error 1

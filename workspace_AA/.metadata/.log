@@ -1419,3 +1419,15 @@ Command-line arguments:  -os win32 -ws win32 -arch x86
 =======
 >>>>>>> 0a8b9c546e029b6aba77d9e7f8d50ba4e6520693:workspace_AA/.metadata/.log
 >>>>>>> 8ba04843aea15f6eeac6145c3598aa8f01b669fa
+!SESSION 2018-09-24 14:21:54.805 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2018-09-24 14:22:12.695
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2018-09-24 14:22:12.712
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
