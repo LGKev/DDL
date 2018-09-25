@@ -1431,3 +1431,10 @@ Command-line arguments:  -os win32 -ws win32 -arch x86
 
 !ENTRY org.eclipse.ui 4 4 2018-09-24 14:22:12.712
 !MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.help.base 4 4 2018-09-25 00:24:14.798
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-09-25 00:24:14.798
+!MESSAGE Help document /com.nxp.gnudocs/standards.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2018-09-25 00:24:14.798
+!MESSAGE Help document /com.nxp.gnudocs/gdbint/index.html cannot be opened.

@@ -1,8 +1,8 @@
-14:28:14 **** Incremental Build of configuration Debug for project adc ****
+14:44:37 **** Incremental Build of configuration Debug for project adc ****
 make -r all 
 Building file: ../DDL/workspace_kk/wdt/src/wdt_main.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lib_small_printf_m0\inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"DDL/workspace_kk/wdt/src/wdt_main.d" -MT"DDL/workspace_kk/wdt/src/wdt_main.o" -MT"DDL/workspace_kk/wdt/src/wdt_main.d" -o "DDL/workspace_kk/wdt/src/wdt_main.o" "../DDL/workspace_kk/wdt/src/wdt_main.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"DDL/workspace_kk/wdt/src/wdt_main.d" -MT"DDL/workspace_kk/wdt/src/wdt_main.o" -MT"DDL/workspace_kk/wdt/src/wdt_main.d" -o "DDL/workspace_kk/wdt/src/wdt_main.o" "../DDL/workspace_kk/wdt/src/wdt_main.c"
 ../DDL/workspace_kk/wdt/src/wdt_main.c: In function 'main':
 ../DDL/workspace_kk/wdt/src/wdt_main.c:38:3: warning: implicit declaration of function 'WDTInit' [-Wimplicit-function-declaration]
    WDTInit();
@@ -31,5 +31,5 @@ arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"
                                                           ^
 make: *** [DDL/workspace_kk/wdt/src/wdt_main.o] Error 1
 
-14:28:15 Build Finished (took 717ms)
+14:44:38 Build Finished (took 745ms)
 

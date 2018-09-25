@@ -116,9 +116,6 @@
 						<entry kind="includePath" name="/${ProjName}/cmsis">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="/lib_small_printf_m0/inc">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
 						<entry kind="includePath" name="/${ProjName}/config">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>

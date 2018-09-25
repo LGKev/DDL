@@ -5,7 +5,7 @@
  * Generated linker script file for LPC1115/303
  * Created from library.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * LPCXpresso v8.2.2 [Build 650] [2016-09-09]  on Sep 24, 2018 2:30:51 PM
+ * LPCXpresso v8.2.2 [Build 650] [2016-09-09]  on Sep 25, 2018 12:19:38 AM
  */
 
 GROUP (
