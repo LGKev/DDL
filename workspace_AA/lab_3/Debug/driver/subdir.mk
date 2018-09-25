@@ -7,7 +7,6 @@ C_SRCS += \
 ../driver/adc.c \
 ../driver/clkconfig.c \
 ../driver/crp.c \
-../driver/debug_printf.c \
 ../driver/gpio.c \
 ../driver/i2c.c \
 ../driver/i2cslave.c \
@@ -23,7 +22,6 @@ OBJS += \
 ./driver/adc.o \
 ./driver/clkconfig.o \
 ./driver/crp.o \
-./driver/debug_printf.o \
 ./driver/gpio.o \
 ./driver/i2c.o \
 ./driver/i2cslave.o \
@@ -39,7 +37,6 @@ C_DEPS += \
 ./driver/adc.d \
 ./driver/clkconfig.d \
 ./driver/crp.d \
-./driver/debug_printf.d \
 ./driver/gpio.d \
 ./driver/i2c.d \
 ./driver/i2cslave.d \
@@ -56,7 +53,7 @@ C_DEPS += \
 driver/%.o: ../driver/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU C Compiler'
-	arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

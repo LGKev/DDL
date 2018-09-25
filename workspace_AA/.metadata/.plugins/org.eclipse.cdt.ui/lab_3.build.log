@@ -1,7 +1,6 @@
-00:23:44 **** Clean-only build of configuration Debug for project lab_3 ****
-make -r clean 
-rm -rf  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
- 
+13:29:56 **** Incremental Build of configuration Debug for project lab_3 ****
+make -r all 
+make: Nothing to be done for `all'.
 
-00:23:45 Build Finished (took 241ms)
+13:29:56 Build Finished (took 141ms)
 

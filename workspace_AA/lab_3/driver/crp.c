@@ -24,8 +24,7 @@
 /**** DANGER CRP3 WILL LOCK PART TO ALL READS and WRITES ****/
 /*********** #define CRP3_MAGIC xxxx 0x43218765 *************/
 /************************************************************/
-
-#ifdef __GNUC__
+#ifndef __GNUC__
 __attribute__ ((section(".crp"))) const uint32_t CRP_WORD = CURRENT_CRP_SETTING;
 #endif
 #ifdef __IAR_SYSTEMS_ICC__

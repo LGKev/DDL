@@ -39,7 +39,7 @@ int main(void) {
 	  GPIOSetDir(LED_PORT_B, LED_BIT_B, 1 );
 	  GPIOSetValue(LED_PORT_B,LED_BIT_B,LED_OFF);
 	  /* Initialize ADC  */
-	   ADCInit( ADC_CLK );
+	   //ADCInit( ADC_CLK );
 
 	uint16_t arr[20];
 	    uint8_t i;
@@ -48,7 +48,7 @@ int main(void) {
 	        {
 	            arr[i] = GetFib(i+1);
 	            fibnum = arr[i];
-	            morse(fibnum);
+	            morse(50);
 	            //printf("%d \n",arr[i]);
 	        }
 
@@ -62,7 +62,7 @@ int main(void) {
 }
 
 
-uint16_t GetFib(uint16_t n)
+uint16_t GetFib(uint8_t n)
 {
   uint16_t arr[20];
   arr[0] = 1;
