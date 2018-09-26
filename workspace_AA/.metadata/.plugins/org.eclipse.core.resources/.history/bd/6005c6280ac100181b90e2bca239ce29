@@ -142,11 +142,6 @@ void morse(uint16_t fib)
             default:
                 return;
         }
-
-        if(incr == 0)
-        {
-        	return;
-        }
         incr--;
     }
 }

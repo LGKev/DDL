@@ -87,10 +87,9 @@ void morse(uint16_t fib)
         fib = fib/10;
         incr++;
     }
-    incr--;
     while(incr >= 0)
     {
-        switch(arr[incr])
+        switch(arr[incr-1])
         {
             case 0:
             	Long(5);
@@ -141,11 +140,6 @@ void morse(uint16_t fib)
 
             default:
                 return;
-        }
-
-        if(incr == 0)
-        {
-        	return;
         }
         incr--;
     }

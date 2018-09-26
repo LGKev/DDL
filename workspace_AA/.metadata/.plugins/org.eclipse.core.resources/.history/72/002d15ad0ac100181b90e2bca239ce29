@@ -94,58 +94,53 @@ void morse(uint16_t fib)
         {
             case 0:
             	Long(5);
-            break;
+            	break;
 
             case 1:
             	Short(1);
             	Long(4);
-            break;
+            	break;
 
             case 2:
             	Short(2);
             	Long(3);
-            break;
+            	break;
 
             case 3:
             	Short(3);
             	Long(2);
-            break;
+            	break;
             case 4:
             	Short(4);
             	Long(1);
-            break;
+            	break;
 
             case 5:
             	Short(5);
-            break;
+            	break;
 
             case 6:
             	Long(1);
             	Short(4);
-            break;
+            	break;
 
             case 7:
             	Long(2);
             	Short(3);
-            break;
+            	break;
 
             case 8:
             	Long(3);
             	Short(2);
-            break;
+            	break;
 
             case 9:
             	Long(4);
             	Short(1);
-            break;
+            	break;
 
             default:
-                return;
-        }
-
-        if(incr == 0)
-        {
-        	return;
+                break;
         }
         incr--;
     }
