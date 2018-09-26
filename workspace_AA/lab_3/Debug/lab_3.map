@@ -838,14 +838,14 @@ OUTPUT(lab_3.axf elf32-littlearm)
  .debug_macro   0x000017b5      0x13b C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
  .debug_macro   0x000018f0      0x83e C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000      0xfbe
+.debug_line     0x00000000      0xfc0
  .debug_line    0x00000000       0xba ./src/cr_startup_lpc11xx.o
  .debug_line    0x000000ba       0x78 ./src/crp.o
- .debug_line    0x00000132      0x387 ./src/main.o
- .debug_line    0x000004b9      0x2a0 ./driver/adc.o
- .debug_line    0x00000759      0x311 ./driver/gpio.o
- .debug_line    0x00000a6a      0x352 ./driver/timer32.o
- .debug_line    0x00000dbc      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_line    0x00000132      0x389 ./src/main.o
+ .debug_line    0x000004bb      0x2a0 ./driver/adc.o
+ .debug_line    0x0000075b      0x311 ./driver/gpio.o
+ .debug_line    0x00000a6c      0x352 ./driver/timer32.o
+ .debug_line    0x00000dbe      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
 .debug_str      0x00000000     0x6852
  .debug_str     0x00000000     0x250d ./src/cr_startup_lpc11xx.o

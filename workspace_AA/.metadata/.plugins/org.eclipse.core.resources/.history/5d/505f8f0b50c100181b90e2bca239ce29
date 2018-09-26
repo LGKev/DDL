@@ -58,6 +58,12 @@ int main(void) {
 	            //printf("%d \n",arr[i]);
 	        }
 
+    // Force the counter to be placed into memory
+    //volatile static int i = 0 ;
+    // Enter an infinite loop, just incrementing a counter
+    /*while(1) {
+        i++ ;
+    }*/
     return 0 ;
 }
 
@@ -82,11 +88,6 @@ void morse(uint16_t fib)
 {
     uint8_t incr = 0;
     uint8_t arr[4];
-    //array holding up to 4 digit numbers, numbers will be stored in reverse. to read correctly we must read backwards.
-    	//we could also fill the array backwards.
-
-    	//breaks the fib number given into its digits, into an Array
-    	// the array will be backwards representation of the actual fib_number
     while(fib > 0)
     {
         arr[incr] = fib % 10;
@@ -94,7 +95,7 @@ void morse(uint16_t fib)
         incr++;
     }
     //incr--;
-    while(incr != 0)// at this point we start with incr at end of the current number
+    while(incr != 0)
     {
         switch(arr[incr-1])
         {
