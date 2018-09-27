@@ -22,6 +22,17 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./startup/cr_startup_lpc11.o
  .data          0x0000000000000000        0x0 ./startup/cr_startup_lpc11.o
  .bss           0x0000000000000000        0x0 ./startup/cr_startup_lpc11.o
+ .text          0x0000000000000000       0x8c ./src/getFib.o
+ .data          0x0000000000000000        0x0 ./src/getFib.o
+ .bss           0x0000000000000000        0x0 ./src/getFib.o
+ .debug_line    0x0000000000000000       0x84 ./src/getFib.o
+ .debug_info    0x0000000000000000       0x26 ./src/getFib.o
+ .debug_abbrev  0x0000000000000000       0x14 ./src/getFib.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./src/getFib.o
+ .debug_str     0x0000000000000000       0x69 ./src/getFib.o
+ .ARM.attributes
+                0x0000000000000000       0x21 ./src/getFib.o
  .group         0x0000000000000000        0xc ./src/main_lab3.o
  .group         0x0000000000000000        0xc ./src/main_lab3.o
  .group         0x0000000000000000        0xc ./src/main_lab3.o
@@ -289,6 +300,7 @@ RamLoc8          0x0000000010000000 0x0000000000002000 xrw
 Linker script and memory map
 
 LOAD ./startup/cr_startup_lpc11.o
+LOAD ./src/getFib.o
 LOAD ./src/main_lab3.o
 LOAD ./driver/adc.o
 LOAD ./driver/crp.o
@@ -521,32 +533,32 @@ OUTPUT(adc.axf elf32-littlearm)
  .debug_ranges  0x00000000000000e8       0x50 ./driver/timer32.o
  .debug_ranges  0x0000000000000138       0x18 ./cmsis/system_LPC11xx.o
 
-.debug_macro    0x0000000000000000     0x1fe7
+.debug_macro    0x0000000000000000     0x1fec
  .debug_macro   0x0000000000000000       0x57 ./startup/cr_startup_lpc11.o
  .debug_macro   0x0000000000000057      0xa54 ./startup/cr_startup_lpc11.o
  .debug_macro   0x0000000000000aab       0x10 ./startup/cr_startup_lpc11.o
  .debug_macro   0x0000000000000abb      0x12d ./startup/cr_startup_lpc11.o
  .debug_macro   0x0000000000000be8      0x5b2 ./startup/cr_startup_lpc11.o
  .debug_macro   0x000000000000119a       0x87 ./startup/cr_startup_lpc11.o
- .debug_macro   0x0000000000001221       0x9d ./src/main_lab3.o
- .debug_macro   0x00000000000012be       0x1c ./src/main_lab3.o
- .debug_macro   0x00000000000012da       0x22 ./src/main_lab3.o
- .debug_macro   0x00000000000012fc      0x37a ./src/main_lab3.o
- .debug_macro   0x0000000000001676       0x8d ./src/main_lab3.o
- .debug_macro   0x0000000000001703      0x123 ./src/main_lab3.o
- .debug_macro   0x0000000000001826       0x28 ./src/main_lab3.o
- .debug_macro   0x000000000000184e       0x52 ./src/main_lab3.o
- .debug_macro   0x00000000000018a0       0x46 ./src/main_lab3.o
- .debug_macro   0x00000000000018e6       0x22 ./src/main_lab3.o
- .debug_macro   0x0000000000001908       0x88 ./driver/adc.o
- .debug_macro   0x0000000000001990       0x2e ./driver/adc.o
- .debug_macro   0x00000000000019be       0x46 ./driver/adc.o
- .debug_macro   0x0000000000001a04       0x88 ./driver/crp.o
- .debug_macro   0x0000000000001a8c       0x28 ./driver/crp.o
- .debug_macro   0x0000000000001ab4       0x79 ./driver/gpio.o
- .debug_macro   0x0000000000001b2d       0x79 ./driver/timer32.o
- .debug_macro   0x0000000000001ba6       0xa9 ./cmsis/system_LPC11xx.o
- .debug_macro   0x0000000000001c4f      0x398 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000001221       0xa2 ./src/main_lab3.o
+ .debug_macro   0x00000000000012c3       0x1c ./src/main_lab3.o
+ .debug_macro   0x00000000000012df       0x22 ./src/main_lab3.o
+ .debug_macro   0x0000000000001301      0x37a ./src/main_lab3.o
+ .debug_macro   0x000000000000167b       0x8d ./src/main_lab3.o
+ .debug_macro   0x0000000000001708      0x123 ./src/main_lab3.o
+ .debug_macro   0x000000000000182b       0x28 ./src/main_lab3.o
+ .debug_macro   0x0000000000001853       0x52 ./src/main_lab3.o
+ .debug_macro   0x00000000000018a5       0x46 ./src/main_lab3.o
+ .debug_macro   0x00000000000018eb       0x22 ./src/main_lab3.o
+ .debug_macro   0x000000000000190d       0x88 ./driver/adc.o
+ .debug_macro   0x0000000000001995       0x2e ./driver/adc.o
+ .debug_macro   0x00000000000019c3       0x46 ./driver/adc.o
+ .debug_macro   0x0000000000001a09       0x88 ./driver/crp.o
+ .debug_macro   0x0000000000001a91       0x28 ./driver/crp.o
+ .debug_macro   0x0000000000001ab9       0x79 ./driver/gpio.o
+ .debug_macro   0x0000000000001b32       0x79 ./driver/timer32.o
+ .debug_macro   0x0000000000001bab       0xa9 ./cmsis/system_LPC11xx.o
+ .debug_macro   0x0000000000001c54      0x398 ./cmsis/system_LPC11xx.o
 
 .debug_line     0x0000000000000000      0xebf
  .debug_line    0x0000000000000000      0x1cd ./startup/cr_startup_lpc11.o
