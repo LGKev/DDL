@@ -49,8 +49,7 @@ int main(void) {
 	    int fibnum;
 	    //fill up an array of pre-calculated fib numbers
 	    	//0th number is 1 and 3rd fib is 3.
-	    // the variable i in the for loop was messing up the registers in the
-	    //GetFib function so we just decided to spell out all the cases
+	    //int x = GetFib(1);
 	    arr[0] = GetFib(1);
 	    fibnum = arr[0];
 	    fibnum += 0;
