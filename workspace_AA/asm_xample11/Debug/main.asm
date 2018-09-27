@@ -122,13 +122,13 @@
  108              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\dell\AppData\Local\Temp\ccU40d0L.s:20     .text.sum:00000000 $t
-C:\Users\dell\AppData\Local\Temp\ccU40d0L.s:25     .text.sum:00000000 sum
-C:\Users\dell\AppData\Local\Temp\ccU40d0L.s:56     .text.main:00000000 $t
-C:\Users\dell\AppData\Local\Temp\ccU40d0L.s:61     .text.main:00000000 main
-C:\Users\dell\AppData\Local\Temp\ccU40d0L.s:99     .text.main:0000002c $d
-C:\Users\dell\AppData\Local\Temp\ccU40d0L.s:105    .bss:00000000 loop.3695
-C:\Users\dell\AppData\Local\Temp\ccU40d0L.s:104    .bss:00000000 $d
+C:\Users\dell\AppData\Local\Temp\ccfj8FXB.s:20     .text.sum:00000000 $t
+C:\Users\dell\AppData\Local\Temp\ccfj8FXB.s:25     .text.sum:00000000 sum
+C:\Users\dell\AppData\Local\Temp\ccfj8FXB.s:56     .text.main:00000000 $t
+C:\Users\dell\AppData\Local\Temp\ccfj8FXB.s:61     .text.main:00000000 main
+C:\Users\dell\AppData\Local\Temp\ccfj8FXB.s:99     .text.main:0000002c $d
+C:\Users\dell\AppData\Local\Temp\ccfj8FXB.s:105    .bss:00000000 loop.3695
+C:\Users\dell\AppData\Local\Temp\ccfj8FXB.s:104    .bss:00000000 $d
                      .debug_frame:00000010 $d
                            .group:00000000 wm4.0.935e200dcf4f236f804f4066baa4d700
 

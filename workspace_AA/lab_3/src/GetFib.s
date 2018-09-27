@@ -14,15 +14,26 @@
   		movs r3,#3
   		movs r4,#1
   		movs r5,#1
+
+  		//if input is 1 or 2
+  		cmp r1,r3
+  		blt END
   		LOOP:
   		adds r2,r5,r4
   		mov r4,r5
   		mov r5,r2
   		adds r3,r3,#1
-  		cmp     r3, r1
-        blt     LOOP
 
-  		mov r0,r2
+  		cmp     r3, r1
+        ble     LOOP
+		mov r0,r2
+  		//str
+  		b TERMINATE
+  		END:
+  		movs r0, #1
+  		b TERMINATE
+TERMINATE:
+
   		mov	sp, r7
   		add	sp, sp, #4
 		pop	{r7, pc}

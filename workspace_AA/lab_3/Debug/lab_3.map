@@ -635,10 +635,10 @@ END GROUP
                 0x00000300                PROVIDE (__CRP_WORD_END__, .)
                 0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
  *(.text*)
- .text          0x00000300       0x24 ./src/GetFib.o
+ .text          0x00000300       0x30 ./src/GetFib.o
                 0x00000300                GetFib
- .text.main     0x00000324       0xb8 ./src/main.o
-                0x00000324                main
+ .text.main     0x00000330       0xac ./src/main.o
+                0x00000330                main
  .text.morse    0x000003dc      0x130 ./src/main.o
                 0x000003dc                morse
  .text.Long     0x0000050c       0x64 ./src/main.o
@@ -808,35 +808,35 @@ OUTPUT(lab_3.axf elf32-littlearm)
  .comment       0x0000006e       0x6e c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
                                  0x6f (size before relaxing)
 
-.debug_line     0x00000000      0xfe1
- .debug_line    0x00000000       0x4e ./src/GetFib.o
- .debug_line    0x0000004e       0xba ./src/cr_startup_lpc11xx.o
- .debug_line    0x00000108       0x78 ./src/crp.o
- .debug_line    0x00000180      0x35c ./src/main.o
- .debug_line    0x000004dc      0x2a0 ./driver/adc.o
- .debug_line    0x0000077c      0x311 ./driver/gpio.o
- .debug_line    0x00000a8d      0x352 ./driver/timer32.o
- .debug_line    0x00000ddf      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_line     0x00000000      0xfe9
+ .debug_line    0x00000000       0x53 ./src/GetFib.o
+ .debug_line    0x00000053       0xba ./src/cr_startup_lpc11xx.o
+ .debug_line    0x0000010d       0x78 ./src/crp.o
+ .debug_line    0x00000185      0x35f ./src/main.o
+ .debug_line    0x000004e4      0x2a0 ./driver/adc.o
+ .debug_line    0x00000784      0x311 ./driver/gpio.o
+ .debug_line    0x00000a95      0x352 ./driver/timer32.o
+ .debug_line    0x00000de7      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_info     0x00000000     0x2656
+.debug_info     0x00000000     0x2679
  .debug_info    0x00000000       0x74 ./src/GetFib.o
  .debug_info    0x00000074      0x203 ./src/cr_startup_lpc11xx.o
  .debug_info    0x00000277       0x3f ./src/crp.o
- .debug_info    0x000002b6      0x2e5 ./src/main.o
- .debug_info    0x0000059b      0x9ec ./driver/adc.o
- .debug_info    0x00000f87      0x6fe ./driver/gpio.o
- .debug_info    0x00001685      0xb7b ./driver/timer32.o
- .debug_info    0x00002200      0x456 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_info    0x000002b6      0x308 ./src/main.o
+ .debug_info    0x000005be      0x9ec ./driver/adc.o
+ .debug_info    0x00000faa      0x6fe ./driver/gpio.o
+ .debug_info    0x000016a8      0xb7b ./driver/timer32.o
+ .debug_info    0x00002223      0x456 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_abbrev   0x00000000      0x946
+.debug_abbrev   0x00000000      0x94f
  .debug_abbrev  0x00000000       0x14 ./src/GetFib.o
  .debug_abbrev  0x00000014       0xe6 ./src/cr_startup_lpc11xx.o
  .debug_abbrev  0x000000fa       0x36 ./src/crp.o
- .debug_abbrev  0x00000130      0x160 ./src/main.o
- .debug_abbrev  0x00000290      0x1f6 ./driver/adc.o
- .debug_abbrev  0x00000486      0x1bb ./driver/gpio.o
- .debug_abbrev  0x00000641      0x1ff ./driver/timer32.o
- .debug_abbrev  0x00000840      0x106 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_abbrev  0x00000130      0x169 ./src/main.o
+ .debug_abbrev  0x00000299      0x1f6 ./driver/adc.o
+ .debug_abbrev  0x0000048f      0x1bb ./driver/gpio.o
+ .debug_abbrev  0x0000064a      0x1ff ./driver/timer32.o
+ .debug_abbrev  0x00000849      0x106 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
 .debug_aranges  0x00000000      0x1f0
  .debug_aranges
