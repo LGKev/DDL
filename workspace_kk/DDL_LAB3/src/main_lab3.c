@@ -21,9 +21,8 @@
 /******************************************************************************
  **   Main Function  main()
  ******************************************************************************/
-
 uint16_t getFib(uint8_t n);
-
+//extern uint16_t getFib(uint8_t n);
 /*
  *  input a fib number, this will parse number into an array (reversed order) 
  *  then will show the digit in morse code with blue and red led.
@@ -87,7 +86,7 @@ int main (void)
 #define betterDemo
 #ifdef betterDemo
 	while(1){
-		morse(fibArray[nth_Fib_number]);
+		morse(fibArray[nth_Fib_number- 1]);
 	}
 #endif
 
@@ -121,6 +120,8 @@ int main (void)
 /* ============================================================================================================  */
 /* ============================================================================================================  */
 
+#define c
+#ifdef c
 uint16_t getFib(uint8_t n)
 {
 	uint16_t arr[20];
@@ -134,7 +135,7 @@ uint16_t getFib(uint8_t n)
 	n = arr[n-1];
 	return n;
 }
-
+#endif
 
 
 void morse(uint16_t fib)
