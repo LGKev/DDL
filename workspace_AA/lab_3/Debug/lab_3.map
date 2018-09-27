@@ -11,6 +11,8 @@ c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/
 
 Discarded input sections
 
+ .data          0x00000000        0x0 ./src/GetFib.o
+ .bss           0x00000000        0x0 ./src/GetFib.o
  .group         0x00000000        0x8 ./src/cr_startup_lpc11xx.o
  .text          0x00000000        0x0 ./src/cr_startup_lpc11xx.o
  .data          0x00000000        0x0 ./src/cr_startup_lpc11xx.o
@@ -548,6 +550,7 @@ RamLoc8          0x10000000         0x00002000         xrw
 
 Linker script and memory map
 
+LOAD ./src/GetFib.o
 LOAD ./src/cr_startup_lpc11xx.o
 LOAD ./src/crp.o
 LOAD ./src/main.o
@@ -578,7 +581,7 @@ END GROUP
                 0x10002000                __top_RamLoc8 = 0x10002000
                 0x10002000                __top_RAM = 0x10002000
 
-.text           0x00000000      0xb34
+.text           0x00000000      0xaac
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -587,7 +590,7 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0xb34 LOADADDR (.data)
+                0x000000c0        0x4 LONG 0xaac LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000c8        0x4 LONG 0x4 SIZEOF (.data)
                 0x000000cc                __data_section_table_end = .
@@ -632,88 +635,88 @@ END GROUP
                 0x00000300                PROVIDE (__CRP_WORD_END__, .)
                 0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
  *(.text*)
- .text.main     0x00000300       0xcc ./src/main.o
-                0x00000300                main
- .text.GetFib   0x000003cc       0x98 ./src/main.o
-                0x000003cc                GetFib
- .text.morse    0x00000464      0x130 ./src/main.o
-                0x00000464                morse
- .text.Long     0x00000594       0x64 ./src/main.o
-                0x00000594                Long
- .text.Short    0x000005f8       0x64 ./src/main.o
-                0x000005f8                Short
+ .text          0x00000300       0x24 ./src/GetFib.o
+                0x00000300                GetFib
+ .text.main     0x00000324       0xb8 ./src/main.o
+                0x00000324                main
+ .text.morse    0x000003dc      0x130 ./src/main.o
+                0x000003dc                morse
+ .text.Long     0x0000050c       0x64 ./src/main.o
+                0x0000050c                Long
+ .text.Short    0x00000570       0x64 ./src/main.o
+                0x00000570                Short
  .text.ADC_IRQHandler
-                0x0000065c       0xe4 ./driver/adc.o
-                0x0000065c                ADC_IRQHandler
+                0x000005d4       0xe4 ./driver/adc.o
+                0x000005d4                ADC_IRQHandler
  .text.GPIOInit
-                0x00000740       0x20 ./driver/gpio.o
-                0x00000740                GPIOInit
+                0x000006b8       0x20 ./driver/gpio.o
+                0x000006b8                GPIOInit
  .text.GPIOSetValue
-                0x00000760       0x34 ./driver/gpio.o
-                0x00000760                GPIOSetValue
+                0x000006d8       0x34 ./driver/gpio.o
+                0x000006d8                GPIOSetValue
  .text.GPIOSetDir
-                0x00000794       0x70 ./driver/gpio.o
-                0x00000794                GPIOSetDir
+                0x0000070c       0x70 ./driver/gpio.o
+                0x0000070c                GPIOSetDir
  .text.NVIC_EnableIRQ
-                0x00000804       0x2c ./driver/timer32.o
+                0x0000077c       0x2c ./driver/timer32.o
  .text.TIMER32_0_IRQHandler
-                0x00000830       0x4c ./driver/timer32.o
-                0x00000830                TIMER32_0_IRQHandler
+                0x000007a8       0x4c ./driver/timer32.o
+                0x000007a8                TIMER32_0_IRQHandler
  .text.enable_timer32
-                0x0000087c       0x34 ./driver/timer32.o
-                0x0000087c                enable_timer32
+                0x000007f4       0x34 ./driver/timer32.o
+                0x000007f4                enable_timer32
  .text.init_timer32
-                0x000008b0      0x134 ./driver/timer32.o
-                0x000008b0                init_timer32
+                0x00000828      0x134 ./driver/timer32.o
+                0x00000828                init_timer32
  .text.SystemInit
-                0x000009e4       0x94 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
-                0x000009e4                SystemInit
+                0x0000095c       0x94 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+                0x0000095c                SystemInit
  .text.__weak_main
-                0x00000a78        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
-                0x00000a78                __weak_main
-                0x00000a78                __main
+                0x000009f0        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                0x000009f0                __weak_main
+                0x000009f0                __main
  .text.__aeabi_division_idivmod
-                0x00000a80       0x78 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
-                0x00000a80                __aeabi_idivmod
-                0x00000a80                __aeabi_idiv
-                0x00000a86                __aeabi_uidivmod
-                0x00000a86                __aeabi_uidiv
+                0x000009f8       0x78 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
+                0x000009f8                __aeabi_idivmod
+                0x000009f8                __aeabi_idiv
+                0x000009fe                __aeabi_uidivmod
+                0x000009fe                __aeabi_uidiv
  .text.__aeabi_division_idiv0
-                0x00000af8        0x2 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
-                0x00000af8                __aeabi_idiv0
+                0x00000a70        0x2 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x00000a70                __aeabi_idiv0
  *(.rodata .rodata.* .constdata .constdata.*)
- *fill*         0x00000afa        0x2 ff
- .rodata.morse  0x00000afc       0x28 ./src/main.o
+ *fill*         0x00000a72        0x2 ff
+ .rodata.morse  0x00000a74       0x28 ./src/main.o
  .rodata.LPC_GPIO
-                0x00000b24       0x10 ./driver/gpio.o
-                0x00000b34                . = ALIGN (0x4)
+                0x00000a9c       0x10 ./driver/gpio.o
+                0x00000aac                . = ALIGN (0x4)
 
-.glue_7         0x00000b34        0x0
- .glue_7        0x00000b34        0x0 linker stubs
+.glue_7         0x00000aac        0x0
+ .glue_7        0x00000aac        0x0 linker stubs
 
-.glue_7t        0x00000b34        0x0
- .glue_7t       0x00000b34        0x0 linker stubs
+.glue_7t        0x00000aac        0x0
+ .glue_7t       0x00000aac        0x0 linker stubs
 
-.vfp11_veneer   0x00000b34        0x0
- .vfp11_veneer  0x00000b34        0x0 linker stubs
+.vfp11_veneer   0x00000aac        0x0
+ .vfp11_veneer  0x00000aac        0x0 linker stubs
 
-.v4_bx          0x00000b34        0x0
- .v4_bx         0x00000b34        0x0 linker stubs
+.v4_bx          0x00000aac        0x0
+ .v4_bx         0x00000aac        0x0 linker stubs
 
-.iplt           0x00000b34        0x0
- .iplt          0x00000b34        0x0 ./src/cr_startup_lpc11xx.o
+.iplt           0x00000aac        0x0
+ .iplt          0x00000aac        0x0 ./src/GetFib.o
 
-.rel.dyn        0x00000b34        0x0
- .rel.iplt      0x00000b34        0x0 ./src/cr_startup_lpc11xx.o
+.rel.dyn        0x00000aac        0x0
+ .rel.iplt      0x00000aac        0x0 ./src/GetFib.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000b34                __exidx_start = .
+                0x00000aac                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000b34                __exidx_end = .
-                0x00000b34                _etext = .
+                0x00000aac                __exidx_end = .
+                0x00000aac                _etext = .
 
 .uninit_RESERVED
                 0x10000000        0x0
@@ -721,7 +724,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x4 load address 0x00000b34
+.data           0x10000000        0x4 load address 0x00000aac
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -733,10 +736,10 @@ END GROUP
                 0x10000004                . = ALIGN (0x4)
                 0x10000004                _edata = .
 
-.igot.plt       0x10000004        0x0 load address 0x00000b38
- .igot.plt      0x10000004        0x0 ./src/cr_startup_lpc11xx.o
+.igot.plt       0x10000004        0x0 load address 0x00000ab0
+ .igot.plt      0x10000004        0x0 ./src/GetFib.o
 
-.bss            0x10000004       0x30 load address 0x00000b38
+.bss            0x10000004       0x30 load address 0x00000ab0
                 0x10000004                _bss = .
  *(.bss*)
  .bss.ADCValue  0x10000004       0x20 ./driver/adc.o
@@ -758,7 +761,7 @@ END GROUP
                 0x10000034                _ebss = .
                 [!provide]                PROVIDE (end, .)
 
-.noinit         0x10000034        0x0 load address 0x00000b38
+.noinit         0x10000034        0x0 load address 0x00000ab0
                 0x10000034                _noinit = .
  *(.noinit*)
                 0x10000034                . = ALIGN (0x4)
@@ -768,47 +771,98 @@ END GROUP
                 0xefffdb1d                PROVIDE (__valid_user_code_checksum, (0x0 - (((_vStackTop + (ResetISR + 0x1)) + (DEFINED (NMI_Handler)?NMI_Handler:M0_NMI_Handler + 0x1)) + (DEFINED (HardFault_Handler)?HardFault_Handler:M0_HardFault_Handler + 0x1))))
 OUTPUT(lab_3.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x262e
- .debug_info    0x00000000      0x203 ./src/cr_startup_lpc11xx.o
- .debug_info    0x00000203       0x3f ./src/crp.o
- .debug_info    0x00000242      0x331 ./src/main.o
- .debug_info    0x00000573      0x9ec ./driver/adc.o
- .debug_info    0x00000f5f      0x6fe ./driver/gpio.o
- .debug_info    0x0000165d      0xb7b ./driver/timer32.o
- .debug_info    0x000021d8      0x456 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.ARM.attributes
+                0x00000000       0x2d
+ .ARM.attributes
+                0x00000000       0x21 ./src/GetFib.o
+ .ARM.attributes
+                0x00000021       0x31 ./src/cr_startup_lpc11xx.o
+ .ARM.attributes
+                0x00000052       0x31 ./src/crp.o
+ .ARM.attributes
+                0x00000083       0x31 ./src/main.o
+ .ARM.attributes
+                0x000000b4       0x31 ./driver/adc.o
+ .ARM.attributes
+                0x000000e5       0x31 ./driver/gpio.o
+ .ARM.attributes
+                0x00000116       0x31 ./driver/timer32.o
+ .ARM.attributes
+                0x00000147       0x31 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .ARM.attributes
+                0x00000178       0x31 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+ .ARM.attributes
+                0x000001a9       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
+ .ARM.attributes
+                0x000001ca       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
 
-.debug_abbrev   0x00000000      0x94e
- .debug_abbrev  0x00000000       0xe6 ./src/cr_startup_lpc11xx.o
- .debug_abbrev  0x000000e6       0x36 ./src/crp.o
- .debug_abbrev  0x0000011c      0x17c ./src/main.o
- .debug_abbrev  0x00000298      0x1f6 ./driver/adc.o
- .debug_abbrev  0x0000048e      0x1bb ./driver/gpio.o
- .debug_abbrev  0x00000649      0x1ff ./driver/timer32.o
- .debug_abbrev  0x00000848      0x106 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.comment        0x00000000       0xdc
+ .comment       0x00000000       0x6e ./src/cr_startup_lpc11xx.o
+                                 0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f ./src/crp.o
+ .comment       0x0000006e       0x6f ./src/main.o
+ .comment       0x0000006e       0x6f ./driver/adc.o
+ .comment       0x0000006e       0x6f ./driver/gpio.o
+ .comment       0x0000006e       0x6f ./driver/timer32.o
+ .comment       0x0000006e       0x6f C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .comment       0x0000006e       0x6e c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                                 0x6f (size before relaxing)
 
-.debug_aranges  0x00000000      0x1d8
- .debug_aranges
-                0x00000000       0x60 ./src/cr_startup_lpc11xx.o
- .debug_aranges
-                0x00000060       0x18 ./src/crp.o
- .debug_aranges
-                0x00000078       0x40 ./src/main.o
- .debug_aranges
-                0x000000b8       0x40 ./driver/adc.o
- .debug_aranges
-                0x000000f8       0x58 ./driver/gpio.o
- .debug_aranges
-                0x00000150       0x60 ./driver/timer32.o
- .debug_aranges
-                0x000001b0       0x28 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_line     0x00000000      0xfe1
+ .debug_line    0x00000000       0x4e ./src/GetFib.o
+ .debug_line    0x0000004e       0xba ./src/cr_startup_lpc11xx.o
+ .debug_line    0x00000108       0x78 ./src/crp.o
+ .debug_line    0x00000180      0x35c ./src/main.o
+ .debug_line    0x000004dc      0x2a0 ./driver/adc.o
+ .debug_line    0x0000077c      0x311 ./driver/gpio.o
+ .debug_line    0x00000a8d      0x352 ./driver/timer32.o
+ .debug_line    0x00000ddf      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_ranges   0x00000000      0x160
+.debug_info     0x00000000     0x2656
+ .debug_info    0x00000000       0x74 ./src/GetFib.o
+ .debug_info    0x00000074      0x203 ./src/cr_startup_lpc11xx.o
+ .debug_info    0x00000277       0x3f ./src/crp.o
+ .debug_info    0x000002b6      0x2e5 ./src/main.o
+ .debug_info    0x0000059b      0x9ec ./driver/adc.o
+ .debug_info    0x00000f87      0x6fe ./driver/gpio.o
+ .debug_info    0x00001685      0xb7b ./driver/timer32.o
+ .debug_info    0x00002200      0x456 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+
+.debug_abbrev   0x00000000      0x946
+ .debug_abbrev  0x00000000       0x14 ./src/GetFib.o
+ .debug_abbrev  0x00000014       0xe6 ./src/cr_startup_lpc11xx.o
+ .debug_abbrev  0x000000fa       0x36 ./src/crp.o
+ .debug_abbrev  0x00000130      0x160 ./src/main.o
+ .debug_abbrev  0x00000290      0x1f6 ./driver/adc.o
+ .debug_abbrev  0x00000486      0x1bb ./driver/gpio.o
+ .debug_abbrev  0x00000641      0x1ff ./driver/timer32.o
+ .debug_abbrev  0x00000840      0x106 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+
+.debug_aranges  0x00000000      0x1f0
+ .debug_aranges
+                0x00000000       0x20 ./src/GetFib.o
+ .debug_aranges
+                0x00000020       0x60 ./src/cr_startup_lpc11xx.o
+ .debug_aranges
+                0x00000080       0x18 ./src/crp.o
+ .debug_aranges
+                0x00000098       0x38 ./src/main.o
+ .debug_aranges
+                0x000000d0       0x40 ./driver/adc.o
+ .debug_aranges
+                0x00000110       0x58 ./driver/gpio.o
+ .debug_aranges
+                0x00000168       0x60 ./driver/timer32.o
+ .debug_aranges
+                0x000001c8       0x28 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+
+.debug_ranges   0x00000000      0x158
  .debug_ranges  0x00000000       0x50 ./src/cr_startup_lpc11xx.o
- .debug_ranges  0x00000050       0x30 ./src/main.o
- .debug_ranges  0x00000080       0x30 ./driver/adc.o
- .debug_ranges  0x000000b0       0x48 ./driver/gpio.o
- .debug_ranges  0x000000f8       0x50 ./driver/timer32.o
- .debug_ranges  0x00000148       0x18 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_ranges  0x00000050       0x28 ./src/main.o
+ .debug_ranges  0x00000078       0x30 ./driver/adc.o
+ .debug_ranges  0x000000a8       0x48 ./driver/gpio.o
+ .debug_ranges  0x000000f0       0x50 ./driver/timer32.o
+ .debug_ranges  0x00000140       0x18 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
 .debug_macro    0x00000000     0x212e
  .debug_macro   0x00000000       0x1d ./src/cr_startup_lpc11xx.o
@@ -838,73 +892,29 @@ OUTPUT(lab_3.axf elf32-littlearm)
  .debug_macro   0x000017b5      0x13b C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
  .debug_macro   0x000018f0      0x83e C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000      0xfc0
- .debug_line    0x00000000       0xba ./src/cr_startup_lpc11xx.o
- .debug_line    0x000000ba       0x78 ./src/crp.o
- .debug_line    0x00000132      0x389 ./src/main.o
- .debug_line    0x000004bb      0x2a0 ./driver/adc.o
- .debug_line    0x0000075b      0x311 ./driver/gpio.o
- .debug_line    0x00000a6c      0x352 ./driver/timer32.o
- .debug_line    0x00000dbe      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
-
-.debug_str      0x00000000     0x6852
+.debug_str      0x00000000     0x684b
  .debug_str     0x00000000     0x250d ./src/cr_startup_lpc11xx.o
                                0x2520 (size before relaxing)
  .debug_str     0x0000250d       0xe9 ./src/crp.o
                                0x2482 (size before relaxing)
- .debug_str     0x000025f6     0x344d ./src/main.o
-                               0x585b (size before relaxing)
- .debug_str     0x00005a43      0x7ae ./driver/adc.o
+ .debug_str     0x000025f6     0x3446 ./src/main.o
+                               0x5854 (size before relaxing)
+ .debug_str     0x00005a3c      0x7ae ./driver/adc.o
                                0x59fc (size before relaxing)
- .debug_str     0x000061f1       0xa5 ./driver/gpio.o
+ .debug_str     0x000061ea       0xa5 ./driver/gpio.o
                                0x5572 (size before relaxing)
- .debug_str     0x00006296      0x11d ./driver/timer32.o
+ .debug_str     0x0000628f      0x11d ./driver/timer32.o
                                0x5a39 (size before relaxing)
- .debug_str     0x000063b3      0x49f C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_str     0x000063ac      0x49f C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
                                0x5717 (size before relaxing)
 
-.comment        0x00000000       0xdc
- .comment       0x00000000       0x6e ./src/cr_startup_lpc11xx.o
-                                 0x6f (size before relaxing)
- .comment       0x0000006e       0x6f ./src/crp.o
- .comment       0x0000006e       0x6f ./src/main.o
- .comment       0x0000006e       0x6f ./driver/adc.o
- .comment       0x0000006e       0x6f ./driver/gpio.o
- .comment       0x0000006e       0x6f ./driver/timer32.o
- .comment       0x0000006e       0x6f C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .comment       0x0000006e       0x6e c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
-                                 0x6f (size before relaxing)
-
-.ARM.attributes
-                0x00000000       0x2f
- .ARM.attributes
-                0x00000000       0x31 ./src/cr_startup_lpc11xx.o
- .ARM.attributes
-                0x00000031       0x31 ./src/crp.o
- .ARM.attributes
-                0x00000062       0x31 ./src/main.o
- .ARM.attributes
-                0x00000093       0x31 ./driver/adc.o
- .ARM.attributes
-                0x000000c4       0x31 ./driver/gpio.o
- .ARM.attributes
-                0x000000f5       0x31 ./driver/timer32.o
- .ARM.attributes
-                0x00000126       0x31 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .ARM.attributes
-                0x00000157       0x31 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
- .ARM.attributes
-                0x00000188       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
- .ARM.attributes
-                0x000001a9       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
-
-.debug_frame    0x00000000      0x4ec
+.debug_frame    0x00000000      0x4cc
  .debug_frame   0x00000000      0x118 ./src/cr_startup_lpc11xx.o
- .debug_frame   0x00000118       0xb0 ./src/main.o
- .debug_frame   0x000001c8       0xac ./driver/adc.o
- .debug_frame   0x00000274      0x10c ./driver/gpio.o
- .debug_frame   0x00000380      0x12c ./driver/timer32.o
- .debug_frame   0x000004ac       0x40 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_frame   0x00000118       0x90 ./src/main.o
+ .debug_frame   0x000001a8       0xac ./driver/adc.o
+ .debug_frame   0x00000254      0x10c ./driver/gpio.o
+ .debug_frame   0x00000360      0x12c ./driver/timer32.o
+ .debug_frame   0x0000048c       0x40 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
 .debug_loc      0x00000000       0x84
  .debug_loc     0x00000000       0x84 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)

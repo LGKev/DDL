@@ -21,7 +21,7 @@
 #include "timer32.h"
 // TODO: insert other definitions and declarations here
 extern int GetFib(int n);
-//uint16_t GetFib(uint8_t n);
+uint16_t GetFib(uint8_t n);
 /*
  *  input a fib number, this will parse number into an array (reversed order)
  *  then will show the digit in morse code with long and short flashes.
@@ -46,7 +46,7 @@ int main(void) {
 
 	uint16_t arr[20];
 	    uint8_t i;
-	    int fibnum;
+	    uint16_t fibnum;
 	    //fill up an array of pre-calculated fib numbers
 	    	//0th number is 1 and 3rd fib is 3.
 	    for ( i = 0; i < 20; i++)

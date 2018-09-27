@@ -1,6 +1,6 @@
-22:05:05 **** Incremental Build of configuration Debug for project lab_3 ****
+14:19:39 **** Incremental Build of configuration Debug for project lab_3 ****
 make -r all 
 make: Nothing to be done for `all'.
 
-22:05:05 Build Finished (took 197ms)
+14:19:39 Build Finished (took 201ms)
 
