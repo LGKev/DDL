@@ -222,10 +222,10 @@ OUTPUT(asm_xample11.axf elf32-littlearm)
  .debug_line    0x0000004d       0xec ./src/cr_startup_lpc11.o
  .debug_line    0x00000139       0x56 ./src/main.o
 
-.debug_info     0x00000000      0x27c
- .debug_info    0x00000000       0x87 ./src/asm_sum_cm0.o
- .debug_info    0x00000087      0x14a ./src/cr_startup_lpc11.o
- .debug_info    0x000001d1       0xab ./src/main.o
+.debug_info     0x00000000      0x275
+ .debug_info    0x00000000       0x80 ./src/asm_sum_cm0.o
+ .debug_info    0x00000080      0x14a ./src/cr_startup_lpc11.o
+ .debug_info    0x000001ca       0xab ./src/main.o
 
 .debug_abbrev   0x00000000      0x177
  .debug_abbrev  0x00000000       0x14 ./src/asm_sum_cm0.o
@@ -249,11 +249,11 @@ OUTPUT(asm_xample11.axf elf32-littlearm)
  .debug_macro   0x0000001d      0x832 ./src/cr_startup_lpc11.o
  .debug_macro   0x0000084f       0x11 ./src/main.o
 
-.debug_str      0x00000000     0x247c
- .debug_str     0x00000000     0x2464 ./src/cr_startup_lpc11.o
-                               0x2472 (size before relaxing)
- .debug_str     0x00002464       0x18 ./src/main.o
-                               0x235f (size before relaxing)
+.debug_str      0x00000000     0x2475
+ .debug_str     0x00000000     0x245d ./src/cr_startup_lpc11.o
+                               0x246b (size before relaxing)
+ .debug_str     0x0000245d       0x18 ./src/main.o
+                               0x2358 (size before relaxing)
 
 .debug_frame    0x00000000      0x128
  .debug_frame   0x00000000       0xd8 ./src/cr_startup_lpc11.o
