@@ -14,6 +14,9 @@
 
 #include <cr_section_macros.h>
 
+
+/*
+ * */
 void GPIOInit(void);
 
 void TIMER32Init(void);
@@ -33,6 +36,13 @@ int main(void) {
     return 0 ;
 }
 
+void GPIOInit(void){
+
+}
+
+void TIMER32Init(void){
+
+}
 
 void PIOINT2_IRQHandler(void){
 
