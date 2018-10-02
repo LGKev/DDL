@@ -10817,3 +10817,116 @@ To terminate debug sessions, first select a debug session in the Debug View and 
 
 !ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:21:56.671
 !MESSAGE Telnet session connected on port 3330->46948 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:29:50.399
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:29:50.401
+!MESSAGE RedlinkServer telnet session connected on port 3025->58160 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:29:52.025
+!MESSAGE Telnet session connected on port 3330->46960 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2018-10-02 12:31:41.570
+!MESSAGE There is already a running debug session for the launch configuration 'DDL_Lab4 LinkServer Debug'.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:31:44.856
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@c581fad): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 12:31:44.856
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:32:35.986
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:32:35.988
+!MESSAGE RedlinkServer telnet session connected on port 3025->58170 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:32:37.625
+!MESSAGE Telnet session connected on port 3330->46970 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:34:58.650
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:34:58.655
+!MESSAGE RedlinkServer telnet session connected on port 3025->58180 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:35:00.311
+!MESSAGE Telnet session connected on port 3330->46980 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:36:20.163
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@64b2112): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 12:36:20.163
+!MESSAGE Invalid context type.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:36:20.855
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@45c37d4c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 12:36:20.855
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 4 -1 2018-10-02 12:36:21.847
+!MESSAGE Write failed: ProbeStatus
+!STACK 0
+java.lang.Exception: com.crt.debugcommon.emulator.client.RedlinkServerException: Write failed: ProbeStatus
+	at com.crt.utils.general.Reporter.log(Reporter.java:654)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.getProbeRefCount(RedlinkServerClient.java:511)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.possiblyExitAndShutdownServer(RedlinkServerClient.java:445)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.launchesTerminated(RedlinkServerClient.java:777)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:314)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1054)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch$2.run(DsfLaunch.java:52)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1110)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1091)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:440)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: com.crt.debugcommon.emulator.client.RedlinkServerException: Write failed: ProbeStatus
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.writeln(RedlinkServerClient.java:1275)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.send(RedlinkServerClient.java:1032)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1089)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.getProbeRefCount(RedlinkServerClient.java:490)
+	... 14 more
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:36:30.913
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:36:30.914
+!MESSAGE RedlinkServer telnet session connected on port 3025->58190 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:36:32.538
+!MESSAGE Telnet session connected on port 3330->46990 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-02 13:23:27.550
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 13:23:27.553
+!MESSAGE RedlinkServer telnet session connected on port 3025->58200 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 13:23:29.184
+!MESSAGE Telnet session connected on port 3330->47000 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-02 13:35:57.998
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 13:35:57.999
+!MESSAGE RedlinkServer telnet session connected on port 3025->58210 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 13:35:59.621
+!MESSAGE Telnet session connected on port 3330->47010 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 13:43:47.556
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@5e44d892): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 13:43:47.556
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-02 13:43:56.536
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 13:43:56.541
+!MESSAGE RedlinkServer telnet session connected on port 3025->58220 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 13:43:58.214
+!MESSAGE Telnet session connected on port 3330->47020 @ 127.0.0.1
