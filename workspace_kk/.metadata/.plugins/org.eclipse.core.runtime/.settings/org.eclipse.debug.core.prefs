@@ -2,4 +2,4 @@
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.attachLaunchType=org.eclipse.cdt.dsf.gdb.launch.attachCLaunch,debug,;
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.postmortemLaunchType=org.eclipse.cdt.dsf.gdb.launch.coreCLaunch,debug,;
 eclipse.preferences.version=1
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="fibArray"/>\n</watchExpressions>\n
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="LPC_GPIO0_LED"/>\n<expression enabled\="true" text\="LPC_GPIO0 -&gt; DATA"/>\n<expression enabled\="true" text\="LPC_GPIO0 -&gt; DIR"/>\n<expression enabled\="true" text\="LPC_IOCON -&gt; PIO0_7"/>\n</watchExpressions>\n
