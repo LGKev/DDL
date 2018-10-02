@@ -10759,3 +10759,61 @@ java.lang.IllegalArgumentException: Index out of bounds
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:19:13.608
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:19:13.612
+!MESSAGE RedlinkServer telnet session connected on port 3025->58126 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:19:13.659
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@144a65aa): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Given context: (gdb[2].proc[42000].threadGroup[i1],gdb[2].proc[42000].OSthread[1]).thread[1], is already suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 12:19:13.660
+!MESSAGE Given context: (gdb[2].proc[42000].threadGroup[i1],gdb[2].proc[42000].OSthread[1]).thread[1], is already suspended.
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:19:23.331
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:19:23.333
+!MESSAGE RedlinkServer telnet session connected on port 3025->58128 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:19:25.000
+!MESSAGE Telnet session connected on port 3330->46928 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:19:26.492
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@1d3ab2e4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Given context: (gdb[3].proc[42000].threadGroup[i1],gdb[3].proc[42000].OSthread[1]).thread[1], is already running. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-10-02 12:19:26.492
+!MESSAGE Given context: (gdb[3].proc[42000].threadGroup[i1],gdb[3].proc[42000].OSthread[1]).thread[1], is already running.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:20:33.430
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7c66e7b3): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 12:20:33.430
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.dsfdebug 2 0 2018-10-02 12:20:35.225
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:20:45.407
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:20:45.409
+!MESSAGE RedlinkServer telnet session connected on port 3025->58138 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:20:47.051
+!MESSAGE Telnet session connected on port 3330->46938 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:21:21.367
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@ae73665): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 12:21:21.367
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:21:54.978
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:21:54.980
+!MESSAGE RedlinkServer telnet session connected on port 3025->58148 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:21:56.671
+!MESSAGE Telnet session connected on port 3330->46948 @ 127.0.0.1

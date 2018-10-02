@@ -146,6 +146,9 @@ void TIMER32Init(void){
 
 //gloabl
 uint8_t toggle = 0;
+
+
+//TODO: the gpio interrupt handler will most likely set MAtch 1 and 0 values. 
 void PIOINT2_IRQHandler(void){
 
 	//clear the flag, check the flag, light an led
@@ -168,21 +171,34 @@ void PIOINT2_IRQHandler(void){
 }
 
 
+// global
+
+uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
 void TIMER32_0_IRQHandler(void){
 
 	//check which source fired
-	if(LPC_TMR32B0 -> IR |= (1<<0)){
+	if(LPC_TMR32B0 -> IR |= (1<<0)){ //match0
 		//clear interrupt
 		LPC_TMR32B0 -> IR &= ~(1<<0);
 
-		if(toggle == 0){
-		LPC_GPIO0 -> DATA &= ~LED_G_P0_8; //on
-		toggle = 1;
-		}
-		else{
-		LPC_GPIO0-> DATA |= LED_G_P0_8; //off
-		toggle = 0;
-		}
-	}
 
+		if(quartlet == 0){
+		LPC_GPIO0 -> DATA &= ~LED_G_P0_8; //on
+		quartlet++;
+		return;
+		}
+		
+		if(quartlet >= 1){
+		LPC_GPIO0-> DATA |= LED_G_P0_8; //off
+		quartlet++;
+			if(quartlet == 5){
+				quartlet = 0;//reset get ready to turn led back on.
+				return;
+			}	
+		}
+	} //end of match0
+	if(LPC_TMR32B0 -> IR |= (1<<1)){ //match1
+		LPC_TMR32B0 -> IR &= ~(1<<1); //clear flag
+		return;
+	}//end of match1
 }
