@@ -8,7 +8,6 @@ C_SRCS += \
 ../driver/can.c \
 ../driver/clkconfig.c \
 ../driver/crp.c \
-../driver/gpio.c \
 ../driver/i2c.c \
 ../driver/i2cslave.c \
 ../driver/lpc_swu.c \
@@ -16,7 +15,6 @@ C_SRCS += \
 ../driver/small_gpio.c \
 ../driver/ssp.c \
 ../driver/timer16.c \
-../driver/timer32.c \
 ../driver/uart.c \
 ../driver/wdt.c 
 
@@ -25,7 +23,6 @@ OBJS += \
 ./driver/can.o \
 ./driver/clkconfig.o \
 ./driver/crp.o \
-./driver/gpio.o \
 ./driver/i2c.o \
 ./driver/i2cslave.o \
 ./driver/lpc_swu.o \
@@ -33,7 +30,6 @@ OBJS += \
 ./driver/small_gpio.o \
 ./driver/ssp.o \
 ./driver/timer16.o \
-./driver/timer32.o \
 ./driver/uart.o \
 ./driver/wdt.o 
 
@@ -42,7 +38,6 @@ C_DEPS += \
 ./driver/can.d \
 ./driver/clkconfig.d \
 ./driver/crp.d \
-./driver/gpio.d \
 ./driver/i2c.d \
 ./driver/i2cslave.d \
 ./driver/lpc_swu.d \
@@ -50,7 +45,6 @@ C_DEPS += \
 ./driver/small_gpio.d \
 ./driver/ssp.d \
 ./driver/timer16.d \
-./driver/timer32.d \
 ./driver/uart.d \
 ./driver/wdt.d 
 

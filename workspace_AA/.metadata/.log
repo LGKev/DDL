@@ -2012,3 +2012,13 @@ To terminate debug sessions, first select a debug session in the Debug View and 
 
 !ENTRY org.eclipse.cdt.core 1 0 2018-10-02 13:09:22.892
 !MESSAGE Indexed 'lab4' (1 sources, 0 headers) in 0.063 sec: 91 declarations; 111 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.dsfdebug 2 0 2018-10-02 14:42:48.115
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.dsfdebug 2 0 2018-10-02 14:51:03.337
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.

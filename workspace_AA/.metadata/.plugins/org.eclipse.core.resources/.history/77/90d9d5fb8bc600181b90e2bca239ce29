@@ -22,9 +22,8 @@
 void GPIOInit(void) {
 
     /* Your code here */
-
-	LPC_GPIO0 -> DIR = 0b1000000;
-	LPC_GPIO0 -> DATA &=~ 0b1000000;
+	LPC_GPIO -> DIR = 0b1000000;
+	LPC_GPIO -> DATA = 0b1000000;
 
 
 }

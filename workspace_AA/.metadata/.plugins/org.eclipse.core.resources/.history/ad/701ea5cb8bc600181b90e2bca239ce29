@@ -23,10 +23,6 @@ void GPIOInit(void) {
 
     /* Your code here */
 
-	LPC_GPIO0 -> DIR = 0b1000000;
-	LPC_GPIO0 -> DATA &=~ 0b1000000;
-
-
 }
 
 /* TIMER32 and TIMER32 Interrupt Initialization */
@@ -54,7 +50,7 @@ int main(void) {
 
     /* Initialization code */
     GPIOInit();                   // Initialize GPIO ports for both Interrupts and LED control
-    //TIMERInit();                // Initialize Timer and Generate a 1ms interrupt
+    TIMERInit();                // Initialize Timer and Generate a 1ms interrupt
 
     /* Infinite looping */
     while(1);

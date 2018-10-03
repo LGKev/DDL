@@ -89,7 +89,7 @@
 					<sourceEntries>
 						<entry excluding="config|driver|inc|src" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="config"/>
-						<entry excluding="debug_printf.c|debug_printf.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="driver"/>
+						<entry excluding="debug_printf.c|debug_printf.h|gpio.c|gpio.h|timer32.c|timer32.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="driver"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
