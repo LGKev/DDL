@@ -61,9 +61,13 @@ void PIOINT2_IRQHandler(void);
 void TIMER32_0_IRQHandler(void);
 
 
+void sysTickInit(void);
+
+
 int main(void) {
 
 	GPIOInit();
+	sysTickInit(); //enable the systick
 	//TIMER32Init();
 
 
@@ -146,9 +150,22 @@ void TIMER32Init(void){
 	NVIC_EnableIRQ(TIMER_32_0_IRQn); //timer32b timer0 interrupt
 }
 
+
+void sysTickInit(void){
+	SysTick -> LOAD = 12000000;
+	SysTick -> CTRL |= (1<<0) | (1<<2); // enable, and use system clock no div (fastest)
+	//enable
+
+}
+
+
+
 //gloabl
 uint8_t toggle = 0;
-
+uint8_t zeroCrossing = 0;
+uint32_t startTime;
+uint32_t endTime;
+uint32_t elapsedTime;
 
 //TODO: the gpio interrupt handler will most likely set MAtch 1 and 0 values. 
 void PIOINT2_IRQHandler(void){
@@ -161,15 +178,32 @@ void PIOINT2_IRQHandler(void){
 		/*TODO: logic for timing */
 		//could we just use system tick here? and get the difference?
 
-		if(toggle == 0){
-		LPC_GPIO0 -> DATA &= ~LED_B_P0_9; //on
-		toggle = 1;
+		if(zeroCrossing == 0){
+			LPC_GPIO0 -> DATA &= ~LED_B_P0_9; //on
+			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
+			startTime = SysTick -> VAL;
+			zeroCrossing++;
+			LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
+			return;
 		}
-		else{
-		LPC_GPIO0 -> DATA |= LED_B_P0_9; //on
-		toggle = 0;
+
+
+		if(zeroCrossing == 1){
+		endTime = SysTick -> VAL;
+			LPC_GPIO0 -> DATA |= LED_B_P0_9; // turn off blue led
+			LPC_GPIO0 -> DATA &= ~LED_R_P0_7; // turn off blue led
+
+			if(endTime > startTime){ // over flowed.
+				elapsedTime = endTime - startTime;
+				zeroCrossing = 0;
+				return;
+			}
+			else{   //normal
+				elapsedTime = startTime - endTime;
+				zeroCrossing = 0;
+				return;
+			}
 		}
-	}
 }
 
 

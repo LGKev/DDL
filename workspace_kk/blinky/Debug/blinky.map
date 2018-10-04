@@ -68,7 +68,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/adc.o
  .debug_macro   0x0000000000000000       0x22 ./driver/adc.o
  .debug_line    0x0000000000000000      0x145 ./driver/adc.o
- .debug_str     0x0000000000000000     0x629f ./driver/adc.o
+ .debug_str     0x0000000000000000     0x62a2 ./driver/adc.o
  .comment       0x0000000000000000       0x7f ./driver/adc.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/adc.o
@@ -101,7 +101,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/can.o
  .debug_macro   0x0000000000000000       0x22 ./driver/can.o
  .debug_line    0x0000000000000000      0x145 ./driver/can.o
- .debug_str     0x0000000000000000     0x629f ./driver/can.o
+ .debug_str     0x0000000000000000     0x62a2 ./driver/can.o
  .comment       0x0000000000000000       0x7f ./driver/can.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/can.o
@@ -134,7 +134,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/clkconfig.o
  .debug_macro   0x0000000000000000       0x22 ./driver/clkconfig.o
  .debug_line    0x0000000000000000      0x14b ./driver/clkconfig.o
- .debug_str     0x0000000000000000     0x62a5 ./driver/clkconfig.o
+ .debug_str     0x0000000000000000     0x62a8 ./driver/clkconfig.o
  .comment       0x0000000000000000       0x7f ./driver/clkconfig.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/clkconfig.o
@@ -192,7 +192,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/debug_printf.o
  .debug_macro   0x0000000000000000       0x22 ./driver/debug_printf.o
  .debug_line    0x0000000000000000      0x14e ./driver/debug_printf.o
- .debug_str     0x0000000000000000     0x62a8 ./driver/debug_printf.o
+ .debug_str     0x0000000000000000     0x62ab ./driver/debug_printf.o
  .comment       0x0000000000000000       0x7f ./driver/debug_printf.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/debug_printf.o
@@ -260,7 +260,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/i2c.o
  .debug_macro   0x0000000000000000       0x22 ./driver/i2c.o
  .debug_line    0x0000000000000000      0x145 ./driver/i2c.o
- .debug_str     0x0000000000000000     0x629f ./driver/i2c.o
+ .debug_str     0x0000000000000000     0x62a2 ./driver/i2c.o
  .comment       0x0000000000000000       0x7f ./driver/i2c.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/i2c.o
@@ -293,7 +293,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/i2cslave.o
  .debug_macro   0x0000000000000000       0x22 ./driver/i2cslave.o
  .debug_line    0x0000000000000000      0x14a ./driver/i2cslave.o
- .debug_str     0x0000000000000000     0x62a4 ./driver/i2cslave.o
+ .debug_str     0x0000000000000000     0x62a7 ./driver/i2cslave.o
  .comment       0x0000000000000000       0x7f ./driver/i2cslave.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/i2cslave.o
@@ -326,7 +326,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/lpc_swu.o
  .debug_macro   0x0000000000000000       0x22 ./driver/lpc_swu.o
  .debug_line    0x0000000000000000      0x149 ./driver/lpc_swu.o
- .debug_str     0x0000000000000000     0x62a3 ./driver/lpc_swu.o
+ .debug_str     0x0000000000000000     0x62a6 ./driver/lpc_swu.o
  .comment       0x0000000000000000       0x7f ./driver/lpc_swu.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/lpc_swu.o
@@ -359,7 +359,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/rs485.o
  .debug_macro   0x0000000000000000       0x22 ./driver/rs485.o
  .debug_line    0x0000000000000000      0x147 ./driver/rs485.o
- .debug_str     0x0000000000000000     0x62a1 ./driver/rs485.o
+ .debug_str     0x0000000000000000     0x62a4 ./driver/rs485.o
  .comment       0x0000000000000000       0x7f ./driver/rs485.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/rs485.o
@@ -392,7 +392,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/small_gpio.o
  .debug_macro   0x0000000000000000       0x22 ./driver/small_gpio.o
  .debug_line    0x0000000000000000      0x14c ./driver/small_gpio.o
- .debug_str     0x0000000000000000     0x62a6 ./driver/small_gpio.o
+ .debug_str     0x0000000000000000     0x62a9 ./driver/small_gpio.o
  .comment       0x0000000000000000       0x7f ./driver/small_gpio.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/small_gpio.o
@@ -425,7 +425,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/ssp.o
  .debug_macro   0x0000000000000000       0x22 ./driver/ssp.o
  .debug_line    0x0000000000000000      0x145 ./driver/ssp.o
- .debug_str     0x0000000000000000     0x629f ./driver/ssp.o
+ .debug_str     0x0000000000000000     0x62a2 ./driver/ssp.o
  .comment       0x0000000000000000       0x7f ./driver/ssp.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/ssp.o
@@ -458,7 +458,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/timer16.o
  .debug_macro   0x0000000000000000       0x22 ./driver/timer16.o
  .debug_line    0x0000000000000000      0x156 ./driver/timer16.o
- .debug_str     0x0000000000000000     0x62b0 ./driver/timer16.o
+ .debug_str     0x0000000000000000     0x62b3 ./driver/timer16.o
  .comment       0x0000000000000000       0x7f ./driver/timer16.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/timer16.o
@@ -530,7 +530,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/uart.o
  .debug_macro   0x0000000000000000       0x22 ./driver/uart.o
  .debug_line    0x0000000000000000      0x146 ./driver/uart.o
- .debug_str     0x0000000000000000     0x62a0 ./driver/uart.o
+ .debug_str     0x0000000000000000     0x62a3 ./driver/uart.o
  .comment       0x0000000000000000       0x7f ./driver/uart.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/uart.o
@@ -563,7 +563,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/wdt.o
  .debug_macro   0x0000000000000000       0x22 ./driver/wdt.o
  .debug_line    0x0000000000000000      0x14e ./driver/wdt.o
- .debug_str     0x0000000000000000     0x62a8 ./driver/wdt.o
+ .debug_str     0x0000000000000000     0x62ab ./driver/wdt.o
  .comment       0x0000000000000000       0x7f ./driver/wdt.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/wdt.o
@@ -605,7 +605,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x12d ./cmsis/core_cm0.o
  .debug_macro   0x0000000000000000      0x5b2 ./cmsis/core_cm0.o
  .debug_line    0x0000000000000000      0x1c2 ./cmsis/core_cm0.o
- .debug_str     0x0000000000000000     0x444e ./cmsis/core_cm0.o
+ .debug_str     0x0000000000000000     0x4451 ./cmsis/core_cm0.o
  .comment       0x0000000000000000       0x7f ./cmsis/core_cm0.o
  .debug_frame   0x0000000000000000       0xc0 ./cmsis/core_cm0.o
  .ARM.attributes
@@ -901,19 +901,19 @@ OUTPUT(blinky.axf elf32-littlearm)
  .debug_line    0x000000000000072a      0x2c0 ./driver/timer32.o
  .debug_line    0x00000000000009ea      0x1c5 ./cmsis/system_LPC11xx.o
 
-.debug_str      0x0000000000000000     0x706f
- .debug_str     0x0000000000000000     0x45b9 ./startup/cr_startup_lpc11.o
-                                       0x4644 (size before relaxing)
- .debug_str     0x00000000000045b9     0x1f32 ./src/blinky_main.o
-                                       0x645c (size before relaxing)
- .debug_str     0x00000000000064eb       0xbf ./driver/crp.o
-                                       0x634e (size before relaxing)
- .debug_str     0x00000000000065aa      0x337 ./driver/gpio.o
-                                       0x6631 (size before relaxing)
- .debug_str     0x00000000000068e1      0x4ae ./driver/timer32.o
-                                       0x6a99 (size before relaxing)
- .debug_str     0x0000000000006d8f      0x2e0 ./cmsis/system_LPC11xx.o
-                                       0x66ad (size before relaxing)
+.debug_str      0x0000000000000000     0x7072
+ .debug_str     0x0000000000000000     0x45bc ./startup/cr_startup_lpc11.o
+                                       0x4647 (size before relaxing)
+ .debug_str     0x00000000000045bc     0x1f32 ./src/blinky_main.o
+                                       0x645f (size before relaxing)
+ .debug_str     0x00000000000064ee       0xbf ./driver/crp.o
+                                       0x6351 (size before relaxing)
+ .debug_str     0x00000000000065ad      0x337 ./driver/gpio.o
+                                       0x6634 (size before relaxing)
+ .debug_str     0x00000000000068e4      0x4ae ./driver/timer32.o
+                                       0x6a9c (size before relaxing)
+ .debug_str     0x0000000000006d92      0x2e0 ./cmsis/system_LPC11xx.o
+                                       0x66b0 (size before relaxing)
 
 .comment        0x0000000000000000       0x7e
  .comment       0x0000000000000000       0x7e ./startup/cr_startup_lpc11.o

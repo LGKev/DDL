@@ -1,6 +1,40 @@
-14:44:46 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+13:19:10 **** Build of configuration Lib for project lib_small_printf_m0 ****
 make -r all 
-make: Nothing to be done for 'all'.
+Building file: ../src/small_printf_float.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_printf_float.d" -MT"src/small_printf_float.o" -MT"src/small_printf_float.d" -o "src/small_printf_float.o" "../src/small_printf_float.c"
+Finished building: ../src/small_printf_float.c
+ 
+Building file: ../src/small_printf_nofloat.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_printf_nofloat.d" -MT"src/small_printf_nofloat.o" -MT"src/small_printf_nofloat.d" -o "src/small_printf_nofloat.o" "../src/small_printf_nofloat.c"
+Finished building: ../src/small_printf_nofloat.c
+ 
+Building file: ../src/small_printf_support.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_printf_support.d" -MT"src/small_printf_support.o" -MT"src/small_printf_support.d" -o "src/small_printf_support.o" "../src/small_printf_support.c"
+Finished building: ../src/small_printf_support.c
+ 
+Building file: ../src/small_utils.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/lib_small_printf_m0/inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_utils.d" -MT"src/small_utils.o" -MT"src/small_utils.d" -o "src/small_utils.o" "../src/small_utils.c"
+Finished building: ../src/small_utils.c
+ 
+Building target: liblib_small_printf_m0.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblib_small_printf_m0.a"  ./src/small_printf_float.o ./src/small_printf_nofloat.o ./src/small_printf_support.o ./src/small_utils.o   
+arm-none-eabi-ar: creating liblib_small_printf_m0.a
+Finished building target: liblib_small_printf_m0.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size liblib_small_printf_m0.a ; # arm-none-eabi-objdump -h -S liblib_small_printf_m0.a >liblib_small_printf_m0.lss
+   text	   data	    bss	    dec	    hex	filename
+    841	      0	     81	    922	    39a	small_printf_float.o (ex liblib_small_printf_m0.a)
+    429	      0	      0	    429	    1ad	small_printf_nofloat.o (ex liblib_small_printf_m0.a)
+    348	      0	     12	    360	    168	small_printf_support.o (ex liblib_small_printf_m0.a)
+    292	      0	      0	    292	    124	small_utils.o (ex liblib_small_printf_m0.a)
+ 
 
-14:44:47 Build Finished (took 735ms)
+13:19:11 Build Finished (took 1s.101ms)
 
