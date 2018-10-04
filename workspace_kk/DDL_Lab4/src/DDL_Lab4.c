@@ -95,6 +95,8 @@ void GPIOInit(void){
 	LPC_GPIO2 -> IEV |= PIN2_1; // set rising EDGE
 	LPC_GPIO2 -> IE |= PIN2_1; // do not mask.
 
+
+	LPC_GPIO2 -> IC = 0xFFF; //12 1's
 	// TODO: need to register with the NVIC
 	  NVIC_EnableIRQ(EINT2_IRQn); //port2 external interrupt
 	// TODO: enable global interrupts
@@ -166,6 +168,38 @@ uint8_t zeroCrossing = 0;
 uint32_t startTime;
 uint32_t endTime;
 uint32_t elapsedTime;
+void PIOINT2_IRQHandler(void){
+
+	//clear the flag, check the flag, light an led
+	if(LPC_GPIO2 -> MIS & 0b10){
+		//interrupt happened, clear that bit
+
+		LPC_GPIO2 -> IC = 0b10; //1 to the clear register clears that bit
+		/*TODO: logic for timing */
+		//could we just use system tick here? and get the difference?
+
+		if(zeroCrossing == 1){
+		endTime = SysTick -> VAL;
+			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
+			LPC_GPIO0 -> DATA |= LED_B_P0_9; // turn off blue led
+			LPC_GPIO0 -> DATA &= ~LED_B_P0_9; // turn off blue led
+			zeroCrossing = 0;
+			return;
+		}
+
+		if(zeroCrossing == 0){
+			LPC_GPIO0 -> DATA |= LED_B_P0_9;
+			LPC_GPIO0 -> DATA |= LED_R_P0_7;
+			LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
+			startTime = SysTick -> VAL;
+			zeroCrossing = 1;
+			return;
+		}
+
+	}
+}
+
+#ifdef GPIO_FULL_INTERRUPT
 
 //TODO: the gpio interrupt handler will most likely set MAtch 1 and 0 values. 
 void PIOINT2_IRQHandler(void){
@@ -204,13 +238,17 @@ void PIOINT2_IRQHandler(void){
 				return;
 			}
 		}
-}
 
+	}
+}
+#endif
 
 // global
 
 uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
-uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt!
+uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
+#define FULL_INTERRUPT
+#ifdef FULL_INTERRUPT
 void TIMER32_0_IRQHandler(void){
 
 	//check which source fired
@@ -264,3 +302,4 @@ void TIMER32_0_IRQHandler(void){
 		return;
 	}//end of match1
 }
+#endif
