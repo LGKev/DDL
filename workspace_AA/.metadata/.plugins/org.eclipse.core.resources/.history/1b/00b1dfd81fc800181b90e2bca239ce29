@@ -27,8 +27,6 @@ void GPIOInit(void) {
 	LPC_GPIO0 -> DIR = 0xFFF;
 	LPC_GPIO0 -> DATA = 0x000;
 
-	LPC_GPIO2 -> DIR = 0x000;
-
 
 }
 

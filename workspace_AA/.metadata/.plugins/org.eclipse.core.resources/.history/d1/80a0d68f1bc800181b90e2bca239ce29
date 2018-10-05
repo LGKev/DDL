@@ -24,10 +24,8 @@ void GPIOInit(void) {
     /* Your code here */
 	LPC_SYSCON -> SYSAHBCLKCTRL |= (1<<6) | (1 << 16);
 	LPC_IOCON -> PIO0_7 = 0xd0;
-	LPC_GPIO0 -> DIR = 0xFFF;
-	LPC_GPIO0 -> DATA = 0x000;
-
-	LPC_GPIO2 -> DIR = 0x000;
+	LPC_GPIO0 -> DIR = 0b1000000;
+	LPC_GPIO0 -> DATA = 0b0111111;
 
 
 }
