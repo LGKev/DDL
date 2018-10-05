@@ -61,10 +61,14 @@ void PIOINT2_IRQHandler(void);
 void TIMER32_0_IRQHandler(void);
 
 
+void sysTickInit(void);
+
+
 int main(void) {
 
 	GPIOInit();
-	TIMER32Init();
+	sysTickInit(); //enable the systick
+	//TIMER32Init();
 
 
 	while(1){
@@ -83,13 +87,16 @@ void GPIOInit(void){
 
 	//iocon_piio2.1 interrupt, probably want pulldown.
 	// 31:11 reserved.
-	//10-0: 00011001000 (binary): hex: 003020
-	LPC_IOCON -> PIO2_1 = 0x003020; //gpio, pull down, no hysterisis, standar gpio
+	//10-0: 00011001000 (binary): hex: 0C8
+	LPC_IOCON -> PIO2_1 = 0xC8; //gpio, pull down, no hysterisis, standar gpio
 	LPC_GPIO2 -> DIR &= ~PIN2_1; //only pin2 is an input! 0 is input 1 is output
 	LPC_GPIO2 -> IS &= ~PIN2_1; //edge triggered, i think that is the rising case...
 	LPC_GPIO2 -> IBE &= ~PIN2_1; //default should be fine, but never too careful
 	LPC_GPIO2 -> IEV |= PIN2_1; // set rising EDGE
+	LPC_GPIO2 -> IE |= PIN2_1; // do not mask.
 
+
+	LPC_GPIO2 -> IC = 0xFFF; //12 1's
 	// TODO: need to register with the NVIC
 	  NVIC_EnableIRQ(EINT2_IRQn); //port2 external interrupt
 	// TODO: enable global interrupts
@@ -140,13 +147,59 @@ void TIMER32Init(void){
 	LPC_TMR32B0 -> MCR |= (1<<1); // enable reset for TMR32b0, when match0
 	LPC_TMR32B0 -> MCR |= (1<<0); // enable interrupt for TMR32b0, when match0
 	LPC_TMR32B0 -> MR0 = 12000000; //value we count up to
+	LPC_TMR32B0 -> MR1 = 24000000; //value we count up to
 
 	NVIC_EnableIRQ(TIMER_32_0_IRQn); //timer32b timer0 interrupt
 }
 
+
+void sysTickInit(void){
+	SysTick -> LOAD = 12000000;
+	SysTick -> CTRL |= (1<<0) | (1<<2); // enable, and use system clock no div (fastest)
+	//enable
+
+}
+
+
+
 //gloabl
 uint8_t toggle = 0;
+uint8_t zeroCrossing = 0;
+uint32_t startTime;
+uint32_t endTime;
+uint32_t elapsedTime;
+void PIOINT2_IRQHandler(void){
 
+	//clear the flag, check the flag, light an led
+	if(LPC_GPIO2 -> MIS & 0b10){
+		//interrupt happened, clear that bit
+
+		LPC_GPIO2 -> IC = 0b10; //1 to the clear register clears that bit
+		/*TODO: logic for timing */
+		//could we just use system tick here? and get the difference?
+
+		if(zeroCrossing == 1){
+		endTime = SysTick -> VAL;
+			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
+			LPC_GPIO0 -> DATA |= LED_B_P0_9; // turn off blue led
+			LPC_GPIO0 -> DATA &= ~LED_B_P0_9; // turn off blue led
+			zeroCrossing = 0;
+			return;
+		}
+
+		if(zeroCrossing == 0){
+			LPC_GPIO0 -> DATA |= LED_B_P0_9;
+			LPC_GPIO0 -> DATA |= LED_R_P0_7;
+			LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
+			startTime = SysTick -> VAL;
+			zeroCrossing = 1;
+			return;
+		}
+
+	}
+}
+
+#ifdef GPIO_FULL_INTERRUPT
 
 //TODO: the gpio interrupt handler will most likely set MAtch 1 and 0 values. 
 void PIOINT2_IRQHandler(void){
@@ -159,21 +212,43 @@ void PIOINT2_IRQHandler(void){
 		/*TODO: logic for timing */
 		//could we just use system tick here? and get the difference?
 
-		if(toggle == 0){
-		LPC_GPIO0 -> DATA &= ~LED_WHITE; //on
-		toggle = 1;
+		if(zeroCrossing == 0){
+			LPC_GPIO0 -> DATA &= ~LED_B_P0_9; //on
+			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
+			startTime = SysTick -> VAL;
+			zeroCrossing++;
+			LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
+			return;
 		}
-		else{
-		LPC_GPIO0 -> DATA |= LED_WHITE; //on
-		toggle = 0;
+
+
+		if(zeroCrossing == 1){
+		endTime = SysTick -> VAL;
+			LPC_GPIO0 -> DATA |= LED_B_P0_9; // turn off blue led
+			LPC_GPIO0 -> DATA &= ~LED_R_P0_7; // turn off blue led
+
+			if(endTime > startTime){ // over flowed.
+				elapsedTime = endTime - startTime;
+				zeroCrossing = 0;
+				return;
+			}
+			else{   //normal
+				elapsedTime = startTime - endTime;
+				zeroCrossing = 0;
+				return;
+			}
 		}
+
 	}
 }
-
+#endif
 
 // global
 
 uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
+uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
+#define FULL_INTERRUPT
+#ifdef FULL_INTERRUPT
 void TIMER32_0_IRQHandler(void){
 
 	//check which source fired
@@ -181,7 +256,10 @@ void TIMER32_0_IRQHandler(void){
 		//clear interrupt
 		LPC_TMR32B0 -> IR &= ~(1<<0);
 
-
+		if(toggleDuty == 1){
+/*==================================================================================================*/
+// This is the 25% duty cycle case
+/*==================================================================================================*/
 		if(quartlet == 0){
 		LPC_GPIO0 -> DATA &= ~LED_G_P0_8; //on
 		quartlet++;
@@ -196,9 +274,32 @@ void TIMER32_0_IRQHandler(void){
 				return;
 			}	
 		}
+		}
+		else if(toggleDuty ==0){
+/*==================================================================================================*/
+// This is the 75% duty cycle case
+/*==================================================================================================*/
+		if(quartlet == 0){
+		quartlet++;
+		LPC_GPIO0-> DATA |= LED_R_P0_7; //off
+		return;
+		}
+
+		if(quartlet >= 1){
+		LPC_GPIO0 -> DATA &= ~LED_R_P0_7; //on
+		quartlet++;
+			if(quartlet == 5){
+				quartlet = 0;//reset get ready to turn led back on.
+				return;
+			}
+		}
+	} //end of the switch for 75% and 25% duty cycles
+/*==================================================================================================*/
 	} //end of match0
-	if(LPC_TMR32B0 -> IR |= (1<<1)){ //match1
+	if(LPC_TMR32B0 -> IR |= (1<<1)){ //match1 // 10 second period
 		LPC_TMR32B0 -> IR &= ~(1<<1); //clear flag
+			toggleDuty ^=1; //toggle!
 		return;
 	}//end of match1
 }
+#endif

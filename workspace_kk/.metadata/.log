@@ -10817,3 +10817,929 @@ To terminate debug sessions, first select a debug session in the Debug View and 
 
 !ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:21:56.671
 !MESSAGE Telnet session connected on port 3330->46948 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:29:50.399
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:29:50.401
+!MESSAGE RedlinkServer telnet session connected on port 3025->58160 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:29:52.025
+!MESSAGE Telnet session connected on port 3330->46960 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2018-10-02 12:31:41.570
+!MESSAGE There is already a running debug session for the launch configuration 'DDL_Lab4 LinkServer Debug'.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:31:44.856
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@c581fad): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 12:31:44.856
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:32:35.986
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:32:35.988
+!MESSAGE RedlinkServer telnet session connected on port 3025->58170 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:32:37.625
+!MESSAGE Telnet session connected on port 3330->46970 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:34:58.650
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:34:58.655
+!MESSAGE RedlinkServer telnet session connected on port 3025->58180 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:35:00.311
+!MESSAGE Telnet session connected on port 3330->46980 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:36:20.163
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@64b2112): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 12:36:20.163
+!MESSAGE Invalid context type.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 12:36:20.855
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@45c37d4c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 12:36:20.855
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 4 -1 2018-10-02 12:36:21.847
+!MESSAGE Write failed: ProbeStatus
+!STACK 0
+java.lang.Exception: com.crt.debugcommon.emulator.client.RedlinkServerException: Write failed: ProbeStatus
+	at com.crt.utils.general.Reporter.log(Reporter.java:654)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.getProbeRefCount(RedlinkServerClient.java:511)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.possiblyExitAndShutdownServer(RedlinkServerClient.java:445)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.launchesTerminated(RedlinkServerClient.java:777)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:314)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1054)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch$2.run(DsfLaunch.java:52)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1110)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1091)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:440)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: com.crt.debugcommon.emulator.client.RedlinkServerException: Write failed: ProbeStatus
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.writeln(RedlinkServerClient.java:1275)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.send(RedlinkServerClient.java:1032)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1089)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.getProbeRefCount(RedlinkServerClient.java:490)
+	... 14 more
+
+!ENTRY com.crt.log 1 0 2018-10-02 12:36:30.913
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 12:36:30.914
+!MESSAGE RedlinkServer telnet session connected on port 3025->58190 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 12:36:32.538
+!MESSAGE Telnet session connected on port 3330->46990 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-02 13:23:27.550
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 13:23:27.553
+!MESSAGE RedlinkServer telnet session connected on port 3025->58200 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 13:23:29.184
+!MESSAGE Telnet session connected on port 3330->47000 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-02 13:35:57.998
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 13:35:57.999
+!MESSAGE RedlinkServer telnet session connected on port 3025->58210 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 13:35:59.621
+!MESSAGE Telnet session connected on port 3330->47010 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 13:43:47.556
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@5e44d892): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 13:43:47.556
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-02 13:43:56.536
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 13:43:56.541
+!MESSAGE RedlinkServer telnet session connected on port 3025->58220 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 13:43:58.214
+!MESSAGE Telnet session connected on port 3330->47020 @ 127.0.0.1
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2018-10-02 13:47:29.902
+!MESSAGE Command not handled: org.eclipse.ui.navigate.forwardHistory
+!STACK 0
+org.eclipse.core.commands.NotEnabledException: Trying to execute the disabled command org.eclipse.ui.navigate.forwardHistory
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:485)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:390)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.executeAction(EclipseCommand.java:89)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.doIt(EclipseCommand.java:77)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.execute(EclipseCommand.java:38)
+	at net.sourceforge.vrapper.vim.commands.CommandWrappers$1.execute(CommandWrappers.java:23)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:264)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:318)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:831)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:467)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:442)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:291)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:485)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:66)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1374)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1357)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1142)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6029)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5732)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1374)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1357)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1386)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:768)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3550)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:785)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1977)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6193)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5608)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9282)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1328)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2116)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4181)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY com.crt.log 1 0 2018-10-02 14:02:36.688
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 14:02:36.690
+!MESSAGE RedlinkServer telnet session connected on port 3025->58230 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 14:02:38.343
+!MESSAGE Telnet session connected on port 3330->47030 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 14:04:43.114
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@43f0c62): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 14:04:43.114
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-02 14:04:53.798
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 14:04:53.799
+!MESSAGE RedlinkServer telnet session connected on port 3025->58240 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 14:04:55.435
+!MESSAGE Telnet session connected on port 3330->47040 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 14:12:33.017
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@2f5dfa89): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 14:12:33.017
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-02 14:12:42.742
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 14:12:42.745
+!MESSAGE RedlinkServer telnet session connected on port 3025->58250 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-02 14:12:44.398
+!MESSAGE Telnet session connected on port 3330->47050 @ 127.0.0.1
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2018-10-02 14:19:47.473
+!MESSAGE Command not handled: org.eclipse.ui.navigate.forwardHistory
+!STACK 0
+org.eclipse.core.commands.NotEnabledException: Trying to execute the disabled command org.eclipse.ui.navigate.forwardHistory
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:485)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:390)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.executeAction(EclipseCommand.java:89)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.doIt(EclipseCommand.java:77)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.execute(EclipseCommand.java:38)
+	at net.sourceforge.vrapper.vim.commands.CommandWrappers$1.execute(CommandWrappers.java:23)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:264)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:318)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:831)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:467)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:442)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:291)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:485)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:66)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1374)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1357)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1142)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6029)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5732)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1374)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1357)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1386)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:768)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3550)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:785)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1977)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6193)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5608)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9282)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1328)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2116)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4181)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2018-10-02 14:23:07.186
+!MESSAGE Command not handled: org.eclipse.ui.navigate.forwardHistory
+!STACK 0
+org.eclipse.core.commands.NotEnabledException: Trying to execute the disabled command org.eclipse.ui.navigate.forwardHistory
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:485)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:390)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.executeAction(EclipseCommand.java:89)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.doIt(EclipseCommand.java:77)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.execute(EclipseCommand.java:38)
+	at net.sourceforge.vrapper.vim.commands.CommandWrappers$1.execute(CommandWrappers.java:23)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:264)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:318)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:831)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:467)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:442)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:291)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:485)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:66)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1374)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1357)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1142)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6029)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5732)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1374)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1357)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1386)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:768)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3550)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:785)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1977)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6193)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5608)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9282)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1328)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2116)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4181)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-02 14:23:58.069
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@43d08236): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-02 14:23:58.069
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.dsfdebug 2 0 2018-10-02 14:24:00.577
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.log 4 -1 2018-10-02 14:24:09.802
+!MESSAGE Read timed out
+!STACK 0
+java.lang.Exception: java.io.IOException: Read timed out
+	at com.crt.utils.general.Reporter.log(Reporter.java:654)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.getProbeRefCount(RedlinkServerClient.java:511)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.possiblyExitAndShutdownServer(RedlinkServerClient.java:445)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.launchesTerminated(RedlinkServerClient.java:777)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:314)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1054)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch$2.run(DsfLaunch.java:52)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1110)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1091)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:440)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Read timed out
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.receive(RedlinkServerClient.java:991)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1090)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.getProbeRefCount(RedlinkServerClient.java:490)
+	... 14 more
+
+!ENTRY com.crt.log 1 0 2018-10-02 14:24:19.823
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-02 14:24:19.825
+!MESSAGE RedlinkServer telnet session connected on port 3025->58260 @ 127.0.0.1
+!SESSION 2018-10-04 13:08:20.573 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-10-04 13:08:26.769
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2018-10-04 13:08:38.676
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-04 13:08:38.676
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(com.nxp.swtools.clocks.commands.unlockAll,Unlock All Settings,
+		,
+		Category(org.eclipse.core.commands.categories.autogenerated,Uncategorized,Commands that were either auto-generated or have no category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50aa9a91,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Execute,Execute,
+		Evaluate selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@663e1144,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2018-10-04 13:08:42.364
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-10-04 13:08:46.635
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-10-04 13:08:46.636
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-10-04 13:08:46.637
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.jface.text 2 0 2018-10-04 13:08:48.976
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-10-04 13:08:48.977
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-10-04 13:08:52.246
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-10-04 14:11:44.852
+!MESSAGE An internal error occurred during: "Computing hover expression".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.debug.ui.editors.AbstractDebugTextHover$1.runOnAST(AbstractDebugTextHover.java:252)
+	at org.eclipse.cdt.ui.text.SharedASTJob$1.runOnAST(SharedASTJob.java:74)
+	at org.eclipse.cdt.internal.core.model.ASTCache.runOnAST(ASTCache.java:221)
+	at org.eclipse.cdt.internal.ui.editor.ASTProvider.runOnAST(ASTProvider.java:336)
+	at org.eclipse.cdt.ui.text.SharedASTJob.run(SharedASTJob.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-04 14:17:00.224
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@37fe62bd): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-04 14:17:00.224
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:17:18.607
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:17:18.610
+!MESSAGE RedlinkServer telnet session connected on port 3025->38182 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:17:20.282
+!MESSAGE Telnet session connected on port 3330->48306 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-04 14:21:21.059
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@5d618551): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-04 14:21:21.059
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:23:51.755
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:23:51.757
+!MESSAGE RedlinkServer telnet session connected on port 3025->38192 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:23:53.419
+!MESSAGE Telnet session connected on port 3330->48316 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2018-10-04 14:25:07.854
+!MESSAGE There is already a running debug session for the launch configuration 'DDL_Lab4 LinkServer Debug'.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-04 14:25:10.379
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@76c5c91c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-04 14:25:10.380
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.dsfdebug 2 0 2018-10-04 14:25:12.175
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:25:23.266
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:25:23.267
+!MESSAGE RedlinkServer telnet session connected on port 3025->38202 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:25:24.906
+!MESSAGE Telnet session connected on port 3330->48326 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-04 14:26:51.074
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4218468c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-04 14:26:51.074
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:26:52.698
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:26:52.700
+!MESSAGE RedlinkServer telnet session connected on port 3025->38212 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:27:01.985
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:27:01.988
+!MESSAGE RedlinkServer telnet session connected on port 3025->38214 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:27:03.607
+!MESSAGE Telnet session connected on port 3330->48338 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-04 14:28:32.547
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@12974b41): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-04 14:28:32.547
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:28:42.098
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:28:42.102
+!MESSAGE RedlinkServer telnet session connected on port 3025->38224 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:28:43.782
+!MESSAGE Telnet session connected on port 3330->48348 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-04 14:31:32.942
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@427cd427): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-04 14:31:32.942
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:31:34.625
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:31:34.628
+!MESSAGE RedlinkServer telnet session connected on port 3025->38234 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:31:43.787
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:31:43.788
+!MESSAGE RedlinkServer telnet session connected on port 3025->38236 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:31:45.420
+!MESSAGE Telnet session connected on port 3330->48360 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:32:17.389
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:32:17.390
+!MESSAGE RedlinkServer telnet session connected on port 3025->38246 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:32:19.028
+!MESSAGE Telnet session connected on port 3330->48370 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-04 14:34:06.068
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@604f19cc): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-04 14:34:06.068
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:34:17.544
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:34:17.545
+!MESSAGE RedlinkServer telnet session connected on port 3025->38256 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:34:19.194
+!MESSAGE Telnet session connected on port 3330->48380 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2018-10-04 14:38:15.203
+!MESSAGE Cannot read from server: not open
+!STACK 0
+java.lang.Exception: com.crt.debugcommon.emulator.client.RedlinkServerException: Cannot read from server: not open
+	at com.crt.utils.general.Reporter.log(Reporter.java:654)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.getProbeRefCount(RedlinkServerClient.java:511)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.possiblyExitAndShutdownServer(RedlinkServerClient.java:445)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.launchesTerminated(RedlinkServerClient.java:777)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:314)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:266)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:1054)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch.access$1(DsfLaunch.java:1)
+	at org.eclipse.cdt.dsf.debug.model.DsfLaunch$2.run(DsfLaunch.java:52)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.run(DebugPlugin.java:1110)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$AsynchRunner.async(DebugPlugin.java:1091)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:440)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: com.crt.debugcommon.emulator.client.RedlinkServerException: Cannot read from server: not open
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.getReader(RedlinkServerClient.java:561)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.receive(RedlinkServerClient.java:977)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.sendReceive(RedlinkServerClient.java:1090)
+	at com.crt.debugcommon.emulator.client.RedlinkServerClient.getProbeRefCount(RedlinkServerClient.java:490)
+	... 14 more
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:38:25.087
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:38:25.090
+!MESSAGE RedlinkServer telnet session connected on port 3025->38266 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:38:26.751
+!MESSAGE Telnet session connected on port 3330->48390 @ 127.0.0.1
+!SESSION 2018-10-04 14:41:43.959 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jface 2 0 2018-10-04 14:41:59.363
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-04 14:41:59.363
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(com.nxp.swtools.clocks.commands.unlockAll,Unlock All Settings,
+		,
+		Category(org.eclipse.core.commands.categories.autogenerated,Uncategorized,Commands that were either auto-generated or have no category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7668f8fd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Execute,Execute,
+		Evaluate selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@75566f4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2018-10-04 14:42:02.491
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-10-04 14:42:06.479
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-10-04 14:42:06.501
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2018-10-04 14:42:06.501
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.jface.text 2 0 2018-10-04 14:42:08.416
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-10-04 14:42:08.416
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-10-04 14:42:11.982
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY com.crt.log 1 0 2018-10-04 14:45:03.975
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-04 14:45:03.994
+!MESSAGE RedlinkServer telnet session connected on port 3025->38372 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-04 14:45:06.151
+!MESSAGE Telnet session connected on port 3330->48496 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 -1 2018-10-04 14:45:08.292
+!MESSAGE Unable to create extension for org.eclipse.core.internal.registry.ExtensionHandle@291
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in "com.crt.debugcommon" was unable to instantiate class "com.crt.debugcommon.emulator.CRTLaunchConfigHandler".
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:186)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.buildExtension(NXPLaunchConfigUtils.java:193)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.<clinit>(NXPLaunchConfigUtils.java:82)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:105)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1289)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:820)
+	at org.eclipse.swt.widgets.Display.getSystemColor(Display.java:2654)
+	at org.eclipse.ui.forms.FormColors.initialize(FormColors.java:148)
+	at org.eclipse.ui.forms.FormColors.<init>(FormColors.java:128)
+	at org.eclipse.ui.forms.widgets.FormToolkit.<init>(FormToolkit.java:252)
+	at com.crt.debugcommon.flash.AbstractFlashWorkItem.<init>(AbstractFlashWorkItem.java:98)
+	at com.crt.debugcommon.flash.LinkServerFlashWorkItem.<init>(LinkServerFlashWorkItem.java:87)
+	at com.crt.debugcommon.flash.LinkServerProgramWorkItem.<init>(LinkServerProgramWorkItem.java:73)
+	at com.crt.debugcommon.emulator.CRTLaunchConfigHandler.getProgrammUI(CRTLaunchConfigHandler.java:985)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.getWorkingItems(AbstractNXPLaunchConfigHandler.java:330)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.<init>(AbstractNXPLaunchConfigHandler.java:181)
+	at com.crt.debugcommon.emulator.CRTLaunchConfigHandler.<init>(CRTLaunchConfigHandler.java:159)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	... 11 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2018-10-04 14:45:08.298
+!MESSAGE Plug-in "com.crt.debugcommon" was unable to instantiate class "com.crt.debugcommon.emulator.CRTLaunchConfigHandler".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1289)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:820)
+	at org.eclipse.swt.widgets.Display.getSystemColor(Display.java:2654)
+	at org.eclipse.ui.forms.FormColors.initialize(FormColors.java:148)
+	at org.eclipse.ui.forms.FormColors.<init>(FormColors.java:128)
+	at org.eclipse.ui.forms.widgets.FormToolkit.<init>(FormToolkit.java:252)
+	at com.crt.debugcommon.flash.AbstractFlashWorkItem.<init>(AbstractFlashWorkItem.java:98)
+	at com.crt.debugcommon.flash.LinkServerFlashWorkItem.<init>(LinkServerFlashWorkItem.java:87)
+	at com.crt.debugcommon.flash.LinkServerProgramWorkItem.<init>(LinkServerProgramWorkItem.java:73)
+	at com.crt.debugcommon.emulator.CRTLaunchConfigHandler.getProgrammUI(CRTLaunchConfigHandler.java:985)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.getWorkingItems(AbstractNXPLaunchConfigHandler.java:330)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.<init>(AbstractNXPLaunchConfigHandler.java:181)
+	at com.crt.debugcommon.emulator.CRTLaunchConfigHandler.<init>(CRTLaunchConfigHandler.java:159)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.buildExtension(NXPLaunchConfigUtils.java:193)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.<clinit>(NXPLaunchConfigUtils.java:82)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:105)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.crt.debugcommon 4 -1 2018-10-04 14:45:08.362
+!MESSAGE Unable to create extension for org.eclipse.core.internal.registry.ExtensionHandle@710
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in "com.nxp.mcuxpresso.core.debug.support.pe" was unable to instantiate class "com.nxp.mcuxpresso.core.debug.support.pe.launches.PELaunchConfigHandler".
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:186)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.buildExtension(NXPLaunchConfigUtils.java:193)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.<clinit>(NXPLaunchConfigUtils.java:82)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:105)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1289)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:820)
+	at org.eclipse.swt.widgets.Display.getSystemColor(Display.java:2654)
+	at org.eclipse.ui.forms.FormColors.initialize(FormColors.java:148)
+	at org.eclipse.ui.forms.FormColors.<init>(FormColors.java:128)
+	at org.eclipse.ui.forms.widgets.FormToolkit.<init>(FormToolkit.java:252)
+	at com.crt.debugcommon.flash.AbstractFlashWorkItem.<init>(AbstractFlashWorkItem.java:98)
+	at com.nxp.mcuxpresso.core.debug.support.pe.flash.PEFlashWorkItem.<init>(PEFlashWorkItem.java:61)
+	at com.nxp.mcuxpresso.core.debug.support.pe.flash.PEProgramWorkItem.<init>(PEProgramWorkItem.java:61)
+	at com.nxp.mcuxpresso.core.debug.support.pe.launches.PELaunchConfigHandler.getProgrammUI(PELaunchConfigHandler.java:1125)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.getWorkingItems(AbstractNXPLaunchConfigHandler.java:330)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.<init>(AbstractNXPLaunchConfigHandler.java:181)
+	at com.nxp.mcuxpresso.core.debug.support.pe.launches.PELaunchConfigHandler.<init>(PELaunchConfigHandler.java:138)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	... 11 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2018-10-04 14:45:08.363
+!MESSAGE Plug-in "com.nxp.mcuxpresso.core.debug.support.pe" was unable to instantiate class "com.nxp.mcuxpresso.core.debug.support.pe.launches.PELaunchConfigHandler".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1289)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:820)
+	at org.eclipse.swt.widgets.Display.getSystemColor(Display.java:2654)
+	at org.eclipse.ui.forms.FormColors.initialize(FormColors.java:148)
+	at org.eclipse.ui.forms.FormColors.<init>(FormColors.java:128)
+	at org.eclipse.ui.forms.widgets.FormToolkit.<init>(FormToolkit.java:252)
+	at com.crt.debugcommon.flash.AbstractFlashWorkItem.<init>(AbstractFlashWorkItem.java:98)
+	at com.nxp.mcuxpresso.core.debug.support.pe.flash.PEFlashWorkItem.<init>(PEFlashWorkItem.java:61)
+	at com.nxp.mcuxpresso.core.debug.support.pe.flash.PEProgramWorkItem.<init>(PEProgramWorkItem.java:61)
+	at com.nxp.mcuxpresso.core.debug.support.pe.launches.PELaunchConfigHandler.getProgrammUI(PELaunchConfigHandler.java:1125)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.getWorkingItems(AbstractNXPLaunchConfigHandler.java:330)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.<init>(AbstractNXPLaunchConfigHandler.java:181)
+	at com.nxp.mcuxpresso.core.debug.support.pe.launches.PELaunchConfigHandler.<init>(PELaunchConfigHandler.java:138)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.buildExtension(NXPLaunchConfigUtils.java:193)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.<clinit>(NXPLaunchConfigUtils.java:82)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:105)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY com.crt.debugcommon 4 -1 2018-10-04 14:45:08.428
+!MESSAGE Unable to create extension for org.eclipse.core.internal.registry.ExtensionHandle@773
+!STACK 1
+org.eclipse.core.runtime.CoreException: Plug-in "com.nxp.mcuxpresso.core.debug.support.segger" was unable to instantiate class "com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchConfigHandler".
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:186)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.buildExtension(NXPLaunchConfigUtils.java:193)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.<clinit>(NXPLaunchConfigUtils.java:82)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:105)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1289)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:820)
+	at org.eclipse.swt.widgets.Display.getSystemColor(Display.java:2654)
+	at org.eclipse.ui.forms.FormColors.initialize(FormColors.java:148)
+	at org.eclipse.ui.forms.FormColors.<init>(FormColors.java:128)
+	at org.eclipse.ui.forms.widgets.FormToolkit.<init>(FormToolkit.java:252)
+	at com.crt.debugcommon.flash.AbstractFlashWorkItem.<init>(AbstractFlashWorkItem.java:98)
+	at com.nxp.mcuxpresso.core.debug.support.segger.flash.JLinkFlashWorkItem.<init>(JLinkFlashWorkItem.java:75)
+	at com.nxp.mcuxpresso.core.debug.support.segger.flash.JLinkProgramWorkItem.<init>(JLinkProgramWorkItem.java:66)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchConfigHandler.getProgrammUI(JLinkLaunchConfigHandler.java:1247)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.getWorkingItems(AbstractNXPLaunchConfigHandler.java:330)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.<init>(AbstractNXPLaunchConfigHandler.java:181)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchConfigHandler.<init>(JLinkLaunchConfigHandler.java:171)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	... 11 more
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2018-10-04 14:45:08.436
+!MESSAGE Plug-in "com.nxp.mcuxpresso.core.debug.support.segger" was unable to instantiate class "com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchConfigHandler".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1289)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:820)
+	at org.eclipse.swt.widgets.Display.getSystemColor(Display.java:2654)
+	at org.eclipse.ui.forms.FormColors.initialize(FormColors.java:148)
+	at org.eclipse.ui.forms.FormColors.<init>(FormColors.java:128)
+	at org.eclipse.ui.forms.widgets.FormToolkit.<init>(FormToolkit.java:252)
+	at com.crt.debugcommon.flash.AbstractFlashWorkItem.<init>(AbstractFlashWorkItem.java:98)
+	at com.nxp.mcuxpresso.core.debug.support.segger.flash.JLinkFlashWorkItem.<init>(JLinkFlashWorkItem.java:75)
+	at com.nxp.mcuxpresso.core.debug.support.segger.flash.JLinkProgramWorkItem.<init>(JLinkProgramWorkItem.java:66)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchConfigHandler.getProgrammUI(JLinkLaunchConfigHandler.java:1247)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.getWorkingItems(AbstractNXPLaunchConfigHandler.java:330)
+	at com.crt.debugcommon.flash.AbstractNXPLaunchConfigHandler.<init>(AbstractNXPLaunchConfigHandler.java:181)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchConfigHandler.<init>(JLinkLaunchConfigHandler.java:171)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.buildExtension(NXPLaunchConfigUtils.java:193)
+	at com.crt.debugcommon.emulator.NXPLaunchConfigUtils.<clinit>(NXPLaunchConfigUtils.java:82)
+	at com.crt.dsfdebug.dsf.override.CRTGdbLaunchDelegate.launch(CRTGdbLaunchDelegate.java:105)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-10-04 14:45:09.526
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-04 14:52:30.337
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1f03b8b6): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-04 14:52:30.337
+!MESSAGE Invalid context type.
