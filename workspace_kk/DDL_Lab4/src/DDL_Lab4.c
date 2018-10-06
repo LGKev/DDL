@@ -68,7 +68,7 @@ int main(void) {
 
 	GPIOInit();
 	sysTickInit(); //enable the systick
-	//TIMER32Init();
+	TIMER32Init();
 
 
 	while(1){
@@ -94,7 +94,6 @@ void GPIOInit(void){
 	LPC_GPIO2 -> IBE &= ~PIN2_1; //default should be fine, but never too careful
 	LPC_GPIO2 -> IEV |= PIN2_1; // set rising EDGE
 	LPC_GPIO2 -> IE |= PIN2_1; // do not mask.
-
 
 	LPC_GPIO2 -> IC = 0xFFF; //12 1's
 	// TODO: need to register with the NVIC
@@ -144,10 +143,14 @@ void TIMER32Init(void){
 	// currently we tick counter each time, and were at 1/12Mhz per tick.
 	
 	// we want to set what happens on a match, so TMR32B0_MCR and MCR0
-	LPC_TMR32B0 -> MCR |= (1<<1); // enable reset for TMR32b0, when match0
+//	LPC_TMR32B0 -> MCR |= (1<<1); // enable reset for TMR32b0, when match0
+	LPC_TMR32B0 -> MCR &= ~(1<<1); // disable reset for TMR32b0, when match0, so we can do the toggling.
 	LPC_TMR32B0 -> MCR |= (1<<0); // enable interrupt for TMR32b0, when match0
-	LPC_TMR32B0 -> MR0 = 12000000; //value we count up to
-	LPC_TMR32B0 -> MR1 = 24000000; //value we count up to
+	LPC_TMR32B0 -> MR0 = 1200000; //value we count up to
+	LPC_TMR32B0 -> MR1 = 2400000; //value we count up to
+
+	LPC_TMR32B0 -> MCR |= (1<<4) | (1<<3); // disable reset for TMR32b0, when match0, so we can do the toggling.
+
 
 	NVIC_EnableIRQ(TIMER_32_0_IRQn); //timer32b timer0 interrupt
 }
@@ -252,10 +255,30 @@ uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
 void TIMER32_0_IRQHandler(void){
 
 	//check which source fired
-	if(LPC_TMR32B0 -> IR |= (1<<0)){ //match0
+	if(LPC_TMR32B0 -> IR &= (1<<0)){ //match0
 		//clear interrupt
 		LPC_TMR32B0 -> IR &= ~(1<<0);
+	//	LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
+		LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
+		return;
+	} //end of match0
 
+	if(LPC_TMR32B0 -> IR &= (1<<1)){ //match1 // 10 second period
+		LPC_TMR32B0 -> IR &= ~(1<<1); //clear flag
+			toggleDuty ^=1; //toggle!
+		//LPC_GPIO0 -> DATA |= LED_B_P0_9;
+		LPC_GPIO0 -> DATA |= LED_R_P0_7;
+		return;
+	}//end of match1
+}
+#endif
+
+
+
+
+
+/*   */
+#ifdef kevin
 		if(toggleDuty == 1){
 /*==================================================================================================*/
 // This is the 25% duty cycle case
@@ -295,11 +318,12 @@ void TIMER32_0_IRQHandler(void){
 		}
 	} //end of the switch for 75% and 25% duty cycles
 /*==================================================================================================*/
-	} //end of match0
-	if(LPC_TMR32B0 -> IR |= (1<<1)){ //match1 // 10 second period
-		LPC_TMR32B0 -> IR &= ~(1<<1); //clear flag
-			toggleDuty ^=1; //toggle!
-		return;
-	}//end of match1
-}
+
+
+
+
+
+
+
+
 #endif
