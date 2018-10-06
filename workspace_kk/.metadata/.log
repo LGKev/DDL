@@ -12043,3 +12043,274 @@ org.eclipse.swt.SWTException: Invalid thread access
 
 !ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-10-05 19:01:35.847
 !MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 19:16:17.597
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@62f6cde9): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 19:16:17.598
+!MESSAGE Invalid context type.
+
+!ENTRY org.eclipse.jface 2 0 2018-10-05 19:38:08.614
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-05 19:38:08.615
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42b8bc3a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42b8bc3a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.macroExpansionHoverScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3d52a67f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-05 19:38:08.615
+!MESSAGE A conflict occurred for ALT+ARROW_LEFT:
+Binding(ALT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.hover.backwardMacroExpansion,Back,
+		Steps backward in macro expansions,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78071dc3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.macroExpansionHoverScope,,,system)
+Binding(ALT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.ui.navigate.backwardHistory,Backward History,
+		Move backward in the editor navigation history,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@530e4d34,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-10-05 19:38:08.615
+!MESSAGE A conflict occurred for ALT+ARROW_RIGHT:
+Binding(ALT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.hover.forwardMacroExpansion,Forward,
+		Steps forward in macro expansions,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54d06203,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.macroExpansionHoverScope,,,system)
+Binding(ALT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.ui.navigate.forwardHistory,Forward History,
+		Move forward in the editor navigation history,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c1957b8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.crt.log 1 0 2018-10-05 19:47:52.893
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 19:47:52.895
+!MESSAGE RedlinkServer telnet session connected on port 3025->42758 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 19:47:54.544
+!MESSAGE Telnet session connected on port 3330->51640 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 19:48:11.131
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@652735): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 19:48:11.132
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 19:48:12.933
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 19:48:12.941
+!MESSAGE RedlinkServer telnet session connected on port 3025->42768 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-05 19:48:22.994
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 19:48:22.997
+!MESSAGE RedlinkServer telnet session connected on port 3025->42770 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 19:48:24.674
+!MESSAGE Telnet session connected on port 3330->51652 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 19:50:21.691
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@22ad8da1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 19:50:21.691
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 19:50:23.842
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 19:50:23.843
+!MESSAGE RedlinkServer telnet session connected on port 3025->42780 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-05 19:50:35.300
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 19:50:35.302
+!MESSAGE RedlinkServer telnet session connected on port 3025->42782 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 19:50:36.942
+!MESSAGE Telnet session connected on port 3330->51664 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 19:53:31.082
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4327acab): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 19:53:31.082
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 19:53:40.613
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 19:53:40.614
+!MESSAGE RedlinkServer telnet session connected on port 3025->42792 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 19:53:42.238
+!MESSAGE Telnet session connected on port 3330->51674 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 19:56:01.787
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@33cc1ab): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 19:56:01.787
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 19:56:15.695
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 19:56:15.698
+!MESSAGE RedlinkServer telnet session connected on port 3025->42802 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 19:56:17.387
+!MESSAGE Telnet session connected on port 3330->51684 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 19:57:00.647
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@62d74b55): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 19:57:00.647
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.dsfdebug 2 0 2018-10-05 19:57:02.435
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.log 1 0 2018-10-05 19:57:12.679
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 19:57:12.682
+!MESSAGE RedlinkServer telnet session connected on port 3025->42812 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 19:57:14.346
+!MESSAGE Telnet session connected on port 3330->51694 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-05 20:02:56.239
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 20:02:56.242
+!MESSAGE RedlinkServer telnet session connected on port 3025->42822 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 20:02:57.876
+!MESSAGE Telnet session connected on port 3330->51704 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 20:06:09.217
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@15abf2e0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 20:06:09.217
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 20:06:18.977
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 20:06:18.979
+!MESSAGE RedlinkServer telnet session connected on port 3025->42832 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 20:06:20.663
+!MESSAGE Telnet session connected on port 3330->51714 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 20:07:26.597
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@3d4d60fc): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 20:07:26.597
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 20:07:41.503
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 20:07:41.513
+!MESSAGE RedlinkServer telnet session connected on port 3025->42842 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 20:07:43.175
+!MESSAGE Telnet session connected on port 3330->51724 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 20:13:19.277
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7b52ab6f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 20:13:19.277
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 20:13:29.539
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 20:13:29.542
+!MESSAGE RedlinkServer telnet session connected on port 3025->42852 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 20:13:31.209
+!MESSAGE Telnet session connected on port 3330->51734 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 20:18:49.859
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@5e45e801): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 20:18:49.859
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 20:19:01.724
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 20:19:01.726
+!MESSAGE RedlinkServer telnet session connected on port 3025->42862 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 20:19:03.368
+!MESSAGE Telnet session connected on port 3330->51744 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 20:19:43.401
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@63a48d88): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 20:19:43.401
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 20:19:45.109
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 20:19:45.110
+!MESSAGE RedlinkServer telnet session connected on port 3025->42872 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-05 20:20:00.741
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 20:20:00.744
+!MESSAGE RedlinkServer telnet session connected on port 3025->42874 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 20:20:02.383
+!MESSAGE Telnet session connected on port 3330->51756 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-05 20:20:45.833
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@ed5e9c7): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-05 20:20:45.834
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-05 20:20:55.743
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 20:20:55.744
+!MESSAGE RedlinkServer telnet session connected on port 3025->42884 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-05 20:20:57.387
+!MESSAGE Telnet session connected on port 3330->51766 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-05 20:22:03.564
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-05 20:22:03.567
+!MESSAGE RedlinkServer telnet session connected on port 3025->42894 @ 127.0.0.1
