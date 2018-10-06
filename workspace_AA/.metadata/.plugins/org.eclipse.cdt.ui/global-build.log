@@ -1,468 +1,171 @@
-15:38:00 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+13:30:46 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
 make -r all 
 make: Nothing to be done for `all'.
-15:38:01 **** Incremental Build of configuration Debug for project lab_3 ****
+13:30:48 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
-Building file: ../src/GetFib.s
-Invoking: MCU Assembler
-arm-none-eabi-gcc -c -x assembler-with-cpp -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -g3 -mcpu=cortex-m0 -mthumb -specs=redlib.specs -o "src/GetFib.o" "../src/GetFib.s"
-Finished building: ../src/GetFib.s
+Building file: ../src/lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -MT"src/lab4.d" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
  
-Building target: lab_3.axf
+Building target: lab4.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab_3.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab_3_Debug.ld" -o "lab_3.axf"  ./src/GetFib.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab4_Debug.ld" -o "lab4.axf"  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/lab4.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
 Memory region         Used Size  Region Size  %age Used
-        MFlash64:        2736 B        64 KB      4.17%
-         RamLoc8:          52 B         8 KB      0.63%
-Finished building target: lab_3.axf
+        MFlash64:        1248 B        64 KB      1.90%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: lab4.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "lab_3.axf"; # arm-none-eabi-objcopy -v -O binary "lab_3.axf" "lab_3.bin" ; # checksum -p LPC1115_303 -d "lab_3.bin";
+arm-none-eabi-size "lab4.axf"; # arm-none-eabi-objcopy -v -O binary "lab4.axf" "lab4.bin" ; # checksum -p LPC1115_303 -d "lab4.bin";
    text	   data	    bss	    dec	    hex	filename
-   2732	      4	     48	   2784	    ae0	lab_3.axf
+   1248	      0	     40	   1288	    508	lab4.axf
  
-15:38:32 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
-make -r clean 
-rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
- 
-15:38:32 **** Clean-only build of configuration Debug for project lab_3 ****
-make -r clean 
-rm -rf  ./src/GetFib.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/clkconfig.d ./driver/crp.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
- 
-15:38:47 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+13:31:44 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
 make -r all 
-Building file: ../src/system_LPC11xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
-Finished building: ../src/system_LPC11xx.c
- 
-Building target: libCMSIS_CORE_LPC11xx.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
-c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
-Finished building target: libCMSIS_CORE_LPC11xx.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
-   text	   data	    bss	    dec	    hex	filename
-    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
- 
-15:38:48 **** Build of configuration Debug for project lab_3 ****
+make: Nothing to be done for `all'.
+13:31:46 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
-Building file: ../src/GetFib.s
-Invoking: MCU Assembler
-arm-none-eabi-gcc -c -x assembler-with-cpp -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -g3 -mcpu=cortex-m0 -mthumb -specs=redlib.specs -o "src/GetFib.o" "../src/GetFib.s"
-Finished building: ../src/GetFib.s
- 
-Building file: ../src/cr_startup_lpc11xx.c
+make: Nothing to be done for `all'.
+13:31:57 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:31:59 **** Incremental Build of configuration Debug for project lab4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:32:01 **** Incremental Build of configuration Debug for project lab4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:37:41 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:37:42 **** Incremental Build of configuration Debug for project lab4 ****
+make -r all 
+Building file: ../src/lab4.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
-Finished building: ../src/cr_startup_lpc11xx.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -MT"src/lab4.d" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
  
-Building file: ../src/crp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
-Finished building: ../src/crp.c
- 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:55:18: warning: unused variable 'j' [-Wunused-variable]
-              int j = i+1;
-                  ^
-../src/main.c:52:10: warning: unused variable 'x' [-Wunused-variable]
-      int x = GetFib(6);
-          ^
-Finished building: ../src/main.c
- 
-Building file: ../driver/adc.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
-Finished building: ../driver/adc.c
- 
-Building file: ../driver/clkconfig.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.o" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
-Finished building: ../driver/clkconfig.c
- 
-Building file: ../driver/crp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
-Finished building: ../driver/crp.c
- 
-Building file: ../driver/gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
-Finished building: ../driver/gpio.c
- 
-Building file: ../driver/i2c.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
-Finished building: ../driver/i2c.c
- 
-Building file: ../driver/i2cslave.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.o" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
-Finished building: ../driver/i2cslave.c
- 
-Building file: ../driver/lpc_swu.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.o" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
-Finished building: ../driver/lpc_swu.c
- 
-Building file: ../driver/rs485.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.o" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
-Finished building: ../driver/rs485.c
- 
-Building file: ../driver/small_gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.o" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
-Finished building: ../driver/small_gpio.c
- 
-Building file: ../driver/ssp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.o" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
-Finished building: ../driver/ssp.c
- 
-Building file: ../driver/timer32.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
-Finished building: ../driver/timer32.c
- 
-Building file: ../driver/uart.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
-Finished building: ../driver/uart.c
- 
-Building file: ../driver/wdt.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.o" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
-Finished building: ../driver/wdt.c
- 
-Building target: lab_3.axf
+Building target: lab4.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab_3.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab_3_Debug.ld" -o "lab_3.axf"  ./src/GetFib.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab4_Debug.ld" -o "lab4.axf"  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/lab4.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
 Memory region         Used Size  Region Size  %age Used
-        MFlash64:        2736 B        64 KB      4.17%
-         RamLoc8:          52 B         8 KB      0.63%
-Finished building target: lab_3.axf
+        MFlash64:        1260 B        64 KB      1.92%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: lab4.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "lab_3.axf"; # arm-none-eabi-objcopy -v -O binary "lab_3.axf" "lab_3.bin" ; # checksum -p LPC1115_303 -d "lab_3.bin";
+arm-none-eabi-size "lab4.axf"; # arm-none-eabi-objcopy -v -O binary "lab4.axf" "lab4.bin" ; # checksum -p LPC1115_303 -d "lab4.bin";
    text	   data	    bss	    dec	    hex	filename
-   2732	      4	     48	   2784	    ae0	lab_3.axf
+   1260	      0	     40	   1300	    514	lab4.axf
  
-15:38:57 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+13:37:58 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
 make -r all 
 make: Nothing to be done for `all'.
-15:38:58 **** Incremental Build of configuration Debug for project lab_3 ****
+13:38:00 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
 make: Nothing to be done for `all'.
-15:39:01 **** Incremental Build of configuration Debug for project lab_3 ****
+13:38:01 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
 make: Nothing to be done for `all'.
-15:40:32 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
-make -r clean 
-rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
- 
-15:40:32 **** Clean-only build of configuration Debug for project lab_3 ****
-make -r clean 
-rm -rf  ./src/GetFib.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/clkconfig.d ./driver/crp.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
- 
-15:40:50 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+14:22:35 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
 make -r all 
-Building file: ../src/system_LPC11xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
-Finished building: ../src/system_LPC11xx.c
- 
-Building target: libCMSIS_CORE_LPC11xx.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
-c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
-Finished building target: libCMSIS_CORE_LPC11xx.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
-   text	   data	    bss	    dec	    hex	filename
-    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
- 
-15:40:52 **** Build of configuration Debug for project lab_3 ****
+make: Nothing to be done for `all'.
+14:22:39 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
-Building file: ../src/GetFib.s
-Invoking: MCU Assembler
-arm-none-eabi-gcc -c -x assembler-with-cpp -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -g3 -mcpu=cortex-m0 -mthumb -specs=redlib.specs -o "src/GetFib.o" "../src/GetFib.s"
-Finished building: ../src/GetFib.s
- 
-Building file: ../src/cr_startup_lpc11xx.c
+Building file: ../src/lab4.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
-Finished building: ../src/cr_startup_lpc11xx.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -MT"src/lab4.d" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
  
-Building file: ../src/crp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
-Finished building: ../src/crp.c
- 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building file: ../driver/adc.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
-Finished building: ../driver/adc.c
- 
-Building file: ../driver/clkconfig.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.o" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
-Finished building: ../driver/clkconfig.c
- 
-Building file: ../driver/crp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
-Finished building: ../driver/crp.c
- 
-Building file: ../driver/gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
-Finished building: ../driver/gpio.c
- 
-Building file: ../driver/i2c.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
-Finished building: ../driver/i2c.c
- 
-Building file: ../driver/i2cslave.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.o" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
-Finished building: ../driver/i2cslave.c
- 
-Building file: ../driver/lpc_swu.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.o" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
-Finished building: ../driver/lpc_swu.c
- 
-Building file: ../driver/rs485.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.o" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
-Finished building: ../driver/rs485.c
- 
-Building file: ../driver/small_gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.o" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
-Finished building: ../driver/small_gpio.c
- 
-Building file: ../driver/ssp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.o" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
-Finished building: ../driver/ssp.c
- 
-Building file: ../driver/timer32.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
-Finished building: ../driver/timer32.c
- 
-Building file: ../driver/uart.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
-Finished building: ../driver/uart.c
- 
-Building file: ../driver/wdt.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.o" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
-Finished building: ../driver/wdt.c
- 
-Building target: lab_3.axf
+Building target: lab4.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab_3.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab_3_Debug.ld" -o "lab_3.axf"  ./src/GetFib.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab4_Debug.ld" -o "lab4.axf"  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/lab4.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
 Memory region         Used Size  Region Size  %age Used
-        MFlash64:        2752 B        64 KB      4.20%
-         RamLoc8:          52 B         8 KB      0.63%
-Finished building target: lab_3.axf
+        MFlash64:        1256 B        64 KB      1.92%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: lab4.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "lab_3.axf"; # arm-none-eabi-objcopy -v -O binary "lab_3.axf" "lab_3.bin" ; # checksum -p LPC1115_303 -d "lab_3.bin";
+arm-none-eabi-size "lab4.axf"; # arm-none-eabi-objcopy -v -O binary "lab4.axf" "lab4.bin" ; # checksum -p LPC1115_303 -d "lab4.bin";
    text	   data	    bss	    dec	    hex	filename
-   2748	      4	     48	   2800	    af0	lab_3.axf
+   1256	      0	     40	   1296	    510	lab4.axf
  
-15:40:59 **** Incremental Build of configuration Debug for project lab_3 ****
+14:22:45 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
 make -r all 
 make: Nothing to be done for `all'.
-15:43:58 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+14:22:47 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
 make: Nothing to be done for `all'.
-15:43:59 **** Incremental Build of configuration Debug for project lab_3 ****
+14:22:50 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
-Building file: ../src/main.c
+make: Nothing to be done for `all'.
+14:26:24 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:26:25 **** Incremental Build of configuration Debug for project lab4 ****
+make -r all 
+Building file: ../src/lab4.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:55:18: warning: unused variable 'j' [-Wunused-variable]
-              int j = i+1;
-                  ^
-../src/main.c:52:10: warning: unused variable 'x' [-Wunused-variable]
-      int x = GetFib(1);
-          ^
-Finished building: ../src/main.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -MT"src/lab4.d" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
  
-Building target: lab_3.axf
+Building target: lab4.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab_3.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab_3_Debug.ld" -o "lab_3.axf"  ./src/GetFib.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab4_Debug.ld" -o "lab4.axf"  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/lab4.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
 Memory region         Used Size  Region Size  %age Used
-        MFlash64:        2736 B        64 KB      4.17%
-         RamLoc8:          52 B         8 KB      0.63%
-Finished building target: lab_3.axf
+        MFlash64:        1272 B        64 KB      1.94%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: lab4.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "lab_3.axf"; # arm-none-eabi-objcopy -v -O binary "lab_3.axf" "lab_3.bin" ; # checksum -p LPC1115_303 -d "lab_3.bin";
+arm-none-eabi-size "lab4.axf"; # arm-none-eabi-objcopy -v -O binary "lab4.axf" "lab4.bin" ; # checksum -p LPC1115_303 -d "lab4.bin";
    text	   data	    bss	    dec	    hex	filename
-   2732	      4	     48	   2784	    ae0	lab_3.axf
+   1272	      0	     40	   1312	    520	lab4.axf
  
-15:44:04 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
-make -r clean 
-rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
- 
-15:44:05 **** Clean-only build of configuration Debug for project lab_3 ****
-make -r clean 
-rm -rf  ./src/GetFib.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./src/cr_startup_lpc11xx.d ./src/crp.d ./src/main.d  ./driver/adc.d ./driver/clkconfig.d ./driver/crp.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  lab_3.axf
- 
-15:44:09 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+14:26:40 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
 make -r all 
-Building file: ../src/system_LPC11xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
-Finished building: ../src/system_LPC11xx.c
- 
-Building target: libCMSIS_CORE_LPC11xx.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
-c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
-Finished building target: libCMSIS_CORE_LPC11xx.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
-   text	   data	    bss	    dec	    hex	filename
-    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
- 
-15:44:11 **** Build of configuration Debug for project lab_3 ****
+make: Nothing to be done for `all'.
+14:26:41 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
-Building file: ../src/GetFib.s
-Invoking: MCU Assembler
-arm-none-eabi-gcc -c -x assembler-with-cpp -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -g3 -mcpu=cortex-m0 -mthumb -specs=redlib.specs -o "src/GetFib.o" "../src/GetFib.s"
-Finished building: ../src/GetFib.s
- 
-Building file: ../src/cr_startup_lpc11xx.c
+make: Nothing to be done for `all'.
+14:26:44 **** Incremental Build of configuration Debug for project lab4 ****
+make -r all 
+make: Nothing to be done for `all'.
+14:37:34 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:37:35 **** Incremental Build of configuration Debug for project lab4 ****
+make -r all 
+Building file: ../src/lab4.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
-Finished building: ../src/cr_startup_lpc11xx.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -MT"src/lab4.d" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
  
-Building file: ../src/crp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
-Finished building: ../src/crp.c
- 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:55:18: warning: unused variable 'j' [-Wunused-variable]
-              int j = i+1;
-                  ^
-../src/main.c:52:10: warning: unused variable 'x' [-Wunused-variable]
-      int x = GetFib(1);
-          ^
-Finished building: ../src/main.c
- 
-Building file: ../driver/adc.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
-Finished building: ../driver/adc.c
- 
-Building file: ../driver/clkconfig.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.o" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
-Finished building: ../driver/clkconfig.c
- 
-Building file: ../driver/crp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
-Finished building: ../driver/crp.c
- 
-Building file: ../driver/gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
-Finished building: ../driver/gpio.c
- 
-Building file: ../driver/i2c.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
-Finished building: ../driver/i2c.c
- 
-Building file: ../driver/i2cslave.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.o" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
-Finished building: ../driver/i2cslave.c
- 
-Building file: ../driver/lpc_swu.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.o" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
-Finished building: ../driver/lpc_swu.c
- 
-Building file: ../driver/rs485.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.o" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
-Finished building: ../driver/rs485.c
- 
-Building file: ../driver/small_gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.o" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
-Finished building: ../driver/small_gpio.c
- 
-Building file: ../driver/ssp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.o" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
-Finished building: ../driver/ssp.c
- 
-Building file: ../driver/timer32.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
-Finished building: ../driver/timer32.c
- 
-Building file: ../driver/uart.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
-Finished building: ../driver/uart.c
- 
-Building file: ../driver/wdt.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab_3\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.o" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
-Finished building: ../driver/wdt.c
- 
-Building target: lab_3.axf
+Building target: lab4.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab_3.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab_3_Debug.ld" -o "lab_3.axf"  ./src/GetFib.o ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/main.o  ./driver/adc.o ./driver/clkconfig.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab4_Debug.ld" -o "lab4.axf"  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/lab4.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
 Memory region         Used Size  Region Size  %age Used
-        MFlash64:        2736 B        64 KB      4.17%
-         RamLoc8:          52 B         8 KB      0.63%
-Finished building target: lab_3.axf
+        MFlash64:        1264 B        64 KB      1.93%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: lab4.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "lab_3.axf"; # arm-none-eabi-objcopy -v -O binary "lab_3.axf" "lab_3.bin" ; # checksum -p LPC1115_303 -d "lab_3.bin";
+arm-none-eabi-size "lab4.axf"; # arm-none-eabi-objcopy -v -O binary "lab4.axf" "lab4.bin" ; # checksum -p LPC1115_303 -d "lab4.bin";
    text	   data	    bss	    dec	    hex	filename
-   2732	      4	     48	   2784	    ae0	lab_3.axf
+   1264	      0	     40	   1304	    518	lab4.axf
  
-15:44:19 **** Incremental Build of configuration Debug for project lab_3 ****
+14:37:53 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+14:37:54 **** Incremental Build of configuration Debug for project lab4 ****
+make -r all 
+make: Nothing to be done for `all'.
+14:37:57 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
 make: Nothing to be done for `all'.
