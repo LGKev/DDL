@@ -252,7 +252,8 @@ void PIOINT2_IRQHandler(void){
 
 
 
-
+uint32_t numberOfMatchesIn_10s = 10;
+uint32_t currentNumberOfMatches = 0;
 uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
 uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
 #define FULL_INTERRUPT
@@ -263,7 +264,17 @@ void TIMER32_0_IRQHandler(void){
 	if(LPC_TMR32B0 -> IR &= (1<<0)){ //match0
 		//clear interrupt
 		LPC_TMR32B0 -> IR &= ~(1<<0);
-		LPC_TMR32B0 -> TC = 0;
+
+
+/* check to see if we have had enough, and need to toggle duty cycles */
+		if(currentNumberOfMatches == numberOfMatchesIn_10s){
+			toggleDuty ^= 1; //toggle
+			//reset
+			currentNumberOfMatches = 0;
+		}
+
+		// TODO verify that the line below, TC = 0; is unnecessary now I have the proper If - else
+		//LPC_TMR32B0 -> TC = 0; //TODO:
 /* ======================================================== */
 // 25 % duty cycle
 /* ======================================================== */
@@ -286,7 +297,29 @@ void TIMER32_0_IRQHandler(void){
 			}
 		}
 /* ======================================================== */
+// 75 % duty cycle
+/* ======================================================== */
+		else if(toggleDuty == 1){
+			if(quartlet == 0){
+				//on time 25% on
+				LPC_GPIO0 -> DATA |= LED_R_P0_7;
+				quartlet = 1;
+			}
+			else if(quartlet >= 1 && quartlet <4){
+				//off time 75%
+				LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
+				quartlet++;
+				if(quartlet == 4){
+					quartlet = 0; //reset
+				}
+			}
+			else{ // redundant since the if within the else if above but never too sure?
+				quartlet = 0;
+			}
+		}
+/* ======================================================== */
 
+		currentNumberOfMatches++; //increment everytime we had a timer interrupt
 		return;
 	} //end of match0
 
