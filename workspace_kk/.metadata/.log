@@ -13214,3 +13214,26 @@ To terminate debug sessions, first select a debug session in the Debug View and 
 
 !ENTRY com.crt.dsfdebug 1 0 2018-10-06 18:53:17.398
 !MESSAGE Telnet session connected on port 3330->57702 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-06 19:05:19.266
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@f970b08): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-06 19:05:19.266
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-06 19:26:22.178
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-06 19:26:22.186
+!MESSAGE RedlinkServer telnet session connected on port 3025->41296 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-06 19:26:23.843
+!MESSAGE Telnet session connected on port 3330->57714 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-06 19:55:02.916
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-06 19:55:02.917
+!MESSAGE RedlinkServer telnet session connected on port 3025->41306 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-06 19:55:04.575
+!MESSAGE Telnet session connected on port 3330->57724 @ 127.0.0.1

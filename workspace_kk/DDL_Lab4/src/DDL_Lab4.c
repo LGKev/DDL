@@ -65,17 +65,11 @@ void sysTickInit(void);
 
 
 int main(void) {
-
 	GPIOInit();
 	sysTickInit(); //enable the systick
-	TIMER32Init();
-
-
-	while(1){
-		//LPC_GPIO0 -> DATA |= 0b1110000000; //all on
-		//LPC_GPIO0 -> DATA &= ~0b1110000000; //all off
-	}
-    return 0 ;
+//	TIMER32Init();
+	while(1);
+    return 0;
 }
 
 
@@ -110,8 +104,6 @@ void GPIOInit(void){
         // NO need for interrupt stuff	
 }
 
-
-
 /**
  * @brief "21.2 Basic Configuration"
  * 	CT32B_0 are configured using the following registers:
@@ -145,8 +137,12 @@ void TIMER32Init(void){
 	// we want to set what happens on a match, so TMR32B0_MCR and MCR0
 	LPC_TMR32B0 -> MCR |= (1<<1); // enable reset of TC on match MR0
 	LPC_TMR32B0 -> MCR |= (1<<0); // enable interrupt for TMR32b0, when match0
-	LPC_TMR32B0 -> MR0 = 12000000; //value we count up to
-	LPC_TMR32B0 -> MR1 = 24000000; //value we count up to
+
+
+	//TODO: once the GPIO handler can calculate frequency, / or main. we
+	// can set the MR0 to be a value, recalculate the 10s tick period.
+	LPC_TMR32B0 -> MR0 = 12000000 -1; //value we count up to
+	// TODO: fully remove eventually LPC_TMR32B0 -> MR1 = 24000000; //value we count up to
 
 	// NOTE: not using the mr1 so need to reset the TC when MR0 is matched
 	//LPC_TMR32B0 -> MCR |= (1<<4) | (1<<3); // disable reset for TMR32b0, when match0, so we can do the toggling.
@@ -159,46 +155,50 @@ void TIMER32Init(void){
 void sysTickInit(void){
 	SysTick -> LOAD = 12000000;
 	SysTick -> CTRL |= (1<<0) | (1<<2); // enable, and use system clock no div (fastest)
-	//enable
+	//enable interrupt? yes lets do it just for testing to verify that load value of 12 MIll results in 1 second blink
+
+	//clear any flags
+	SysTick ->  CTRL &= ~(1<<16); // countFlag looks like its the interrupt flag
+	SysTick -> CTRL |= (1<<1); //enable the interrupt
+	NVIC_EnableIRQ(SysTick_IRQn); //timer32b timer0 interrupt
+}
+
+void SysTick_Handler(void){
+	SysTick ->  CTRL &= ~(1<<16); // countFlag looks like its the interrupt flag
+
+	LPC_GPIO0 -> DATA ^= (1<<7); //7th bit ie: LED_R_P0_7
 
 }
 
 
 
+
 //gloabl
-uint8_t toggle = 0;
 uint8_t zeroCrossing = 0;
 uint32_t startTime;
 uint32_t endTime;
 uint32_t elapsedTime;
 void PIOINT2_IRQHandler(void){
-
-	//clear the flag, check the flag, light an led
+	//check which GPIO triggered the interrupt in port2
 	if(LPC_GPIO2 -> MIS & 0b10){
-		//interrupt happened, clear that bit
-
-		LPC_GPIO2 -> IC = 0b10; //1 to the clear register clears that bit
+		LPC_GPIO2 -> IC = 0b10; //1 to the clear register clears the bit specified
 		/*TODO: logic for timing */
-		//could we just use system tick here? and get the difference?
-
-		if(zeroCrossing == 1){
-		endTime = SysTick -> VAL;
-			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
-			LPC_GPIO0 -> DATA |= LED_B_P0_9; // turn off blue led
-			LPC_GPIO0 -> DATA &= ~LED_B_P0_9; // turn off blue led
-			zeroCrossing = 0;
-			return;
-		}
 
 		if(zeroCrossing == 0){
-			LPC_GPIO0 -> DATA |= LED_B_P0_9;
-			LPC_GPIO0 -> DATA |= LED_R_P0_7;
-			LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
 			startTime = SysTick -> VAL;
+			LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
 			zeroCrossing = 1;
-			return;
 		}
-
+		else if(zeroCrossing == 1){
+			endTime = SysTick ->VAL;
+			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
+			zeroCrossing = 0;
+			elapsedTime = (startTime - endTime)/(12000000); // # [ticks] / [ticks/sec] == [seconds]
+			//TODO: could set the MR0 now
+			LPC_TMR32B0 -> MR0 = 3;
+			/*
+			 * */
+		}
 	}
 }
 
@@ -252,10 +252,12 @@ void PIOINT2_IRQHandler(void){
 
 
 
-uint32_t numberOfMatchesIn_10s = 10;
+uint32_t numberOfMatchesIn_10s = 100;
 uint32_t currentNumberOfMatches = 0;
 uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
 uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
+
+//TODO: remove this if define
 #define FULL_INTERRUPT
 #ifdef FULL_INTERRUPT
 void TIMER32_0_IRQHandler(void){
