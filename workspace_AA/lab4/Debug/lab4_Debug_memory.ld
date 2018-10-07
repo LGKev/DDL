@@ -5,7 +5,7 @@
  * Generated linker script file for LPC1115/303
  * Created from memory.ldt by FMCreateLinkMemory
  * Using Freemarker v2.3.23
- * LPCXpresso v8.2.2 [Build 650] [2016-09-09]  on Oct 4, 2018 2:37:57 PM
+ * MCUXpresso IDE v10.2.1 [Build 795] [2018-07-25] on Oct 5, 2018 8:27:27 PM
  */
 
 MEMORY

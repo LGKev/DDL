@@ -143,13 +143,13 @@ void TIMER32Init(void){
 	// currently we tick counter each time, and were at 1/12Mhz per tick.
 	
 	// we want to set what happens on a match, so TMR32B0_MCR and MCR0
-//	LPC_TMR32B0 -> MCR |= (1<<1); // enable reset for TMR32b0, when match0
-	LPC_TMR32B0 -> MCR &= ~(1<<1); // disable reset for TMR32b0, when match0, so we can do the toggling.
+	LPC_TMR32B0 -> MCR |= (1<<1); // enable reset of TC on match MR0
 	LPC_TMR32B0 -> MCR |= (1<<0); // enable interrupt for TMR32b0, when match0
-	LPC_TMR32B0 -> MR0 = 1200000; //value we count up to
-	LPC_TMR32B0 -> MR1 = 2400000; //value we count up to
+	LPC_TMR32B0 -> MR0 = 12000000; //value we count up to
+	LPC_TMR32B0 -> MR1 = 24000000; //value we count up to
 
-	LPC_TMR32B0 -> MCR |= (1<<4) | (1<<3); // disable reset for TMR32b0, when match0, so we can do the toggling.
+	// NOTE: not using the mr1 so need to reset the TC when MR0 is matched
+	//LPC_TMR32B0 -> MCR |= (1<<4) | (1<<3); // disable reset for TMR32b0, when match0, so we can do the toggling.
 
 
 	NVIC_EnableIRQ(TIMER_32_0_IRQn); //timer32b timer0 interrupt
@@ -248,6 +248,11 @@ void PIOINT2_IRQHandler(void){
 
 // global
 
+//		LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
+
+
+
+
 uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
 uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
 #define FULL_INTERRUPT
@@ -258,17 +263,42 @@ void TIMER32_0_IRQHandler(void){
 	if(LPC_TMR32B0 -> IR &= (1<<0)){ //match0
 		//clear interrupt
 		LPC_TMR32B0 -> IR &= ~(1<<0);
-	//	LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
-		LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
+		LPC_TMR32B0 -> TC = 0;
+/* ======================================================== */
+// 25 % duty cycle
+/* ======================================================== */
+		if(toggleDuty == 0){
+			if(quartlet == 0){
+				//on time 25% on
+				LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
+				quartlet = 1;
+			}
+			else if(quartlet >= 1 && quartlet <4){
+				//off time 75%
+				LPC_GPIO0 -> DATA |= LED_R_P0_7;
+				quartlet++;
+				if(quartlet == 4){
+					quartlet = 0; //reset
+				}
+			}
+			else{ // redundant since the if within the else if above but never too sure?
+				quartlet = 0;
+			}
+		}
+/* ======================================================== */
+
 		return;
 	} //end of match0
 
 	if(LPC_TMR32B0 -> IR &= (1<<1)){ //match1 // 10 second period
 		LPC_TMR32B0 -> IR &= ~(1<<1); //clear flag
-			toggleDuty ^=1; //toggle!
-		//LPC_GPIO0 -> DATA |= LED_B_P0_9;
+
+		/*
+		toggleDuty ^=1; //toggle!
+		LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
 		LPC_GPIO0 -> DATA |= LED_R_P0_7;
 		return;
+	*/
 	}//end of match1
 }
 #endif
@@ -276,8 +306,23 @@ void TIMER32_0_IRQHandler(void){
 
 
 
+//#define kevin
+/*
+ *
+ * 	sysTick gives us the period.
+ * 		period gives us the duration of one quarter.
+ * 			this value is set to the MR0. with a reset of TC on match.
+ * 				for 25% duty cycle: when MR0_count < 1 turn on led.
+ * 					then when MR0_count >1, turn off led,
+ * 						if MR0_count == 3; count = 0; reset.
+ * 			Need to cacluate a counter of the Quarlet.  to determine the 10 second period.
+ * 				question: how many times does the MR0 interrupt occur in a 10 second period
+ * 					equation: 10 second / MR0_duration = number of times the MR0 interrupt occurs.
+ * 					when we reach our number we change to the alternate duty cycle
+ *
+ *    */
 
-/*   */
+
 #ifdef kevin
 		if(toggleDuty == 1){
 /*==================================================================================================*/

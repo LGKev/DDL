@@ -1,547 +1,547 @@
 Archive member included to satisfy reference by file (symbol)
 
-C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
                               ./src/cr_startup_lpc11xx.o (SystemInit)
-c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
                               ./src/cr_startup_lpc11xx.o (__main)
-c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
                               ./driver/adc.o (__aeabi_uidiv)
-c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
-                              c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o) (__aeabi_idiv0)
+/usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+                              /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o) (__aeabi_idiv0)
 
 Discarded input sections
 
- .group         0x00000000        0x8 ./src/cr_startup_lpc11xx.o
- .text          0x00000000        0x0 ./src/cr_startup_lpc11xx.o
- .data          0x00000000        0x0 ./src/cr_startup_lpc11xx.o
- .bss           0x00000000        0x0 ./src/cr_startup_lpc11xx.o
- .group         0x00000000        0x8 ./src/crp.o
- .group         0x00000000        0x8 ./src/crp.o
- .text          0x00000000        0x0 ./src/crp.o
- .data          0x00000000        0x0 ./src/crp.o
- .bss           0x00000000        0x0 ./src/crp.o
- .debug_macro   0x00000000      0x83e ./src/crp.o
- .group         0x00000000        0x8 ./src/lab4.o
- .group         0x00000000        0x8 ./src/lab4.o
- .group         0x00000000        0x8 ./src/lab4.o
- .group         0x00000000        0x8 ./src/lab4.o
- .group         0x00000000        0x8 ./src/lab4.o
- .group         0x00000000        0x8 ./src/lab4.o
- .group         0x00000000        0x8 ./src/lab4.o
- .group         0x00000000        0x8 ./src/lab4.o
- .group         0x00000000        0x8 ./src/lab4.o
- .group         0x00000000        0x8 ./src/lab4.o
- .text          0x00000000        0x0 ./src/lab4.o
- .data          0x00000000        0x0 ./src/lab4.o
- .bss           0x00000000        0x0 ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/cr_startup_lpc11xx.o
+ .text          0x0000000000000000        0x0 ./src/cr_startup_lpc11xx.o
+ .data          0x0000000000000000        0x0 ./src/cr_startup_lpc11xx.o
+ .bss           0x0000000000000000        0x0 ./src/cr_startup_lpc11xx.o
+ .group         0x0000000000000000        0xc ./src/crp.o
+ .group         0x0000000000000000        0xc ./src/crp.o
+ .text          0x0000000000000000        0x0 ./src/crp.o
+ .data          0x0000000000000000        0x0 ./src/crp.o
+ .bss           0x0000000000000000        0x0 ./src/crp.o
+ .debug_macro   0x0000000000000000      0xa5a ./src/crp.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .group         0x0000000000000000        0xc ./src/lab4.o
+ .text          0x0000000000000000        0x0 ./src/lab4.o
+ .data          0x0000000000000000        0x0 ./src/lab4.o
+ .bss           0x0000000000000000        0x0 ./src/lab4.o
  .text.TIMERInit
-                0x00000000        0xc ./src/lab4.o
- .debug_macro   0x00000000      0x83e ./src/lab4.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/adc.o
- .text          0x00000000        0x0 ./driver/adc.o
- .data          0x00000000        0x0 ./driver/adc.o
- .bss           0x00000000        0x0 ./driver/adc.o
+                0x0000000000000000        0xa ./src/lab4.o
+ .debug_macro   0x0000000000000000      0xa5a ./src/lab4.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/adc.o
+ .text          0x0000000000000000        0x0 ./driver/adc.o
+ .data          0x0000000000000000        0x0 ./driver/adc.o
+ .bss           0x0000000000000000        0x0 ./driver/adc.o
  .text.NVIC_EnableIRQ
-                0x00000000       0x2c ./driver/adc.o
- .text.ADCInit  0x00000000      0x134 ./driver/adc.o
- .text.ADCRead  0x00000000       0x50 ./driver/adc.o
+                0x0000000000000000       0x2c ./driver/adc.o
+ .text.ADCInit  0x0000000000000000      0x134 ./driver/adc.o
+ .text.ADCRead  0x0000000000000000       0x50 ./driver/adc.o
  .text.ADCBurstRead
-                0x00000000       0x44 ./driver/adc.o
- .debug_macro   0x00000000      0x83e ./driver/adc.o
- .debug_macro   0x00000000       0x1c ./driver/adc.o
- .debug_macro   0x00000000       0x3a ./driver/adc.o
- .debug_macro   0x00000000       0x10 ./driver/adc.o
- .debug_macro   0x00000000      0x12d ./driver/adc.o
- .debug_macro   0x00000000      0x5b2 ./driver/adc.o
- .debug_macro   0x00000000       0x1f ./driver/adc.o
- .debug_macro   0x00000000      0x242 ./driver/adc.o
- .debug_macro   0x00000000      0x131 ./driver/adc.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .group         0x00000000        0x8 ./driver/can.o
- .text          0x00000000        0x0 ./driver/can.o
- .data          0x00000000        0x0 ./driver/can.o
- .bss           0x00000000        0x0 ./driver/can.o
- .debug_info    0x00000000       0x6f ./driver/can.o
- .debug_abbrev  0x00000000       0x29 ./driver/can.o
+                0x0000000000000000       0x44 ./driver/adc.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/adc.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/adc.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/adc.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/adc.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/adc.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/adc.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/adc.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/adc.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/adc.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/can.o
+ .text          0x0000000000000000        0x0 ./driver/can.o
+ .data          0x0000000000000000        0x0 ./driver/can.o
+ .bss           0x0000000000000000        0x0 ./driver/can.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/can.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/can.o
  .debug_aranges
-                0x00000000       0x18 ./driver/can.o
- .debug_macro   0x00000000       0x84 ./driver/can.o
- .debug_macro   0x00000000      0x83e ./driver/can.o
- .debug_macro   0x00000000       0x10 ./driver/can.o
- .debug_macro   0x00000000       0x1c ./driver/can.o
- .debug_macro   0x00000000       0x3a ./driver/can.o
- .debug_macro   0x00000000       0x10 ./driver/can.o
- .debug_macro   0x00000000      0x12d ./driver/can.o
- .debug_macro   0x00000000      0x5b2 ./driver/can.o
- .debug_macro   0x00000000       0x1f ./driver/can.o
- .debug_macro   0x00000000      0x242 ./driver/can.o
- .debug_macro   0x00000000      0x131 ./driver/can.o
- .debug_macro   0x00000000       0x28 ./driver/can.o
- .debug_line    0x00000000      0x1d6 ./driver/can.o
- .debug_str     0x00000000     0x521e ./driver/can.o
- .comment       0x00000000       0x6f ./driver/can.o
+                0x0000000000000000       0x18 ./driver/can.o
+ .debug_macro   0x0000000000000000       0x84 ./driver/can.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/can.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/can.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/can.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/can.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/can.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/can.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/can.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/can.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/can.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/can.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/can.o
+ .debug_line    0x0000000000000000      0x1ee ./driver/can.o
+ .debug_str     0x0000000000000000     0x5ab1 ./driver/can.o
+ .comment       0x0000000000000000       0x7f ./driver/can.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/can.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/clkconfig.o
- .text          0x00000000        0x0 ./driver/clkconfig.o
- .data          0x00000000        0x0 ./driver/clkconfig.o
- .bss           0x00000000        0x0 ./driver/clkconfig.o
- .debug_info    0x00000000       0x6f ./driver/clkconfig.o
- .debug_abbrev  0x00000000       0x29 ./driver/clkconfig.o
+                0x0000000000000000       0x31 ./driver/can.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/clkconfig.o
+ .text          0x0000000000000000        0x0 ./driver/clkconfig.o
+ .data          0x0000000000000000        0x0 ./driver/clkconfig.o
+ .bss           0x0000000000000000        0x0 ./driver/clkconfig.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/clkconfig.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/clkconfig.o
  .debug_aranges
-                0x00000000       0x18 ./driver/clkconfig.o
- .debug_macro   0x00000000       0x84 ./driver/clkconfig.o
- .debug_macro   0x00000000      0x83e ./driver/clkconfig.o
- .debug_macro   0x00000000       0x10 ./driver/clkconfig.o
- .debug_macro   0x00000000       0x1c ./driver/clkconfig.o
- .debug_macro   0x00000000       0x3a ./driver/clkconfig.o
- .debug_macro   0x00000000       0x10 ./driver/clkconfig.o
- .debug_macro   0x00000000      0x12d ./driver/clkconfig.o
- .debug_macro   0x00000000      0x5b2 ./driver/clkconfig.o
- .debug_macro   0x00000000       0x1f ./driver/clkconfig.o
- .debug_macro   0x00000000      0x242 ./driver/clkconfig.o
- .debug_macro   0x00000000      0x131 ./driver/clkconfig.o
- .debug_macro   0x00000000       0x28 ./driver/clkconfig.o
- .debug_line    0x00000000      0x1dc ./driver/clkconfig.o
- .debug_str     0x00000000     0x5224 ./driver/clkconfig.o
- .comment       0x00000000       0x6f ./driver/clkconfig.o
+                0x0000000000000000       0x18 ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000       0x84 ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/clkconfig.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/clkconfig.o
+ .debug_line    0x0000000000000000      0x1f4 ./driver/clkconfig.o
+ .debug_str     0x0000000000000000     0x5ab7 ./driver/clkconfig.o
+ .comment       0x0000000000000000       0x7f ./driver/clkconfig.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/clkconfig.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/crp.o
- .text          0x00000000        0x0 ./driver/crp.o
- .data          0x00000000        0x0 ./driver/crp.o
- .bss           0x00000000        0x0 ./driver/crp.o
- .debug_info    0x00000000       0x6f ./driver/crp.o
- .debug_abbrev  0x00000000       0x29 ./driver/crp.o
+                0x0000000000000000       0x31 ./driver/clkconfig.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/crp.o
+ .text          0x0000000000000000        0x0 ./driver/crp.o
+ .data          0x0000000000000000        0x0 ./driver/crp.o
+ .bss           0x0000000000000000        0x0 ./driver/crp.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/crp.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/crp.o
  .debug_aranges
-                0x00000000       0x18 ./driver/crp.o
- .debug_macro   0x00000000       0x9c ./driver/crp.o
- .debug_macro   0x00000000      0x83e ./driver/crp.o
- .debug_macro   0x00000000       0x10 ./driver/crp.o
- .debug_macro   0x00000000       0x1c ./driver/crp.o
- .debug_macro   0x00000000       0x3a ./driver/crp.o
- .debug_macro   0x00000000       0x10 ./driver/crp.o
- .debug_macro   0x00000000      0x12d ./driver/crp.o
- .debug_macro   0x00000000      0x5b2 ./driver/crp.o
- .debug_macro   0x00000000       0x1f ./driver/crp.o
- .debug_macro   0x00000000      0x242 ./driver/crp.o
- .debug_macro   0x00000000      0x131 ./driver/crp.o
- .debug_macro   0x00000000       0x28 ./driver/crp.o
- .debug_macro   0x00000000       0x34 ./driver/crp.o
- .debug_macro   0x00000000       0x28 ./driver/crp.o
- .debug_line    0x00000000      0x1df ./driver/crp.o
- .debug_str     0x00000000     0x52c4 ./driver/crp.o
- .comment       0x00000000       0x6f ./driver/crp.o
+                0x0000000000000000       0x18 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x9c ./driver/crp.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/crp.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x34 ./driver/crp.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/crp.o
+ .debug_line    0x0000000000000000      0x1f7 ./driver/crp.o
+ .debug_str     0x0000000000000000     0x5b57 ./driver/crp.o
+ .comment       0x0000000000000000       0x7f ./driver/crp.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/crp.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2c.o
- .text          0x00000000        0x0 ./driver/i2c.o
- .data          0x00000000        0x0 ./driver/i2c.o
- .bss           0x00000000        0x0 ./driver/i2c.o
- .debug_info    0x00000000       0x6f ./driver/i2c.o
- .debug_abbrev  0x00000000       0x29 ./driver/i2c.o
+                0x0000000000000000       0x31 ./driver/crp.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2c.o
+ .text          0x0000000000000000        0x0 ./driver/i2c.o
+ .data          0x0000000000000000        0x0 ./driver/i2c.o
+ .bss           0x0000000000000000        0x0 ./driver/i2c.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/i2c.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/i2c.o
  .debug_aranges
-                0x00000000       0x18 ./driver/i2c.o
- .debug_macro   0x00000000       0x84 ./driver/i2c.o
- .debug_macro   0x00000000      0x83e ./driver/i2c.o
- .debug_macro   0x00000000       0x10 ./driver/i2c.o
- .debug_macro   0x00000000       0x1c ./driver/i2c.o
- .debug_macro   0x00000000       0x3a ./driver/i2c.o
- .debug_macro   0x00000000       0x10 ./driver/i2c.o
- .debug_macro   0x00000000      0x12d ./driver/i2c.o
- .debug_macro   0x00000000      0x5b2 ./driver/i2c.o
- .debug_macro   0x00000000       0x1f ./driver/i2c.o
- .debug_macro   0x00000000      0x242 ./driver/i2c.o
- .debug_macro   0x00000000      0x131 ./driver/i2c.o
- .debug_macro   0x00000000       0x28 ./driver/i2c.o
- .debug_line    0x00000000      0x1d6 ./driver/i2c.o
- .debug_str     0x00000000     0x521e ./driver/i2c.o
- .comment       0x00000000       0x6f ./driver/i2c.o
+                0x0000000000000000       0x18 ./driver/i2c.o
+ .debug_macro   0x0000000000000000       0x84 ./driver/i2c.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/i2c.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/i2c.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/i2c.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/i2c.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/i2c.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/i2c.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/i2c.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/i2c.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/i2c.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/i2c.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/i2c.o
+ .debug_line    0x0000000000000000      0x1ee ./driver/i2c.o
+ .debug_str     0x0000000000000000     0x5ab1 ./driver/i2c.o
+ .comment       0x0000000000000000       0x7f ./driver/i2c.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/i2c.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/i2cslave.o
- .text          0x00000000        0x0 ./driver/i2cslave.o
- .data          0x00000000        0x0 ./driver/i2cslave.o
- .bss           0x00000000        0x0 ./driver/i2cslave.o
- .debug_info    0x00000000       0x6f ./driver/i2cslave.o
- .debug_abbrev  0x00000000       0x29 ./driver/i2cslave.o
+                0x0000000000000000       0x31 ./driver/i2c.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/i2cslave.o
+ .text          0x0000000000000000        0x0 ./driver/i2cslave.o
+ .data          0x0000000000000000        0x0 ./driver/i2cslave.o
+ .bss           0x0000000000000000        0x0 ./driver/i2cslave.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/i2cslave.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/i2cslave.o
  .debug_aranges
-                0x00000000       0x18 ./driver/i2cslave.o
- .debug_macro   0x00000000       0x84 ./driver/i2cslave.o
- .debug_macro   0x00000000      0x83e ./driver/i2cslave.o
- .debug_macro   0x00000000       0x10 ./driver/i2cslave.o
- .debug_macro   0x00000000       0x1c ./driver/i2cslave.o
- .debug_macro   0x00000000       0x3a ./driver/i2cslave.o
- .debug_macro   0x00000000       0x10 ./driver/i2cslave.o
- .debug_macro   0x00000000      0x12d ./driver/i2cslave.o
- .debug_macro   0x00000000      0x5b2 ./driver/i2cslave.o
- .debug_macro   0x00000000       0x1f ./driver/i2cslave.o
- .debug_macro   0x00000000      0x242 ./driver/i2cslave.o
- .debug_macro   0x00000000      0x131 ./driver/i2cslave.o
- .debug_macro   0x00000000       0x28 ./driver/i2cslave.o
- .debug_line    0x00000000      0x1db ./driver/i2cslave.o
- .debug_str     0x00000000     0x5223 ./driver/i2cslave.o
- .comment       0x00000000       0x6f ./driver/i2cslave.o
+                0x0000000000000000       0x18 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x84 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/i2cslave.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/i2cslave.o
+ .debug_line    0x0000000000000000      0x1f3 ./driver/i2cslave.o
+ .debug_str     0x0000000000000000     0x5ab6 ./driver/i2cslave.o
+ .comment       0x0000000000000000       0x7f ./driver/i2cslave.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/i2cslave.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/lpc_swu.o
- .text          0x00000000        0x0 ./driver/lpc_swu.o
- .data          0x00000000        0x0 ./driver/lpc_swu.o
- .bss           0x00000000        0x0 ./driver/lpc_swu.o
- .debug_info    0x00000000       0x6f ./driver/lpc_swu.o
- .debug_abbrev  0x00000000       0x29 ./driver/lpc_swu.o
+                0x0000000000000000       0x31 ./driver/i2cslave.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/lpc_swu.o
+ .text          0x0000000000000000        0x0 ./driver/lpc_swu.o
+ .data          0x0000000000000000        0x0 ./driver/lpc_swu.o
+ .bss           0x0000000000000000        0x0 ./driver/lpc_swu.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/lpc_swu.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/lpc_swu.o
  .debug_aranges
-                0x00000000       0x18 ./driver/lpc_swu.o
- .debug_macro   0x00000000       0x84 ./driver/lpc_swu.o
- .debug_macro   0x00000000      0x83e ./driver/lpc_swu.o
- .debug_macro   0x00000000       0x10 ./driver/lpc_swu.o
- .debug_macro   0x00000000       0x1c ./driver/lpc_swu.o
- .debug_macro   0x00000000       0x3a ./driver/lpc_swu.o
- .debug_macro   0x00000000       0x10 ./driver/lpc_swu.o
- .debug_macro   0x00000000      0x12d ./driver/lpc_swu.o
- .debug_macro   0x00000000      0x5b2 ./driver/lpc_swu.o
- .debug_macro   0x00000000       0x1f ./driver/lpc_swu.o
- .debug_macro   0x00000000      0x242 ./driver/lpc_swu.o
- .debug_macro   0x00000000      0x131 ./driver/lpc_swu.o
- .debug_macro   0x00000000       0x28 ./driver/lpc_swu.o
- .debug_line    0x00000000      0x1da ./driver/lpc_swu.o
- .debug_str     0x00000000     0x5222 ./driver/lpc_swu.o
- .comment       0x00000000       0x6f ./driver/lpc_swu.o
+                0x0000000000000000       0x18 ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000       0x84 ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/lpc_swu.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/lpc_swu.o
+ .debug_line    0x0000000000000000      0x1f2 ./driver/lpc_swu.o
+ .debug_str     0x0000000000000000     0x5ab5 ./driver/lpc_swu.o
+ .comment       0x0000000000000000       0x7f ./driver/lpc_swu.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/lpc_swu.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/rs485.o
- .text          0x00000000        0x0 ./driver/rs485.o
- .data          0x00000000        0x0 ./driver/rs485.o
- .bss           0x00000000        0x0 ./driver/rs485.o
- .debug_info    0x00000000       0x6f ./driver/rs485.o
- .debug_abbrev  0x00000000       0x29 ./driver/rs485.o
+                0x0000000000000000       0x31 ./driver/lpc_swu.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/rs485.o
+ .text          0x0000000000000000        0x0 ./driver/rs485.o
+ .data          0x0000000000000000        0x0 ./driver/rs485.o
+ .bss           0x0000000000000000        0x0 ./driver/rs485.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/rs485.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/rs485.o
  .debug_aranges
-                0x00000000       0x18 ./driver/rs485.o
- .debug_macro   0x00000000       0x84 ./driver/rs485.o
- .debug_macro   0x00000000      0x83e ./driver/rs485.o
- .debug_macro   0x00000000       0x10 ./driver/rs485.o
- .debug_macro   0x00000000       0x1c ./driver/rs485.o
- .debug_macro   0x00000000       0x3a ./driver/rs485.o
- .debug_macro   0x00000000       0x10 ./driver/rs485.o
- .debug_macro   0x00000000      0x12d ./driver/rs485.o
- .debug_macro   0x00000000      0x5b2 ./driver/rs485.o
- .debug_macro   0x00000000       0x1f ./driver/rs485.o
- .debug_macro   0x00000000      0x242 ./driver/rs485.o
- .debug_macro   0x00000000      0x131 ./driver/rs485.o
- .debug_macro   0x00000000       0x28 ./driver/rs485.o
- .debug_line    0x00000000      0x1d8 ./driver/rs485.o
- .debug_str     0x00000000     0x5220 ./driver/rs485.o
- .comment       0x00000000       0x6f ./driver/rs485.o
+                0x0000000000000000       0x18 ./driver/rs485.o
+ .debug_macro   0x0000000000000000       0x84 ./driver/rs485.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/rs485.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/rs485.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/rs485.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/rs485.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/rs485.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/rs485.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/rs485.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/rs485.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/rs485.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/rs485.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/rs485.o
+ .debug_line    0x0000000000000000      0x1f0 ./driver/rs485.o
+ .debug_str     0x0000000000000000     0x5ab3 ./driver/rs485.o
+ .comment       0x0000000000000000       0x7f ./driver/rs485.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/rs485.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/small_gpio.o
- .text          0x00000000        0x0 ./driver/small_gpio.o
- .data          0x00000000        0x0 ./driver/small_gpio.o
- .bss           0x00000000        0x0 ./driver/small_gpio.o
- .debug_info    0x00000000       0x6f ./driver/small_gpio.o
- .debug_abbrev  0x00000000       0x29 ./driver/small_gpio.o
+                0x0000000000000000       0x31 ./driver/rs485.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/small_gpio.o
+ .text          0x0000000000000000        0x0 ./driver/small_gpio.o
+ .data          0x0000000000000000        0x0 ./driver/small_gpio.o
+ .bss           0x0000000000000000        0x0 ./driver/small_gpio.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/small_gpio.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/small_gpio.o
  .debug_aranges
-                0x00000000       0x18 ./driver/small_gpio.o
- .debug_macro   0x00000000       0x84 ./driver/small_gpio.o
- .debug_macro   0x00000000      0x83e ./driver/small_gpio.o
- .debug_macro   0x00000000       0x10 ./driver/small_gpio.o
- .debug_macro   0x00000000       0x1c ./driver/small_gpio.o
- .debug_macro   0x00000000       0x3a ./driver/small_gpio.o
- .debug_macro   0x00000000       0x10 ./driver/small_gpio.o
- .debug_macro   0x00000000      0x12d ./driver/small_gpio.o
- .debug_macro   0x00000000      0x5b2 ./driver/small_gpio.o
- .debug_macro   0x00000000       0x1f ./driver/small_gpio.o
- .debug_macro   0x00000000      0x242 ./driver/small_gpio.o
- .debug_macro   0x00000000      0x131 ./driver/small_gpio.o
- .debug_macro   0x00000000       0x28 ./driver/small_gpio.o
- .debug_line    0x00000000      0x1dd ./driver/small_gpio.o
- .debug_str     0x00000000     0x5225 ./driver/small_gpio.o
- .comment       0x00000000       0x6f ./driver/small_gpio.o
+                0x0000000000000000       0x18 ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000       0x84 ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/small_gpio.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/small_gpio.o
+ .debug_line    0x0000000000000000      0x1f5 ./driver/small_gpio.o
+ .debug_str     0x0000000000000000     0x5ab8 ./driver/small_gpio.o
+ .comment       0x0000000000000000       0x7f ./driver/small_gpio.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/small_gpio.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/ssp.o
- .text          0x00000000        0x0 ./driver/ssp.o
- .data          0x00000000        0x0 ./driver/ssp.o
- .bss           0x00000000        0x0 ./driver/ssp.o
- .debug_info    0x00000000       0x6f ./driver/ssp.o
- .debug_abbrev  0x00000000       0x29 ./driver/ssp.o
+                0x0000000000000000       0x31 ./driver/small_gpio.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/ssp.o
+ .text          0x0000000000000000        0x0 ./driver/ssp.o
+ .data          0x0000000000000000        0x0 ./driver/ssp.o
+ .bss           0x0000000000000000        0x0 ./driver/ssp.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/ssp.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/ssp.o
  .debug_aranges
-                0x00000000       0x18 ./driver/ssp.o
- .debug_macro   0x00000000       0x84 ./driver/ssp.o
- .debug_macro   0x00000000      0x83e ./driver/ssp.o
- .debug_macro   0x00000000       0x10 ./driver/ssp.o
- .debug_macro   0x00000000       0x1c ./driver/ssp.o
- .debug_macro   0x00000000       0x3a ./driver/ssp.o
- .debug_macro   0x00000000       0x10 ./driver/ssp.o
- .debug_macro   0x00000000      0x12d ./driver/ssp.o
- .debug_macro   0x00000000      0x5b2 ./driver/ssp.o
- .debug_macro   0x00000000       0x1f ./driver/ssp.o
- .debug_macro   0x00000000      0x242 ./driver/ssp.o
- .debug_macro   0x00000000      0x131 ./driver/ssp.o
- .debug_macro   0x00000000       0x28 ./driver/ssp.o
- .debug_line    0x00000000      0x1d6 ./driver/ssp.o
- .debug_str     0x00000000     0x521e ./driver/ssp.o
- .comment       0x00000000       0x6f ./driver/ssp.o
+                0x0000000000000000       0x18 ./driver/ssp.o
+ .debug_macro   0x0000000000000000       0x84 ./driver/ssp.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/ssp.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/ssp.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/ssp.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/ssp.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/ssp.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/ssp.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/ssp.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/ssp.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/ssp.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/ssp.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/ssp.o
+ .debug_line    0x0000000000000000      0x1ee ./driver/ssp.o
+ .debug_str     0x0000000000000000     0x5ab1 ./driver/ssp.o
+ .comment       0x0000000000000000       0x7f ./driver/ssp.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/ssp.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/timer16.o
- .text          0x00000000        0x0 ./driver/timer16.o
- .data          0x00000000        0x0 ./driver/timer16.o
- .bss           0x00000000        0x0 ./driver/timer16.o
- .debug_info    0x00000000       0x6f ./driver/timer16.o
- .debug_abbrev  0x00000000       0x29 ./driver/timer16.o
+                0x0000000000000000       0x31 ./driver/ssp.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/timer16.o
+ .text          0x0000000000000000        0x0 ./driver/timer16.o
+ .data          0x0000000000000000        0x0 ./driver/timer16.o
+ .bss           0x0000000000000000        0x0 ./driver/timer16.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/timer16.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/timer16.o
  .debug_aranges
-                0x00000000       0x18 ./driver/timer16.o
- .debug_macro   0x00000000       0x8e ./driver/timer16.o
- .debug_macro   0x00000000      0x83e ./driver/timer16.o
- .debug_macro   0x00000000       0x10 ./driver/timer16.o
- .debug_macro   0x00000000       0x1c ./driver/timer16.o
- .debug_macro   0x00000000       0x3a ./driver/timer16.o
- .debug_macro   0x00000000       0x10 ./driver/timer16.o
- .debug_macro   0x00000000      0x12d ./driver/timer16.o
- .debug_macro   0x00000000      0x5b2 ./driver/timer16.o
- .debug_macro   0x00000000       0x1f ./driver/timer16.o
- .debug_macro   0x00000000      0x242 ./driver/timer16.o
- .debug_macro   0x00000000      0x131 ./driver/timer16.o
- .debug_macro   0x00000000       0x28 ./driver/timer16.o
- .debug_line    0x00000000      0x1e7 ./driver/timer16.o
- .debug_str     0x00000000     0x522f ./driver/timer16.o
- .comment       0x00000000       0x6f ./driver/timer16.o
+                0x0000000000000000       0x18 ./driver/timer16.o
+ .debug_macro   0x0000000000000000       0x8e ./driver/timer16.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/timer16.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/timer16.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/timer16.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/timer16.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/timer16.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/timer16.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/timer16.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/timer16.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/timer16.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/timer16.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/timer16.o
+ .debug_line    0x0000000000000000      0x1ff ./driver/timer16.o
+ .debug_str     0x0000000000000000     0x5ac2 ./driver/timer16.o
+ .comment       0x0000000000000000       0x7f ./driver/timer16.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/timer16.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/uart.o
- .text          0x00000000        0x0 ./driver/uart.o
- .data          0x00000000        0x0 ./driver/uart.o
- .bss           0x00000000        0x0 ./driver/uart.o
- .debug_info    0x00000000       0x6f ./driver/uart.o
- .debug_abbrev  0x00000000       0x29 ./driver/uart.o
+                0x0000000000000000       0x31 ./driver/timer16.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/uart.o
+ .text          0x0000000000000000        0x0 ./driver/uart.o
+ .data          0x0000000000000000        0x0 ./driver/uart.o
+ .bss           0x0000000000000000        0x0 ./driver/uart.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/uart.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/uart.o
  .debug_aranges
-                0x00000000       0x18 ./driver/uart.o
- .debug_macro   0x00000000       0x84 ./driver/uart.o
- .debug_macro   0x00000000      0x83e ./driver/uart.o
- .debug_macro   0x00000000       0x10 ./driver/uart.o
- .debug_macro   0x00000000       0x1c ./driver/uart.o
- .debug_macro   0x00000000       0x3a ./driver/uart.o
- .debug_macro   0x00000000       0x10 ./driver/uart.o
- .debug_macro   0x00000000      0x12d ./driver/uart.o
- .debug_macro   0x00000000      0x5b2 ./driver/uart.o
- .debug_macro   0x00000000       0x1f ./driver/uart.o
- .debug_macro   0x00000000      0x242 ./driver/uart.o
- .debug_macro   0x00000000      0x131 ./driver/uart.o
- .debug_macro   0x00000000       0x28 ./driver/uart.o
- .debug_line    0x00000000      0x1d7 ./driver/uart.o
- .debug_str     0x00000000     0x521f ./driver/uart.o
- .comment       0x00000000       0x6f ./driver/uart.o
+                0x0000000000000000       0x18 ./driver/uart.o
+ .debug_macro   0x0000000000000000       0x84 ./driver/uart.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/uart.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/uart.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/uart.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/uart.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/uart.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/uart.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/uart.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/uart.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/uart.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/uart.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/uart.o
+ .debug_line    0x0000000000000000      0x1ef ./driver/uart.o
+ .debug_str     0x0000000000000000     0x5ab2 ./driver/uart.o
+ .comment       0x0000000000000000       0x7f ./driver/uart.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/uart.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .group         0x00000000        0x8 ./driver/wdt.o
- .text          0x00000000        0x0 ./driver/wdt.o
- .data          0x00000000        0x0 ./driver/wdt.o
- .bss           0x00000000        0x0 ./driver/wdt.o
- .debug_info    0x00000000       0x6f ./driver/wdt.o
- .debug_abbrev  0x00000000       0x29 ./driver/wdt.o
+                0x0000000000000000       0x31 ./driver/uart.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .group         0x0000000000000000        0xc ./driver/wdt.o
+ .text          0x0000000000000000        0x0 ./driver/wdt.o
+ .data          0x0000000000000000        0x0 ./driver/wdt.o
+ .bss           0x0000000000000000        0x0 ./driver/wdt.o
+ .debug_info    0x0000000000000000       0xb3 ./driver/wdt.o
+ .debug_abbrev  0x0000000000000000       0x76 ./driver/wdt.o
  .debug_aranges
-                0x00000000       0x18 ./driver/wdt.o
- .debug_macro   0x00000000       0x8e ./driver/wdt.o
- .debug_macro   0x00000000      0x83e ./driver/wdt.o
- .debug_macro   0x00000000       0x10 ./driver/wdt.o
- .debug_macro   0x00000000       0x1c ./driver/wdt.o
- .debug_macro   0x00000000       0x3a ./driver/wdt.o
- .debug_macro   0x00000000       0x10 ./driver/wdt.o
- .debug_macro   0x00000000      0x12d ./driver/wdt.o
- .debug_macro   0x00000000      0x5b2 ./driver/wdt.o
- .debug_macro   0x00000000       0x1f ./driver/wdt.o
- .debug_macro   0x00000000      0x242 ./driver/wdt.o
- .debug_macro   0x00000000      0x131 ./driver/wdt.o
- .debug_macro   0x00000000       0x28 ./driver/wdt.o
- .debug_line    0x00000000      0x1df ./driver/wdt.o
- .debug_str     0x00000000     0x5227 ./driver/wdt.o
- .comment       0x00000000       0x6f ./driver/wdt.o
+                0x0000000000000000       0x18 ./driver/wdt.o
+ .debug_macro   0x0000000000000000       0x8e ./driver/wdt.o
+ .debug_macro   0x0000000000000000      0xa5a ./driver/wdt.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/wdt.o
+ .debug_macro   0x0000000000000000       0x1c ./driver/wdt.o
+ .debug_macro   0x0000000000000000       0x3a ./driver/wdt.o
+ .debug_macro   0x0000000000000000       0x10 ./driver/wdt.o
+ .debug_macro   0x0000000000000000      0x12d ./driver/wdt.o
+ .debug_macro   0x0000000000000000      0x5b2 ./driver/wdt.o
+ .debug_macro   0x0000000000000000       0x1f ./driver/wdt.o
+ .debug_macro   0x0000000000000000      0x242 ./driver/wdt.o
+ .debug_macro   0x0000000000000000      0x131 ./driver/wdt.o
+ .debug_macro   0x0000000000000000       0x28 ./driver/wdt.o
+ .debug_line    0x0000000000000000      0x1f7 ./driver/wdt.o
+ .debug_str     0x0000000000000000     0x5aba ./driver/wdt.o
+ .comment       0x0000000000000000       0x7f ./driver/wdt.o
  .ARM.attributes
-                0x00000000       0x31 ./driver/wdt.o
- .group         0x00000000        0x8 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .group         0x00000000        0x8 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .text          0x00000000        0x0 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .data          0x00000000        0x0 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .bss           0x00000000        0x0 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+                0x0000000000000000       0x31 ./driver/wdt.o
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .group         0x0000000000000000        0xc /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .text          0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .data          0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .bss           0x0000000000000000        0x0 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
  .text.SystemCoreClockUpdate
-                0x00000000       0xb0 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .rodata.CSWTCH.7
-                0x00000000       0x40 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+                0x0000000000000000       0xa8 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
  .data.SystemCoreClock
-                0x00000000        0x4 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000       0x10 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000      0x12d C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000      0x5b2 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000       0x1c C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000       0x3a C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000       0x1f C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000      0x242 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x00000000      0x131 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .text          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
- .data          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
- .bss           0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
- .text          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
- .data          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
- .bss           0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
+                0x0000000000000000        0x4 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .rodata.CSWTCH.3
+                0x0000000000000000       0x40 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000000000000000       0x10 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000000000000000      0x12d /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000000000000000      0x5b2 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000000000000000       0x1c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000000000000000       0x3a /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000000000000000       0x1f /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000000000000000      0x242 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000000000000000      0x131 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
  .text.__aeabi_division_idivmod
-                0x00000000       0x78 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
+                0x0000000000000000       0x78 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
  .ARM.attributes
-                0x00000000       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
- .text          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
- .data          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
- .bss           0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000000000       0x21 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+ .text          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .data          0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .bss           0x0000000000000000        0x0 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
  .text.__aeabi_division_idiv0
-                0x00000000        0x2 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000000000        0x2 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
  .ARM.attributes
-                0x00000000       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000000000       0x21 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
-MFlash64         0x00000000         0x00010000         xr
-RamLoc8          0x10000000         0x00002000         xrw
-*default*        0x00000000         0xffffffff
+MFlash64         0x0000000000000000 0x0000000000010000 xr
+RamLoc8          0x0000000010000000 0x0000000000002000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
 
@@ -561,272 +561,275 @@ LOAD ./driver/ssp.o
 LOAD ./driver/timer16.o
 LOAD ./driver/uart.o
 LOAD ./driver/wdt.o
-LOAD C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a
+LOAD /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a
 START GROUP
-LOAD c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a
-LOAD c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a
+LOAD /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a
+LOAD /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a
 END GROUP
-                0x00000000                __base_MFlash64 = 0x0
-                0x00000000                __base_Flash = 0x0
-                0x00010000                __top_MFlash64 = 0x10000
-                0x00010000                __top_Flash = 0x10000
-                0x10000000                __base_RamLoc8 = 0x10000000
-                0x10000000                __base_RAM = 0x10000000
-                0x10002000                __top_RamLoc8 = 0x10002000
-                0x10002000                __top_RAM = 0x10002000
+                0x0000000000000000                __base_MFlash64 = 0x0
+                0x0000000000000000                __base_Flash = 0x0
+                0x0000000000010000                __top_MFlash64 = 0x10000
+                0x0000000000010000                __top_Flash = 0x10000
+                0x0000000010000000                __base_RamLoc8 = 0x10000000
+                0x0000000010000000                __base_RAM = 0x10000000
+                0x0000000010002000                __top_RamLoc8 = 0x10002000
+                0x0000000010002000                __top_RAM = 0x10002000
 
-.text           0x00000000      0x4f0
+.text           0x0000000000000000      0x4ec
  FILL mask 0xff
-                0x00000000                __vectors_start__ = ABSOLUTE (.)
+                0x0000000000000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
- .isr_vector    0x00000000       0xc0 ./src/cr_startup_lpc11xx.o
-                0x00000000                g_pfnVectors
-                0x000000c0                . = ALIGN (0x4)
-                0x000000c0                __section_table_start = .
-                0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0x4f0 LOADADDR (.data)
-                0x000000c4        0x4 LONG 0x10000000 ADDR (.data)
-                0x000000c8        0x4 LONG 0x0 SIZEOF (.data)
-                0x000000cc                __data_section_table_end = .
-                0x000000cc                __bss_section_table = .
-                0x000000cc        0x4 LONG 0x10000000 ADDR (.bss)
-                0x000000d0        0x4 LONG 0x28 SIZEOF (.bss)
-                0x000000d4                __bss_section_table_end = .
-                0x000000d4                __section_table_end = .
+ .isr_vector    0x0000000000000000       0xc0 ./src/cr_startup_lpc11xx.o
+                0x0000000000000000                g_pfnVectors
+                0x00000000000000c0                . = ALIGN (0x4)
+                0x00000000000000c0                __section_table_start = .
+                0x00000000000000c0                __data_section_table = .
+                0x00000000000000c0        0x4 LONG 0x4ec LOADADDR (.data)
+                0x00000000000000c4        0x4 LONG 0x10000000 ADDR (.data)
+                0x00000000000000c8        0x4 LONG 0x0 SIZEOF (.data)
+                0x00000000000000cc                __data_section_table_end = .
+                0x00000000000000cc                __bss_section_table = .
+                0x00000000000000cc        0x4 LONG 0x10000000 ADDR (.bss)
+                0x00000000000000d0        0x4 LONG 0x28 SIZEOF (.bss)
+                0x00000000000000d4                __bss_section_table_end = .
+                0x00000000000000d4                __section_table_end = .
  *(.after_vectors*)
  .after_vectors
-                0x000000d4      0x124 ./src/cr_startup_lpc11xx.o
-                0x000000d4                data_init
-                0x00000114                bss_init
-                0x00000148                ResetISR
-                0x000001c8                NMI_Handler
-                0x000001d0                HardFault_Handler
-                0x000001d8                SVC_Handler
-                0x000001e0                PendSV_Handler
-                0x000001e8                SysTick_Handler
-                0x000001f0                PIOINT1_IRQHandler
-                0x000001f0                IntDefaultHandler
-                0x000001f0                SSP0_IRQHandler
-                0x000001f0                TIMER32_1_IRQHandler
-                0x000001f0                UART_IRQHandler
-                0x000001f0                TIMER16_1_IRQHandler
-                0x000001f0                SSP1_IRQHandler
-                0x000001f0                BOD_IRQHandler
-                0x000001f0                WAKEUP_IRQHandler
-                0x000001f0                PIOINT0_IRQHandler
-                0x000001f0                I2C_IRQHandler
-                0x000001f0                WDT_IRQHandler
-                0x000001f0                CAN_IRQHandler
-                0x000001f0                TIMER16_0_IRQHandler
-                0x000001f0                PIOINT3_IRQHandler
-                0x000002fc                . = 0x2fc
- *fill*         0x000001f8      0x104 ff
-                0x000002fc                PROVIDE (__CRP_WORD_START__, .)
+                0x00000000000000d4      0x118 ./src/cr_startup_lpc11xx.o
+                0x00000000000000d4                data_init
+                0x0000000000000114                bss_init
+                0x0000000000000148                ResetISR
+                0x00000000000001c8                NMI_Handler
+                0x00000000000001ce                HardFault_Handler
+                0x00000000000001d4                SVC_Handler
+                0x00000000000001da                PendSV_Handler
+                0x00000000000001e0                SysTick_Handler
+                0x00000000000001e6                TIMER16_0_IRQHandler
+                0x00000000000001e6                UART_IRQHandler
+                0x00000000000001e6                TIMER32_1_IRQHandler
+                0x00000000000001e6                IntDefaultHandler
+                0x00000000000001e6                PIOINT1_IRQHandler
+                0x00000000000001e6                CAN_IRQHandler
+                0x00000000000001e6                SSP0_IRQHandler
+                0x00000000000001e6                TIMER16_1_IRQHandler
+                0x00000000000001e6                SSP1_IRQHandler
+                0x00000000000001e6                BOD_IRQHandler
+                0x00000000000001e6                WAKEUP_IRQHandler
+                0x00000000000001e6                PIOINT0_IRQHandler
+                0x00000000000001e6                I2C_IRQHandler
+                0x00000000000001e6                WDT_IRQHandler
+                0x00000000000001e6                PIOINT3_IRQHandler
+                0x00000000000002fc                . = 0x2fc
+ *fill*         0x00000000000001ec      0x110 ff
+                0x00000000000002fc                PROVIDE (__CRP_WORD_START__, .)
  *(.crp)
- .crp           0x000002fc        0x4 ./src/crp.o
-                0x000002fc                CRP_WORD
-                0x00000300                PROVIDE (__CRP_WORD_END__, .)
-                0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
+ .crp           0x00000000000002fc        0x4 ./src/crp.o
+                0x00000000000002fc                CRP_WORD
+                0x0000000000000300                PROVIDE (__CRP_WORD_END__, .)
+                0x0000000000000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
  *(.text*)
  .text.GPIOInit
-                0x00000300       0x4c ./src/lab4.o
-                0x00000300                GPIOInit
+                0x0000000000000300       0x58 ./src/lab4.o
+                0x0000000000000300                GPIOInit
  .text.PIOINT2_IRQHandler
-                0x0000034c        0xc ./src/lab4.o
-                0x0000034c                PIOINT2_IRQHandler
+                0x0000000000000358        0xa ./src/lab4.o
+                0x0000000000000358                PIOINT2_IRQHandler
  .text.TIMER32_0_IRQHandler
-                0x00000358        0xc ./src/lab4.o
-                0x00000358                TIMER32_0_IRQHandler
- .text.main     0x00000364        0xc ./src/lab4.o
-                0x00000364                main
+                0x0000000000000362        0xa ./src/lab4.o
+                0x0000000000000362                TIMER32_0_IRQHandler
+ .text.main     0x000000000000036c        0xa ./src/lab4.o
+                0x000000000000036c                main
+ *fill*         0x0000000000000376        0x2 ff
  .text.ADC_IRQHandler
-                0x00000370       0xe4 ./driver/adc.o
-                0x00000370                ADC_IRQHandler
+                0x0000000000000378       0xe4 ./driver/adc.o
+                0x0000000000000378                ADC_IRQHandler
  .text.SystemInit
-                0x00000454       0x94 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
-                0x00000454                SystemInit
+                0x000000000000045c       0x88 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+                0x000000000000045c                SystemInit
  .text.__weak_main
-                0x000004e8        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
-                0x000004e8                __weak_main
-                0x000004e8                __main
+                0x00000000000004e4        0x8 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+                0x00000000000004e4                __main
+                0x00000000000004e4                __weak_main
  *(.rodata .rodata.* .constdata .constdata.*)
-                0x000004f0                . = ALIGN (0x4)
+                0x00000000000004ec                . = ALIGN (0x4)
 
-.glue_7         0x000004f0        0x0
- .glue_7        0x000004f0        0x0 linker stubs
+.glue_7         0x00000000000004ec        0x0
+ .glue_7        0x00000000000004ec        0x0 linker stubs
 
-.glue_7t        0x000004f0        0x0
- .glue_7t       0x000004f0        0x0 linker stubs
+.glue_7t        0x00000000000004ec        0x0
+ .glue_7t       0x00000000000004ec        0x0 linker stubs
 
-.vfp11_veneer   0x000004f0        0x0
- .vfp11_veneer  0x000004f0        0x0 linker stubs
+.vfp11_veneer   0x00000000000004ec        0x0
+ .vfp11_veneer  0x00000000000004ec        0x0 linker stubs
 
-.v4_bx          0x000004f0        0x0
- .v4_bx         0x000004f0        0x0 linker stubs
+.v4_bx          0x00000000000004ec        0x0
+ .v4_bx         0x00000000000004ec        0x0 linker stubs
 
-.iplt           0x000004f0        0x0
- .iplt          0x000004f0        0x0 ./src/cr_startup_lpc11xx.o
+.iplt           0x00000000000004ec        0x0
+ .iplt          0x00000000000004ec        0x0 ./src/cr_startup_lpc11xx.o
 
-.rel.dyn        0x000004f0        0x0
- .rel.iplt      0x000004f0        0x0 ./src/cr_startup_lpc11xx.o
+.rel.dyn        0x00000000000004ec        0x0
+ .rel.iplt      0x00000000000004ec        0x0 ./src/cr_startup_lpc11xx.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000004f0                __exidx_start = .
+                0x00000000000004ec                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000004f0                __exidx_end = .
-                0x000004f0                _etext = .
+                0x00000000000004ec                __exidx_end = .
+                0x00000000000004ec                _etext = .
 
 .uninit_RESERVED
-                0x10000000        0x0
+                0x0000000010000000        0x0
  *(.bss.$RESERVED*)
-                0x10000000                . = ALIGN (0x4)
-                0x10000000                _end_uninit_RESERVED = .
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x000004f0
+.data           0x0000000010000000        0x0 load address 0x00000000000004ec
  FILL mask 0xff
-                0x10000000                _data = .
+                0x0000000010000000                _data = .
  *(vtable)
  *(.ramfunc*)
  *(.data*)
-                0x10000000                . = ALIGN (0x4)
-                0x10000000                _edata = .
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x000004f0
- .igot.plt      0x10000000        0x0 ./src/cr_startup_lpc11xx.o
+.igot.plt       0x0000000010000000        0x0 load address 0x00000000000004ec
+ .igot.plt      0x0000000010000000        0x0 ./src/cr_startup_lpc11xx.o
 
-.bss            0x10000000       0x28 load address 0x000004f0
-                0x10000000                _bss = .
+.bss            0x0000000010000000       0x28 load address 0x00000000000004ec
+                0x0000000010000000                _bss = .
  *(.bss*)
- .bss.ADCValue  0x10000000       0x20 ./driver/adc.o
-                0x10000000                ADCValue
+ .bss.ADCValue  0x0000000010000000       0x20 ./driver/adc.o
+                0x0000000010000000                ADCValue
  .bss.ADCIntDone
-                0x10000020        0x4 ./driver/adc.o
-                0x10000020                ADCIntDone
+                0x0000000010000020        0x4 ./driver/adc.o
+                0x0000000010000020                ADCIntDone
  .bss.OverRunCounter
-                0x10000024        0x4 ./driver/adc.o
-                0x10000024                OverRunCounter
+                0x0000000010000024        0x4 ./driver/adc.o
+                0x0000000010000024                OverRunCounter
  *(COMMON)
-                0x10000028                . = ALIGN (0x4)
-                0x10000028                _ebss = .
-                [!provide]                PROVIDE (end, .)
+                0x0000000010000028                . = ALIGN (0x4)
+                0x0000000010000028                _ebss = .
+                [!provide]                        PROVIDE (end, .)
 
-.noinit         0x10000028        0x0 load address 0x000004f0
-                0x10000028                _noinit = .
+.noinit         0x0000000010000028        0x0 load address 0x00000000000004ec
+                0x0000000010000028                _noinit = .
  *(.noinit*)
-                0x10000028                . = ALIGN (0x4)
-                0x10000028                _end_noinit = .
-                [!provide]                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
-                0x10002000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc8 - 0x0))
-                0xefffdb1d                PROVIDE (__valid_user_code_checksum, (0x0 - (((_vStackTop + (ResetISR + 0x1)) + (DEFINED (NMI_Handler)?NMI_Handler:M0_NMI_Handler + 0x1)) + (DEFINED (HardFault_Handler)?HardFault_Handler:M0_HardFault_Handler + 0x1))))
+                0x0000000010000028                . = ALIGN (0x4)
+                0x0000000010000028                _end_noinit = .
+                [!provide]                        PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x0000000010002000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc8 - 0x0))
+                0xffffffffefffdb1f                PROVIDE (__valid_user_code_checksum, (0x0 - (((_vStackTop + (ResetISR + 0x1)) + (DEFINED (NMI_Handler)?NMI_Handler:M0_NMI_Handler + 0x1)) + (DEFINED (HardFault_Handler)?HardFault_Handler:M0_HardFault_Handler + 0x1))))
+                0x0000000000000000                _image_start = LOADADDR (.text)
+                0x00000000000004ec                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x00000000000004ec                _image_size = (_image_end - _image_start)
 OUTPUT(lab4.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x1876
- .debug_info    0x00000000      0x203 ./src/cr_startup_lpc11xx.o
- .debug_info    0x00000203       0x3f ./src/crp.o
- .debug_info    0x00000242      0x7f2 ./src/lab4.o
- .debug_info    0x00000a34      0x9ec ./driver/adc.o
- .debug_info    0x00001420      0x456 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_info     0x0000000000000000     0x1905
+ .debug_info    0x0000000000000000      0x204 ./src/cr_startup_lpc11xx.o
+ .debug_info    0x0000000000000204       0x3f ./src/crp.o
+ .debug_info    0x0000000000000243      0x82b ./src/lab4.o
+ .debug_info    0x0000000000000a6e      0xa0c ./driver/adc.o
+ .debug_info    0x000000000000147a      0x48b /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_abbrev   0x00000000      0x556
- .debug_abbrev  0x00000000       0xe6 ./src/cr_startup_lpc11xx.o
- .debug_abbrev  0x000000e6       0x36 ./src/crp.o
- .debug_abbrev  0x0000011c      0x13e ./src/lab4.o
- .debug_abbrev  0x0000025a      0x1f6 ./driver/adc.o
- .debug_abbrev  0x00000450      0x106 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_abbrev   0x0000000000000000      0x601
+ .debug_abbrev  0x0000000000000000       0xf4 ./src/cr_startup_lpc11xx.o
+ .debug_abbrev  0x00000000000000f4       0x36 ./src/crp.o
+ .debug_abbrev  0x000000000000012a      0x175 ./src/lab4.o
+ .debug_abbrev  0x000000000000029f      0x229 ./driver/adc.o
+ .debug_abbrev  0x00000000000004c8      0x139 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_aranges  0x00000000      0x120
+.debug_aranges  0x0000000000000000      0x120
  .debug_aranges
-                0x00000000       0x60 ./src/cr_startup_lpc11xx.o
+                0x0000000000000000       0x60 ./src/cr_startup_lpc11xx.o
  .debug_aranges
-                0x00000060       0x18 ./src/crp.o
+                0x0000000000000060       0x18 ./src/crp.o
  .debug_aranges
-                0x00000078       0x40 ./src/lab4.o
+                0x0000000000000078       0x40 ./src/lab4.o
  .debug_aranges
-                0x000000b8       0x40 ./driver/adc.o
+                0x00000000000000b8       0x40 ./driver/adc.o
  .debug_aranges
-                0x000000f8       0x28 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+                0x00000000000000f8       0x28 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_ranges   0x00000000       0xc8
- .debug_ranges  0x00000000       0x50 ./src/cr_startup_lpc11xx.o
- .debug_ranges  0x00000050       0x30 ./src/lab4.o
- .debug_ranges  0x00000080       0x30 ./driver/adc.o
- .debug_ranges  0x000000b0       0x18 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_ranges   0x0000000000000000       0xc8
+ .debug_ranges  0x0000000000000000       0x50 ./src/cr_startup_lpc11xx.o
+ .debug_ranges  0x0000000000000050       0x30 ./src/lab4.o
+ .debug_ranges  0x0000000000000080       0x30 ./driver/adc.o
+ .debug_ranges  0x00000000000000b0       0x18 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_macro    0x00000000     0x1f48
- .debug_macro   0x00000000       0x1d ./src/cr_startup_lpc11xx.o
- .debug_macro   0x0000001d      0x83e ./src/cr_startup_lpc11xx.o
- .debug_macro   0x0000085b       0x1a ./src/crp.o
- .debug_macro   0x00000875       0x34 ./src/crp.o
- .debug_macro   0x000008a9       0x7f ./src/lab4.o
- .debug_macro   0x00000928       0x1c ./src/lab4.o
- .debug_macro   0x00000944       0x3a ./src/lab4.o
- .debug_macro   0x0000097e       0x10 ./src/lab4.o
- .debug_macro   0x0000098e      0x12d ./src/lab4.o
- .debug_macro   0x00000abb      0x5b2 ./src/lab4.o
- .debug_macro   0x0000106d       0x1f ./src/lab4.o
- .debug_macro   0x0000108c      0x242 ./src/lab4.o
- .debug_macro   0x000012ce      0x131 ./src/lab4.o
- .debug_macro   0x000013ff       0x82 ./src/lab4.o
- .debug_macro   0x00001481       0x9c ./driver/adc.o
- .debug_macro   0x0000151d       0x10 ./driver/adc.o
- .debug_macro   0x0000152d       0x28 ./driver/adc.o
- .debug_macro   0x00001555       0x34 ./driver/adc.o
- .debug_macro   0x00001589       0x46 ./driver/adc.o
- .debug_macro   0x000015cf      0x13b C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .debug_macro   0x0000170a      0x83e C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_macro    0x0000000000000000     0x2380
+ .debug_macro   0x0000000000000000       0x1d ./src/cr_startup_lpc11xx.o
+ .debug_macro   0x000000000000001d      0xa5a ./src/cr_startup_lpc11xx.o
+ .debug_macro   0x0000000000000a77       0x1a ./src/crp.o
+ .debug_macro   0x0000000000000a91       0x34 ./src/crp.o
+ .debug_macro   0x0000000000000ac5       0x7f ./src/lab4.o
+ .debug_macro   0x0000000000000b44       0x1c ./src/lab4.o
+ .debug_macro   0x0000000000000b60       0x3a ./src/lab4.o
+ .debug_macro   0x0000000000000b9a       0x10 ./src/lab4.o
+ .debug_macro   0x0000000000000baa      0x12d ./src/lab4.o
+ .debug_macro   0x0000000000000cd7      0x5b2 ./src/lab4.o
+ .debug_macro   0x0000000000001289       0x1f ./src/lab4.o
+ .debug_macro   0x00000000000012a8      0x242 ./src/lab4.o
+ .debug_macro   0x00000000000014ea      0x131 ./src/lab4.o
+ .debug_macro   0x000000000000161b       0x82 ./src/lab4.o
+ .debug_macro   0x000000000000169d       0x9c ./driver/adc.o
+ .debug_macro   0x0000000000001739       0x10 ./driver/adc.o
+ .debug_macro   0x0000000000001749       0x28 ./driver/adc.o
+ .debug_macro   0x0000000000001771       0x34 ./driver/adc.o
+ .debug_macro   0x00000000000017a5       0x46 ./driver/adc.o
+ .debug_macro   0x00000000000017eb      0x13b /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_macro   0x0000000000001926      0xa5a /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000      0x806
- .debug_line    0x00000000       0xba ./src/cr_startup_lpc11xx.o
- .debug_line    0x000000ba       0x78 ./src/crp.o
- .debug_line    0x00000132      0x233 ./src/lab4.o
- .debug_line    0x00000365      0x29f ./driver/adc.o
- .debug_line    0x00000604      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_line     0x0000000000000000      0x850
+ .debug_line    0x0000000000000000       0xb8 ./src/cr_startup_lpc11xx.o
+ .debug_line    0x00000000000000b8       0x79 ./src/crp.o
+ .debug_line    0x0000000000000131      0x242 ./src/lab4.o
+ .debug_line    0x0000000000000373      0x2b7 ./driver/adc.o
+ .debug_line    0x000000000000062a      0x226 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_str      0x00000000     0x6533
- .debug_str     0x00000000     0x250c ./src/cr_startup_lpc11xx.o
-                               0x251f (size before relaxing)
- .debug_str     0x0000250c       0xe9 ./src/crp.o
-                               0x2481 (size before relaxing)
- .debug_str     0x000025f5     0x35f8 ./src/lab4.o
-                               0x5a05 (size before relaxing)
- .debug_str     0x00005bed      0x4a7 ./driver/adc.o
-                               0x59fb (size before relaxing)
- .debug_str     0x00006094      0x49f C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
-                               0x5717 (size before relaxing)
+.debug_str      0x0000000000000000     0x6dcc
+ .debug_str     0x0000000000000000     0x2dfe ./src/cr_startup_lpc11xx.o
+                                       0x2e11 (size before relaxing)
+ .debug_str     0x0000000000002dfe       0xe9 ./src/crp.o
+                                       0x2d68 (size before relaxing)
+ .debug_str     0x0000000000002ee7     0x35a4 ./src/lab4.o
+                                       0x628f (size before relaxing)
+ .debug_str     0x000000000000648b      0x497 ./driver/adc.o
+                                       0x6275 (size before relaxing)
+ .debug_str     0x0000000000006922      0x4aa /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+                                       0x5f91 (size before relaxing)
 
-.comment        0x00000000       0xdc
- .comment       0x00000000       0x6e ./src/cr_startup_lpc11xx.o
-                                 0x6f (size before relaxing)
- .comment       0x0000006e       0x6f ./src/crp.o
- .comment       0x0000006e       0x6f ./src/lab4.o
- .comment       0x0000006e       0x6f ./driver/adc.o
- .comment       0x0000006e       0x6f C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
- .comment       0x0000006e       0x6e c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
-                                 0x6f (size before relaxing)
+.comment        0x0000000000000000       0x7e
+ .comment       0x0000000000000000       0x7e ./src/cr_startup_lpc11xx.o
+                                         0x7f (size before relaxing)
+ .comment       0x000000000000007e       0x7f ./src/crp.o
+ .comment       0x000000000000007e       0x7f ./src/lab4.o
+ .comment       0x000000000000007e       0x7f ./driver/adc.o
+ .comment       0x000000000000007e       0x7f /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .comment       0x000000000000007e       0x7f /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
 
 .ARM.attributes
-                0x00000000       0x2f
+                0x0000000000000000       0x2f
  .ARM.attributes
-                0x00000000       0x31 ./src/cr_startup_lpc11xx.o
+                0x0000000000000000       0x31 ./src/cr_startup_lpc11xx.o
  .ARM.attributes
-                0x00000031       0x31 ./src/crp.o
+                0x0000000000000031       0x31 ./src/crp.o
  .ARM.attributes
-                0x00000062       0x31 ./src/lab4.o
+                0x0000000000000062       0x31 ./src/lab4.o
  .ARM.attributes
-                0x00000093       0x31 ./driver/adc.o
+                0x0000000000000093       0x31 ./driver/adc.o
  .ARM.attributes
-                0x000000c4       0x31 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+                0x00000000000000c4       0x31 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
  .ARM.attributes
-                0x000000f5       0x31 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                0x00000000000000f5       0x31 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
 
-.debug_frame    0x00000000      0x2a0
- .debug_frame   0x00000000      0x118 ./src/cr_startup_lpc11xx.o
- .debug_frame   0x00000118       0x9c ./src/lab4.o
- .debug_frame   0x000001b4       0xac ./driver/adc.o
- .debug_frame   0x00000260       0x40 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_frame    0x0000000000000000      0x298
+ .debug_frame   0x0000000000000000      0x118 ./src/cr_startup_lpc11xx.o
+ .debug_frame   0x0000000000000118       0x9c ./src/lab4.o
+ .debug_frame   0x00000000000001b4       0xac ./driver/adc.o
+ .debug_frame   0x0000000000000260       0x38 /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_loc      0x00000000       0x84
- .debug_loc     0x00000000       0x84 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_loc      0x0000000000000000       0x9c
+ .debug_loc     0x0000000000000000       0x9c /home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug/libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
