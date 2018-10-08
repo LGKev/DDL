@@ -1,0 +1,9 @@
+20:23:38 **** Build of configuration Default for project shit test ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/nxp/LPCXpresso_8.2.2_650/lpcxpresso/jre/bin/client;C:/nxp/LPCXpresso_8.2.2_650/lpcxpresso/jre/bin;C:/nxp/LPCXpresso_8.2.2_650/lpcxpresso/jre/lib/i386;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Wolfram Research\WolframScript\;C:\Program Files\MATLAB\R2018a\bin;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Users\dell\AppData\Local\Microsoft\WindowsApps;C:\Users\dell\AppData\Local\atom\bin;C:\PYTHON27;C:\Users\dell\AppData\Local\Microsoft\WindowsApps;C:\altera\16.0\modelsim_ase\win32aloem;C:\intelFPGA\16.1\modelsim_ase\win32aloem;C:\intelFPGA_lite\16.1\modelsim_ase\win32aloem;C:\Users\dell\AppData\Local\GitHubDesktop\bin;C:\nxp\LPCXpresso_8.2.2_650\lpcxpresso;]
+
+20:23:38 Build Finished (took 154ms)
+
