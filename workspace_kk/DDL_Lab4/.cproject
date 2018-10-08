@@ -249,4 +249,5 @@
 	<storageModule moduleId="com.crt.advproject">
 		<boardId>LPCXpresso1115</boardId>
 	</storageModule>
+	<storageModule moduleId="refreshScope"/>
 </cproject>

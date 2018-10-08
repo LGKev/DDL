@@ -23,6 +23,16 @@
 #define LED_R_P0_7		(0xF7F)
 #define LED_WHITE		(0xC7F)
 #define LED_OFF			(0xFFF)
+
+
+/* Useful small tests */
+/* Uncomment one test at a time.
+ * If all tests are commented out, normal application code executes.
+ * */
+//#define TEST_SYSTICK_INTERRUPT // blinks the red led at 1 Hz
+
+
+
 /**
  * @brief Configures GPIO: Pins 2.1(interrupt) , 0.7 (LED)
  * 	Enables APB Clock, APB- peripheral bus,clock needed, for peripherals: GPIO
@@ -67,7 +77,7 @@ void sysTickInit(void);
 int main(void) {
 	GPIOInit();
 	sysTickInit(); //enable the systick
-//	TIMER32Init();
+	//TIMER32Init();
 	while(1);
     return 0;
 }
@@ -151,25 +161,42 @@ void TIMER32Init(void){
 	NVIC_EnableIRQ(TIMER_32_0_IRQn); //timer32b timer0 interrupt
 }
 
-
+/* This section is used to set up the System Ticker to time the frequency of an interrupt.
+ * The CTRL register of the system tick gave some odd behavior, explained below and in the comments.
+ * 	When BIT2 of CTRL was set, assumed 12 MHZ clock for system. a load value of 12 Million should make 1 second period.
+ * 		See Page:408 of the manual: Section Example Timer Calculations
+ *		Assuming 12 Mhz, and a 1 second period we would want 12Mil - 1 for the LOAD value.
+ *		CTRL |= (1<<0) | (1<< 2) gave me a period of 500 ms.
+ *			LOAD value of 24Mil results in an overflow because we only have 24 bits.
+ *		CTR: |= (1<<0);
+ *		CTRL &= ~(1<<2);
+ *			LOAD value of 12Million, resulted in the correct period, you must have bit 2 be 0. and bit 0 to be 1.
+ * */
 void sysTickInit(void){
 	SysTick -> LOAD = 12000000;
-	SysTick -> CTRL |= (1<<0) | (1<<2); // enable, and use system clock no div (fastest)
+	SysTick -> CTRL |= (1<<0); // enable, and use system clock no div (fastest)
+	SysTick -> CTRL &= ~(1<<2); // this is really saying use the 12Mhz clock and not 6Mhz dived down by 2
+	// Mayb there is a typo in the manual because with bit 2 set for SysTick, you get 1/2 the clock you want.
+	//varified by chanign bit2 and the load values. i was always having to double the load value.
 	//enable interrupt? yes lets do it just for testing to verify that load value of 12 MIll results in 1 second blink
 
 	//clear any flags
 	SysTick ->  CTRL &= ~(1<<16); // countFlag looks like its the interrupt flag
+
+#ifdef TEST_SYSTICK_INTERRUPT
+	SysTick -> LOAD = 12000000 - 1; // 1Hz blink
 	SysTick -> CTRL |= (1<<1); //enable the interrupt
 	NVIC_EnableIRQ(SysTick_IRQn); //timer32b timer0 interrupt
+#endif
 }
 
+
+#ifdef TEST_SYSTICK_INTERRUPT
 void SysTick_Handler(void){
 	SysTick ->  CTRL &= ~(1<<16); // countFlag looks like its the interrupt flag
-
 	LPC_GPIO0 -> DATA ^= (1<<7); //7th bit ie: LED_R_P0_7
-
 }
-
+#endif
 
 
 
@@ -193,16 +220,15 @@ void PIOINT2_IRQHandler(void){
 			endTime = SysTick ->VAL;
 			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
 			zeroCrossing = 0;
-			elapsedTime = (startTime - endTime)/(12000000); // # [ticks] / [ticks/sec] == [seconds]
+			elapsedTime= (startTime - endTime)/(12000000); // # [ticks] / [ticks/sec] == [seconds]
 			//TODO: could set the MR0 now
 			LPC_TMR32B0 -> MR0 = 3;
-			/*
-			 * */
 		}
 	}
 }
 
-#ifdef GPIO_FULL_INTERRUPT
+#define TEST_SYSTICK_INTERRUPT
+#ifdef TEST_SYSTICK_INTERRUPT
 
 //TODO: the gpio interrupt handler will most likely set MAtch 1 and 0 values. 
 void PIOINT2_IRQHandler(void){
