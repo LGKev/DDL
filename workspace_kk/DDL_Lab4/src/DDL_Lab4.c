@@ -173,7 +173,15 @@ void TIMER32Init(void){
  *			LOAD value of 12Million, resulted in the correct period, you must have bit 2 be 0. and bit 0 to be 1.
  * */
 void sysTickInit(void){
-	SysTick -> LOAD = 12000000;
+
+//	SysTick -> LOAD = 60000 -1; // 12Mhz * 5ms = 60*10^3 - 1;
+	SysTick -> LOAD = 12000000; // we count from 12mil to 0. but at the 12 Mhz rate.
+	/* I am doing it this way because I figure that the slowest signal we see is going to be faster than .5 seconds.
+	 * obviously this sets a lower limit on the slowest signal we can detect. and if we did have to do slower signals
+	 * we would want to account for when 12Mil gets to zero by checking the 16th bit, automatically set  when we reach 0
+	 * */
+
+
 	SysTick -> CTRL |= (1<<0); // enable, and use system clock no div (fastest)
 	SysTick -> CTRL &= ~(1<<2); // this is really saying use the 12Mhz clock and not 6Mhz dived down by 2
 	// Mayb there is a typo in the manual because with bit 2 set for SysTick, you get 1/2 the clock you want.
@@ -221,14 +229,15 @@ void PIOINT2_IRQHandler(void){
 			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
 			zeroCrossing = 0;
 			elapsedTime= (startTime - endTime)/(12000000); // # [ticks] / [ticks/sec] == [seconds]
-			//TODO: could set the MR0 now
+			//TODO: could set the MR0 now, which determines the blinking led period
 			LPC_TMR32B0 -> MR0 = 3;
 		}
 	}
 }
 
-#define TEST_SYSTICK_INTERRUPT
-#ifdef TEST_SYSTICK_INTERRUPT
+
+//#define GPIO_FULL_INTERRUPT
+#ifdef GPIO_FULL_INTERRUPT
 
 //TODO: the gpio interrupt handler will most likely set MAtch 1 and 0 values. 
 void PIOINT2_IRQHandler(void){
