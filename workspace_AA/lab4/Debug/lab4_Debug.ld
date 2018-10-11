@@ -5,7 +5,11 @@
  * Generated linker script file for LPC1115/303
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
+<<<<<<< HEAD
  * MCUXpresso IDE v10.2.1 [Build 795] [2018-07-25] on Oct 9, 2018 2:38:27 PM
+=======
+ * LPCXpresso v8.2.2 [Build 650] [2016-09-09]  on Oct 10, 2018 7:14:41 PM
+>>>>>>> b6a97e011cfb91e7cfc6d4d7e1820dccb00e4bf1
  */
 
 INCLUDE "lab4_Debug_library.ld"
@@ -22,7 +26,7 @@ SECTIONS
         __vectors_start__ = ABSOLUTE(.) ;
         KEEP(*(.isr_vector))
         /* Global Section Table */
-        . = ALIGN(4) ;
+        . = ALIGN(4) ; 
         __section_table_start = .;
         __data_section_table = .;
         LONG(LOADADDR(.data));
@@ -34,7 +38,7 @@ SECTIONS
         LONG(  SIZEOF(.bss));
         __bss_section_table_end = .;
         __section_table_end = . ;
-        /* End of Global Section Table */
+	    /* End of Global Section Table */
 
         *(.after_vectors*)
 
@@ -45,13 +49,13 @@ SECTIONS
         PROVIDE(__CRP_WORD_END__ = .) ;
         ASSERT(!(__CRP_WORD_START__ == __CRP_WORD_END__), "Linker CRP Enabled, but no CRP_WORD provided within application");
         /* End of Code Read Protection */
-    } > MFlash64
+    } >MFlash64
 
-    .text : ALIGN(4)
+    .text : ALIGN(4)    
     {
-       *(.text*)
-       *(.rodata .rodata.* .constdata .constdata.*)
-       . = ALIGN(4);
+        *(.text*)
+        *(.rodata .rodata.* .constdata .constdata.*)
+        . = ALIGN(4);
     } > MFlash64
     /*
      * for exception handling/unwind - some Newlib functions (in common
@@ -61,7 +65,6 @@ SECTIONS
     {
         *(.ARM.extab* .gnu.linkonce.armextab.*)
     } > MFlash64
-
     __exidx_start = .;
 
     .ARM.exidx : ALIGN(4)
@@ -79,7 +82,6 @@ SECTIONS
         . = ALIGN(4) ;
         _end_uninit_RESERVED = .;
     } > RamLoc8
-
     /* Main DATA section (RamLoc8) */
     .data : ALIGN(4)
     {
@@ -91,7 +93,6 @@ SECTIONS
        . = ALIGN(4) ;
        _edata = . ;
     } > RamLoc8 AT>MFlash64
-
     /* MAIN BSS SECTION */
     .bss : ALIGN(4)
     {
@@ -102,7 +103,6 @@ SECTIONS
         _ebss = .;
         PROVIDE(end = .);
     } > RamLoc8
-
     /* DEFAULT NOINIT SECTION */
     .noinit (NOLOAD): ALIGN(4)
     {
@@ -111,6 +111,7 @@ SECTIONS
          . = ALIGN(4) ;
         _end_noinit = .;
     } > RamLoc8
+
     PROVIDE(_pvHeapStart = DEFINED(__user_heap_base) ? __user_heap_base : .);
     PROVIDE(_vStackTop = DEFINED(__user_stack_top) ? __user_stack_top : __top_RamLoc8 - 0);
 
@@ -122,13 +123,4 @@ SECTIONS
                                          + (( DEFINED(HardFault_Handler) ? HardFault_Handler : M0_HardFault_Handler ) + 1) 
                                          )
            );
-
-    /* Provide basic symbols giving location and size of main text
-     * block, including initial values of RW data sections. Note that
-     * these will need extending to give a complete picture with
-     * complex images (e.g multiple Flash banks).
-     */
-    _image_start = LOADADDR(.text);
-    _image_end = LOADADDR(.data) + SIZEOF(.data);
-    _image_size = _image_end - _image_start;
 }

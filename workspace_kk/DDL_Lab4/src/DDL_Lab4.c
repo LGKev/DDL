@@ -76,12 +76,13 @@ float startTime;
 float endTime;
 float elapsedTime;
 float periodTicks;
+float quarterPeriod_ms = 0;
 uint32_t  period_ms = 0;
 uint32_t numberOfInterupts_1ms = 0;
 uint8_t edgeCount = 0;
-uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
+uint8_t quartlet = 0; //quarter of the period because 25% and 75% are multiples of 1/4
 uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
-
+uint32_t blinkTime_ms = 0;
 int main(void) {
 	GPIOInit();
 	TIMER32Init();
@@ -90,8 +91,14 @@ int main(void) {
 		if(calculateNewPeriod == 1){
 			period_ms = (endTime - startTime)/2;
 			calculateNewPeriod = 0;
+			quarterPeriod_ms = ((float)period_ms/4.0);
+			blinkTime_ms = 0;
 		}
-
+		/* 25 % duty cycle */
+		if( blinkTime_ms < quarterPeriod_ms){
+			LPC_GPIO0->DATA &= ~LED_B_P0_9;
+			quartlet = 1;
+		}
 	}
     return 0;
 }
@@ -106,7 +113,7 @@ void GPIOInit(void){
 	//iocon_piio2.1 interrupt, probably want pulldown.
 	// 31:11 reserved.
 	//10-0: 00011001000 (binary): hex: 0C8
-	LPC_IOCON -> PIO2_1 = 0xC8; //gpio, pull down, no hysterisis, standar gpio
+	//LPC_IOCON -> PIO2_1 = 0xC8; //gpio, pull down, no hysterisis, standar gpio
 	LPC_GPIO2 -> DIR &= ~PIN2_1; //only pin2 is an input! 0 is input 1 is output
 	LPC_GPIO2 -> IS &= ~PIN2_1; //edge triggered, i think that is the rising case...
 	LPC_GPIO2 -> IBE &= ~PIN2_1; //default should be fine, but never too careful
@@ -209,6 +216,7 @@ void TIMER32_0_IRQHandler(void){
 		//clear interrupt
 		LPC_TMR32B0 -> IR &= ~(1<<0);
 		numberOfInterupts_1ms++;
+		blinkTime_ms++;
 	}
 
 

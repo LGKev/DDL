@@ -1,0 +1,81 @@
+/*
+===============================================================================
+ Name        : lab4.c
+ Author      : Ali Al Naji & Kevin Kuwata
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC11xx.h"
+#endif
+
+#include <cr_section_macros.h>
+
+// TODO: insert other include files here
+
+// TODO: insert other definitions and declarations here
+
+/* GPIO and GPIO Interrupt Initialization */
+void GPIOInit(void) {
+
+    /* Your code here */
+	LPC_SYSCON -> SYSAHBCLKCTRL |= (1<<6) | (1 << 16);
+	LPC_IOCON -> PIO0_7 = 0xd0;
+	LPC_GPIO0 -> DIR = 0xFFF;
+	LPC_GPIO0 -> DATA = 0x000;
+
+	LPC_GPIO2 -> DIR = 0x000;
+
+
+}
+
+/* TIMER32 and TIMER32 Interrupt Initialization */
+void TIMERInit(void) {
+
+    /* Your code here */
+
+}
+
+/* GPIO Interrupt Handler */
+void PIOINT2_IRQHandler(void) {
+
+    /* Your code here */
+
+}
+
+/* TIMER32 Interrupt Handler */
+void TIMER32_0_IRQHandler(void) {
+
+    /* Your code here */
+
+}
+
+int main(void) {
+
+    /* Initialization code */
+    GPIOInit();                   // Initialize GPIO ports for both Interrupts and LED control
+    //TIMERInit();                // Initialize Timer and Generate a 1ms interrupt
+
+    /* Infinite looping */
+    while(1);
+
+
+    return 0;
+}
+/*
+int main(void) {
+
+    // TODO: insert code here
+
+    // Force the counter to be placed into memory
+    volatile static int i = 0 ;
+    // Enter an infinite loop, just incrementing a counter
+    while(1) {
+        i++ ;
+    }
+    return 0 ;
+}
+*/
