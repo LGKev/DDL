@@ -61,6 +61,14 @@ void TIMER32Init(void);
  * many zero crossings we've had, a start/stop flag,
  */
 // TODO: you're going to need some jumper cables to do a test for interrupt
+void PIOINT2_IRQHandler(void);
+
+/**
+ * @brief Configured to trigger every 1ms (0.5ms tbd).
+ * @globals: something to parse time out for 25% and 75% duty cycles
+ * 	a few more because we have timing for led,
+ */
+void TIMER32_0_IRQHandler(void);
 
 
 //void sysTickInit(void);
@@ -119,7 +127,7 @@ void GPIOInit(void){
 	//iocon_pio0.7 led
 	//10-0: 0 0011 0  00 000 -> hex: 003000
 	//LPC_IOCON -> PIO0_7 = 0xd0; //0xd0 default will work. but never too sure
-	LPC_GPIO0 -> DIR |= (1<<7); //output red led btw make them all outputs!
+	LPC_GPIO0 -> DIR |= 0xFFF; //output red led btw make them all outputs!
 	// the led's configured such that a GPIO:0 is on, and GPIO:1 is off.
 	LPC_GPIO0 -> DATA |= LED_OFF; //turn  all off
         // NO need for interrupt stuff
@@ -162,7 +170,7 @@ void TIMER32Init(void){
 
 	//TODO: once the GPIO handler can calculate frequency, / or main. we
 	// can set the MR0 to be a value, recalculate the 10s tick period.
-	LPC_TMR32B0 -> MR0 = 48000; //value we count up to
+	LPC_TMR32B0 -> MR0 = 12000; //value we count up to
 	// TODO: fully remove eventually LPC_TMR32B0 -> MR1 = 24000000; //value we count up to
 
 	// NOTE: not using the mr1 so need to reset the TC when MR0 is matched

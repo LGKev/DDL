@@ -61,6 +61,14 @@ void TIMER32Init(void);
  * many zero crossings we've had, a start/stop flag,
  */
 // TODO: you're going to need some jumper cables to do a test for interrupt
+void PIOINT2_IRQHandler(void);
+
+/**
+ * @brief Configured to trigger every 1ms (0.5ms tbd).
+ * @globals: something to parse time out for 25% and 75% duty cycles
+ * 	a few more because we have timing for led,
+ */
+void TIMER32_0_IRQHandler(void);
 
 
 //void sysTickInit(void);
@@ -87,9 +95,8 @@ int main(void) {
 		{
 			elapsedTime = endTime - startTime;
 			new_period = 0;
-			//printf("%d",elapsedTime);
-		}
 
+		}
 	}
     return 0;
 }
@@ -104,7 +111,7 @@ void GPIOInit(void){
 	//iocon_piio2.1 interrupt, probably want pulldown.
 	// 31:11 reserved.
 	//10-0: 00011001000 (binary): hex: 0C8
-	//LPC_IOCON -> PIO2_1 = 0xC8; //gpio, pull down, no hysterisis, standar gpio
+	LPC_IOCON -> PIO2_1 = 0xC8; //gpio, pull down, no hysterisis, standar gpio
 	LPC_GPIO2 -> DIR &= ~PIN2_1; //only pin2 is an input! 0 is input 1 is output
 	LPC_GPIO2 -> IS &= ~PIN2_1; //edge triggered, i think that is the rising case...
 	LPC_GPIO2 -> IBE &= ~PIN2_1; //default should be fine, but never too careful
@@ -114,12 +121,13 @@ void GPIOInit(void){
 	LPC_GPIO2 -> IC = 0xFFF; //12 1's
 	// TODO: need to register with the NVIC
 	  NVIC_EnableIRQ(EINT2_IRQn); //port2 external interrupt
-	// TODO: enable global i//
+	// TODO: enable global interrupts
+
 
 	//iocon_pio0.7 led
 	//10-0: 0 0011 0  00 000 -> hex: 003000
-	//LPC_IOCON -> PIO0_7 = 0xd0; //0xd0 default will work. but never too sure
-	LPC_GPIO0 -> DIR |= (1<<7); //output red led btw make them all outputs!
+	LPC_IOCON -> PIO0_7 = 0xd0; //0xd0 default will work. but never too sure
+	LPC_GPIO0 -> DIR |= 0xFFF; //output red led btw make them all outputs!
 	// the led's configured such that a GPIO:0 is on, and GPIO:1 is off.
 	LPC_GPIO0 -> DATA |= LED_OFF; //turn  all off
         // NO need for interrupt stuff
@@ -162,7 +170,7 @@ void TIMER32Init(void){
 
 	//TODO: once the GPIO handler can calculate frequency, / or main. we
 	// can set the MR0 to be a value, recalculate the 10s tick period.
-	LPC_TMR32B0 -> MR0 = 48000; //value we count up to
+	LPC_TMR32B0 -> MR0 = 12000; //value we count up to
 	// TODO: fully remove eventually LPC_TMR32B0 -> MR1 = 24000000; //value we count up to
 
 	// NOTE: not using the mr1 so need to reset the TC when MR0 is matched
@@ -198,15 +206,15 @@ void PIOINT2_IRQHandler(void)
 		{
 			startTime = numberOfInterrupt_1ms;
 			edgeCount++;
-			LPC_GPIO0 -> DATA &= ~(1 << 7);
+			//LPC_GPIO0 -> DATA &= ~(1 << 7);
 
 		}
 		else if(edgeCount == 1)
 		{
 			endTime = numberOfInterrupt_1ms;
-			new_period = 1;
-			LPC_GPIO0 -> DATA |= (1 << 7);
 			edgeCount = 0;
+			new_period = 1;
+			//LPC_GPIO0 -> DATA |= (1 << 7);
 		}
 		/*TODO: logic for timing */
 
