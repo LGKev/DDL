@@ -99,12 +99,12 @@ int main(void) {
         while(numberOfPeriodsExecuted <= numberOfPeriodsIn_10S)
                 {
                     //on 75%
-                    while(tenSecondTimer_ms <= 3*quartlet)
+                    while(tenSecondTimer_ms <= quartlet)
                     {
                         LPC_GPIO0 -> DATA &=~ LED_B_P0_9;
                     }
                     //off 25%
-                    while(tenSecondTimer_ms > 3*quartlet && tenSecondTimer_ms <= quartlet*4)
+                    while(tenSecondTimer_ms > quartlet && tenSecondTimer_ms <= quartlet*4)
                     {
                         LPC_GPIO0 -> DATA |= LED_B_P0_9;
                     }

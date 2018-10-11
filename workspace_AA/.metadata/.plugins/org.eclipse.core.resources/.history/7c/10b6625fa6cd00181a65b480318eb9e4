@@ -77,7 +77,7 @@ int main(void) {
             period_ms = (endTime - startTime)*2;
             calculateNewPeriod = 0;
             quartlet =(period_ms / 4);
-            numberOfPeriodsIn_10S =  10000/ period_ms;
+            numberOfPeriodsIn_10S =  100000/ period_ms;
         }
         tenSecondTimer_ms = 0;
         while(numberOfPeriodsExecuted <= numberOfPeriodsIn_10S)
@@ -95,23 +95,6 @@ int main(void) {
             tenSecondTimer_ms = 0;
             numberOfPeriodsExecuted++;
         }
-        numberOfPeriodsExecuted = 0;
-        while(numberOfPeriodsExecuted <= numberOfPeriodsIn_10S)
-                {
-                    //on 75%
-                    while(tenSecondTimer_ms <= 3*quartlet)
-                    {
-                        LPC_GPIO0 -> DATA &=~ LED_B_P0_9;
-                    }
-                    //off 25%
-                    while(tenSecondTimer_ms > 3*quartlet && tenSecondTimer_ms <= quartlet*4)
-                    {
-                        LPC_GPIO0 -> DATA |= LED_B_P0_9;
-                    }
-                    tenSecondTimer_ms = 0;
-                    numberOfPeriodsExecuted++;
-                }
-        numberOfPeriodsExecuted = 0;
     }
     return 0;
 }

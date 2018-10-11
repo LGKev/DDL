@@ -1,4 +1,4 @@
-15:04:07 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+15:50:41 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
 make -r all 
 Building file: ../src/system_LPC11xx.c
 Invoking: MCU C Compiler
@@ -18,5 +18,5 @@ arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "li
     388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
  
 
-15:04:08 Build Finished (took 1s.15ms)
+15:50:42 Build Finished (took 692ms)
 
