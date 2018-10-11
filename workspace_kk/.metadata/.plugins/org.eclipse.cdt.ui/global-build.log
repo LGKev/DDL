@@ -1,7 +1,7 @@
-21:17:28 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+19:27:03 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-21:17:32 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+19:27:06 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
 make -r -j2 all 
 Building file: ../src/DDL_Lab4.c
 Invoking: MCU C Compiler
@@ -12,17 +12,20 @@ Building target: DDL_Lab4.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
 Memory region         Used Size  Region Size  %age Used
-        MFlash64:        2152 B        64 KB      3.28%
-         RamLoc8:          28 B         8 KB      0.34%
+        MFlash64:        1428 B        64 KB      2.18%
+         RamLoc8:          0 GB         8 KB      0.00%
 Finished building target: DDL_Lab4.axf
  
 make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
    text	   data	    bss	    dec	    hex	filename
-   2148	      4	     24	   2176	    880	DDL_Lab4.axf
+   1428	      0	      0	   1428	    594	DDL_Lab4.axf
  
-21:18:23 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+19:44:47 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+19:44:49 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
 make -r -j2 all 
 Building file: ../src/DDL_Lab4.c
 Invoking: MCU C Compiler
@@ -33,113 +36,609 @@ Building target: DDL_Lab4.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
 Memory region         Used Size  Region Size  %age Used
-        MFlash64:        2028 B        64 KB      3.09%
-         RamLoc8:          28 B         8 KB      0.34%
+        MFlash64:        1480 B        64 KB      2.26%
+         RamLoc8:          0 GB         8 KB      0.00%
 Finished building target: DDL_Lab4.axf
  
 make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
    text	   data	    bss	    dec	    hex	filename
-   2024	      4	     24	   2052	    804	DDL_Lab4.axf
+   1480	      0	      0	   1480	    5c8	DDL_Lab4.axf
  
-21:49:51 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
-make -r -j2 all 
-Building file: ../src/DDL_Lab4.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
-../src/DDL_Lab4.c:243:6: error: redefinition of 'PIOINT2_IRQHandler'
- void PIOINT2_IRQHandler(void){
-      ^~~~~~~~~~~~~~~~~~
-../src/DDL_Lab4.c:216:6: note: previous definition of 'PIOINT2_IRQHandler' was here
- void PIOINT2_IRQHandler(void){
-      ^~~~~~~~~~~~~~~~~~
-make: *** [src/DDL_Lab4.o] Error 1
-src/subdir.mk:24: recipe for target 'src/DDL_Lab4.o' failed
-21:50:09 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
-make -r -j2 all 
-Building file: ../src/DDL_Lab4.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
-Finished building: ../src/DDL_Lab4.c
- 
-Building target: DDL_Lab4.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
-Memory region         Used Size  Region Size  %age Used
-        MFlash64:        1960 B        64 KB      2.99%
-         RamLoc8:          28 B         8 KB      0.34%
-Finished building target: DDL_Lab4.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
-   text	   data	    bss	    dec	    hex	filename
-   1956	      4	     24	   1984	    7c0	DDL_Lab4.axf
- 
-21:51:37 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
-make -r -j2 all 
-Building file: ../src/DDL_Lab4.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
-Finished building: ../src/DDL_Lab4.c
- 
-Building target: DDL_Lab4.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
-Memory region         Used Size  Region Size  %age Used
-        MFlash64:        2084 B        64 KB      3.18%
-         RamLoc8:          28 B         8 KB      0.34%
-Finished building target: DDL_Lab4.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
-   text	   data	    bss	    dec	    hex	filename
-   2080	      4	     24	   2108	    83c	DDL_Lab4.axf
- 
-21:53:32 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
-make -r -j2 all 
-Building file: ../src/DDL_Lab4.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
-Finished building: ../src/DDL_Lab4.c
- 
-Building target: DDL_Lab4.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
-Memory region         Used Size  Region Size  %age Used
-        MFlash64:        2084 B        64 KB      3.18%
-         RamLoc8:          28 B         8 KB      0.34%
-Finished building target: DDL_Lab4.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
-   text	   data	    bss	    dec	    hex	filename
-   2080	      4	     24	   2108	    83c	DDL_Lab4.axf
- 
-21:54:15 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
-make -r -j2 all 
-Building file: ../src/DDL_Lab4.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
-Finished building: ../src/DDL_Lab4.c
- 
-Building target: DDL_Lab4.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
-Memory region         Used Size  Region Size  %age Used
-        MFlash64:        1960 B        64 KB      2.99%
-         RamLoc8:          28 B         8 KB      0.34%
-Finished building target: DDL_Lab4.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
-   text	   data	    bss	    dec	    hex	filename
-   1956	      4	     24	   1984	    7c0	DDL_Lab4.axf
- 
-21:55:15 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+19:44:53 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
 make -r -j2 all 
 make: Nothing to be done for 'all'.
+19:50:09 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+19:50:11 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1480 B        64 KB      2.26%
+         RamLoc8:          0 GB         8 KB      0.00%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1480	      0	      0	   1480	    5c8	DDL_Lab4.axf
+ 
+19:50:14 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+19:51:18 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+19:51:20 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+19:51:22 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+19:52:08 **** Clean-only build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 clean 
+rm -rf  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./src/DDL_Lab4.d ./src/cr_startup_lpc11xx.d ./src/crp.d  DDL_Lab4.axf
+ 
+19:52:09 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+19:52:12 **** Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Finished building: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+ 
+Finished building: ../src/crp.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1480 B        64 KB      2.26%
+         RamLoc8:          0 GB         8 KB      0.00%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1480	      0	      0	   1480	    5c8	DDL_Lab4.axf
+ 
+19:52:14 **** Incremental Build of configuration Debug for project blinky ****
+make -r -j2 all 
+Building target: blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=blinky.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "blinky.axf"  ./startup/cr_startup_lpc11.o  ./src/blinky_main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: blinky.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size blinky.axf; arm-none-eabi-objcopy -O binary blinky.axf blinky.bin ; checksum -p LPC1115_303 -d blinky.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2124	      4	      8	   2136	    858	blinky.axf
+Written checksum 0xefffd637 at offset 0x1c in file blinky.bin
+Previous value 0x00000000 at offset 0x1c in file blinky.bin
+ 
+19:52:18 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+19:52:40 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+19:52:42 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+19:52:45 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+19:53:48 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+19:53:50 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1480 B        64 KB      2.26%
+         RamLoc8:          0 GB         8 KB      0.00%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1480	      0	      0	   1480	    5c8	DDL_Lab4.axf
+ 
+19:53:52 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+19:55:34 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1480 B        64 KB      2.26%
+         RamLoc8:          0 GB         8 KB      0.00%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1480	      0	      0	   1480	    5c8	DDL_Lab4.axf
+ 
+19:56:39 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+20:30:19 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+../src/DDL_Lab4.c: In function 'PIOINT2_IRQHandler':
+../src/DDL_Lab4.c:176:16: error: 'numberOfInterupts_1ms' undeclared (first use in this function); did you mean 'numberOfMatchesIn_10s'?
+src/subdir.mk:24: recipe for target 'src/DDL_Lab4.o' failed
+    startTime = numberOfInterupts_1ms
+                ^~~~~~~~~~~~~~~~~~~~~
+                numberOfMatchesIn_10s
+../src/DDL_Lab4.c:176:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/DDL_Lab4.c:177:4: error: expected ';' before 'edgeCount'
+    edgeCount = 1;
+    ^~~~~~~~~
+make: *** [src/DDL_Lab4.o] Error 1
+20:30:52 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1692 B        64 KB      2.58%
+         RamLoc8:          16 B         8 KB      0.20%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1692	      0	     16	   1708	    6ac	DDL_Lab4.axf
+ 
+20:41:59 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+../src/DDL_Lab4.c:79:10: error: expected identifier or '(' before '=' token
+ uint32_t = period_ms = 0;
+          ^
+../src/DDL_Lab4.c: In function 'main':
+../src/DDL_Lab4.c:86:4: error: 'period_ms' undeclared (first use in this function); did you mean 'periodTicks'?
+    period_ms = endTime - startTime;
+    ^~~~~~~~~
+    periodTicks
+../src/DDL_Lab4.c:86:4: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/DDL_Lab4.o' failed
+make: *** [src/DDL_Lab4.o] Error 1
+20:42:11 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2272 B        64 KB      3.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2272	      0	     24	   2296	    8f8	DDL_Lab4.axf
+ 
+20:46:59 **** Clean-only build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 clean 
+rm -rf  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./src/DDL_Lab4.d ./src/cr_startup_lpc11xx.d ./src/crp.d  DDL_Lab4.axf
+ 
+20:47:00 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+20:47:02 **** Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Finished building: ../src/crp.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2272 B        64 KB      3.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2272	      0	     24	   2296	    8f8	DDL_Lab4.axf
+ 
+20:47:05 **** Incremental Build of configuration Debug for project blinky ****
+make -r -j2 all 
+Building target: blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=blinky.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "blinky.axf"  ./startup/cr_startup_lpc11.o  ./src/blinky_main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: blinky.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size blinky.axf; arm-none-eabi-objcopy -O binary blinky.axf blinky.bin ; checksum -p LPC1115_303 -d blinky.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2124	      4	      8	   2136	    858	blinky.axf
+Written checksum 0xefffd637 at offset 0x1c in file blinky.bin
+Previous value 0x00000000 at offset 0x1c in file blinky.bin
+ 
+20:47:08 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+make: Nothing to be done for 'all'.
+20:48:18 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2272 B        64 KB      3.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2272	      0	     24	   2296	    8f8	DDL_Lab4.axf
+ 
+20:48:53 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+20:52:16 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+20:57:04 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2272 B        64 KB      3.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2272	      0	     24	   2296	    8f8	DDL_Lab4.axf
+ 
+21:03:23 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1640 B        64 KB      2.50%
+         RamLoc8:          20 B         8 KB      0.24%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1640	      0	     20	   1660	    67c	DDL_Lab4.axf
+ 
+21:04:13 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1636 B        64 KB      2.50%
+         RamLoc8:          20 B         8 KB      0.24%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1636	      0	     20	   1656	    678	DDL_Lab4.axf
+ 
+21:06:16 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1636 B        64 KB      2.50%
+         RamLoc8:          20 B         8 KB      0.24%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1636	      0	     20	   1656	    678	DDL_Lab4.axf
+ 
+21:08:38 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1688 B        64 KB      2.58%
+         RamLoc8:          20 B         8 KB      0.24%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1688	      0	     20	   1708	    6ac	DDL_Lab4.axf
+ 
+21:11:32 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1456 B        64 KB      2.22%
+         RamLoc8:          20 B         8 KB      0.24%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1456	      0	     20	   1476	    5c4	DDL_Lab4.axf
+ 
+21:18:49 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1460 B        64 KB      2.23%
+         RamLoc8:          20 B         8 KB      0.24%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1460	      0	     20	   1480	    5c8	DDL_Lab4.axf
+ 
+21:22:00 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1464 B        64 KB      2.23%
+         RamLoc8:          20 B         8 KB      0.24%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1464	      0	     20	   1484	    5cc	DDL_Lab4.axf
+ 
+21:23:13 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1468 B        64 KB      2.24%
+         RamLoc8:          20 B         8 KB      0.24%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1468	      0	     20	   1488	    5d0	DDL_Lab4.axf
+ 
+21:24:02 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:          2 KB        64 KB      3.12%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2048	      0	     24	   2072	    818	DDL_Lab4.axf
+ 
+21:25:04 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2280 B        64 KB      3.48%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2280	      0	     24	   2304	    900	DDL_Lab4.axf
+ 
+21:28:27 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2280 B        64 KB      3.48%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2280	      0	     24	   2304	    900	DDL_Lab4.axf
+ 
+21:34:05 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2480 B        64 KB      3.78%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2480	      0	     24	   2504	    9c8	DDL_Lab4.axf
+ 
+21:36:06 **** Incremental Build of configuration Debug for project DDL_Lab4 ****
+make -r -j2 all 
+Building file: ../src/DDL_Lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL_Lab4.d" -MT"src/DDL_Lab4.o" -MT"src/DDL_Lab4.d" -o "src/DDL_Lab4.o" "../src/DDL_Lab4.c"
+Finished building: ../src/DDL_Lab4.c
+ 
+Building target: DDL_Lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="DDL_Lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL_Lab4_Debug.ld" -o "DDL_Lab4.axf"  ./src/DDL_Lab4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2488 B        64 KB      3.80%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL_Lab4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL_Lab4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL_Lab4.axf" "DDL_Lab4.bin" ; # checksum -p LPC1115_303 -d "DDL_Lab4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2488	      0	     24	   2512	    9d0	DDL_Lab4.axf
+ 

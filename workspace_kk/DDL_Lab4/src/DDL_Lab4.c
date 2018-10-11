@@ -24,12 +24,12 @@
 #define LED_WHITE		(0xC7F)
 #define LED_OFF			(0xFFF)
 
+uint32_t numberOfMatchesIn_10s = 0;
 
 /* Useful small tests */
 /* Uncomment one test at a time.
  * If all tests are commented out, normal application code executes.
  * */
-//#define TEST_SYSTICK_INTERRUPT // blinks the red led at 1 Hz
 
 
 
@@ -71,14 +71,28 @@ void PIOINT2_IRQHandler(void);
 void TIMER32_0_IRQHandler(void);
 
 
-void sysTickInit(void);
-
+uint8_t calculateNewPeriod = 0; // when 1 new period is ready for calculation
+float startTime;
+float endTime;
+float elapsedTime;
+float periodTicks;
+uint32_t  period_ms = 0;
+uint32_t numberOfInterupts_1ms = 0;
+uint8_t edgeCount = 0;
+uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
+uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
 
 int main(void) {
 	GPIOInit();
-	sysTickInit(); //enable the systick
-	//TIMER32Init();
-	while(1);
+	TIMER32Init();
+	while(1){
+
+		if(calculateNewPeriod == 1){
+			period_ms = (endTime - startTime)/2;
+			calculateNewPeriod = 0;
+		}
+
+	}
     return 0;
 }
 
@@ -151,294 +165,59 @@ void TIMER32Init(void){
 
 	//TODO: once the GPIO handler can calculate frequency, / or main. we
 	// can set the MR0 to be a value, recalculate the 10s tick period.
-	LPC_TMR32B0 -> MR0 = 12000000 -1; //value we count up to
+	LPC_TMR32B0 -> MR0 = 12000; //value we count up to
 	// TODO: fully remove eventually LPC_TMR32B0 -> MR1 = 24000000; //value we count up to
 
 	// NOTE: not using the mr1 so need to reset the TC when MR0 is matched
 	//LPC_TMR32B0 -> MCR |= (1<<4) | (1<<3); // disable reset for TMR32b0, when match0, so we can do the toggling.
 
-
+	LPC_TMR32B0 -> IR = 0;
 	NVIC_EnableIRQ(TIMER_32_0_IRQn); //timer32b timer0 interrupt
 }
 
-/* This section is used to set up the System Ticker to time the frequency of an interrupt.
- * The CTRL register of the system tick gave some odd behavior, explained below and in the comments.
- * 	When BIT2 of CTRL was set, assumed 12 MHZ clock for system. a load value of 12 Million should make 1 second period.
- * 		See Page:408 of the manual: Section Example Timer Calculations
- *		Assuming 12 Mhz, and a 1 second period we would want 12Mil - 1 for the LOAD value.
- *		CTRL |= (1<<0) | (1<< 2) gave me a period of 500 ms.
- *			LOAD value of 24Mil results in an overflow because we only have 24 bits.
- *		CTR: |= (1<<0);
- *		CTRL &= ~(1<<2);
- *			LOAD value of 12Million, resulted in the correct period, you must have bit 2 be 0. and bit 0 to be 1.
- * */
-void sysTickInit(void){
-
-//	SysTick -> LOAD = 60000 -1; // 12Mhz * 5ms = 60*10^3 - 1;
-	SysTick -> LOAD = 12000000; // we count from 12mil to 0. but at the 12 Mhz rate.
-	/* I am doing it this way because I figure that the slowest signal we see is going to be faster than .5 seconds.
-	 * obviously this sets a lower limit on the slowest signal we can detect. and if we did have to do slower signals
-	 * we would want to account for when 12Mil gets to zero by checking the 16th bit, automatically set  when we reach 0
-	 * */
-
-
-	SysTick -> CTRL |= (1<<0); // enable, and use system clock no div (fastest)
-	SysTick -> CTRL &= ~(1<<2); // this is really saying use the 12Mhz clock and not 6Mhz dived down by 2
-	// Mayb there is a typo in the manual because with bit 2 set for SysTick, you get 1/2 the clock you want.
-	//varified by chanign bit2 and the load values. i was always having to double the load value.
-	//enable interrupt? yes lets do it just for testing to verify that load value of 12 MIll results in 1 second blink
-
-	//clear any flags
-	SysTick ->  CTRL &= ~(1<<16); // countFlag looks like its the interrupt flag
-
-#ifdef TEST_SYSTICK_INTERRUPT
-	SysTick -> LOAD = 12000000 - 1; // 1Hz blink
-	SysTick -> CTRL |= (1<<1); //enable the interrupt
-	NVIC_EnableIRQ(SysTick_IRQn); //timer32b timer0 interrupt
-#endif
-}
-
-
-#ifdef TEST_SYSTICK_INTERRUPT
-void SysTick_Handler(void){
-	SysTick ->  CTRL &= ~(1<<16); // countFlag looks like its the interrupt flag
-	LPC_GPIO0 -> DATA ^= (1<<7); //7th bit ie: LED_R_P0_7
-}
-#endif
-
-
 
 //gloabl
-uint8_t zeroCrossing = 0;
-uint32_t startTime;
-uint32_t endTime;
-uint32_t elapsedTime;
+
+
 void PIOINT2_IRQHandler(void){
 	//check which GPIO triggered the interrupt in port2
 	if(LPC_GPIO2 -> MIS & 0b10){
 		LPC_GPIO2 -> IC = 0b10; //1 to the clear register clears the bit specified
-		/*TODO: logic for timing */
 
-		if(zeroCrossing == 0){
-			startTime = SysTick -> VAL;
-			LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
-			zeroCrossing = 1;
+		if(edgeCount == 0){
+			startTime = numberOfInterupts_1ms;
+			edgeCount++;
 		}
-		else if(zeroCrossing == 1){
-			endTime = SysTick ->VAL;
-			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
-			zeroCrossing = 0;
-			elapsedTime= (startTime - endTime)/(12000000); // # [ticks] / [ticks/sec] == [seconds]
-			//TODO: could set the MR0 now, which determines the blinking led period
-			LPC_TMR32B0 -> MR0 = 3;
+		else if(edgeCount <= 3){
+			edgeCount++;
+		}
+		else if(edgeCount == 4){
+			endTime = numberOfInterupts_1ms;
+			edgeCount = 0;
+			calculateNewPeriod = 1;
 		}
 	}
 }
 
 
-//#define GPIO_FULL_INTERRUPT
-#ifdef GPIO_FULL_INTERRUPT
 
-//TODO: the gpio interrupt handler will most likely set MAtch 1 and 0 values. 
-void PIOINT2_IRQHandler(void){
-
-	//clear the flag, check the flag, light an led
-	if(LPC_GPIO2 -> MIS & 0b10){
-		//interrupt happened, clear that bit
-		LPC_GPIO2 -> IC |= 0b10; //1 to the clear register clears that bit
-
-		/*TODO: logic for timing */
-		//could we just use system tick here? and get the difference?
-
-		if(zeroCrossing == 0){
-			LPC_GPIO0 -> DATA &= ~LED_B_P0_9; //on
-			LPC_GPIO0 -> DATA |= LED_R_P0_7; // turn off blue led
-			startTime = SysTick -> VAL;
-			zeroCrossing++;
-			LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
-			return;
-		}
-
-
-		if(zeroCrossing == 1){
-		endTime = SysTick -> VAL;
-			LPC_GPIO0 -> DATA |= LED_B_P0_9; // turn off blue led
-			LPC_GPIO0 -> DATA &= ~LED_R_P0_7; // turn off blue led
-
-			if(endTime > startTime){ // over flowed.
-				elapsedTime = endTime - startTime;
-				zeroCrossing = 0;
-				return;
-			}
-			else{   //normal
-				elapsedTime = startTime - endTime;
-				zeroCrossing = 0;
-				return;
-			}
-		}
-
-	}
-}
-#endif
-
-// global
-
-//		LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
-
-
-
-uint32_t numberOfMatchesIn_10s = 100;
-uint32_t currentNumberOfMatches = 0;
-uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
-uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
-
-//TODO: remove this if define
-#define FULL_INTERRUPT
-#ifdef FULL_INTERRUPT
+// globals
 void TIMER32_0_IRQHandler(void){
 
 	//check which source fired
 	if(LPC_TMR32B0 -> IR &= (1<<0)){ //match0
 		//clear interrupt
 		LPC_TMR32B0 -> IR &= ~(1<<0);
+		numberOfInterupts_1ms++;
+	}
 
 
-/* check to see if we have had enough, and need to toggle duty cycles */
-		if(currentNumberOfMatches == numberOfMatchesIn_10s){
-			toggleDuty ^= 1; //toggle
-			//reset
-			currentNumberOfMatches = 0;
-		}
-
-		// TODO verify that the line below, TC = 0; is unnecessary now I have the proper If - else
-		//LPC_TMR32B0 -> TC = 0; //TODO:
-/* ======================================================== */
-// 25 % duty cycle
-/* ======================================================== */
-		if(toggleDuty == 0){
-			if(quartlet == 0){
-				//on time 25% on
-				LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
-				quartlet = 1;
-			}
-			else if(quartlet >= 1 && quartlet <4){
-				//off time 75%
-				LPC_GPIO0 -> DATA |= LED_R_P0_7;
-				quartlet++;
-				if(quartlet == 4){
-					quartlet = 0; //reset
-				}
-			}
-			else{ // redundant since the if within the else if above but never too sure?
-				quartlet = 0;
-			}
-		}
-/* ======================================================== */
-// 75 % duty cycle
-/* ======================================================== */
-		else if(toggleDuty == 1){
-			if(quartlet == 0){
-				//on time 25% on
-				LPC_GPIO0 -> DATA |= LED_R_P0_7;
-				quartlet = 1;
-			}
-			else if(quartlet >= 1 && quartlet <4){
-				//off time 75%
-				LPC_GPIO0 -> DATA &= ~LED_R_P0_7;
-				quartlet++;
-				if(quartlet == 4){
-					quartlet = 0; //reset
-				}
-			}
-			else{ // redundant since the if within the else if above but never too sure?
-				quartlet = 0;
-			}
-		}
-/* ======================================================== */
-
-		currentNumberOfMatches++; //increment everytime we had a timer interrupt
-		return;
-	} //end of match0
-
-	if(LPC_TMR32B0 -> IR &= (1<<1)){ //match1 // 10 second period
-		LPC_TMR32B0 -> IR &= ~(1<<1); //clear flag
-
-		/*
-		toggleDuty ^=1; //toggle!
-		LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
-		LPC_GPIO0 -> DATA |= LED_R_P0_7;
-		return;
-	*/
+		if(LPC_TMR32B0 -> IR &= (1<<1)){ //match1 // 10 second period
+			LPC_TMR32B0 -> IR &= ~(1<<1); //clear flag
 	}//end of match1
+
+
+
 }
-#endif
 
 
-
-
-//#define kevin
-/*
- *
- * 	sysTick gives us the period.
- * 		period gives us the duration of one quarter.
- * 			this value is set to the MR0. with a reset of TC on match.
- * 				for 25% duty cycle: when MR0_count < 1 turn on led.
- * 					then when MR0_count >1, turn off led,
- * 						if MR0_count == 3; count = 0; reset.
- * 			Need to cacluate a counter of the Quarlet.  to determine the 10 second period.
- * 				question: how many times does the MR0 interrupt occur in a 10 second period
- * 					equation: 10 second / MR0_duration = number of times the MR0 interrupt occurs.
- * 					when we reach our number we change to the alternate duty cycle
- *
- *    */
-
-
-#ifdef kevin
-		if(toggleDuty == 1){
-/*==================================================================================================*/
-// This is the 25% duty cycle case
-/*==================================================================================================*/
-		if(quartlet == 0){
-		LPC_GPIO0 -> DATA &= ~LED_G_P0_8; //on
-		quartlet++;
-		return;
-		}
-		
-		if(quartlet >= 1){
-		LPC_GPIO0-> DATA |= LED_G_P0_8; //off
-		quartlet++;
-			if(quartlet == 5){
-				quartlet = 0;//reset get ready to turn led back on.
-				return;
-			}	
-		}
-		}
-		else if(toggleDuty ==0){
-/*==================================================================================================*/
-// This is the 75% duty cycle case
-/*==================================================================================================*/
-		if(quartlet == 0){
-		quartlet++;
-		LPC_GPIO0-> DATA |= LED_R_P0_7; //off
-		return;
-		}
-
-		if(quartlet >= 1){
-		LPC_GPIO0 -> DATA &= ~LED_R_P0_7; //on
-		quartlet++;
-			if(quartlet == 5){
-				quartlet = 0;//reset get ready to turn led back on.
-				return;
-			}
-		}
-	} //end of the switch for 75% and 25% duty cycles
-/*==================================================================================================*/
-
-
-
-
-
-
-
-
-#endif

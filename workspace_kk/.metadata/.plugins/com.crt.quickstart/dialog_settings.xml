@@ -13,6 +13,6 @@
 		</list>
 	</section>
 	<section name="com.crt.quickstart.views.wizards.examples.QSExampleSelectionPage">
-		<item value="/usr/local/mcuxpressoide-10.2.1_795/ide/Examples/Legacy/CMSIS_CORE" key="dirname"/>
+		<item value="/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_AA/lab4" key="dirname"/>
 	</section>
 </section>
