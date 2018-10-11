@@ -5,9 +5,13 @@ C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSI
 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
                               ./src/cr_startup_lpc11xx.o (__main)
 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
-                              C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o) (__aeabi_uidiv)
+                              ./src/DDL4.o (__aeabi_uidiv)
 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
                               c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o) (__aeabi_idiv0)
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+                              ./src/DDL4.o (__aeabi_fsub)
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
+                              c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o) (__aeabi_lmul)
 
 Discarded input sections
 
@@ -24,11 +28,14 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/DDL4.o
  .data          0x00000000        0x0 ./src/DDL4.o
  .bss           0x00000000        0x0 ./src/DDL4.o
- .bss.zeroCrossing
-                0x00000000        0x1 ./src/DDL4.o
- .bss.currentNumberOfMatches
+ .bss.numberOfMatchesIn_10s
                 0x00000000        0x4 ./src/DDL4.o
- .bss.quartlet  0x00000000        0x1 ./src/DDL4.o
+ .bss.elapsedTime
+                0x00000000        0x4 ./src/DDL4.o
+ .bss.periodTicks
+                0x00000000        0x4 ./src/DDL4.o
+ .bss.edgeCount
+                0x00000000        0x1 ./src/DDL4.o
  .bss.toggleDuty
                 0x00000000        0x1 ./src/DDL4.o
  .group         0x00000000        0x8 ./src/cr_startup_lpc11xx.o
@@ -74,17 +81,67 @@ Discarded input sections
  .text          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
  .data          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
  .bss           0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
- .text.__aeabi_division_idivmod
-                0x00000000       0x78 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
- .ARM.attributes
-                0x00000000       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
  .text          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
  .data          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
  .bss           0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
- .text.__aeabi_division_idiv0
-                0x00000000        0x2 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+ .text          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .data          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .bss           0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_fmul
+                0x00000000       0xc4 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_fdiv
+                0x00000000       0xf0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_frsub
+                0x00000000       0x10 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_fneg
+                0x00000000        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_f2iz
+                0x00000000       0x38 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_f2lz
+                0x00000000       0x64 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_f2ulz
+                0x00000000       0x3c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__bhs_ul2f
+                0x00000000       0x84 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_i2f
+                0x00000000       0x16 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_l2f
+                0x00000000       0x20 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_ul2f
+                0x00000000        0xc c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_f2d
+                0x00000000       0x40 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_fcmpeq
+                0x00000000       0x20 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_fcmplt
+                0x00000000       0x44 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_fcmpgt
+                0x00000000       0x3e c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_fcmpge
+                0x00000000       0x3c c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_fcmpun
+                0x00000000       0x16 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_cfcmple
+                0x00000000       0x24 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text.__aeabi_cfrcmple
+                0x00000000        0xe c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+ .text          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
+ .data          0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
+ .bss           0x00000000        0x0 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_lmul
+                0x00000000       0x2e c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_llsl
+                0x00000000       0x18 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_llsr
+                0x00000000       0x18 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_lasr
+                0x00000000       0x18 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_lcmp
+                0x00000000       0x14 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
+ .text.__aeabi_llong_ulcmp
+                0x00000000       0x10 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
  .ARM.attributes
-                0x00000000       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x00000000       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(llong.o)
 
 Memory Configuration
 
@@ -112,7 +169,7 @@ END GROUP
                 0x10002000                __top_RamLoc8 = 0x10002000
                 0x10002000                __top_RAM = 0x10002000
 
-.text           0x00000000      0x670
+.text           0x00000000      0xa4c
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -121,13 +178,13 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0x670 LOADADDR (.data)
+                0x000000c0        0x4 LONG 0xa4c LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000c8        0x4 LONG 0x0 SIZEOF (.data)
                 0x000000cc                __data_section_table_end = .
                 0x000000cc                __bss_section_table = .
                 0x000000cc        0x4 LONG 0x10000000 ADDR (.bss)
-                0x000000d0        0x4 LONG 0x18 SIZEOF (.bss)
+                0x000000d0        0x4 LONG 0x28 SIZEOF (.bss)
                 0x000000d4                __bss_section_table_end = .
                 0x000000d4                __section_table_end = .
  *(.after_vectors*)
@@ -168,56 +225,85 @@ END GROUP
  *(.text*)
  .text.NVIC_EnableIRQ
                 0x00000300       0x2c ./src/DDL4.o
- .text.main     0x0000032c       0x3c ./src/DDL4.o
+ .text.main     0x0000032c      0x118 ./src/DDL4.o
                 0x0000032c                main
  .text.GPIOInit
-                0x00000368       0xd4 ./src/DDL4.o
-                0x00000368                GPIOInit
+                0x00000444       0xd0 ./src/DDL4.o
+                0x00000444                GPIOInit
  .text.TIMER32Init
-                0x0000043c       0x78 ./src/DDL4.o
-                0x0000043c                TIMER32Init
+                0x00000514       0x7c ./src/DDL4.o
+                0x00000514                TIMER32Init
  .text.PIOINT2_IRQHandler
-                0x000004b4       0xa4 ./src/DDL4.o
-                0x000004b4                PIOINT2_IRQHandler
+                0x00000590       0x84 ./src/DDL4.o
+                0x00000590                PIOINT2_IRQHandler
  .text.TIMER32_0_IRQHandler
-                0x00000558       0x7c ./src/DDL4.o
-                0x00000558                TIMER32_0_IRQHandler
+                0x00000614       0x60 ./src/DDL4.o
+                0x00000614                TIMER32_0_IRQHandler
  .text.SystemInit
-                0x000005d4       0x94 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
-                0x000005d4                SystemInit
+                0x00000674       0x94 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+                0x00000674                SystemInit
  .text.__weak_main
-                0x00000668        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
-                0x00000668                __weak_main
-                0x00000668                __main
+                0x00000708        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                0x00000708                __weak_main
+                0x00000708                __main
+ .text.__aeabi_division_idivmod
+                0x00000710       0x78 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
+                0x00000710                __aeabi_idivmod
+                0x00000710                __aeabi_idiv
+                0x00000716                __aeabi_uidivmod
+                0x00000716                __aeabi_uidiv
+ .text.__aeabi_division_idiv0
+                0x00000788        0x2 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+                0x00000788                __aeabi_idiv0
+ *fill*         0x0000078a        0x2 ff
+ .text.__aeabi_fsub
+                0x0000078c      0x130 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+                0x0000078c                __aeabi_fsub
+ .text.__aeabi_fadd
+                0x000008bc       0xb8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+                0x000008bc                __aeabi_fadd
+ .text.__aeabi_f2uiz
+                0x00000974       0x28 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+                0x00000974                __aeabi_f2uiz
+ .text.__bhs_ui2f
+                0x0000099c       0x62 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+                0x0000099c                __bhs_ui2f
+ .text.__aeabi_ui2f
+                0x000009fe        0xc c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+                0x000009fe                __aeabi_ui2f
+ .text.__aeabi_fcmple
+                0x00000a0a       0x40 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
+                0x00000a0a                __aeabi_fcmple
  *(.rodata .rodata.* .constdata .constdata.*)
-                0x00000670                . = ALIGN (0x4)
+                0x00000a4c                . = ALIGN (0x4)
+ *fill*         0x00000a4a        0x2 ff
 
-.glue_7         0x00000670        0x0
- .glue_7        0x00000670        0x0 linker stubs
+.glue_7         0x00000a4c        0x0
+ .glue_7        0x00000a4c        0x0 linker stubs
 
-.glue_7t        0x00000670        0x0
- .glue_7t       0x00000670        0x0 linker stubs
+.glue_7t        0x00000a4c        0x0
+ .glue_7t       0x00000a4c        0x0 linker stubs
 
-.vfp11_veneer   0x00000670        0x0
- .vfp11_veneer  0x00000670        0x0 linker stubs
+.vfp11_veneer   0x00000a4c        0x0
+ .vfp11_veneer  0x00000a4c        0x0 linker stubs
 
-.v4_bx          0x00000670        0x0
- .v4_bx         0x00000670        0x0 linker stubs
+.v4_bx          0x00000a4c        0x0
+ .v4_bx         0x00000a4c        0x0 linker stubs
 
-.iplt           0x00000670        0x0
- .iplt          0x00000670        0x0 ./src/DDL4.o
+.iplt           0x00000a4c        0x0
+ .iplt          0x00000a4c        0x0 ./src/DDL4.o
 
-.rel.dyn        0x00000670        0x0
- .rel.iplt      0x00000670        0x0 ./src/DDL4.o
+.rel.dyn        0x00000a4c        0x0
+ .rel.iplt      0x00000a4c        0x0 ./src/DDL4.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000670                __exidx_start = .
+                0x00000a4c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000670                __exidx_end = .
-                0x00000670                _etext = .
+                0x00000a4c                __exidx_end = .
+                0x00000a4c                _etext = .
 
 .uninit_RESERVED
                 0x10000000        0x0
@@ -225,7 +311,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x00000670
+.data           0x10000000        0x0 load address 0x00000a4c
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -234,55 +320,67 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x00000670
+.igot.plt       0x10000000        0x0 load address 0x00000a4c
  .igot.plt      0x10000000        0x0 ./src/DDL4.o
 
-.bss            0x10000000       0x18 load address 0x00000670
+.bss            0x10000000       0x28 load address 0x00000a4c
                 0x10000000                _bss = .
  *(.bss*)
- .bss.elapsedTime
+ .bss.tenSecondTimer_ms
                 0x10000000        0x4 ./src/DDL4.o
-                0x10000000                elapsedTime
- .bss.new_period
-                0x10000004        0x4 ./src/DDL4.o
-                0x10000004                new_period
+                0x10000000                tenSecondTimer_ms
+ .bss.calculateNewPeriod
+                0x10000004        0x1 ./src/DDL4.o
+                0x10000004                calculateNewPeriod
+ *fill*         0x10000005        0x3 
  .bss.startTime
                 0x10000008        0x4 ./src/DDL4.o
                 0x10000008                startTime
  .bss.endTime   0x1000000c        0x4 ./src/DDL4.o
                 0x1000000c                endTime
- .bss.numberOfInterrupt_1ms
+ .bss.period_ms
                 0x10000010        0x4 ./src/DDL4.o
-                0x10000010                numberOfInterrupt_1ms
- .bss.edgeCount
+                0x10000010                period_ms
+ .bss.numberOfInterupts_1ms
                 0x10000014        0x4 ./src/DDL4.o
-                0x10000014                edgeCount
+                0x10000014                numberOfInterupts_1ms
+ .bss.quartlet  0x10000018        0x4 ./src/DDL4.o
+                0x10000018                quartlet
+ .bss.numberOfPeriodsIn_10S
+                0x1000001c        0x4 ./src/DDL4.o
+                0x1000001c                numberOfPeriodsIn_10S
+ .bss.numberOfPeriodsExecuted
+                0x10000020        0x4 ./src/DDL4.o
+                0x10000020                numberOfPeriodsExecuted
+ .bss.edge      0x10000024        0x1 ./src/DDL4.o
+                0x10000024                edge
  *(COMMON)
-                0x10000018                . = ALIGN (0x4)
-                0x10000018                _ebss = .
+                0x10000028                . = ALIGN (0x4)
+ *fill*         0x10000025        0x3 
+                0x10000028                _ebss = .
                 [!provide]                PROVIDE (end, .)
 
-.noinit         0x10000018        0x0 load address 0x00000670
-                0x10000018                _noinit = .
+.noinit         0x10000028        0x0 load address 0x00000a4c
+                0x10000028                _noinit = .
  *(.noinit*)
-                0x10000018                . = ALIGN (0x4)
-                0x10000018                _end_noinit = .
+                0x10000028                . = ALIGN (0x4)
+                0x10000028                _end_noinit = .
                 [!provide]                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x10002000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc8 - 0x0))
                 0xefffdb1d                PROVIDE (__valid_user_code_checksum, (0x0 - (((_vStackTop + (ResetISR + 0x1)) + (DEFINED (NMI_Handler)?NMI_Handler:M0_NMI_Handler + 0x1)) + (DEFINED (HardFault_Handler)?HardFault_Handler:M0_HardFault_Handler + 0x1))))
 OUTPUT(DDL4.axf elf32-littlearm)
 
-.debug_info     0x00000000      0xfba
- .debug_info    0x00000000      0x922 ./src/DDL4.o
- .debug_info    0x00000922      0x203 ./src/cr_startup_lpc11xx.o
- .debug_info    0x00000b25       0x3f ./src/crp.o
- .debug_info    0x00000b64      0x456 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_info     0x00000000     0x12be
+ .debug_info    0x00000000      0xc26 ./src/DDL4.o
+ .debug_info    0x00000c26      0x203 ./src/cr_startup_lpc11xx.o
+ .debug_info    0x00000e29       0x3f ./src/crp.o
+ .debug_info    0x00000e68      0x456 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_abbrev   0x00000000      0x3e2
- .debug_abbrev  0x00000000      0x1c0 ./src/DDL4.o
- .debug_abbrev  0x000001c0       0xe6 ./src/cr_startup_lpc11xx.o
- .debug_abbrev  0x000002a6       0x36 ./src/crp.o
- .debug_abbrev  0x000002dc      0x106 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_abbrev   0x00000000      0x3ef
+ .debug_abbrev  0x00000000      0x1cd ./src/DDL4.o
+ .debug_abbrev  0x000001cd       0xe6 ./src/cr_startup_lpc11xx.o
+ .debug_abbrev  0x000002b3       0x36 ./src/crp.o
+ .debug_abbrev  0x000002e9      0x106 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
 .debug_aranges  0x00000000       0xe8
  .debug_aranges
@@ -317,20 +415,20 @@ OUTPUT(DDL4.axf elf32-littlearm)
  .debug_macro   0x000014ab      0x13b C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
  .debug_macro   0x000015e6      0x83e C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000      0x5b0
- .debug_line    0x00000000      0x27c ./src/DDL4.o
- .debug_line    0x0000027c       0xba ./src/cr_startup_lpc11xx.o
- .debug_line    0x00000336       0x78 ./src/crp.o
- .debug_line    0x000003ae      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_line     0x00000000      0x5c2
+ .debug_line    0x00000000      0x28e ./src/DDL4.o
+ .debug_line    0x0000028e       0xba ./src/cr_startup_lpc11xx.o
+ .debug_line    0x00000348       0x78 ./src/crp.o
+ .debug_line    0x000003c0      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_str      0x00000000     0x6218
- .debug_str     0x00000000     0x5b08 ./src/DDL4.o
-                               0x5b86 (size before relaxing)
- .debug_str     0x00005b08      0x178 ./src/cr_startup_lpc11xx.o
+.debug_str      0x00000000     0x6439
+ .debug_str     0x00000000     0x5d29 ./src/DDL4.o
+                               0x5da7 (size before relaxing)
+ .debug_str     0x00005d29      0x178 ./src/cr_startup_lpc11xx.o
                                0x251f (size before relaxing)
- .debug_str     0x00005c80       0xe9 ./src/crp.o
+ .debug_str     0x00005ea1       0xe9 ./src/crp.o
                                0x2481 (size before relaxing)
- .debug_str     0x00005d69      0x4af C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_str     0x00005f8a      0x4af C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
                                0x5717 (size before relaxing)
 
 .comment        0x00000000       0xdc
@@ -341,6 +439,7 @@ OUTPUT(DDL4.axf elf32-littlearm)
  .comment       0x0000006e       0x6f C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
  .comment       0x0000006e       0x6e c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
                                  0x6f (size before relaxing)
+ .comment       0x000000dc       0x6f c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
 
 .ARM.attributes
                 0x00000000       0x2f
@@ -354,6 +453,12 @@ OUTPUT(DDL4.axf elf32-littlearm)
                 0x00000093       0x31 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
  .ARM.attributes
                 0x000000c4       0x31 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+ .ARM.attributes
+                0x000000f5       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_32.o)
+ .ARM.attributes
+                0x00000116       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(division_idiv0.o)
+ .ARM.attributes
+                0x00000137       0x31 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libcr_eabihelpers.a(float.o)
 
 .debug_frame    0x00000000      0x214
  .debug_frame   0x00000000       0xbc ./src/DDL4.o

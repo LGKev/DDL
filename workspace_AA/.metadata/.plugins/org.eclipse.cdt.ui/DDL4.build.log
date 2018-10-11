@@ -1,6 +1,6 @@
-13:27:03 **** Incremental Build of configuration Debug for project DDL4 ****
+15:04:12 **** Incremental Build of configuration Debug for project DDL4 ****
 make -r all 
 make: Nothing to be done for `all'.
 
-13:27:03 Build Finished (took 124ms)
+15:04:12 Build Finished (took 112ms)
 
