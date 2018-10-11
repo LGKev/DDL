@@ -1,6 +1,26 @@
-14:37:57 **** Incremental Build of configuration Debug for project lab4 ****
+19:14:41 **** Incremental Build of configuration Debug for project lab4 ****
 make -r all 
-make: Nothing to be done for `all'.
+Building file: ../src/lab4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\driver" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\lab4\config" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -MT"src/lab4.d" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: lab4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab4_Debug.ld" &Heap:Default;Post Data;Default&Stack:Default;End;Default -o "lab4.axf"  ./src/cr_startup_lpc11xx.o ./src/crp.o ./src/lab4.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/uart.o ./driver/wdt.o   -lCMSIS_CORE_LPC11xx
+/bin/sh: Heap:Default: command not found
+/bin/sh: Post: command not found
+/bin/sh: Default: command not found
+/bin/sh: Stack:Default: command not found
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:         764 B        64 KB      1.17%
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/ld.exe: Linker CRP Enabled, but no CRP_WORD provided within application
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/ld.exe: warning: cannot find entry symbol ResetISR; defaulting to 00000000
+collect2.exe: error: ld returned 1 exit status
+         RamLoc8:          0 GB         8 KB      0.00%
+/bin/sh: End: command not found
+/bin/sh: Default: command not found
+make: *** [lab4.axf] Error 127
 
-14:37:57 Build Finished (took 195ms)
+19:14:42 Build Finished (took 823ms)
 

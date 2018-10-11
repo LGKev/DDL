@@ -1,6 +1,7 @@
 /*
 ===============================================================================
- Name        : lab4.c
+
+Name        : lab4.c
  Author      : Ali Al Naji & Kevin Kuwata
  Version     :
  Copyright   : $(copyright)

@@ -30,7 +30,7 @@ all: lab4.axf
 lab4.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/Debug" -Xlinker -Map="lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab4_Debug.ld" -o "lab4.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="lab4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "lab4_Debug.ld" &Heap:Default;Post Data;Default&Stack:Default;End;Default -o "lab4.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
@@ -45,6 +45,7 @@ post-build:
 	-arm-none-eabi-size "lab4.axf"; # arm-none-eabi-objcopy -v -O binary "lab4.axf" "lab4.bin" ; # checksum -p LPC1115_303 -d "lab4.bin";
 	-@echo ' '
 
-.PHONY: all clean dependents post-build
+.PHONY: all clean dependents
+.SECONDARY: post-build
 
 -include ../makefile.targets
