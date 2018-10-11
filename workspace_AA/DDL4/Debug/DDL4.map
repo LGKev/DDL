@@ -26,13 +26,6 @@ Discarded input sections
  .bss           0x00000000        0x0 ./src/DDL4.o
  .bss.zeroCrossing
                 0x00000000        0x1 ./src/DDL4.o
- .bss.startTime
-                0x00000000        0x4 ./src/DDL4.o
- .bss.endTime   0x00000000        0x4 ./src/DDL4.o
- .bss.elapsedTime
-                0x00000000        0x4 ./src/DDL4.o
- .data.numberOfMatchesIn_10s
-                0x00000000        0x4 ./src/DDL4.o
  .bss.currentNumberOfMatches
                 0x00000000        0x4 ./src/DDL4.o
  .bss.quartlet  0x00000000        0x1 ./src/DDL4.o
@@ -119,7 +112,7 @@ END GROUP
                 0x10002000                __top_RamLoc8 = 0x10002000
                 0x10002000                __top_RAM = 0x10002000
 
-.text           0x00000000      0x5cc
+.text           0x00000000      0x650
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -128,13 +121,13 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0x5cc LOADADDR (.data)
+                0x000000c0        0x4 LONG 0x650 LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000c8        0x4 LONG 0x0 SIZEOF (.data)
                 0x000000cc                __data_section_table_end = .
                 0x000000cc                __bss_section_table = .
                 0x000000cc        0x4 LONG 0x10000000 ADDR (.bss)
-                0x000000d0        0x4 LONG 0x0 SIZEOF (.bss)
+                0x000000d0        0x4 LONG 0x18 SIZEOF (.bss)
                 0x000000d4                __bss_section_table_end = .
                 0x000000d4                __section_table_end = .
  *(.after_vectors*)
@@ -175,56 +168,56 @@ END GROUP
  *(.text*)
  .text.NVIC_EnableIRQ
                 0x00000300       0x2c ./src/DDL4.o
- .text.main     0x0000032c       0x10 ./src/DDL4.o
+ .text.main     0x0000032c       0x3c ./src/DDL4.o
                 0x0000032c                main
  .text.GPIOInit
-                0x0000033c       0xe4 ./src/DDL4.o
-                0x0000033c                GPIOInit
+                0x00000368       0xe4 ./src/DDL4.o
+                0x00000368                GPIOInit
  .text.TIMER32Init
-                0x00000420       0x74 ./src/DDL4.o
-                0x00000420                TIMER32Init
+                0x0000044c       0x74 ./src/DDL4.o
+                0x0000044c                TIMER32Init
  .text.PIOINT2_IRQHandler
-                0x00000494       0x2c ./src/DDL4.o
-                0x00000494                PIOINT2_IRQHandler
+                0x000004c0       0x78 ./src/DDL4.o
+                0x000004c0                PIOINT2_IRQHandler
  .text.TIMER32_0_IRQHandler
-                0x000004c0       0x70 ./src/DDL4.o
-                0x000004c0                TIMER32_0_IRQHandler
+                0x00000538       0x7c ./src/DDL4.o
+                0x00000538                TIMER32_0_IRQHandler
  .text.SystemInit
-                0x00000530       0x94 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
-                0x00000530                SystemInit
+                0x000005b4       0x94 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+                0x000005b4                SystemInit
  .text.__weak_main
-                0x000005c4        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
-                0x000005c4                __weak_main
-                0x000005c4                __main
+                0x00000648        0x8 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(__weak__main.o)
+                0x00000648                __weak_main
+                0x00000648                __main
  *(.rodata .rodata.* .constdata .constdata.*)
-                0x000005cc                . = ALIGN (0x4)
+                0x00000650                . = ALIGN (0x4)
 
-.glue_7         0x000005cc        0x0
- .glue_7        0x000005cc        0x0 linker stubs
+.glue_7         0x00000650        0x0
+ .glue_7        0x00000650        0x0 linker stubs
 
-.glue_7t        0x000005cc        0x0
- .glue_7t       0x000005cc        0x0 linker stubs
+.glue_7t        0x00000650        0x0
+ .glue_7t       0x00000650        0x0 linker stubs
 
-.vfp11_veneer   0x000005cc        0x0
- .vfp11_veneer  0x000005cc        0x0 linker stubs
+.vfp11_veneer   0x00000650        0x0
+ .vfp11_veneer  0x00000650        0x0 linker stubs
 
-.v4_bx          0x000005cc        0x0
- .v4_bx         0x000005cc        0x0 linker stubs
+.v4_bx          0x00000650        0x0
+ .v4_bx         0x00000650        0x0 linker stubs
 
-.iplt           0x000005cc        0x0
- .iplt          0x000005cc        0x0 ./src/DDL4.o
+.iplt           0x00000650        0x0
+ .iplt          0x00000650        0x0 ./src/DDL4.o
 
-.rel.dyn        0x000005cc        0x0
- .rel.iplt      0x000005cc        0x0 ./src/DDL4.o
+.rel.dyn        0x00000650        0x0
+ .rel.iplt      0x00000650        0x0 ./src/DDL4.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000005cc                __exidx_start = .
+                0x00000650                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000005cc                __exidx_end = .
-                0x000005cc                _etext = .
+                0x00000650                __exidx_end = .
+                0x00000650                _etext = .
 
 .uninit_RESERVED
                 0x10000000        0x0
@@ -232,7 +225,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x000005cc
+.data           0x10000000        0x0 load address 0x00000650
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -241,32 +234,49 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x000005cc
+.igot.plt       0x10000000        0x0 load address 0x00000650
  .igot.plt      0x10000000        0x0 ./src/DDL4.o
 
-.bss            0x10000000        0x0 load address 0x000005cc
+.bss            0x10000000       0x18 load address 0x00000650
                 0x10000000                _bss = .
  *(.bss*)
+ .bss.elapsedTime
+                0x10000000        0x4 ./src/DDL4.o
+                0x10000000                elapsedTime
+ .bss.new_period
+                0x10000004        0x4 ./src/DDL4.o
+                0x10000004                new_period
+ .bss.startTime
+                0x10000008        0x4 ./src/DDL4.o
+                0x10000008                startTime
+ .bss.endTime   0x1000000c        0x4 ./src/DDL4.o
+                0x1000000c                endTime
+ .bss.numberOfInterrupt_1ms
+                0x10000010        0x4 ./src/DDL4.o
+                0x10000010                numberOfInterrupt_1ms
+ .bss.edgeCount
+                0x10000014        0x4 ./src/DDL4.o
+                0x10000014                edgeCount
  *(COMMON)
-                0x10000000                . = ALIGN (0x4)
-                0x10000000                _ebss = .
+                0x10000018                . = ALIGN (0x4)
+                0x10000018                _ebss = .
                 [!provide]                PROVIDE (end, .)
 
-.noinit         0x10000000        0x0 load address 0x000005cc
-                0x10000000                _noinit = .
+.noinit         0x10000018        0x0 load address 0x00000650
+                0x10000018                _noinit = .
  *(.noinit*)
-                0x10000000                . = ALIGN (0x4)
-                0x10000000                _end_noinit = .
+                0x10000018                . = ALIGN (0x4)
+                0x10000018                _end_noinit = .
                 [!provide]                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x10002000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc8 - 0x0))
                 0xefffdb1d                PROVIDE (__valid_user_code_checksum, (0x0 - (((_vStackTop + (ResetISR + 0x1)) + (DEFINED (NMI_Handler)?NMI_Handler:M0_NMI_Handler + 0x1)) + (DEFINED (HardFault_Handler)?HardFault_Handler:M0_HardFault_Handler + 0x1))))
 OUTPUT(DDL4.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x1240
- .debug_info    0x00000000      0xba8 ./src/DDL4.o
- .debug_info    0x00000ba8      0x203 ./src/cr_startup_lpc11xx.o
- .debug_info    0x00000dab       0x3f ./src/crp.o
- .debug_info    0x00000dea      0x456 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_info     0x00000000     0x1262
+ .debug_info    0x00000000      0xbca ./src/DDL4.o
+ .debug_info    0x00000bca      0x203 ./src/cr_startup_lpc11xx.o
+ .debug_info    0x00000dcd       0x3f ./src/crp.o
+ .debug_info    0x00000e0c      0x456 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
 .debug_abbrev   0x00000000      0x3ef
  .debug_abbrev  0x00000000      0x1cd ./src/DDL4.o
@@ -307,20 +317,20 @@ OUTPUT(DDL4.axf elf32-littlearm)
  .debug_macro   0x000014ab      0x13b C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
  .debug_macro   0x000015e6      0x83e C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_line     0x00000000      0x5a4
- .debug_line    0x00000000      0x270 ./src/DDL4.o
- .debug_line    0x00000270       0xba ./src/cr_startup_lpc11xx.o
- .debug_line    0x0000032a       0x78 ./src/crp.o
- .debug_line    0x000003a2      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+.debug_line     0x00000000      0x5b0
+ .debug_line    0x00000000      0x27c ./src/DDL4.o
+ .debug_line    0x0000027c       0xba ./src/cr_startup_lpc11xx.o
+ .debug_line    0x00000336       0x78 ./src/crp.o
+ .debug_line    0x000003ae      0x202 C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
 
-.debug_str      0x00000000     0x63c9
- .debug_str     0x00000000     0x5cb9 ./src/DDL4.o
-                               0x5d37 (size before relaxing)
- .debug_str     0x00005cb9      0x178 ./src/cr_startup_lpc11xx.o
+.debug_str      0x00000000     0x63de
+ .debug_str     0x00000000     0x5cce ./src/DDL4.o
+                               0x5d4c (size before relaxing)
+ .debug_str     0x00005cce      0x178 ./src/cr_startup_lpc11xx.o
                                0x251f (size before relaxing)
- .debug_str     0x00005e31       0xe9 ./src/crp.o
+ .debug_str     0x00005e46       0xe9 ./src/crp.o
                                0x2481 (size before relaxing)
- .debug_str     0x00005f1a      0x4af C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
+ .debug_str     0x00005f2f      0x4af C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug\libCMSIS_CORE_LPC11xx.a(system_LPC11xx.o)
                                0x5717 (size before relaxing)
 
 .comment        0x00000000       0xdc

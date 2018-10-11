@@ -231,6 +231,7 @@ uint32_t currentNumberOfMatches = 0;
 uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
 uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
 
+//TODO: remove this if define
 
 void TIMER32_0_IRQHandler(void)
 {

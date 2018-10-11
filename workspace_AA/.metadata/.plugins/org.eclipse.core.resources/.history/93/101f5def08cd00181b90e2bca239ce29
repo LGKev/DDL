@@ -73,26 +73,11 @@ void TIMER32_0_IRQHandler(void);
 
 //void sysTickInit(void);
 
-uint32_t elapsedTime;
-uint32_t new_period = 0;
-uint32_t startTime;
-uint32_t endTime;
-uint32_t numberOfInterrupt_1ms = 0;
-uint8_t zeroCrossing = 0;
-uint32_t edgeCount = 0;
-
 
 int main(void) {
 	GPIOInit();
 	TIMER32Init();
-	while(1)
-	{
-		if(new_period == 1)
-		{
-			elapsedTime = endTime - startTime;
-			new_period = 0;
-		}
-	}
+	while(1);
     return 0;
 }
 
@@ -189,8 +174,13 @@ void TIMER32Init(void){
 
 
 //gloabl
-
-
+uint32_t numberOfInterrupt_1ms = 0;
+uint8_t zeroCrossing = 0;
+uint32_t edgeCount = 0;
+uint32_t new_period = 0;
+uint32_t startTime;
+uint32_t endTime;
+uint32_t elapsedTime;
 void PIOINT2_IRQHandler(void)
 {
 	//check which GPIO triggered the interrupt in port2
@@ -201,7 +191,7 @@ void PIOINT2_IRQHandler(void)
 		{
 			startTime = numberOfInterrupt_1ms;
 			edgeCount++;
-			//LPC_GPIO0 -> DATA &= ~(1 << 7);
+			LPC_GPIO0 -> DATA &= ~(1 << 7);
 
 		}
 		else if(edgeCount == 1)
@@ -209,7 +199,7 @@ void PIOINT2_IRQHandler(void)
 			endTime = numberOfInterrupt_1ms;
 			edgeCount = 0;
 			new_period = 1;
-			//LPC_GPIO0 -> DATA |= (1 << 7);
+			LPC_GPIO0 -> DATA |= (1 << 7);
 		}
 		/*TODO: logic for timing */
 
@@ -231,6 +221,7 @@ uint32_t currentNumberOfMatches = 0;
 uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
 uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
 
+//TODO: remove this if define
 
 void TIMER32_0_IRQHandler(void)
 {
@@ -240,10 +231,10 @@ void TIMER32_0_IRQHandler(void)
 	{ //match0
 		//clear interrupt
 		LPC_TMR32B0 -> IR &= ~(1<<0);
-		LPC_GPIO0 -> DATA &= ~(1 << 7);
+		//LPC_GPIO0 -> DATA &= ~(1 << 7);
 		numberOfInterrupt_1ms++;
 	}
-	LPC_GPIO0 -> DATA |= (1 << 7);
+	//LPC_GPIO0 -> DATA |= (1 << 7);
 	if(LPC_TMR32B0 -> IR &= (1<<1))
 	{ //match1 // 10 second period
 		LPC_TMR32B0 -> IR &= ~(1<<1); //clear flag
