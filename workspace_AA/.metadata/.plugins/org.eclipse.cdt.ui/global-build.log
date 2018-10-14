@@ -414,3 +414,924 @@ make: Nothing to be done for `all'.
 19:57:00 **** Incremental Build of configuration Debug for project DDL4 ****
 make -r all 
 make: Nothing to be done for `all'.
+<<<<<<< HEAD
+=======
+20:40:20 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+20:40:22 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+../src/DDL4.c: In function 'PIOINT2_IRQHandler':
+../src/DDL4.c:191:16: error: 'numberOfInterrupt_1ms' undeclared (first use in this function)
+    startTime = numberOfInterrupt_1ms;
+                ^
+../src/DDL4.c:191:16: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/DDL4.o] Error 1
+20:40:46 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+20:40:47 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1572 B        64 KB      2.40%
+         RamLoc8:          20 B         8 KB      0.24%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1572	      0	     20	   1592	    638	DDL4.axf
+ 
+20:41:00 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+20:41:02 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+20:41:04 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+20:47:35 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+20:47:37 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+20:52:36 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+20:52:38 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1616 B        64 KB      2.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1616	      0	     24	   1640	    668	DDL4.axf
+ 
+20:52:44 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+20:52:45 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+20:52:47 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+20:56:57 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r clean 
+rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
+ 
+20:56:57 **** Clean-only build of configuration Debug for project DDL4 ****
+make -r clean 
+rm -rf  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./src/DDL4.d ./src/cr_startup_lpc11xx.d ./src/crp.d  DDL4.axf
+ 
+20:57:05 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+20:57:08 **** Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1616 B        64 KB      2.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1616	      0	     24	   1640	    668	DDL4.axf
+ 
+20:57:12 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+21:00:19 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r clean 
+rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
+ 
+21:00:19 **** Clean-only build of configuration Debug for project DDL4 ****
+make -r clean 
+rm -rf  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./src/DDL4.d ./src/cr_startup_lpc11xx.d ./src/crp.d  DDL4.axf
+ 
+21:00:23 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+21:00:25 **** Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1616 B        64 KB      2.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1616	      0	     24	   1640	    668	DDL4.axf
+ 
+21:00:29 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+21:03:07 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+21:03:09 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+21:03:11 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+21:07:04 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+21:07:06 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1616 B        64 KB      2.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1616	      0	     24	   1640	    668	DDL4.axf
+ 
+21:07:18 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+21:07:19 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+21:07:21 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+21:19:17 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+21:19:18 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1616 B        64 KB      2.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1616	      0	     24	   1640	    668	DDL4.axf
+ 
+21:19:24 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r clean 
+rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
+ 
+21:19:24 **** Clean-only build of configuration Debug for project DDL4 ****
+make -r clean 
+rm -rf  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./src/DDL4.d ./src/cr_startup_lpc11xx.d ./src/crp.d  DDL4.axf
+ 
+21:19:29 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+21:19:31 **** Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1616 B        64 KB      2.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1616	      0	     24	   1640	    668	DDL4.axf
+ 
+21:19:35 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:03:57 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+13:04:01 **** Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+../src/DDL4.c: In function 'main':
+../src/DDL4.c:98:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+    printf("%d",elapsedTime);
+    ^
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       11776 B        64 KB     17.97%
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(fpprintf.o): In function `printf':
+fpprintf.c:(.text.printf+0x38): undefined reference to `__sys_write'
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(_deferredlazyseek.o): In function `__flsbuf':
+_deferredlazyseek.c:(.text.__flsbuf+0x88): undefined reference to `__sys_istty'
+         RamLoc8:         356 B         8 KB      4.35%
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(_writebuf.o): In function `_Cwritebuf':
+_writebuf.c:(.text._Cwritebuf+0x16): undefined reference to `__sys_flen'
+_writebuf.c:(.text._Cwritebuf+0x26): undefined reference to `__sys_seek'
+_writebuf.c:(.text._Cwritebuf+0x3c): undefined reference to `__sys_write'
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(alloc.o): In function `_Csys_alloc':
+alloc.c:(.text._Csys_alloc+0xe): undefined reference to `__sys_write'
+alloc.c:(.text._Csys_alloc+0x12): undefined reference to `__sys_appexit'
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(fseek.o): In function `fseek':
+fseek.c:(.text.fseek+0x18): undefined reference to `__sys_istty'
+fseek.c:(.text.fseek+0x3c): undefined reference to `__sys_flen'
+collect2.exe: error: ld returned 1 exit status
+make: *** [DDL4.axf] Error 1
+13:09:39 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:09:40 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:       11776 B        64 KB     17.97%
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(fpprintf.o): In function `printf':
+fpprintf.c:(.text.printf+0x38): undefined reference to `__sys_write'
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(_deferredlazyseek.o): In function `__flsbuf':
+_deferredlazyseek.c:(.text.__flsbuf+0x88): undefined reference to `__sys_istty'
+         RamLoc8:         356 B         8 KB      4.35%
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(_writebuf.o): In function `_Cwritebuf':
+_writebuf.c:(.text._Cwritebuf+0x16): undefined reference to `__sys_flen'
+_writebuf.c:(.text._Cwritebuf+0x26): undefined reference to `__sys_seek'
+_writebuf.c:(.text._Cwritebuf+0x3c): undefined reference to `__sys_write'
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(alloc.o): In function `_Csys_alloc':
+alloc.c:(.text._Csys_alloc+0xe): undefined reference to `__sys_write'
+alloc.c:(.text._Csys_alloc+0x12): undefined reference to `__sys_appexit'
+c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libcr_c.a(fseek.o): In function `fseek':
+fseek.c:(.text.fseek+0x18): undefined reference to `__sys_istty'
+fseek.c:(.text.fseek+0x3c): undefined reference to `__sys_flen'
+collect2.exe: error: ld returned 1 exit status
+make: *** [DDL4.axf] Error 1
+13:09:48 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:09:49 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1620 B        64 KB      2.47%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1620	      0	     24	   1644	    66c	DDL4.axf
+ 
+13:10:23 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:10:25 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1664 B        64 KB      2.54%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1664	      0	     24	   1688	    698	DDL4.axf
+ 
+13:10:56 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:10:57 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:10:59 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:12:49 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:12:50 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1648 B        64 KB      2.51%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1648	      0	     24	   1672	    688	DDL4.axf
+ 
+13:12:53 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:15:24 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:15:25 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1648 B        64 KB      2.51%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1648	      0	     24	   1672	    688	DDL4.axf
+ 
+13:15:28 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:16:46 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:16:47 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1648 B        64 KB      2.51%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1648	      0	     24	   1672	    688	DDL4.axf
+ 
+13:16:50 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:19:48 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:19:50 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:19:51 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:20:14 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:20:16 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:20:18 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+13:26:59 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+13:27:00 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        1648 B        64 KB      2.51%
+         RamLoc8:          24 B         8 KB      0.29%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1648	      0	     24	   1672	    688	DDL4.axf
+ 
+13:27:03 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+15:03:48 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:03:50 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2636 B        64 KB      4.02%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2636	      0	     40	   2676	    a74	DDL4.axf
+ 
+15:03:56 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r clean 
+rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
+ 
+15:03:56 **** Clean-only build of configuration Debug for project DDL4 ****
+make -r clean 
+rm -rf  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./src/DDL4.d ./src/cr_startup_lpc11xx.d ./src/crp.d  DDL4.axf
+ 
+15:04:07 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+15:04:09 **** Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2636 B        64 KB      4.02%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2636	      0	     40	   2676	    a74	DDL4.axf
+ 
+15:04:12 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+15:36:16 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:36:17 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2640 B        64 KB      4.03%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2640	      0	     40	   2680	    a78	DDL4.axf
+ 
+15:36:23 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:36:24 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+15:36:26 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+15:40:22 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:40:24 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2640 B        64 KB      4.03%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2640	      0	     40	   2680	    a78	DDL4.axf
+ 
+15:40:28 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:40:30 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+15:40:31 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+15:44:40 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:44:42 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2648 B        64 KB      4.04%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2648	      0	     40	   2688	    a80	DDL4.axf
+ 
+15:44:44 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r clean 
+rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
+ 
+15:44:44 **** Clean-only build of configuration Debug for project DDL4 ****
+make -r clean 
+rm -rf  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./src/DDL4.d ./src/cr_startup_lpc11xx.d ./src/crp.d  DDL4.axf
+ 
+15:44:48 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+15:44:50 **** Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2648 B        64 KB      4.04%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2648	      0	     40	   2688	    a80	DDL4.axf
+ 
+15:44:53 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+15:50:33 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+15:50:35 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2792 B        64 KB      4.26%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2792	      0	     40	   2832	    b10	DDL4.axf
+ 
+15:50:38 **** Clean-only build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r clean 
+rm -rf  ./src/system_LPC11xx.o  ./src/system_LPC11xx.d  libCMSIS_CORE_LPC11xx.a
+ 
+15:50:38 **** Clean-only build of configuration Debug for project DDL4 ****
+make -r clean 
+rm -rf  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./src/DDL4.d ./src/cr_startup_lpc11xx.d ./src/crp.d  DDL4.axf
+ 
+15:50:41 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC11xx.a
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+15:50:43 **** Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+Finished building: ../src/DDL4.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\DDL4\inc" -I"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building target: DDL4.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDL\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDL4.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDL4_Debug.ld" -o "DDL4.axf"  ./src/DDL4.o ./src/cr_startup_lpc11xx.o ./src/crp.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2792 B        64 KB      4.26%
+         RamLoc8:          40 B         8 KB      0.49%
+Finished building target: DDL4.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DDL4.axf"; # arm-none-eabi-objcopy -v -O binary "DDL4.axf" "DDL4.bin" ; # checksum -p LPC1115_303 -d "DDL4.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2792	      0	     40	   2832	    b10	DDL4.axf
+ 
+15:50:46 **** Incremental Build of configuration Debug for project DDL4 ****
+make -r all 
+make: Nothing to be done for `all'.
+>>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a

@@ -1,7 +1,10 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=3280b4a6602cee0785ee77f8f719dcac9c887c4a
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:nxp_lpcxpresso_11c24_periph_blinky Debug,org.eclipse.launchbar.core.descriptorType.default\:nxp_lpcxpresso_11c24_periph_blinky Debug (1),org.eclipse.launchbar.core.descriptorType.default\:blinky Debug,org.eclipse.launchbar.core.descriptorType.default\:blinky LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:blinky LinkServer Release,org.eclipse.launchbar.core.descriptorType.default\:blinky Release,org.eclipse.launchbar.core.descriptorType.default\:DDL_Lab4 LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:DDL_Lab4 LinkServer Release
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:uart Debug (2),org.eclipse.launchbar.core.descriptorType.default\:uart Debug,org.eclipse.launchbar.core.descriptorType.default\:nxp_lpcxpresso_11c24_periph_blinky Debug,org.eclipse.launchbar.core.descriptorType.default\:nxp_lpcxpresso_11c24_periph_blinky Debug (1),org.eclipse.launchbar.core.descriptorType.default\:blinky Debug,org.eclipse.launchbar.core.descriptorType.default\:blinky LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:blinky LinkServer Release,org.eclipse.launchbar.core.descriptorType.default\:blinky Release,org.eclipse.launchbar.core.descriptorType.default\:DDL_Lab5_UART LinkServer Release,org.eclipse.launchbar.core.descriptorType.default\:DDL_Lab5_UART LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:uart LinkServer Debug,org.eclipse.launchbar.core.descriptorType.default\:uart LinkServer Release
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:nxp_lpcxpresso_11c24_periph_blinky\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:nxp_lpcxpresso_11c24_periph_blinky\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

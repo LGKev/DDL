@@ -1,39 +1,9 @@
-14:25:58 **** Build of configuration Debug for project uart ****
+15:58:17 **** Incremental Build of configuration Debug for project uart ****
 make -r -j2 all 
-Building file: ../startup/cr_startup_lpc11.c
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
-Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
-Finished building: ../startup/cr_startup_lpc11.c
 Finished building: ../src/uart_main.c
- 
-Building file: ../driver/can.c
- 
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
-Building file: ../driver/crp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
-Finished building: ../driver/can.c
- 
-Building file: ../driver/uart.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
-Finished building: ../driver/crp.c
- 
-Building file: ../cmsis/core_cm0.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
-Finished building: ../driver/uart.c
- 
-Building file: ../cmsis/system_LPC11xx.c
-Finished building: ../cmsis/core_cm0.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
- 
-Finished building: ../cmsis/system_LPC11xx.c
  
 Building target: uart.axf
 Invoking: MCU Linker
@@ -42,12 +12,12 @@ Finished building target: uart.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1115_303 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
    2052	      8	     72	   2132	    854	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
 
-14:25:59 Build Finished (took 856ms)
+15:58:18 Build Finished (took 1s.174ms)
 

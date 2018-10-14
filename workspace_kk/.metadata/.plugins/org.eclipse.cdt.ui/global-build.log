@@ -1,19 +1,823 @@
-13:17:32 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
-make -r all 
-Building file: ../src/system_LPC11xx.c
+15:25:22 **** Incremental Build of configuration Debug for project uart ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Building file: ../startup/cr_startup_lpc11.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"/home/kkuwata/Documents/MCUXpresso_10.2.1_795/workspace_kk/CMSIS_CORE_LPC11xx/inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
-Finished building: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
  
-Building target: libCMSIS_CORE_LPC11xx.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
-arm-none-eabi-ar: creating libCMSIS_CORE_LPC11xx.a
-Finished building target: libCMSIS_CORE_LPC11xx.a
+Finished building: ../startup/cr_startup_lpc11.c
+Building file: ../driver/can.c
+ 
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/can.c
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../driver/uart.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+Finished building: ../cmsis/core_cm0.c
+ 
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1115_303 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-    368	      4	      0	    372	    174	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+   2052	      8	     72	   2132	    854	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+15:26:22 **** Incremental Build of configuration Debug for project uart ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+15:58:17 **** Incremental Build of configuration Debug for project uart ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1115_303 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2052	      8	     72	   2132	    854	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:28:27 **** Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c:58:1: warning: data definition has no type or storage class
+ UARTBuffer[12]="HELLO WORLD";
+src/subdir.mk:18: recipe for target 'src/uart_main.o' failed
+ ^~~~~~~~~~
+../src/uart_main.c:58:1: warning: type defaults to 'int' in declaration of 'UARTBuffer' [-Wimplicit-int]
+../src/uart_main.c:58:1: error: conflicting types for 'UARTBuffer'
+../src/uart_main.c:38:25: note: previous declaration of 'UARTBuffer' was here
+ extern volatile uint8_t UARTBuffer[BUFSIZE];
+                         ^~~~~~~~~~
+../src/uart_main.c:58:16: error: array of inappropriate type initialized from string constant
+ UARTBuffer[12]="HELLO WORLD";
+                ^~~~~~~~~~~~~
+../src/uart_main.c:62:1: error: unknown type name 'uint_8t'; did you mean 'uint8_t'?
+ uint_8t uartCharReceived = 0;
+ ^~~~~~~
+ uint8_t
+../src/uart_main.c:63:1: error: unknown type name 'uint_8t'; did you mean 'uint8_t'?
+ uint_8t delay = 0;
+ ^~~~~~~
+ uint8_t
+../src/uart_main.c: In function 'idleState':
+../src/uart_main.c:94:2: error: case label not within a switch statement
+  case value:
+  ^~~~
+../src/uart_main.c:95:3: warning: statement with no effect [-Wunused-value]
+   1:
+   ^
+../src/uart_main.c:95:4: error: expected ';' before ':' token
+   1:
+    ^
+../src/uart_main.c:97:3: warning: statement with no effect [-Wunused-value]
+   2:
+   ^
+../src/uart_main.c:97:4: error: expected ';' before ':' token
+   2:
+    ^
+../src/uart_main.c:99:2: error: 'default' label not within a switch statement
+  default:
+  ^~~~~~~
+../src/uart_main.c:100:3: error: break statement not within loop or switch
+   break;
+   ^~~~~
+make: *** [src/uart_main.o] Error 1
+16:31:20 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:31:22 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c:62:1: error: unknown type name 'uint_t'; did you mean 'uint8_t'?
+ uint_t delay = 0;
+ ^~~~~~
+ uint8_t
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:71:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[0]="H";
+              ^
+../src/uart_main.c:72:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[1]="E";
+              ^
+../src/uart_main.c:73:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[2]="L";
+              ^
+src/subdir.mk:18: recipe for target 'src/uart_main.o' failed
+../src/uart_main.c:74:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[3]="L";
+              ^
+../src/uart_main.c:75:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[4]="O";
+              ^
+../src/uart_main.c:76:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[5]=" ";
+              ^
+../src/uart_main.c:77:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[6]="W";
+              ^
+../src/uart_main.c:78:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[7]="O";
+              ^
+../src/uart_main.c:79:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[8]="R";
+              ^
+../src/uart_main.c:80:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[9]="L";
+              ^
+../src/uart_main.c:81:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[10]="D";
+               ^
+../src/uart_main.c:82:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[11]="\0";
+               ^
+../src/uart_main.c: In function 'idleState':
+../src/uart_main.c:107:2: error: case label not within a switch statement
+  case value:
+  ^~~~
+../src/uart_main.c:108:3: warning: statement with no effect [-Wunused-value]
+   1:
+   ^
+../src/uart_main.c:108:4: error: expected ';' before ':' token
+   1:
+    ^
+../src/uart_main.c:110:3: warning: statement with no effect [-Wunused-value]
+   2:
+   ^
+../src/uart_main.c:110:4: error: expected ';' before ':' token
+   2:
+    ^
+../src/uart_main.c:112:2: error: 'default' label not within a switch statement
+  default:
+  ^~~~~~~
+../src/uart_main.c:113:3: error: break statement not within loop or switch
+   break;
+   ^~~~~
+make: *** [src/uart_main.o] Error 1
+16:31:27 **** Build of configuration Debug for project blinky ****
+make -r -j2 all 
+Building target: blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=blinky.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "blinky.axf"  ./startup/cr_startup_lpc11.o  ./src/blinky_main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: blinky.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size blinky.axf; arm-none-eabi-objcopy -O binary blinky.axf blinky.bin ; checksum -p LPC1115_303 -d blinky.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2124	      4	      8	   2136	    858	blinky.axf
+Written checksum 0xefffd637 at offset 0x1c in file blinky.bin
+Previous value 0x00000000 at offset 0x1c in file blinky.bin
+ 
+16:31:34 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:31:36 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:71:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[0]="H";
+              ^
+../src/uart_main.c:72:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[1]="E";
+              ^
+../src/uart_main.c:73:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[2]="L";
+              ^
+../src/uart_main.c:74:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[3]="L";
+              ^
+../src/uart_main.c:75:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[4]="O";
+              ^
+../src/uart_main.c:76:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[5]=" ";
+              ^
+../src/uart_main.c:77:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+src/subdir.mk:18: recipe for target 'src/uart_main.o' failed
+ UARTBuffer[6]="W";
+              ^
+../src/uart_main.c:78:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[7]="O";
+              ^
+../src/uart_main.c:79:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[8]="R";
+              ^
+../src/uart_main.c:80:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[9]="L";
+              ^
+../src/uart_main.c:81:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[10]="D";
+               ^
+../src/uart_main.c:82:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[11]="\0";
+               ^
+../src/uart_main.c: In function 'idleState':
+../src/uart_main.c:107:2: error: case label not within a switch statement
+  case value:
+  ^~~~
+../src/uart_main.c:108:3: warning: statement with no effect [-Wunused-value]
+   1:
+   ^
+../src/uart_main.c:108:4: error: expected ';' before ':' token
+   1:
+    ^
+../src/uart_main.c:110:3: warning: statement with no effect [-Wunused-value]
+   2:
+   ^
+../src/uart_main.c:110:4: error: expected ';' before ':' token
+   2:
+    ^
+../src/uart_main.c:112:2: error: 'default' label not within a switch statement
+  default:
+  ^~~~~~~
+../src/uart_main.c:113:3: error: break statement not within loop or switch
+   break;
+   ^~~~~
+make: *** [src/uart_main.o] Error 1
+16:31:40 **** Incremental Build of configuration Debug for project blinky ****
+make -r -j2 all 
+make: Nothing to be done for 'all'.
+16:32:09 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:71:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[0]="H";
+              ^
+../src/uart_main.c:72:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[1]="E";
+              ^
+../src/uart_main.c:73:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[2]="L";
+              ^
+../src/uart_main.c:74:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[3]="L";
+              ^
+../src/uart_main.c:75:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[4]="O";
+              ^
+../src/uart_main.c:76:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[5]=" ";
+              ^
+../src/uart_main.c:77:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[6]="W";
+              ^
+../src/uart_main.c:78:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[7]="O";
+              ^
+../src/uart_main.c:79:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[8]="R";
+              ^
+../src/uart_main.c:80:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[9]="L";
+              ^
+../src/uart_main.c:81:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[10]="D";
+               ^
+../src/uart_main.c:82:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[11]="\0";
+               ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2232	      8	     76	   2316	    90c	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:34:09 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:71:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[0]="H";
+              ^
+../src/uart_main.c:72:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[1]="E";
+              ^
+../src/uart_main.c:73:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[2]="L";
+              ^
+../src/uart_main.c:74:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[3]="L";
+              ^
+../src/uart_main.c:75:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[4]="O";
+              ^
+../src/uart_main.c:76:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[5]=" ";
+              ^
+../src/uart_main.c:77:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[6]="W";
+              ^
+../src/uart_main.c:78:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[7]="O";
+              ^
+../src/uart_main.c:79:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[8]="R";
+              ^
+../src/uart_main.c:80:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[9]="L";
+              ^
+../src/uart_main.c:81:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[10]="D";
+               ^
+../src/uart_main.c:82:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[11]="\0";
+               ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2232	      8	     76	   2316	    90c	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:35:17 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:71:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[0]="H";
+              ^
+../src/uart_main.c:72:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[1]="E";
+              ^
+../src/uart_main.c:73:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[2]="L";
+              ^
+../src/uart_main.c:74:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[3]="L";
+              ^
+../src/uart_main.c:75:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[4]="O";
+              ^
+../src/uart_main.c:76:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[5]=" ";
+              ^
+../src/uart_main.c:77:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[6]="W";
+              ^
+../src/uart_main.c:78:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[7]="O";
+              ^
+../src/uart_main.c:79:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[8]="R";
+              ^
+../src/uart_main.c:80:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[9]="L";
+              ^
+../src/uart_main.c:81:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[10]="D";
+               ^
+../src/uart_main.c:82:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[11]="\0";
+               ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2232	      8	     76	   2316	    90c	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:37:37 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:71:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[0]="H";
+              ^
+../src/uart_main.c:72:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[1]="E";
+              ^
+../src/uart_main.c:73:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[2]="L";
+              ^
+../src/uart_main.c:74:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[3]="L";
+              ^
+../src/uart_main.c:75:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[4]="O";
+              ^
+../src/uart_main.c:76:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[5]=" ";
+              ^
+../src/uart_main.c:77:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[6]="W";
+              ^
+../src/uart_main.c:78:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[7]="O";
+              ^
+../src/uart_main.c:79:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[8]="R";
+              ^
+../src/uart_main.c:80:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[9]="L";
+              ^
+../src/uart_main.c:81:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[10]="D";
+               ^
+../src/uart_main.c:82:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[11]="\0";
+               ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2228	      8	     76	   2312	    908	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:40:01 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:71:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[0]="H";
+              ^
+../src/uart_main.c:72:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[1]="E";
+              ^
+../src/uart_main.c:73:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[2]="L";
+              ^
+../src/uart_main.c:74:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[3]="L";
+              ^
+../src/uart_main.c:75:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[4]="O";
+              ^
+../src/uart_main.c:76:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[5]=" ";
+              ^
+../src/uart_main.c:77:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[6]="W";
+              ^
+../src/uart_main.c:78:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[7]="O";
+              ^
+../src/uart_main.c:79:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[8]="R";
+              ^
+../src/uart_main.c:80:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[9]="L";
+              ^
+../src/uart_main.c:81:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[10]="D";
+               ^
+../src/uart_main.c:82:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[11]="\0";
+               ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2220	      8	     72	   2300	    8fc	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:42:04 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:71:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[0]="H";
+              ^
+../src/uart_main.c:72:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[1]="E";
+              ^
+../src/uart_main.c:73:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[2]="L";
+              ^
+../src/uart_main.c:74:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[3]="L";
+              ^
+../src/uart_main.c:75:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[4]="O";
+              ^
+../src/uart_main.c:76:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[5]=" ";
+              ^
+../src/uart_main.c:77:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[6]="W";
+              ^
+../src/uart_main.c:78:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[7]="O";
+              ^
+../src/uart_main.c:79:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[8]="R";
+              ^
+../src/uart_main.c:80:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[9]="L";
+              ^
+../src/uart_main.c:81:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[10]="D";
+               ^
+../src/uart_main.c:82:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[11]="\n";
+               ^
+../src/uart_main.c:83:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[12]="\0";
+               ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2236	      8	     72	   2316	    90c	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:43:13 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:72:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[1]="E";
+              ^
+../src/uart_main.c:73:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[2]="L";
+              ^
+../src/uart_main.c:74:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[3]="L";
+              ^
+../src/uart_main.c:75:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[4]="O";
+              ^
+../src/uart_main.c:76:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[5]=" ";
+              ^
+../src/uart_main.c:77:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[6]="W";
+              ^
+../src/uart_main.c:78:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[7]="O";
+              ^
+../src/uart_main.c:79:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[8]="R";
+              ^
+../src/uart_main.c:80:14: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[9]="L";
+              ^
+../src/uart_main.c:81:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[10]="D";
+               ^
+../src/uart_main.c:82:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[11]="\n";
+               ^
+../src/uart_main.c:83:15: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+ UARTBuffer[12]="\0";
+               ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2224	      8	     72	   2304	    900	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:44:45 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2128	      8	     72	   2208	    8a0	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:46:08 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2152	      8	     76	   2236	    8bc	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:48:19 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2164	      8	     76	   2248	    8c8	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:49:11 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2164	      8	     76	   2248	    8c8	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:49:40 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2164	      8	     76	   2248	    8c8	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:50:23 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2164	      8	     76	   2248	    8c8	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+16:51:05 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2164	      8	     76	   2248	    8c8	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
  

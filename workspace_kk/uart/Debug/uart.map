@@ -70,7 +70,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x123 ./driver/can.o
  .debug_macro   0x0000000000000000       0x22 ./driver/can.o
  .debug_line    0x0000000000000000      0x145 ./driver/can.o
- .debug_str     0x0000000000000000     0x6295 ./driver/can.o
+ .debug_str     0x0000000000000000     0x6298 ./driver/can.o
  .comment       0x0000000000000000       0x7f ./driver/can.o
  .ARM.attributes
                 0x0000000000000000       0x31 ./driver/can.o
@@ -164,7 +164,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x12d ./cmsis/core_cm0.o
  .debug_macro   0x0000000000000000      0x5b2 ./cmsis/core_cm0.o
  .debug_line    0x0000000000000000      0x1c2 ./cmsis/core_cm0.o
- .debug_str     0x0000000000000000     0x444c ./cmsis/core_cm0.o
+ .debug_str     0x0000000000000000     0x444f ./cmsis/core_cm0.o
  .comment       0x0000000000000000       0x7f ./cmsis/core_cm0.o
  .debug_frame   0x0000000000000000       0xc0 ./cmsis/core_cm0.o
  .ARM.attributes
@@ -432,17 +432,17 @@ OUTPUT(uart.axf elf32-littlearm)
  .debug_line    0x00000000000004a0      0x230 ./driver/uart.o
  .debug_line    0x00000000000006d0      0x1c5 ./cmsis/system_LPC11xx.o
 
-.debug_str      0x0000000000000000     0x6f88
- .debug_str     0x0000000000000000     0x45b7 ./startup/cr_startup_lpc11.o
-                                       0x4642 (size before relaxing)
- .debug_str     0x00000000000045b7     0x1f86 ./src/uart_main.o
-                                       0x64ae (size before relaxing)
- .debug_str     0x000000000000653d       0xbf ./driver/crp.o
-                                       0x6344 (size before relaxing)
- .debug_str     0x00000000000065fc      0x6ac ./driver/uart.o
-                                       0x6b36 (size before relaxing)
- .debug_str     0x0000000000006ca8      0x2e0 ./cmsis/system_LPC11xx.o
-                                       0x66ab (size before relaxing)
+.debug_str      0x0000000000000000     0x6f89
+ .debug_str     0x0000000000000000     0x45ba ./startup/cr_startup_lpc11.o
+                                       0x4645 (size before relaxing)
+ .debug_str     0x00000000000045ba     0x1f84 ./src/uart_main.o
+                                       0x64af (size before relaxing)
+ .debug_str     0x000000000000653e       0xbf ./driver/crp.o
+                                       0x6347 (size before relaxing)
+ .debug_str     0x00000000000065fd      0x6ac ./driver/uart.o
+                                       0x6b39 (size before relaxing)
+ .debug_str     0x0000000000006ca9      0x2e0 ./cmsis/system_LPC11xx.o
+                                       0x66ae (size before relaxing)
 
 .comment        0x0000000000000000       0x7e
  .comment       0x0000000000000000       0x7e ./startup/cr_startup_lpc11.o

@@ -26,6 +26,7 @@
 							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.195312081" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.876640184" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.2014846192" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+<<<<<<< HEAD
 							</tool>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.1233498820" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1714264003" languageId="com.crt.advproject.com.crt.mcu.assembly" languageName="Assembly" sourceContentType="com.crt.advproject.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
@@ -33,6 +34,15 @@
 							<tool id="org.eclipse.cdt.build.core.settings.holder.1497348925" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1649697976" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
+=======
+							</tool>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.1233498820" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1714264003" languageId="com.crt.advproject.com.crt.mcu.assembly" languageName="Assembly" sourceContentType="com.crt.advproject.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.1497348925" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
+								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1649697976" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+							</tool>
+>>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
 							<tool id="org.eclipse.cdt.build.core.settings.holder.1220032245" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.501244710" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
@@ -48,6 +58,25 @@
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="shit test.null.658037214" name="shit test"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.486613514;com.crt.advproject.config.exe.debug.486613514.;com.crt.advproject.gcc.exe.debug.220569916;com.crt.advproject.compiler.input.387565999">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.132532647">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.crt.advproject.config.exe.debug.486613514;com.crt.advproject.config.exe.debug.486613514.;com.crt.advproject.gas.exe.debug.1491737428;com.crt.advproject.assembler.input.268183242">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
+		</scannerConfigBuildInfo>
+=======
+>>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
 		<cconfiguration id="0.132532647">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="0.132532647" moduleId="org.eclipse.cdt.core.settings" name="Default">
 				<externalSettings/>
@@ -85,6 +114,7 @@
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
+<<<<<<< HEAD
 =======
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -102,6 +132,9 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.crt.advproject.GCCManagedMakePerProjectProfile"/>
 		</scannerConfigBuildInfo>
 >>>>>>> b6a97e011cfb91e7cfc6d4d7e1820dccb00e4bf1
+=======
+>>>>>>> 5081584043b7793d7b4caacb8573b400edf9d385
+>>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="com.crt.config">
