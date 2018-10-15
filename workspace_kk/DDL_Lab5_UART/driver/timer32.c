@@ -20,7 +20,6 @@
  * use without further testing or modification.
 ****************************************************************************/
 #include "driver_config.h"
-#if CONFIG_ENABLE_DRIVER_TIMER32==1
 #include "timer32.h"
 
 /* ===================

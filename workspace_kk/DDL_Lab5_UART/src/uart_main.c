@@ -41,6 +41,7 @@
 extern volatile uint32_t UARTCount;
 extern volatile uint8_t UARTBuffer[BUFSIZE];
 
+extern volatile uint32_t timer32_0_counter = 0; //increments every 10ms, in the interrupt handler
 
 
 /**
@@ -137,7 +138,7 @@ if(currentStateFlag == 0){
 } // end of state 0
 
 if(currentStateFlag == 1){
-
+	/* checking to see if we are changing states */
 	if(uartCharReceived == '3'){
 		currentStateFlag = 4;
 		//go to the duty cycle menu
@@ -146,6 +147,24 @@ if(currentStateFlag == 1){
 		//go to the led frequency menu
 		currentStateFlag = 5;
 	}
+	else if(uartCharReceived == '5'){
+		//go back to the Arm Peripheral Menu (State = 0);
+		currentStateFlag = 0;
+	}
+	/* checking if we put in a menu option  */
+	else if(uartCharReceived == '1'){
+		setLEDBlinkON();
+	}
+	else if(uartCharReceived == '2'){
+		setLEDBlinkOff();
+	}
+	else if(uartCharReceived == '3'){
+		setLEDFrequency(50); // TODO what are we passing here? Is it goign to be a value?
+	}
+	else if(uartCharReceived == '4'){
+		setLEDDutyCycle(50); //TODO: what are we sending? a percentage? 	
+	}
+	/* invalid input just stay in current state */
 	else{
 		currentStateFlag = 1; //spin
 	}
@@ -208,7 +227,7 @@ if(currentStateFlag == 3){
 	  /* ============================================================================================ */
   }
 }
-
+/*
 void idleState(uint8_t value){
 	switch (value):
 				case 1:
@@ -219,7 +238,7 @@ void idleState(uint8_t value){
 	default:
 		break;
 }
-
+*/
 
 void GPIOInit(void){
 	// configure clock for APB/ AHB
@@ -234,3 +253,92 @@ void GPIOInit(void){
 	LPC_GPIO0 -> DATA |= LED_OFF; //turn  all off
         // NO need for interrupt stuff
 }
+
+
+
+/* ============================================================================================ */
+// 	 LED Control Menu Functions
+/* ============================================================================================ */
+void setLEDBlinkOn(void){
+	LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
+}
+
+void setLEDBlinkOff(void){
+	LPC_GPIO0 -> DATA |= LED_B_P0_9;
+}
+
+void setLEDFrequency(uint8_t frequency){
+	
+}
+
+void setLEDDutyCycle(uint8_t dutyCycle){
+
+}
+
+/* We need the following:
+ * 	- period
+ * 	- duty cycle
+ * 	- currentTimerCount
+ *
+ * 	note: if we blink in a while loop, this can be interrupted by the uart IRQ.
+ * 		if we get an interrupt we set a flag. but we return to the while loop. SO in the while loop check for the same. or set a enw flag
+ *
+ *
+ * 	*/
+void ledBlink(void){
+
+	uint32_t period = 0;
+	uint32_t dutyCycle = 0;
+	uint32_t startTime = 0;
+
+
+	while(uartCount == 0){
+	//Time On
+
+	//Time Off
+
+	}
+	//come out of the while loop and then check the menus.
+}
+
+
+/* ============================================================================================ */
+// 	 LED Frequency  Menu Functions
+/* ============================================================================================ */
+void setLEDON(void){
+	LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
+}
+
+void setLEDOFF(void){
+	LPC_GPIO0 -> DATA |= LED_B_P0_9;
+}
+
+
+
+/* ============================================================================================ */
+// 	 LED Duty Cycle  Menu Functions
+/* ============================================================================================ */
+
+
+/* ============================================================================================ */
+// 	 ADC Control  Menu Functions
+/* ============================================================================================ */
+
+
+
+
+/* ============================================================================================ */
+// 	 ADC Reporting Frequency  Menu Functions
+/* ============================================================================================ */
+
+
+
+
+
+
+
+
+
+
+
+
