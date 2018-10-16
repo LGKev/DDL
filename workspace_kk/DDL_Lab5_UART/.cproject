@@ -88,20 +88,6 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<folderInfo id="com.crt.advproject.config.exe.debug.1584568070.1650247662" name="/" resourcePath="driver">
-						<toolChain id="com.crt.advproject.toolchain.exe.debug.77918802" name="Code Red MCU Tools" superClass="com.crt.advproject.toolchain.exe.debug" unusedChildren="">
-							<tool id="com.crt.advproject.cpp.exe.debug.1179396735" name="MCU C++ Compiler" superClass="com.crt.advproject.cpp.exe.debug.147207195"/>
-							<tool id="com.crt.advproject.gcc.exe.debug.1802415322" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug.1507794419">
-								<inputType id="com.crt.advproject.compiler.input.2042916118" superClass="com.crt.advproject.compiler.input"/>
-							</tool>
-							<tool id="com.crt.advproject.gas.exe.debug.1209851116" name="MCU Assembler" superClass="com.crt.advproject.gas.exe.debug.1492544946">
-								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.523266025" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
-								<inputType id="com.crt.advproject.assembler.input.1089548141" name="Additional Assembly Source Files" superClass="com.crt.advproject.assembler.input"/>
-							</tool>
-							<tool id="com.crt.advproject.link.cpp.exe.debug.1250604415" name="MCU C++ Linker" superClass="com.crt.advproject.link.cpp.exe.debug.1765994721"/>
-							<tool id="com.crt.advproject.link.exe.debug.386135" name="MCU Linker" superClass="com.crt.advproject.link.exe.debug.1903724699"/>
-						</toolChain>
-					</folderInfo>
 					<fileInfo id="com.crt.advproject.config.exe.debug.1584568070.2032533121" name="core_cm0.c" rcbsApplicability="disable" resourcePath="cmsis/core_cm0.c" toolsToInvoke="com.crt.advproject.gcc.exe.debug.1507794419.323255473">
 						<tool id="com.crt.advproject.gcc.exe.debug.1507794419.323255473" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug.1507794419">
 							<option id="gnu.c.compiler.option.optimization.flags.703107004" name="Other optimization flags" superClass="gnu.c.compiler.option.optimization.flags" value="-Os" valueType="string"/>
@@ -118,7 +104,7 @@
 						<entry excluding="config|cmsis|startup|driver|src|linker" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="cmsis"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="config"/>
-						<entry excluding="i2c.c|ssp.h|i2cslave.c|timer16.h|wdt.c|rs485.c|small_gpio.h|clkconfig.h|i2cslave.h|gpio.c|debug_printf.c|timer16.c|ssp.c|gpio.h|type.h|wdt.h|i2c.h|small_gpio.c|lpc_swu.h|clkconfig.c|debug_printf.h|lpc_swu.c|rs485.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="driver"/>
+						<entry excluding="i2c.c|ssp.h|i2cslave.c|timer16.h|wdt.c|rs485.c|small_gpio.h|clkconfig.h|i2cslave.h|debug_printf.c|timer16.c|ssp.c|type.h|wdt.h|i2c.h|small_gpio.c|lpc_swu.h|clkconfig.c|debug_printf.h|lpc_swu.c|rs485.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="driver"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="linker"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup"/>
@@ -263,7 +249,14 @@
 &lt;/infoList&gt;
 &lt;/TargetConfig&gt;</projectStorage>
 	</storageModule>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/DDL_Lab5_UART"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/DDL_Lab5_UART"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="com.crt.advproject"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>

@@ -19,8 +19,15 @@
 ****************************************************************************/
 #include "driver_config.h"
 #include "target_config.h"
-
+#include "timer32.h"
 #include "uart.h"
+#include "gpio.h"
+#include "adc.h"
+
+#include "LPC11xx.h"
+#include <cr_section_macros.h>
+
+
 
 // #define part1 //prints out hello world
 
@@ -41,7 +48,16 @@
 extern volatile uint32_t UARTCount;
 extern volatile uint8_t UARTBuffer[BUFSIZE];
 
-extern volatile uint32_t timer32_0_counter = 0; //increments every 10ms, in the interrupt handler
+extern volatile uint32_t timer32_0_counter; //increments every 10ms, in the interrupt handler
+
+//global
+/* Fucntions tthat touch these globals:
+ * 		-setLEDON
+ * */
+float currentDutyCycle = 0.5; //[percentage]
+uint32_t currentPeriod = 1000; // [miliseconds]
+
+/*==================================== */
 
 
 /**
@@ -57,6 +73,7 @@ void GPIOInit(void);
 
 void idleState(uint8_t value);
 
+void setLEDON(void);
 
 
 
@@ -74,7 +91,7 @@ int main (void) {
 	   * in the CMSIS system_<part family>.c file.
 	   */
 
-
+#ifdef part1
 UARTBuffer[0]='h';
 UARTBuffer[1]='E';
 UARTBuffer[2]='L';
@@ -88,11 +105,19 @@ UARTBuffer[9]='L';
 UARTBuffer[10]='D';
 UARTBuffer[11]='\n';
 UARTBuffer[12]='\0';
+#endif
+  init_timer32(0, TIME_INTERVAL);
+  enable_timer32(0);
+
+  GPIOInit();
+
 
   /* NVIC is installed inside UARTInit file. */
   UARTInit(UART_BAUD);
+ // UARTSend("AT", 3); //TODO fix this, something with line endings.
+  //UARTSend((uint8_t)"AT+Set53", 9);
 
-	  UARTCount = 13;
+	//  UARTCount = 13;
   while (1) 
   {				/* Loop forever */
 
@@ -139,30 +164,23 @@ if(currentStateFlag == 0){
 
 if(currentStateFlag == 1){
 	/* checking to see if we are changing states */
-	if(uartCharReceived == '3'){
-		currentStateFlag = 4;
-		//go to the duty cycle menu
+
+	/* checking if we put in a menu option  */
+	if(uartCharReceived == '1'){
+		setLEDON();
 	}
-	else if(uartCharReceived =='4'){
-		//go to the led frequency menu
+	else if(uartCharReceived == '2'){
+	//	setLEDBlinkOff();
+		LPC_GPIO0 ->DATA |= 0xfff; //TODO: no magic numbers.
+	}
+	else if(uartCharReceived == '3'){
+		currentStateFlag = 4;
+	}
+	else if(uartCharReceived == '4'){
 		currentStateFlag = 5;
 	}
 	else if(uartCharReceived == '5'){
-		//go back to the Arm Peripheral Menu (State = 0);
 		currentStateFlag = 0;
-	}
-	/* checking if we put in a menu option  */
-	else if(uartCharReceived == '1'){
-		setLEDBlinkON();
-	}
-	else if(uartCharReceived == '2'){
-		setLEDBlinkOff();
-	}
-	else if(uartCharReceived == '3'){
-		setLEDFrequency(50); // TODO what are we passing here? Is it goign to be a value?
-	}
-	else if(uartCharReceived == '4'){
-		setLEDDutyCycle(50); //TODO: what are we sending? a percentage? 	
 	}
 	/* invalid input just stay in current state */
 	else{
@@ -176,6 +194,24 @@ if(currentStateFlag == 4){
 		currentStateFlag = 1;
 		//go to the duty cycle menu
 	}
+	else if(uartCharReceived == '1' ){
+		//set duty cycle to 10%
+	}
+	else if(uartCharReceived == '2' ){
+		//set duty cycle to 25%
+	}
+	else if(uartCharReceived == '3' ){
+		//set duty cycle to 50%
+	}
+	else if(uartCharReceived == '4' ){
+		//set duty cycle to 75%
+	}
+	else if(uartCharReceived == '5' ){
+		//set duty cycle to 90%
+	}
+	else if(uartCharReceived == '6' ){
+		currentStateFlag = 1;
+	}
 	else {
 		currentStateFlag = 4; //do nothing just spin
 	}
@@ -187,6 +223,22 @@ if(currentStateFlag == 5){
 		currentStateFlag = 1; //go back up
 		//go to the duty cycle menu
 	}
+	else if(uartCharReceived == '1')
+	{
+		//slow freq
+	}
+	else if(uartCharReceived == '2')
+	{
+		//medium freq
+	}
+	else if(uartCharReceived == '3')
+	{
+		//fast freq
+	}
+	else if(uartCharReceived == '4')
+	{
+		//verry fast
+	}
 	else {
 		currentStateFlag = 5; //do nothing just spin
 	}
@@ -194,11 +246,15 @@ if(currentStateFlag == 5){
 
 if(currentStateFlag == 2){
 
-	if(uartCharReceived == '3'){
-		currentStateFlag = 3; //go to the adc report freq state
-		//go to the duty cycle menu
+	if(uartCharReceived == '1'){
+	// adc report on
 	}
-	else if(uartCharReceived == '4') {
+	else if(uartCharReceived == '2') {
+	// adc report off
+	}
+	else if(uartCharReceived == '3') {
+		//set report freq
+	}else if(uartCharReceived == '4') {
 		currentStateFlag = 0; //go back to the main menu
 	}
 	else{
@@ -209,12 +265,28 @@ if(currentStateFlag == 2){
 
 if(currentStateFlag == 3){
 
-	if(uartCharReceived == '5'){
-		currentStateFlag = 2; //go up a menu
-		//go to adc control menu
+	if(uartCharReceived == '6'){
+		currentStateFlag = 1; //go back up
+		//go to the duty cycle menu
 	}
-	else{
-		currentStateFlag = 3; //just spin
+	else if(uartCharReceived == '1')
+	{
+		//slow freq
+	}
+	else if(uartCharReceived == '2')
+	{
+		//medium freq
+	}
+	else if(uartCharReceived == '3')
+	{
+		//fast freq
+	}
+	else if(uartCharReceived == '4')
+	{
+		//verry fast
+	}
+	else {
+		currentStateFlag = 3; //do nothing just spin
 	}
 } //end of state 2
 
@@ -256,25 +328,6 @@ void GPIOInit(void){
 
 
 
-/* ============================================================================================ */
-// 	 LED Control Menu Functions
-/* ============================================================================================ */
-void setLEDBlinkOn(void){
-	LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
-}
-
-void setLEDBlinkOff(void){
-	LPC_GPIO0 -> DATA |= LED_B_P0_9;
-}
-
-void setLEDFrequency(uint8_t frequency){
-	
-}
-
-void setLEDDutyCycle(uint8_t dutyCycle){
-
-}
-
 /* We need the following:
  * 	- period
  * 	- duty cycle
@@ -285,28 +338,37 @@ void setLEDDutyCycle(uint8_t dutyCycle){
  *
  *
  * 	*/
-void ledBlink(void){
 
-	uint32_t period = 0;
-	uint32_t dutyCycle = 0;
-	uint32_t startTime = 0;
-
-
-	while(uartCount == 0){
-	//Time On
-
-	//Time Off
-
-	}
-	//come out of the while loop and then check the menus.
-}
 
 
 /* ============================================================================================ */
 // 	 LED Frequency  Menu Functions
 /* ============================================================================================ */
+
+
 void setLEDON(void){
-	LPC_GPIO0 -> DATA &= ~LED_B_P0_9;
+timer32_0_counter = 0; // reset counter
+//uint32_t delay;
+
+	while(UARTCount !=0){
+
+
+		//on
+		while(timer32_0_counter < (uint32_t)((float)currentDutyCycle*(float)currentPeriod))
+		{
+		LPC_GPIO0 -> DATA = 0x000;
+		}
+		//off
+		while(timer32_0_counter >= (uint32_t)((float)currentDutyCycle*(float)currentPeriod) && timer32_0_counter < currentPeriod )
+		{
+			LPC_GPIO0 -> DATA |= 0xfff;
+		}
+
+
+
+		timer32_0_counter = 0; // reset counter
+
+	}
 }
 
 void setLEDOFF(void){
