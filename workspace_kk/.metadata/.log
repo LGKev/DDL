@@ -9902,3 +9902,182 @@ Binding(CTRL+U,
 
 !ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-10-18 13:11:13.242
 !MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY com.crt.log 1 0 2018-10-18 13:40:15.696
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 13:40:15.702
+!MESSAGE RedlinkServer telnet session connected on port 3025->42688 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 13:40:17.811
+!MESSAGE Telnet session connected on port 3330->53462 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 13:44:42.116
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@5bbda513): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 13:44:42.116
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 13:44:54.762
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 13:44:54.766
+!MESSAGE RedlinkServer telnet session connected on port 3025->42698 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 13:44:56.400
+!MESSAGE Telnet session connected on port 3330->53472 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 13:52:11.159
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@49fcb76): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 13:52:11.159
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 13:52:32.276
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 13:52:32.278
+!MESSAGE RedlinkServer telnet session connected on port 3025->42708 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 13:52:33.918
+!MESSAGE Telnet session connected on port 3330->53482 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 14:00:13.450
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@26f76f5b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:00:13.450
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 14:00:26.106
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 14:00:26.108
+!MESSAGE RedlinkServer telnet session connected on port 3025->42718 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 14:00:27.789
+!MESSAGE Telnet session connected on port 3330->53492 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2018-10-18 14:05:57.934
+!MESSAGE There is already a running debug session for the launch configuration 'DDL_Lab5_UART LinkServer Debug'.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 14:06:00.452
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@295a23a7): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:06:00.452
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 14:06:28.029
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 14:06:28.032
+!MESSAGE RedlinkServer telnet session connected on port 3025->42728 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 14:06:29.664
+!MESSAGE Telnet session connected on port 3330->53502 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 14:10:22.060
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4a47c496): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:10:22.060
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 14:12:15.482
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 14:12:15.491
+!MESSAGE RedlinkServer telnet session connected on port 3025->42738 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 14:12:17.145
+!MESSAGE Telnet session connected on port 3330->53512 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2018-10-18 14:14:56.407
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.debug.core.sourcelookup.containers.CompositeSourceContainer.getSourceContainers(CompositeSourceContainer.java:134)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:69)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:100)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:115)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:117)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:82)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.crt.debugcommon 4 0 2018-10-18 14:14:56.524
+!MESSAGE There is already a running debug session for the launch configuration 'DDL_Lab5_UART LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2018-10-18 14:15:12.559
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 14:15:12.560
+!MESSAGE RedlinkServer telnet session connected on port 3025->42748 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 14:15:14.190
+!MESSAGE Telnet session connected on port 3330->53522 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 14:19:04.636
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@2f7f735a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:19:04.636
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 14:19:34.747
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 14:19:34.748
+!MESSAGE RedlinkServer telnet session connected on port 3025->42758 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 14:19:36.425
+!MESSAGE Telnet session connected on port 3330->53532 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 14:21:57.536
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@63d5695e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:21:57.536
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 14:22:09.236
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 14:22:09.238
+!MESSAGE RedlinkServer telnet session connected on port 3025->42768 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 14:22:10.909
+!MESSAGE Telnet session connected on port 3330->53542 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 14:31:09.757
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@48dd8396): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:31:09.757
+!MESSAGE Invalid context type.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 14:31:11.354
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@690b5fcc): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:31:11.354
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 14:31:22.374
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 14:31:22.376
+!MESSAGE RedlinkServer telnet session connected on port 3025->42778 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 14:31:24.043
+!MESSAGE Telnet session connected on port 3330->53552 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 14:34:43.301
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4e4fb248): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:34:43.301
+!MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 14:34:55.646
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 14:34:55.647
+!MESSAGE RedlinkServer telnet session connected on port 3025->42788 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 14:34:57.287
+!MESSAGE Telnet session connected on port 3330->53562 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-10-18 14:36:20.152
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4bd32a69): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:36:20.152
+!MESSAGE Invalid context type.

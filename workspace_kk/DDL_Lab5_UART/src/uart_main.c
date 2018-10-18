@@ -55,7 +55,7 @@ extern volatile uint32_t timer32_0_counter; //increments every 10ms, in the inte
  * 		-setLEDON
  * */
 float currentDutyCycle = 0.5; //[percentage]
-uint32_t currentPeriod = 1000; // [miliseconds]
+uint32_t currentPeriod = 100; // [miliseconds]
 
 /*==================================== */
 
@@ -218,30 +218,37 @@ if(currentStateFlag == 4){
 } //end of state 4
 
 if(currentStateFlag == 5){
-
 	if(uartCharReceived == '6'){
-		currentStateFlag = 1; //go back up
-		//go to the duty cycle menu
-	}
-	else if(uartCharReceived == '1')
-	{
-		//slow freq
-	}
-	else if(uartCharReceived == '2')
-	{
-		//medium freq
-	}
-	else if(uartCharReceived == '3')
-	{
-		//fast freq
-	}
-	else if(uartCharReceived == '4')
-	{
-		//verry fast
-	}
-	else {
-		currentStateFlag = 5; //do nothing just spin
-	}
+			currentStateFlag = 1; //go back up
+		}
+		else if(uartCharReceived == '1')
+		{
+			//slow freq
+			currentPeriod = 1000;
+			currentStateFlag = 1;
+		}
+		else if(uartCharReceived == '2')
+		{
+			//medium freq
+			currentPeriod = 100;
+			currentStateFlag = 1;
+		}
+		else if(uartCharReceived == '3')
+		{
+			//fast freq0
+			currentPeriod = 50;
+			currentStateFlag = 1;
+		}
+		else if(uartCharReceived == '4')
+		{
+			//verry fast
+			currentPeriod = 25;
+			currentStateFlag = 1;
+		}
+		else {
+			currentStateFlag = 3; //do nothing just spin
+		}
+
 } //end of state 1
 
 if(currentStateFlag == 2){
@@ -264,30 +271,30 @@ if(currentStateFlag == 2){
 
 
 if(currentStateFlag == 3){
+	if(uartCharReceived == '5'){
+			currentStateFlag = 2; //go back up
+			//go to the duty cycle menu
+		}
+		else if(uartCharReceived == '1')
+		{
+			//slow freq
+		}
+		else if(uartCharReceived == '2')
+		{
+			//medium freq
+		}
+		else if(uartCharReceived == '3')
+		{
+			//fast freq
+		}
+		else if(uartCharReceived == '4')
+		{
+			//verry fast
+		}
+		else {
+			currentStateFlag = 3; //do nothing just spin
+		}
 
-	if(uartCharReceived == '6'){
-		currentStateFlag = 1; //go back up
-		//go to the duty cycle menu
-	}
-	else if(uartCharReceived == '1')
-	{
-		//slow freq
-	}
-	else if(uartCharReceived == '2')
-	{
-		//medium freq
-	}
-	else if(uartCharReceived == '3')
-	{
-		//fast freq
-	}
-	else if(uartCharReceived == '4')
-	{
-		//verry fast
-	}
-	else {
-		currentStateFlag = 3; //do nothing just spin
-	}
 } //end of state 2
 
 
@@ -349,10 +356,6 @@ void GPIOInit(void){
 void setLEDON(void){
 timer32_0_counter = 0; // reset counter
 //uint32_t delay;
-
-	while(UARTCount !=0){
-
-
 		//on
 		while(timer32_0_counter < (uint32_t)((float)currentDutyCycle*(float)currentPeriod))
 		{
@@ -363,12 +366,6 @@ timer32_0_counter = 0; // reset counter
 		{
 			LPC_GPIO0 -> DATA |= 0xfff;
 		}
-
-
-
-		timer32_0_counter = 0; // reset counter
-
-	}
 }
 
 void setLEDOFF(void){
