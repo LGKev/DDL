@@ -10081,3 +10081,12 @@ java.lang.NullPointerException
 !MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4bd32a69): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Invalid context type. null' resulted in an error.
 !SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2018-10-18 14:36:20.152
 !MESSAGE Invalid context type.
+
+!ENTRY com.crt.log 1 0 2018-10-18 14:40:00.484
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-18 14:40:00.485
+!MESSAGE RedlinkServer telnet session connected on port 3025->42800 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-18 14:40:02.114
+!MESSAGE Telnet session connected on port 3330->53574 @ 127.0.0.1

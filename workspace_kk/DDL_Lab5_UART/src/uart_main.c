@@ -190,27 +190,29 @@ if(currentStateFlag == 1){
 
 if(currentStateFlag == 4){
 
-	if(uartCharReceived == '5'){
+	if(uartCharReceived == '6'){
 		currentStateFlag = 1;
 		//go to the duty cycle menu
 	}
 	else if(uartCharReceived == '1' ){
 		//set duty cycle to 10%
+		currentDutyCycle = 0.1;
 	}
 	else if(uartCharReceived == '2' ){
 		//set duty cycle to 25%
+		currentDutyCycle = 0.25;
 	}
 	else if(uartCharReceived == '3' ){
 		//set duty cycle to 50%
+		currentDutyCycle = 0.5;
 	}
 	else if(uartCharReceived == '4' ){
 		//set duty cycle to 75%
+		currentDutyCycle = 0.75;
 	}
 	else if(uartCharReceived == '5' ){
 		//set duty cycle to 90%
-	}
-	else if(uartCharReceived == '6' ){
-		currentStateFlag = 1;
+		currentDutyCycle = 0.9;
 	}
 	else {
 		currentStateFlag = 4; //do nothing just spin
