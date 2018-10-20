@@ -24,6 +24,7 @@
 
 extern volatile uint32_t UARTCount;
 extern volatile uint8_t UARTBuffer[BUFSIZE];
+uint8_t currentState = 0;
 
 int main (void) {
 	  /* Basic chip initialization is taken care of in SystemInit() called
@@ -37,15 +38,39 @@ int main (void) {
 #if MODEM_TEST
   ModemInit();
 #endif
+//#define part1
+#ifdef part1
+  UARTBuffer[0] = 'H';
+  UARTBuffer[1] = 'e';
+  UARTBuffer[2] = 'l';
+  UARTBuffer[3] = 'l';
+  UARTBuffer[4] = 'o';
+  UARTBuffer[5] = ' ';
+  UARTBuffer[6] = 'W';
+  UARTBuffer[7] = 'o';
+  UARTBuffer[8] = 'r';
+  UARTBuffer[9] = 'l';
+  UARTBuffer[10] = 'd';
+  UARTBuffer[11] = '\n';
+  UARTBuffer[12] = '\0';
 
-  while (1) 
+
+  while (1)
   {				/* Loop forever */
+
 	if ( UARTCount != 0 )
 	{
 	  LPC_UART->IER = IER_THRE | IER_RLS;			/* Disable RBR */
 	  UARTSend( (uint8_t *)UARTBuffer, UARTCount );
-	  UARTCount = 0;
+	  UARTCount = 13;
 	  LPC_UART->IER = IER_THRE | IER_RLS | IER_RBR;	/* Re-enable RBR */
+	  uint32_t delay;
+	  for(delay = 0; delay < 2000000; delay++);
 	}
+
+
+
+
   }
+#endif
 }
