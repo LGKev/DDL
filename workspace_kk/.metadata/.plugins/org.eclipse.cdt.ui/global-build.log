@@ -1,26 +1,19 @@
-13:38:59 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
-make -r -j2 all 
-Building target: uart.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-Finished building target: uart.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
-   text	   data	    bss	    dec	    hex	filename
-   3620	     16	     84	   3720	    e88	uart.axf
-Written checksum 0xefffd637 at offset 0x1c in file uart.bin
-Previous value 0x00000000 at offset 0x1c in file uart.bin
- 
-13:40:06 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
-make -r -j2 all 
-make: Nothing to be done for 'all'.
-13:44:46 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+18:54:41 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:272:12: warning: passing argument 1 of 'UARTSend' makes pointer from integer without a cast [-Wint-conversion]
+   UARTSend(53, 3);
+            ^~
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'int'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^~~~~~~~
+../src/uart_main.c:129:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -32,15 +25,26 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3620	     16	     84	   3720	    e88	uart.axf
+   4492	     16	    124	   4632	   1218	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
-13:52:24 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+18:55:24 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:272:12: warning: passing argument 1 of 'UARTSend' makes pointer from integer without a cast [-Wint-conversion]
+   UARTSend(53, 3);
+            ^~
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'int'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^~~~~~~~
+../src/uart_main.c:129:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -52,15 +56,19 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3620	     16	     84	   3720	    e88	uart.axf
+   4520	     16	    124	   4660	   1234	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
-14:00:18 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+19:01:53 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:129:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -72,15 +80,22 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3628	     16	     84	   3728	    e90	uart.axf
+   4520	     16	    124	   4660	   1234	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
-14:06:19 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+19:04:48 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:273:12: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   UARTSend((uint8_t *)test, 3);
+            ^
+../src/uart_main.c:129:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -92,18 +107,92 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3604	     16	     84	   3704	    e78	uart.axf
+   4532	     16	    124	   4672	   1240	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
-14:12:07 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
-make -r -j2 all 
-make: Nothing to be done for 'all'.
-14:15:04 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+19:18:35 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:415:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c: In function 'numberToAscii':
+../src/uart_main.c:440:24: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     asciiDigits[incr2] = '0';
+                        ^
+../src/uart_main.c:445:24: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     asciiDigits[incr2] = '1';
+                        ^
+../src/uart_main.c:450:24: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     asciiDigits[incr2] = '2';
+                        ^
+../src/uart_main.c:416:11: warning: unused variable 'delay' [-Wunused-variable]
+Finished building: ../src/uart_main.c
+  uint32_t delay;
+           ^~~~~
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   4820	     16	    164	   5000	   1388	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+19:23:05 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c: In function 'numberToAscii':
+../src/uart_main.c:491:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  asciiDigits[incr2] = "\n";
+                     ^
+../src/uart_main.c:492:23: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  asciiDigits[incr2++] = "\0";
+                       ^
+../src/uart_main.c:419:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay;
+           ^~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -115,15 +204,42 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3604	     16	     84	   3704	    e78	uart.axf
+   4892	     16	    136	   5044	   13b4	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
-14:19:27 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+19:24:47 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c: In function 'numberToAscii':
+../src/uart_main.c:491:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  asciiDigits[incr2] = "\n";
+                     ^
+../src/uart_main.c:492:23: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  asciiDigits[incr2++] = "\0";
+                       ^
+../src/uart_main.c:419:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay;
+           ^~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -135,15 +251,42 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3636	     16	     84	   3736	    e98	uart.axf
+   4892	     16	    136	   5044	   13b4	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
-14:22:01 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+19:26:08 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c: In function 'numberToAscii':
+../src/uart_main.c:491:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  asciiDigits[incr2] = "\n";
+                     ^
+../src/uart_main.c:492:23: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  asciiDigits[incr2++] = "\0";
+                       ^
+../src/uart_main.c:419:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay;
+           ^~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -155,15 +298,36 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3660	     16	     84	   3760	    eb0	uart.axf
+   4892	     16	    136	   5044	   13b4	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
-14:31:13 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+19:28:08 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(012);
+   ^~~~~~~~~~~~~
+../src/uart_main.c: In function 'numberToAscii':
+../src/uart_main.c:419:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay;
+           ^~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -175,15 +339,36 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3668	     16	     84	   3768	    eb8	uart.axf
+   4872	     16	    136	   5024	   13a0	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
-14:34:48 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+19:30:07 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+../src/uart_main.c: In function 'numberToAscii':
+../src/uart_main.c:419:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay;
+           ^~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -195,15 +380,36 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3668	     16	     84	   3768	    eb8	uart.axf
+   4876	     16	    136	   5028	   13a4	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  
-14:39:52 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+19:31:54 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
 make -r -j2 all 
 Building file: ../src/uart_main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+../src/uart_main.c: In function 'numberToAscii':
+../src/uart_main.c:419:11: warning: unused variable 'delay' [-Wunused-variable]
+  uint32_t delay;
+           ^~~~~
 Finished building: ../src/uart_main.c
  
 Building target: uart.axf
@@ -215,7 +421,155 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
    text	   data	    bss	    dec	    hex	filename
-   3708	     16	     84	   3808	    ee0	uart.axf
+   4876	     16	    136	   5028	   13a4	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+19:35:07 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   4876	     16	    148	   5040	   13b0	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+19:37:35 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   4876	     16	    148	   5040	   13b0	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+19:39:58 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   4836	     16	    148	   5000	   1388	uart.axf
+Written checksum 0xefffd637 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+19:41:13 **** Incremental Build of configuration Debug for project DDL_Lab5_UART ****
+make -r -j2 all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:276:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+../src/uart_main.c:273:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^~~~
+../src/uart_main.c:132:13: warning: unused variable 'adcValue' [-Wunused-variable]
+    uint32_t adcValue = ADCValue[0];
+             ^~~~~~~~
+../src/uart_main.c: At top level:
+../src/uart_main.c:418:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^~~~~~~~~~~~~
+../src/uart_main.c:276:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(12112);
+   ^~~~~~~~~~~~~
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   4836	     16	    148	   5000	   1388	uart.axf
 Written checksum 0xefffd637 at offset 0x1c in file uart.bin
 Previous value 0x00000000 at offset 0x1c in file uart.bin
  

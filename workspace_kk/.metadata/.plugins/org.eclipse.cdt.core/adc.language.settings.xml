@@ -5,6 +5,9 @@
 			<provider id="com.crt.advproject.GCCBuildCommandParser">
 				<language id="org.eclipse.cdt.core.gcc">
 					<resource project-relative-path="src/adc_main.c">
+						<entry kind="includePath" name="/lib_small_printf_m0/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/${ProjName}/cmsis">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>

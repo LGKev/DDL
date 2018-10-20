@@ -50,6 +50,9 @@ extern volatile uint8_t UARTBuffer[BUFSIZE];
 
 extern volatile uint32_t timer32_0_counter; //increments every 10ms, in the interrupt handler
 
+
+volatile char asciiDigits[10]; // for decimal to ascii numbers for printing
+volatile  uint8_t digitArray[10]; //array holding up to 4 digit numbers, numbers will be stored in reverse. to read correctly we must read backwards.
 //global
 /* Fucntions tthat touch these globals:
  * 		-setLEDON
@@ -111,6 +114,8 @@ UARTBuffer[12]='\0';
 
   GPIOInit();
 
+	ADCInit( ADC_CLK );
+
 
   /* NVIC is installed inside UARTInit file. */
   UARTInit(UART_BAUD);
@@ -120,6 +125,16 @@ UARTBuffer[12]='\0';
 	//  UARTCount = 13;
   while (1) 
   {				/* Loop forever */
+
+	  ADCRead( 0 );
+	  while ( !ADCIntDone );
+	  ADCIntDone = 0;
+	  uint32_t adcValue = ADCValue[0];
+
+
+
+
+
 
 #ifdef part1
 	  LPC_UART->IER = IER_THRE | IER_RLS;			/* Disable RBR */
@@ -254,9 +269,16 @@ if(currentStateFlag == 5){
 } //end of state 1
 
 if(currentStateFlag == 2){
-
+uint32_t i=0;
+uint8_t test = 53; //ascii 5
 	if(uartCharReceived == '1'){
 	// adc report on
+		numberToAscii(12112);
+		UARTSend((uint8_t *) asciiDigits, 10);
+		for(i=0; i<2000000; i++);
+		for(i=0; i<10; i++){
+			asciiDigits[i] = '\0';
+		}
 	}
 	else if(uartCharReceived == '2') {
 	// adc report off
@@ -393,6 +415,80 @@ void setLEDOFF(void){
 /* ============================================================================================ */
 
 
+void numberToAscii(uint16_t number){
+	uint8_t incr = 0;
+	uint8_t incr2 = 0;
+	//we could also fill the array backwards.
+
+
+	//breaks the number number given into its digits, into an Array
+	// the array will be backwards representation of the actual number_number
+	while(number > 0)
+	{
+		digitArray[incr] = number % 10;
+		number = number/10;
+		incr++;
+	}
+	incr--;
+
+
+	while(incr != -1)// at this point we start with incr at end of the current number
+		{
+		switch(digitArray[incr])
+		{
+			case 0:
+				// _ _ _ _ _
+				asciiDigits[incr2] = '0';
+				break;
+
+			case 1:
+				// *_ _ _ _
+				asciiDigits[incr2] = '1';
+				break;
+
+			case 2:
+				// ** _ _ _
+				asciiDigits[incr2] = '2';
+
+				break;
+
+			case 3:
+				//*** _ _
+				break;
+
+			case 4:
+				//**** _
+				break;
+
+			case 5:
+				//* * * * *
+				break;
+
+			case 6:
+				// _ * * * *
+				break;
+
+			case 7:
+				//_  _  * * *
+				break;
+
+			case 8:
+				// _ _  _ * *
+				break;
+
+			case 9:
+				// _ _ _  _ *
+				break;
+
+			default:
+				return;
+		}
+		incr--;
+		incr2++;
+		}
+	asciiDigits[incr2] = '\n';
+	asciiDigits[incr2++] = '\0';
+	}
 
 
 
