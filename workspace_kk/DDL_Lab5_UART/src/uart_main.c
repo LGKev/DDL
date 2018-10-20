@@ -59,7 +59,7 @@ volatile  uint8_t digitArray[10]; //array holding up to 4 digit numbers, numbers
  * */
 float currentDutyCycle = 0.5; //[percentage]
 uint32_t currentPeriod = 100; // [miliseconds]
-
+uint32_t currentADCDelay = 2000000;
 /*==================================== */
 
 
@@ -130,6 +130,8 @@ UARTBuffer[12]='\0';
 	  while ( !ADCIntDone );
 	  ADCIntDone = 0;
 	  uint32_t adcValue = ADCValue[0];
+	  float voltage_V = (float)(((float)adcValue / 1023)*(3.3))*1000.0;
+	  uint32_t voltage_mV = (uint32_t)voltage_V;
 
 
 
@@ -273,9 +275,14 @@ uint32_t i=0;
 uint8_t test = 53; //ascii 5
 	if(uartCharReceived == '1'){
 	// adc report on
-		numberToAscii(12112);
+		numberToAscii(voltage_mV);
 		UARTSend((uint8_t *) asciiDigits, 10);
-		for(i=0; i<2000000; i++);
+		UARTBuffer[0]='\n';
+		/* when we just sent '\0' with uartsend, we dont' get a new line.
+		 * but with putting into the buffer and then using it, we got a new line
+		 * is it the casting of the pointer? */
+		UARTSend((uint8_t *)UARTBuffer, 2);
+		for(i=0; i<currentADCDelay; i++);
 		for(i=0; i<10; i++){
 			asciiDigits[i] = '\0';
 		}
@@ -284,6 +291,7 @@ uint8_t test = 53; //ascii 5
 	// adc report off
 	}
 	else if(uartCharReceived == '3') {
+		currentStateFlag =3;
 		//set report freq
 	}else if(uartCharReceived == '4') {
 		currentStateFlag = 0; //go back to the main menu
@@ -302,18 +310,22 @@ if(currentStateFlag == 3){
 		else if(uartCharReceived == '1')
 		{
 			//slow freq
+			currentADCDelay = 3000000;
 		}
 		else if(uartCharReceived == '2')
 		{
 			//medium freq
+			currentADCDelay = 2000000;
 		}
 		else if(uartCharReceived == '3')
 		{
 			//fast freq
+			currentADCDelay = 1000000;
 		}
 		else if(uartCharReceived == '4')
 		{
 			//verry fast
+			currentADCDelay = 500000;
 		}
 		else {
 			currentStateFlag = 3; //do nothing just spin
@@ -416,7 +428,7 @@ void setLEDOFF(void){
 
 
 void numberToAscii(uint16_t number){
-	uint8_t incr = 0;
+	int8_t incr = 0;
 	uint8_t incr2 = 0;
 	//we could also fill the array backwards.
 
@@ -454,30 +466,37 @@ void numberToAscii(uint16_t number){
 
 			case 3:
 				//*** _ _
+				asciiDigits[incr2] = '3';
 				break;
 
 			case 4:
 				//**** _
+				asciiDigits[incr2] = '4';
 				break;
 
 			case 5:
 				//* * * * *
+				asciiDigits[incr2] = '5';
 				break;
 
 			case 6:
 				// _ * * * *
+				asciiDigits[incr2] = '6';
 				break;
 
 			case 7:
 				//_  _  * * *
+				asciiDigits[incr2] = '7';
 				break;
 
 			case 8:
 				// _ _  _ * *
+				asciiDigits[incr2] = '8';
 				break;
 
 			case 9:
 				// _ _ _  _ *
+				asciiDigits[incr2] = '9';
 				break;
 
 			default:
@@ -486,8 +505,8 @@ void numberToAscii(uint16_t number){
 		incr--;
 		incr2++;
 		}
-	asciiDigits[incr2] = '\n';
-	asciiDigits[incr2++] = '\0';
+	asciiDigits[incr2++] = 'm';
+	asciiDigits[incr2++] = 'V';
 	}
 
 
