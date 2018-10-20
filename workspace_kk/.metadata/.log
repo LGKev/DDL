@@ -10757,3 +10757,60 @@ org.eclipse.core.commands.NotEnabledException: Trying to execute the disabled co
 
 !ENTRY com.crt.dsfdebug 1 0 2018-10-19 20:29:06.056
 !MESSAGE Telnet session connected on port 3330->46528 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-19 20:41:55.921
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-19 20:41:55.924
+!MESSAGE RedlinkServer telnet session connected on port 3025->42604 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-19 20:41:57.583
+!MESSAGE Telnet session connected on port 3330->46544 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-19 20:46:45.764
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-19 20:46:45.774
+!MESSAGE RedlinkServer telnet session connected on port 3025->42614 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-19 20:46:47.409
+!MESSAGE Telnet session connected on port 3330->46554 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-19 20:48:15.455
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-19 20:48:15.456
+!MESSAGE RedlinkServer telnet session connected on port 3025->42624 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-19 20:48:17.114
+!MESSAGE Telnet session connected on port 3330->46564 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-19 20:50:04.800
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-19 20:50:04.802
+!MESSAGE RedlinkServer telnet session connected on port 3025->42634 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-19 20:50:06.450
+!MESSAGE Telnet session connected on port 3330->46574 @ 127.0.0.1
+
+!ENTRY com.crt.debugcommon 4 0 2018-10-19 20:52:30.894
+!MESSAGE There is already a running debug session for the launch configuration 'DDL_Lab5_UART LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2018-10-19 20:53:58.770
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-19 20:53:58.772
+!MESSAGE RedlinkServer telnet session connected on port 3025->42646 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-19 20:54:00.391
+!MESSAGE Telnet session connected on port 3330->46586 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2018-10-19 20:55:32.475
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.crt.debugcommon 1 0 2018-10-19 20:55:32.479
+!MESSAGE RedlinkServer telnet session connected on port 3025->42656 @ 127.0.0.1
+
+!ENTRY com.crt.dsfdebug 1 0 2018-10-19 20:55:34.149
+!MESSAGE Telnet session connected on port 3330->46596 @ 127.0.0.1

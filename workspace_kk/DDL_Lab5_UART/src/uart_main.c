@@ -86,6 +86,7 @@ void setLEDON(void);
 uint8_t uartCharReceived = 0;
 uint32_t delay = 0;
 uint8_t currentStateFlag = 0;
+uint8_t displayMenu = 1;
 
 
 int main (void) {
@@ -164,22 +165,32 @@ UARTBuffer[12]='\0';
 	  /* state machine, decide*/
 
 if(currentStateFlag == 0){
+	if(displayMenu == 1){
+		  UARTSend("1. Control LED \n", 17 );
+		  UARTSend("2. Control ADC \n", 17 );
+		displayMenu = 0;
+	}
 	  if(uartCharReceived == '1'){
 		  //turn on led >> State: LED Control
 		  //set a flag to let us know what state we are in.i
 		  currentStateFlag = 1;
+	  	  displayMenu = 1;
 	  }
 	  else if(uartCharReceived == '2'){
 		  //turn off led >> State: ADC Control
 		  currentStateFlag = 2;
+	  	  displayMenu = 1;
 	  }
 	  else{
 		  //print out menu again
 		  currentStateFlag = 0;
+
 	  }
 } // end of state 0
 
 if(currentStateFlag == 1){
+
+
 	/* checking to see if we are changing states */
 
 	/* checking if we put in a menu option  */
@@ -191,17 +202,30 @@ if(currentStateFlag == 1){
 		LPC_GPIO0 ->DATA |= 0xfff; //TODO: no magic numbers.
 	}
 	else if(uartCharReceived == '3'){
+	  	  displayMenu = 1;
 		currentStateFlag = 4;
 	}
 	else if(uartCharReceived == '4'){
 		currentStateFlag = 5;
+	  	  displayMenu = 1;
 	}
 	else if(uartCharReceived == '5'){
 		currentStateFlag = 0;
+	  	  displayMenu = 1;
 	}
 	/* invalid input just stay in current state */
 	else{
 		currentStateFlag = 1; //spin
+
+
+	}
+	if(displayMenu == 1){
+		  UARTSend("1. Blink On \n", 20 );
+		  UARTSend("2. Blink Off \n", 20 );
+		  UARTSend("3. Set Frequency \n", 30 );
+		  UARTSend("4. Set Duty Cycle \n", 30 );
+		  UARTSend("5. Go Back \n", 20 );
+		displayMenu = 0;
 	}
 } //end of state 1
 
@@ -233,10 +257,31 @@ if(currentStateFlag == 4){
 	}
 	else {
 		currentStateFlag = 4; //do nothing just spin
+
+
+	}
+	if(displayMenu == 1){
+		  UARTSend("1. 10% \n\0", 20 );
+		  UARTSend("2. 25% \n\0", 20 );
+		  UARTSend("3. 50% \n\0", 20 );
+		  UARTSend("4. 75% \n\0", 20 );
+		  UARTSend("5. 90% \n\0", 20 );
+		  UARTSend("6. Go Back \n\0", 20 );
+		displayMenu = 0;
 	}
 } //end of state 4
 
 if(currentStateFlag == 5){
+
+	if(displayMenu == 1){
+		  UARTSend("1. $Low \n\0", 20 );
+		  UARTSend("2. m3d \n\0", 20 );
+		  UARTSend("3. F@$T \n\0", 20 );
+		  UARTSend("4. \/ery F@$T \n\0", 20 );
+		  UARTSend("5. RUN BACK!", 20 );
+		displayMenu = 0;
+	}
+
 	if(uartCharReceived == '6'){
 			currentStateFlag = 1; //go back up
 		}
@@ -266,11 +311,20 @@ if(currentStateFlag == 5){
 		}
 		else {
 			currentStateFlag = 3; //do nothing just spin
+
 		}
 
 } //end of state 1
 
 if(currentStateFlag == 2){
+	if(displayMenu == 1){
+		  UARTSend("1. ADC Reporting On \n\0", 20 );
+		  UARTSend("2. ADC Reporting Off \n\0", 20 );
+		  UARTSend("3. Set ADC Frequency \n\0", 20 );
+		  UARTSend("4. Go Back. \n\0", 20 );
+		displayMenu = 0;
+	}
+
 uint32_t i=0;
 uint8_t test = 53; //ascii 5
 	if(uartCharReceived == '1'){
@@ -298,11 +352,20 @@ uint8_t test = 53; //ascii 5
 	}
 	else{
 		currentStateFlag = 2; //just spin
+
 	}
 } //end of state 2
 
 
 if(currentStateFlag == 3){
+	if(displayMenu == 1){
+		  UARTSend("1. Slow \n\0", 20 );
+		  UARTSend("2.  Medium \n\0", 20 );
+		  UARTSend("3.  Fast \n\0", 20 );
+		  UARTSend("4.  Sonic Fast \n\0", 20 );
+		  UARTSend("5. Go Back \n\0", 20 );
+		displayMenu = 0;
+	}
 	if(uartCharReceived == '5'){
 			currentStateFlag = 2; //go back up
 			//go to the duty cycle menu
@@ -329,6 +392,8 @@ if(currentStateFlag == 3){
 		}
 		else {
 			currentStateFlag = 3; //do nothing just spin
+
+
 		}
 
 } //end of state 2
