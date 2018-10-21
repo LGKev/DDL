@@ -445,7 +445,7 @@ END GROUP
                 0x0000000000008000                __top_MFlash32 = 0x8000
                 0x0000000010002000                __top_RamLoc8 = 0x10002000
 
-.text           0x0000000000000000     0x1728
+.text           0x0000000000000000     0x1ad0
  FILL mask 0xff
  *(.isr_vector)
  .isr_vector    0x0000000000000000       0xc0 ./startup/cr_startup_lpc11.o
@@ -495,129 +495,131 @@ END GROUP
                 0x000000000000037e                I2C_IRQHandler
                 0x000000000000037e                WDT_IRQHandler
                 0x000000000000037e                PIOINT3_IRQHandler
- .text.main     0x0000000000000384      0x3b4 ./src/uart_main.o
+ .text.main     0x0000000000000384      0x5a8 ./src/uart_main.o
                 0x0000000000000384                main
  .text.GPIOInit
-                0x0000000000000738       0x60 ./src/uart_main.o
-                0x0000000000000738                GPIOInit
+                0x000000000000092c       0x60 ./src/uart_main.o
+                0x000000000000092c                GPIOInit
  .text.setLEDON
-                0x0000000000000798       0xa8 ./src/uart_main.o
-                0x0000000000000798                setLEDON
+                0x000000000000098c       0xa8 ./src/uart_main.o
+                0x000000000000098c                setLEDON
  .text.numberToAscii
-                0x0000000000000840      0x188 ./src/uart_main.o
-                0x0000000000000840                numberToAscii
+                0x0000000000000a34      0x188 ./src/uart_main.o
+                0x0000000000000a34                numberToAscii
  .text.NVIC_EnableIRQ
-                0x00000000000009c8       0x2c ./driver/adc.o
+                0x0000000000000bbc       0x2c ./driver/adc.o
  .text.ADC_IRQHandler
-                0x00000000000009f4       0xe4 ./driver/adc.o
-                0x00000000000009f4                ADC_IRQHandler
- .text.ADCInit  0x0000000000000ad8      0x134 ./driver/adc.o
-                0x0000000000000ad8                ADCInit
- .text.ADCRead  0x0000000000000c0c       0x50 ./driver/adc.o
-                0x0000000000000c0c                ADCRead
+                0x0000000000000be8       0xe4 ./driver/adc.o
+                0x0000000000000be8                ADC_IRQHandler
+ .text.ADCInit  0x0000000000000ccc      0x134 ./driver/adc.o
+                0x0000000000000ccc                ADCInit
+ .text.ADCRead  0x0000000000000e00       0x50 ./driver/adc.o
+                0x0000000000000e00                ADCRead
  .text.NVIC_EnableIRQ
-                0x0000000000000c5c       0x2c ./driver/timer32.o
+                0x0000000000000e50       0x2c ./driver/timer32.o
  .text.TIMER32_0_IRQHandler
-                0x0000000000000c88       0x4c ./driver/timer32.o
-                0x0000000000000c88                TIMER32_0_IRQHandler
+                0x0000000000000e7c       0x4c ./driver/timer32.o
+                0x0000000000000e7c                TIMER32_0_IRQHandler
  .text.enable_timer32
-                0x0000000000000cd4       0x34 ./driver/timer32.o
-                0x0000000000000cd4                enable_timer32
+                0x0000000000000ec8       0x34 ./driver/timer32.o
+                0x0000000000000ec8                enable_timer32
  .text.init_timer32
-                0x0000000000000d08      0x134 ./driver/timer32.o
-                0x0000000000000d08                init_timer32
+                0x0000000000000efc      0x134 ./driver/timer32.o
+                0x0000000000000efc                init_timer32
  .text.NVIC_EnableIRQ
-                0x0000000000000e3c       0x2c ./driver/uart.o
+                0x0000000000001030       0x2c ./driver/uart.o
  .text.NVIC_DisableIRQ
-                0x0000000000000e68       0x30 ./driver/uart.o
+                0x000000000000105c       0x30 ./driver/uart.o
  .text.UART_IRQHandler
-                0x0000000000000e98      0x110 ./driver/uart.o
-                0x0000000000000e98                UART_IRQHandler
+                0x000000000000108c      0x110 ./driver/uart.o
+                0x000000000000108c                UART_IRQHandler
  .text.UARTInit
-                0x0000000000000fa8      0x114 ./driver/uart.o
-                0x0000000000000fa8                UARTInit
+                0x000000000000119c      0x114 ./driver/uart.o
+                0x000000000000119c                UARTInit
  .text.UARTSend
-                0x00000000000010bc       0x40 ./driver/uart.o
-                0x00000000000010bc                UARTSend
+                0x00000000000012b0       0x40 ./driver/uart.o
+                0x00000000000012b0                UARTSend
  .text.SystemCoreClockUpdate
-                0x00000000000010fc       0xb8 ./cmsis/system_LPC11xx.o
-                0x00000000000010fc                SystemCoreClockUpdate
+                0x00000000000012f0       0xb8 ./cmsis/system_LPC11xx.o
+                0x00000000000012f0                SystemCoreClockUpdate
  .text.__weak_main
-                0x00000000000011b4        0x8 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
-                0x00000000000011b4                __main
-                0x00000000000011b4                __weak_main
+                0x00000000000013a8        0x8 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/libcr_c.a(__weak__main.o)
+                0x00000000000013a8                __main
+                0x00000000000013a8                __weak_main
  .text.__aeabi_division_idivmod
-                0x00000000000011bc       0x78 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
-                0x00000000000011bc                __aeabi_idiv
-                0x00000000000011bc                __aeabi_idivmod
-                0x00000000000011c2                __aeabi_uidiv
-                0x00000000000011c2                __aeabi_uidivmod
+                0x00000000000013b0       0x78 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_32.o)
+                0x00000000000013b0                __aeabi_idiv
+                0x00000000000013b0                __aeabi_idivmod
+                0x00000000000013b6                __aeabi_uidiv
+                0x00000000000013b6                __aeabi_uidivmod
  .text.__aeabi_division_idiv0
-                0x0000000000001234        0x2 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
-                0x0000000000001234                __aeabi_idiv0
- *fill*         0x0000000000001236        0x2 ff
+                0x0000000000001428        0x2 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000001428                __aeabi_idiv0
+ *fill*         0x000000000000142a        0x2 ff
  .text.__aeabi_dmul
-                0x0000000000001238      0x184 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x0000000000001238                __aeabi_dmul
+                0x000000000000142c      0x184 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+                0x000000000000142c                __aeabi_dmul
  .text.__aeabi_d2f
-                0x00000000000013bc       0x60 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
-                0x00000000000013bc                __aeabi_d2f
+                0x00000000000015b0       0x60 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(double.o)
+                0x00000000000015b0                __aeabi_d2f
  .text.__aeabi_fmul
-                0x000000000000141c       0xc4 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
-                0x000000000000141c                __aeabi_fmul
+                0x0000000000001610       0xc4 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
+                0x0000000000001610                __aeabi_fmul
  .text.__aeabi_fdiv
-                0x00000000000014e0       0xdc /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
-                0x00000000000014e0                __aeabi_fdiv
+                0x00000000000016d4       0xdc /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
+                0x00000000000016d4                __aeabi_fdiv
  .text.__aeabi_f2uiz
-                0x00000000000015bc       0x2a /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
-                0x00000000000015bc                __aeabi_f2uiz
+                0x00000000000017b0       0x2a /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
+                0x00000000000017b0                __aeabi_f2uiz
  .text.__bhs_ui2f
-                0x00000000000015e6       0x62 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
-                0x00000000000015e6                __bhs_ui2f
+                0x00000000000017da       0x62 /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
+                0x00000000000017da                __bhs_ui2f
  .text.__aeabi_ui2f
-                0x0000000000001648        0xc /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
-                0x0000000000001648                __aeabi_ui2f
+                0x000000000000183c        0xc /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
+                0x000000000000183c                __aeabi_ui2f
  .text.__aeabi_f2d
-                0x0000000000001654       0x3c /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
-                0x0000000000001654                __aeabi_f2d
+                0x0000000000001848       0x3c /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(float.o)
+                0x0000000000001848                __aeabi_f2d
  .text.__aeabi_llong_lmul
-                0x0000000000001690       0x2e /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
-                0x0000000000001690                __aeabi_lmul
+                0x0000000000001884       0x2e /usr/local/mcuxpressoide-10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/libcr_eabihelpers.a(llong.o)
+                0x0000000000001884                __aeabi_lmul
  *(.rodata*)
- *fill*         0x00000000000016be        0x2 ff
+ *fill*         0x00000000000018b2        0x2 ff
+ .rodata        0x00000000000018b4      0x1b2 ./src/uart_main.o
+ *fill*         0x0000000000001a66        0x2 ff
  .rodata.numberToAscii
-                0x00000000000016c0       0x28 ./src/uart_main.o
+                0x0000000000001a68       0x28 ./src/uart_main.o
  .rodata.CSWTCH.5
-                0x00000000000016e8       0x40 ./cmsis/system_LPC11xx.o
+                0x0000000000001a90       0x40 ./cmsis/system_LPC11xx.o
 
-.glue_7         0x0000000000001728        0x0
- .glue_7        0x0000000000001728        0x0 linker stubs
+.glue_7         0x0000000000001ad0        0x0
+ .glue_7        0x0000000000001ad0        0x0 linker stubs
 
-.glue_7t        0x0000000000001728        0x0
- .glue_7t       0x0000000000001728        0x0 linker stubs
+.glue_7t        0x0000000000001ad0        0x0
+ .glue_7t       0x0000000000001ad0        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000001728        0x0
- .vfp11_veneer  0x0000000000001728        0x0 linker stubs
+.vfp11_veneer   0x0000000000001ad0        0x0
+ .vfp11_veneer  0x0000000000001ad0        0x0 linker stubs
 
-.v4_bx          0x0000000000001728        0x0
- .v4_bx         0x0000000000001728        0x0 linker stubs
+.v4_bx          0x0000000000001ad0        0x0
+ .v4_bx         0x0000000000001ad0        0x0 linker stubs
 
-.iplt           0x0000000000001728        0x0
- .iplt          0x0000000000001728        0x0 ./startup/cr_startup_lpc11.o
+.iplt           0x0000000000001ad0        0x0
+ .iplt          0x0000000000001ad0        0x0 ./startup/cr_startup_lpc11.o
 
-.rel.dyn        0x0000000000001728        0x0
- .rel.iplt      0x0000000000001728        0x0 ./startup/cr_startup_lpc11.o
+.rel.dyn        0x0000000000001ad0        0x0
+ .rel.iplt      0x0000000000001ad0        0x0 ./startup/cr_startup_lpc11.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000001728                __exidx_start = .
+                0x0000000000001ad0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000000001728                __exidx_end = .
-                0x0000000000001728                _etext = .
+                0x0000000000001ad0                __exidx_end = .
+                0x0000000000001ad0                _etext = .
 
-.data           0x0000000010000000       0x14 load address 0x0000000000001728
+.data           0x0000000010000000       0x14 load address 0x0000000000001ad0
                 0x0000000010000000                _data = .
  *(vtable)
  *(.data*)
@@ -630,19 +632,22 @@ END GROUP
  .data.currentADCDelay
                 0x0000000010000008        0x4 ./src/uart_main.o
                 0x0000000010000008                currentADCDelay
+ .data.displayMenu
+                0x000000001000000c        0x1 ./src/uart_main.o
+                0x000000001000000c                displayMenu
  .data.UARTTxEmpty
-                0x000000001000000c        0x1 ./driver/uart.o
-                0x000000001000000c                UARTTxEmpty
- *fill*         0x000000001000000d        0x3 
+                0x000000001000000d        0x1 ./driver/uart.o
+                0x000000001000000d                UARTTxEmpty
+ *fill*         0x000000001000000e        0x2 
  .data.SystemCoreClock
                 0x0000000010000010        0x4 ./cmsis/system_LPC11xx.o
                 0x0000000010000010                SystemCoreClock
                 0x0000000010000014                _edata = .
 
-.igot.plt       0x0000000010000014        0x0 load address 0x000000000000173c
+.igot.plt       0x0000000010000014        0x0 load address 0x0000000000001ae4
  .igot.plt      0x0000000010000014        0x0 ./startup/cr_startup_lpc11.o
 
-.bss            0x0000000010000014       0x94 load address 0x000000000000173c
+.bss            0x0000000010000014       0x94 load address 0x0000000000001ae4
                 0x0000000010000014                _bss = .
  *(.bss*)
  .bss.uartCharReceived
@@ -679,21 +684,21 @@ END GROUP
                 0x00000000100000a4                UARTStatus
                 0x00000000100000a8                _ebss = .
 
-.cr_heap        0x00000000100000a8        0x0 load address 0x000000000000173c
+.cr_heap        0x00000000100000a8        0x0 load address 0x0000000000001ae4
                 0x00000000100000a8                end = .
                 0x00000000100000a8                _pvHeapStart = .
                 0x0000000010002000                _vRamTop = __top_RamLoc8
                 0x0000000010002000                _vStackTop = _vRamTop
 OUTPUT(uart.axf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0x342a
+.debug_info     0x0000000000000000     0x343b
  .debug_info    0x0000000000000000      0x1c5 ./startup/cr_startup_lpc11.o
- .debug_info    0x00000000000001c5      0xb8a ./src/uart_main.o
- .debug_info    0x0000000000000d4f      0x9fe ./driver/adc.o
- .debug_info    0x000000000000174d       0xc9 ./driver/crp.o
- .debug_info    0x0000000000001816      0xb83 ./driver/timer32.o
- .debug_info    0x0000000000002399      0xb7c ./driver/uart.o
- .debug_info    0x0000000000002f15      0x515 ./cmsis/system_LPC11xx.o
+ .debug_info    0x00000000000001c5      0xb9b ./src/uart_main.o
+ .debug_info    0x0000000000000d60      0x9fe ./driver/adc.o
+ .debug_info    0x000000000000175e       0xc9 ./driver/crp.o
+ .debug_info    0x0000000000001827      0xb83 ./driver/timer32.o
+ .debug_info    0x00000000000023aa      0xb7c ./driver/uart.o
+ .debug_info    0x0000000000002f26      0x515 ./cmsis/system_LPC11xx.o
 
 .debug_abbrev   0x0000000000000000      0xb2d
  .debug_abbrev  0x0000000000000000       0xcb ./startup/cr_startup_lpc11.o
@@ -755,29 +760,29 @@ OUTPUT(uart.axf elf32-littlearm)
  .debug_macro   0x0000000000001cb6       0xa9 ./cmsis/system_LPC11xx.o
  .debug_macro   0x0000000000001d5f      0x398 ./cmsis/system_LPC11xx.o
 
-.debug_line     0x0000000000000000      0xee1
+.debug_line     0x0000000000000000      0xf0d
  .debug_line    0x0000000000000000      0x1cd ./startup/cr_startup_lpc11.o
- .debug_line    0x00000000000001cd      0x303 ./src/uart_main.o
- .debug_line    0x00000000000004d0      0x20e ./driver/adc.o
- .debug_line    0x00000000000006de      0x14e ./driver/crp.o
- .debug_line    0x000000000000082c      0x2c0 ./driver/timer32.o
- .debug_line    0x0000000000000aec      0x230 ./driver/uart.o
- .debug_line    0x0000000000000d1c      0x1c5 ./cmsis/system_LPC11xx.o
+ .debug_line    0x00000000000001cd      0x32f ./src/uart_main.o
+ .debug_line    0x00000000000004fc      0x20e ./driver/adc.o
+ .debug_line    0x000000000000070a      0x14e ./driver/crp.o
+ .debug_line    0x0000000000000858      0x2c0 ./driver/timer32.o
+ .debug_line    0x0000000000000b18      0x230 ./driver/uart.o
+ .debug_line    0x0000000000000d48      0x1c5 ./cmsis/system_LPC11xx.o
 
-.debug_str      0x0000000000000000     0x792b
+.debug_str      0x0000000000000000     0x7937
  .debug_str     0x0000000000000000     0x45c3 ./startup/cr_startup_lpc11.o
                                        0x464e (size before relaxing)
- .debug_str     0x00000000000045c3     0x2b84 ./src/uart_main.o
-                                       0x70c4 (size before relaxing)
- .debug_str     0x0000000000007147      0x28d ./driver/adc.o
+ .debug_str     0x00000000000045c3     0x2b90 ./src/uart_main.o
+                                       0x70d0 (size before relaxing)
+ .debug_str     0x0000000000007153      0x28d ./driver/adc.o
                                        0x6ac6 (size before relaxing)
- .debug_str     0x00000000000073d4       0xbf ./driver/crp.o
+ .debug_str     0x00000000000073e0       0xbf ./driver/crp.o
                                        0x63b8 (size before relaxing)
- .debug_str     0x0000000000007493      0x11d ./driver/timer32.o
+ .debug_str     0x000000000000749f      0x11d ./driver/timer32.o
                                        0x6b03 (size before relaxing)
- .debug_str     0x00000000000075b0       0x9b ./driver/uart.o
+ .debug_str     0x00000000000075bc       0x9b ./driver/uart.o
                                        0x6baa (size before relaxing)
- .debug_str     0x000000000000764b      0x2e0 ./cmsis/system_LPC11xx.o
+ .debug_str     0x0000000000007657      0x2e0 ./cmsis/system_LPC11xx.o
                                        0x66b7 (size before relaxing)
 
 .comment        0x0000000000000000       0x7e
