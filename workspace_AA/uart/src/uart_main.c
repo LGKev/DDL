@@ -233,6 +233,7 @@ if(currentStateFlag == 4){
 
 	if(uartCharReceived == '6'){
 		currentStateFlag = 1;
+		displayMenu = 1;
 		//go to the duty cycle menu
 	}
 	else if(uartCharReceived == '1' ){
@@ -261,28 +262,21 @@ if(currentStateFlag == 4){
 
 	}
 	if(displayMenu == 1){
-		  UARTSend("1. 10% \n\0", 20 );
-		  UARTSend("2. 25% \n\0", 20 );
-		  UARTSend("3. 50% \n\0", 20 );
-		  UARTSend("4. 75% \n\0", 20 );
-		  UARTSend("5. 90% \n\0", 20 );
-		  UARTSend("6. Go Back \n\0", 20 );
+		  UARTSend("1. 10% \n", 9 );
+		  UARTSend("2. 25% \n", 9 );
+		  UARTSend("3. 50% \n", 9 );
+		  UARTSend("4. 75% \n", 9 );
+		  UARTSend("5. 90% \n", 9 );
+		  UARTSend("6. Go Back \n", 13 );
 		displayMenu = 0;
 	}
 } //end of state 4
 
 if(currentStateFlag == 5){
 
-	if(displayMenu == 1){
-		  UARTSend("1. $Low \n\0", 20 );
-		  UARTSend("2. m3d \n\0", 20 );
-		  UARTSend("3. F@$T \n\0", 20 );
-		  UARTSend("4. \/ery F@$T \n\0", 20 );
-		  UARTSend("5. RUN BACK!", 20 );
-		displayMenu = 0;
-	}
 
-	if(uartCharReceived == '6'){
+
+	if(uartCharReceived == '5'){
 			currentStateFlag = 1; //go back up
 		}
 		else if(uartCharReceived == '1')
@@ -313,17 +307,19 @@ if(currentStateFlag == 5){
 			currentStateFlag = 3; //do nothing just spin
 
 		}
+	if(displayMenu == 1){
+			  UARTSend("1. Slow \n", 10 );
+			  UARTSend("2. Medium \n", 11 );
+			  UARTSend("3. Fast \n", 10 );
+			  UARTSend("4. Very Fast \n", 15 );
+			  UARTSend("5. Go Back \n", 13 );
+			displayMenu = 0;
+		}
 
-} //end of state 1
+} //end of state 5
 
 if(currentStateFlag == 2){
-	if(displayMenu == 1){
-		  UARTSend("1. ADC Reporting On \n\0", 20 );
-		  UARTSend("2. ADC Reporting Off \n\0", 20 );
-		  UARTSend("3. Set ADC Frequency \n\0", 20 );
-		  UARTSend("4. Go Back. \n\0", 20 );
-		displayMenu = 0;
-	}
+
 
 uint32_t i=0;
 uint8_t test = 53; //ascii 5
@@ -346,28 +342,31 @@ uint8_t test = 53; //ascii 5
 	}
 	else if(uartCharReceived == '3') {
 		currentStateFlag =3;
+		displayMenu = 1;
 		//set report freq
 	}else if(uartCharReceived == '4') {
 		currentStateFlag = 0; //go back to the main menu
+		displayMenu = 1;
 	}
 	else{
 		currentStateFlag = 2; //just spin
 
 	}
+	if(displayMenu == 1){
+			  UARTSend("1. ADC Reporting On \n", 22 );
+			  UARTSend("2. ADC Reporting Off \n", 23 );
+			  UARTSend("3. Set ADC Frequency \n", 23 );
+			  UARTSend("4. Go Back \n", 13 );
+			displayMenu = 0;
+		}
 } //end of state 2
 
 
 if(currentStateFlag == 3){
-	if(displayMenu == 1){
-		  UARTSend("1. Slow \n\0", 20 );
-		  UARTSend("2.  Medium \n\0", 20 );
-		  UARTSend("3.  Fast \n\0", 20 );
-		  UARTSend("4.  Sonic Fast \n\0", 20 );
-		  UARTSend("5. Go Back \n\0", 20 );
-		displayMenu = 0;
-	}
+
 	if(uartCharReceived == '5'){
 			currentStateFlag = 2; //go back up
+			displayMenu = 1;
 			//go to the duty cycle menu
 		}
 		else if(uartCharReceived == '1')
@@ -395,8 +394,15 @@ if(currentStateFlag == 3){
 
 
 		}
-
-} //end of state 2
+	if(displayMenu == 1){
+			  UARTSend("1. Slow \n", 10 );
+			  UARTSend("2. Medium \n", 11 );
+			  UARTSend("3. Fast \n", 10 );
+			  UARTSend("4. Very Fast \n", 15 );
+			  UARTSend("5. Go Back \n", 13 );
+			displayMenu = 0;
+		}
+} //end of state 3
 
 
 
