@@ -28,3 +28,9 @@
 
 #Mac
 .DS_Store
+
+#mcu expresso
+*/.metadata/
+
+
+
