@@ -267,7 +267,7 @@ if(currentStateFlag == 4){
 		currentDutyCycle = 0.9;
 	}
 	else {
-		setLEDON();
+		//setLEDON();
 		currentStateFlag = 4; //do nothing just spin
 
 
