@@ -4,18 +4,27 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../driver/adc.c \
 ../driver/can.c \
 ../driver/crp.c \
+../driver/gpio.c \
+../driver/timer32.c \
 ../driver/uart.c 
 
 OBJS += \
+./driver/adc.o \
 ./driver/can.o \
 ./driver/crp.o \
+./driver/gpio.o \
+./driver/timer32.o \
 ./driver/uart.o 
 
 C_DEPS += \
+./driver/adc.d \
 ./driver/can.d \
 ./driver/crp.d \
+./driver/gpio.d \
+./driver/timer32.d \
 ./driver/uart.d 
 
 
