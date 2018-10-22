@@ -190,7 +190,14 @@ if(currentStateFlag == 0){
 
 if(currentStateFlag == 1){
 
-
+	if(displayMenu == 1){
+			  UARTSend("1. Blink On \n", 14 );
+			  UARTSend("2. Blink Off \n", 15 );
+			  UARTSend("3. Set Duty Cycle \n", 20 );
+			  UARTSend("4. Set Frequency \n", 19 );
+			  UARTSend("5. Go Back \n", 13 );
+			displayMenu = 0;
+		}
 	/* checking to see if we are changing states */
 
 	/* checking if we put in a menu option  */
@@ -215,22 +222,25 @@ if(currentStateFlag == 1){
 	}
 	/* invalid input just stay in current state */
 	else{
+		setLEDON();
 		currentStateFlag = 1; //spin
 
 
 	}
-	if(displayMenu == 1){
-		  UARTSend("1. Blink On \n", 14 );
-		  UARTSend("2. Blink Off \n", 15 );
-		  UARTSend("3. Set Frequency \n", 19 );
-		  UARTSend("4. Set Duty Cycle \n", 20 );
-		  UARTSend("5. Go Back \n", 13 );
-		displayMenu = 0;
-	}
+
 } //end of state 1
 
 if(currentStateFlag == 4){
 
+	if(displayMenu == 1){
+			  UARTSend("1. 10% \n", 9 );
+			  UARTSend("2. 25% \n", 9 );
+			  UARTSend("3. 50% \n", 9 );
+			  UARTSend("4. 75% \n", 9 );
+			  UARTSend("5. 90% \n", 9 );
+			  UARTSend("6. Go Back \n", 13 );
+			displayMenu = 0;
+	}
 	if(uartCharReceived == '6'){
 		currentStateFlag = 1;
 		displayMenu = 1;
@@ -257,25 +267,26 @@ if(currentStateFlag == 4){
 		currentDutyCycle = 0.9;
 	}
 	else {
+		setLEDON();
 		currentStateFlag = 4; //do nothing just spin
 
 
 	}
-	if(displayMenu == 1){
-		  UARTSend("1. 10% \n", 9 );
-		  UARTSend("2. 25% \n", 9 );
-		  UARTSend("3. 50% \n", 9 );
-		  UARTSend("4. 75% \n", 9 );
-		  UARTSend("5. 90% \n", 9 );
-		  UARTSend("6. Go Back \n", 13 );
-		displayMenu = 0;
+
 	}
-} //end of state 4
+ //end of state 4
 
 if(currentStateFlag == 5){
 
 
-
+	if(displayMenu == 1){
+				  UARTSend("1. Slow \n", 10 );
+				  UARTSend("2. Medium \n", 11 );
+				  UARTSend("3. Fast \n", 10 );
+				  UARTSend("4. Very Fast \n", 15 );
+				  UARTSend("5. Go Back \n", 13 );
+				displayMenu = 0;
+			}
 	if(uartCharReceived == '5'){
 			currentStateFlag = 1; //go back up
 		}
@@ -307,14 +318,7 @@ if(currentStateFlag == 5){
 			currentStateFlag = 3; //do nothing just spin
 
 		}
-	if(displayMenu == 1){
-			  UARTSend("1. Slow \n", 10 );
-			  UARTSend("2. Medium \n", 11 );
-			  UARTSend("3. Fast \n", 10 );
-			  UARTSend("4. Very Fast \n", 15 );
-			  UARTSend("5. Go Back \n", 13 );
-			displayMenu = 0;
-		}
+
 
 } //end of state 5
 
@@ -323,6 +327,13 @@ if(currentStateFlag == 2){
 
 uint32_t i=0;
 uint8_t test = 53; //ascii 5
+if(displayMenu == 1){
+			  UARTSend("1. ADC Reporting On \n", 22 );
+			  UARTSend("2. ADC Reporting Off \n", 23 );
+			  UARTSend("3. Set ADC Frequency \n", 23 );
+			  UARTSend("4. Go Back \n", 13 );
+			displayMenu = 0;
+		}
 	if(uartCharReceived == '1'){
 	// adc report on
 		numberToAscii(voltage_mV);
@@ -352,18 +363,20 @@ uint8_t test = 53; //ascii 5
 		currentStateFlag = 2; //just spin
 
 	}
-	if(displayMenu == 1){
-			  UARTSend("1. ADC Reporting On \n", 22 );
-			  UARTSend("2. ADC Reporting Off \n", 23 );
-			  UARTSend("3. Set ADC Frequency \n", 23 );
-			  UARTSend("4. Go Back \n", 13 );
-			displayMenu = 0;
-		}
+
 } //end of state 2
 
 
 if(currentStateFlag == 3){
 
+	if(displayMenu == 1){
+				  UARTSend("1. Slow \n", 10 );
+				  UARTSend("2. Medium \n", 11 );
+				  UARTSend("3. Fast \n", 10 );
+				  UARTSend("4. Very Fast \n", 15 );
+				  UARTSend("5. Go Back \n", 13 );
+				displayMenu = 0;
+			}
 	if(uartCharReceived == '5'){
 			currentStateFlag = 2; //go back up
 			displayMenu = 1;
@@ -394,14 +407,7 @@ if(currentStateFlag == 3){
 
 
 		}
-	if(displayMenu == 1){
-			  UARTSend("1. Slow \n", 10 );
-			  UARTSend("2. Medium \n", 11 );
-			  UARTSend("3. Fast \n", 10 );
-			  UARTSend("4. Very Fast \n", 15 );
-			  UARTSend("5. Go Back \n", 13 );
-			displayMenu = 0;
-		}
+
 } //end of state 3
 
 

@@ -3531,3 +3531,1133 @@ Previous value 0x00000000 at offset 0x1c in file uart.bin
 16:37:08 **** Incremental Build of configuration Debug for project uart ****
 make -r all 
 make: Nothing to be done for `all'.
+11:13:53 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:169:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("1. Control LED \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:170:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("2. Control ADC \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:223:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("1. Blink On \n", 14 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:224:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("2. Blink Off \n", 15 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:225:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("3. Set Frequency \n", 19 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:226:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("4. Set Duty Cycle \n", 20 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:227:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("5. Go Back \n", 13 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:265:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("1. 10% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:266:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("2. 25% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:267:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("3. 50% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:268:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("4. 75% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:269:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("5. 90% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:270:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("6. Go Back \n", 13 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:311:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. Slow \n", 10 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:312:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. Medium \n", 11 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:313:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Fast \n", 10 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:314:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Very Fast \n", 15 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:315:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("5. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:328:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(voltage_mV);
+   ^
+../src/uart_main.c:356:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. ADC Reporting On \n", 22 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:357:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. ADC Reporting Off \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:358:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Set ADC Frequency \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:359:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:325:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^
+../src/uart_main.c:398:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. Slow \n", 10 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:399:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. Medium \n", 11 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:400:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Fast \n", 10 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:401:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Very Fast \n", 15 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:402:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("5. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c: At top level:
+../src/uart_main.c:500:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^
+../src/uart_main.c:328:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(voltage_mV);
+   ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6840	     20	    148	   7008	   1b60	uart.axf
+Written checksum 0xefffd635 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+11:14:01 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+make: Nothing to be done for `all'.
+11:20:11 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:169:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("1. Control LED \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:170:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("2. Control ADC \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:223:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("1. Blink On \n", 14 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:224:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("2. Blink Off \n", 15 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:225:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("3. Set Frequency \n", 19 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:226:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("4. Set Duty Cycle \n", 20 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:227:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("5. Go Back \n", 13 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:265:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("1. 10% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:266:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("2. 25% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:267:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("3. 50% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:268:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("4. 75% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:269:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("5. 90% \n", 9 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:270:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("6. Go Back \n", 13 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:311:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. Slow \n", 10 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:312:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. Medium \n", 11 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:313:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Fast \n", 10 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:314:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Very Fast \n", 15 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:315:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("5. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:327:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. ADC Reporting On \n", 22 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:328:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. ADC Reporting Off \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:329:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Set ADC Frequency \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:330:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:335:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(voltage_mV);
+   ^
+../src/uart_main.c:325:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^
+../src/uart_main.c:369:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("1. Slow \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:370:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("2. Medium \n", 11 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:371:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("3. Fast \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:372:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("4. Very Fast \n", 15 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:373:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("5. Go Back \n", 13 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c: At top level:
+../src/uart_main.c:502:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^
+../src/uart_main.c:335:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(voltage_mV);
+   ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6840	     20	    148	   7008	   1b60	uart.axf
+Written checksum 0xefffd635 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+11:20:15 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+make: Nothing to be done for `all'.
+11:21:49 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:169:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("1. Control LED \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:170:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("2. Control ADC \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:194:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. Blink On \n", 14 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:195:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. Blink Off \n", 15 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:196:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Set Frequency \n", 19 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:197:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Set Duty Cycle \n", 20 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:198:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("5. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:235:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. 10% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:236:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. 25% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:237:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. 50% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:238:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. 75% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:239:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("5. 90% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:240:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("6. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:280:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("1. Slow \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:281:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("2. Medium \n", 11 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:282:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("3. Fast \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:283:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("4. Very Fast \n", 15 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:284:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("5. Go Back \n", 13 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:328:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. ADC Reporting On \n", 22 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:329:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. ADC Reporting Off \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:330:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Set ADC Frequency \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:331:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:336:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(voltage_mV);
+   ^
+../src/uart_main.c:326:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^
+../src/uart_main.c:370:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("1. Slow \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:371:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("2. Medium \n", 11 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:372:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("3. Fast \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:373:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("4. Very Fast \n", 15 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:374:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("5. Go Back \n", 13 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c: At top level:
+../src/uart_main.c:503:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^
+../src/uart_main.c:336:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(voltage_mV);
+   ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6856	     20	    148	   7024	   1b70	uart.axf
+Written checksum 0xefffd635 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+11:21:53 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+make: Nothing to be done for `all'.
+11:24:44 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:169:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("1. Control LED \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:170:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("2. Control ADC \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:194:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. Blink On \n", 14 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:195:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. Blink Off \n", 15 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:196:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Set Frequency \n", 19 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:197:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Set Duty Cycle \n", 20 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:198:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("5. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:235:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. 10% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:236:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. 25% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:237:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. 50% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:238:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. 75% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:239:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("5. 90% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:240:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("6. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:281:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("1. Slow \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:282:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("2. Medium \n", 11 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:283:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("3. Fast \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:284:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("4. Very Fast \n", 15 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:285:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("5. Go Back \n", 13 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:329:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. ADC Reporting On \n", 22 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:330:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. ADC Reporting Off \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:331:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Set ADC Frequency \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:332:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:337:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(voltage_mV);
+   ^
+../src/uart_main.c:327:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^
+../src/uart_main.c:371:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("1. Slow \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:372:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("2. Medium \n", 11 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:373:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("3. Fast \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:374:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("4. Very Fast \n", 15 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:375:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("5. Go Back \n", 13 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c: At top level:
+../src/uart_main.c:504:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^
+../src/uart_main.c:337:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(voltage_mV);
+   ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6856	     20	    148	   7024	   1b70	uart.axf
+Written checksum 0xefffd635 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+11:24:48 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+make: Nothing to be done for `all'.
+11:26:52 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+../src/uart_main.c: In function 'main':
+../src/uart_main.c:169:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("1. Control LED \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:170:14: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+     UARTSend("2. Control ADC \n", 17 );
+              ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:194:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. Blink On \n", 14 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:195:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. Blink Off \n", 15 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:196:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Set Duty Cycle \n", 20 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:197:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Set Frequency \n", 19 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:198:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("5. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:235:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. 10% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:236:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. 25% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:237:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. 50% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:238:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. 75% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:239:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("5. 90% \n", 9 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:240:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("6. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:281:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("1. Slow \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:282:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("2. Medium \n", 11 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:283:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("3. Fast \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:284:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("4. Very Fast \n", 15 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:285:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("5. Go Back \n", 13 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:329:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("1. ADC Reporting On \n", 22 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:330:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("2. ADC Reporting Off \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:331:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("3. Set ADC Frequency \n", 23 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:332:15: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+      UARTSend("4. Go Back \n", 13 );
+               ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:337:3: warning: implicit declaration of function 'numberToAscii' [-Wimplicit-function-declaration]
+   numberToAscii(voltage_mV);
+   ^
+../src/uart_main.c:327:9: warning: unused variable 'test' [-Wunused-variable]
+ uint8_t test = 53; //ascii 5
+         ^
+../src/uart_main.c:371:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("1. Slow \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:372:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("2. Medium \n", 11 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:373:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("3. Fast \n", 10 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:374:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("4. Very Fast \n", 15 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c:375:16: warning: pointer targets in passing argument 1 of 'UARTSend' differ in signedness [-Wpointer-sign]
+       UARTSend("5. Go Back \n", 13 );
+                ^
+In file included from ../src/uart_main.c:23:0:
+../driver/uart.h:52:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ void UARTSend(uint8_t *BufferPtr, uint32_t Length);
+      ^
+../src/uart_main.c: At top level:
+../src/uart_main.c:504:6: warning: conflicting types for 'numberToAscii'
+ void numberToAscii(uint16_t number){
+      ^
+../src/uart_main.c:337:3: note: previous implicit declaration of 'numberToAscii' was here
+   numberToAscii(voltage_mV);
+   ^
+Finished building: ../src/uart_main.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6856	     20	    148	   7024	   1b70	uart.axf
+Written checksum 0xefffd635 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+11:26:55 **** Incremental Build of configuration Debug for project uart ****
+make -r all 
+make: Nothing to be done for `all'.
