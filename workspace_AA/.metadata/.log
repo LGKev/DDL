@@ -3567,3 +3567,6 @@ To terminate debug sessions, first select a debug session in the Debug View and 
 !MESSAGE Termi&nate/Disconnect All is not enabled.
 
 To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-10-23 13:17:38.737
+!MESSAGE Indexed 'sensor_lab' (9 sources, 17 headers) in 0.518 sec: 880 declarations; 1,703 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
