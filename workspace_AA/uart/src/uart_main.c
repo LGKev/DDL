@@ -222,7 +222,7 @@ if(currentStateFlag == 1){
 	}
 	/* invalid input just stay in current state */
 	else{
-		setLEDON();
+		//setLEDON();
 		currentStateFlag = 1; //spin
 
 
