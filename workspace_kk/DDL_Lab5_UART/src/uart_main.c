@@ -166,8 +166,8 @@ UARTBuffer[12]='\0';
 
 if(currentStateFlag == 0){
 	if(displayMenu == 1){
-		  UARTSend("1. Control LED \n", 17 );
-		  UARTSend("2. Control ADC \n", 17 );
+		  UARTSend("1. Control LED \n",strlen("1. Control LED \n"));
+		  UARTSend("2. Control ADC \n",strlen("2. Control ADC \n"));
 		displayMenu = 0;
 	}
 	  if(uartCharReceived == '1'){
@@ -220,11 +220,11 @@ if(currentStateFlag == 1){
 
 	}
 	if(displayMenu == 1){
-		  UARTSend("1. Blink On \n", 20 );
-		  UARTSend("2. Blink Off \n", 20 );
-		  UARTSend("3. Set Frequency \n", 30 );
-		  UARTSend("4. Set Duty Cycle \n", 30 );
-		  UARTSend("5. Go Back \n", 20 );
+		  UARTSend("1. Blink On \n", strlen("1. Blink On \n"));
+		  UARTSend("2. Blink Off \n", strlen("2. Blink Off \n"));
+		  UARTSend("3. Set Frequency \n",strlen("3. Set Frequency \n") );
+		  UARTSend("4. Set Duty Cycle \n", strlen("4. Set Duty Cycle \n") );
+		  UARTSend("5. Go Back \n", strlen("5. Go Back \n"));
 		displayMenu = 0;
 	}
 } //end of state 1
@@ -261,12 +261,12 @@ if(currentStateFlag == 4){
 
 	}
 	if(displayMenu == 1){
-		  UARTSend("1. 10% \n\0", 20 );
-		  UARTSend("2. 25% \n\0", 20 );
-		  UARTSend("3. 50% \n\0", 20 );
-		  UARTSend("4. 75% \n\0", 20 );
-		  UARTSend("5. 90% \n\0", 20 );
-		  UARTSend("6. Go Back \n\0", 20 );
+		  UARTSend("1. 10% \n\0", strlen("1. 10% \n\0");
+		  UARTSend("2. 25% \n\0", strlen("2. 25% \n\0");
+		  UARTSend("3. 50% \n\0", strlen("3. 50% \n\0");
+		  UARTSend("4. 75% \n\0", strlen("4. 75% \n\0");
+		  UARTSend("5. 90% \n\0", strlen("5. 90% \n\0");
+		  UARTSend("6. Go Back \n\0", strlen("6. Go Back\n\0") );
 		displayMenu = 0;
 	}
 } //end of state 4
@@ -274,11 +274,11 @@ if(currentStateFlag == 4){
 if(currentStateFlag == 5){
 
 	if(displayMenu == 1){
-		  UARTSend("1. $Low \n\0", 20 );
-		  UARTSend("2. m3d \n\0", 20 );
-		  UARTSend("3. F@$T \n\0", 20 );
-		  UARTSend("4. \/ery F@$T \n\0", 20 );
-		  UARTSend("5. RUN BACK!", 20 );
+		  UARTSend("1. $Low \n\0", strlen("1. $Low \n\0") );
+		  UARTSend("2. m3d \n\0", strlen("2. m3d \n\0") );
+		  UARTSend("3. F@$T \n\0",strlen("3. F@$T \n\0") );
+		  UARTSend("4. \/ery F@$T \n\0", strlen("4. \/ery F@$T \n\0") );
+		  UARTSend("5. RUN BACK!", strlen("5. RUN BACK!"));
 		displayMenu = 0;
 	}
 
@@ -318,10 +318,10 @@ if(currentStateFlag == 5){
 
 if(currentStateFlag == 2){
 	if(displayMenu == 1){
-		  UARTSend("1. ADC Reporting On \n\0", 20 );
-		  UARTSend("2. ADC Reporting Off \n\0", 20 );
-		  UARTSend("3. Set ADC Frequency \n\0", 20 );
-		  UARTSend("4. Go Back. \n\0", 20 );
+		  UARTSend("1. ADC Reporting On \n\0", strlen("1. ADC Reporting On \n\0"));
+		  UARTSend("2. ADC Reporting Off \n\0",strlen("2. ADC Reporting Off \n\0"));
+		  UARTSend("3. Set ADC Frequency \n\0",strlen("3. Set ADC Frequency \n\0"));
+		  UARTSend("4. Go Back. \n\0", strlen("4. Go Back. \n\0") );
 		displayMenu = 0;
 	}
 
@@ -359,11 +359,11 @@ uint8_t test = 53; //ascii 5
 
 if(currentStateFlag == 3){
 	if(displayMenu == 1){
-		  UARTSend("1. Slow \n\0", 20 );
-		  UARTSend("2.  Medium \n\0", 20 );
-		  UARTSend("3.  Fast \n\0", 20 );
-		  UARTSend("4.  Sonic Fast \n\0", 20 );
-		  UARTSend("5. Go Back \n\0", 20 );
+		  UARTSend("1. Slow \n\0", strlen("1. Slow \n\0") );
+		  UARTSend("2.  Medium \n\0",	strlen());
+		  UARTSend("3.  Fast \n\0", 		strlen());
+		  UARTSend("4.  Sonic Fast \n\0",	 strlen());
+		  UARTSend("5. Go Back \n\0", 		 strlen());
 		displayMenu = 0;
 	}
 	if(uartCharReceived == '5'){
