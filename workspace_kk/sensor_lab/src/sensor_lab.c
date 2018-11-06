@@ -125,9 +125,10 @@ int main (void)
 #ifdef correctRead
 	  /* read 2 byte */
   I2CWriteLength = 2; //maybe 4
-  I2CReadLength = 2; //2 to get 2 consecutigve data bytes
+  I2CReadLength = 4; //2 to get 2 consecutigve data bytes
   I2CMasterBuffer[0] = MPU6050_ADDR;
-  I2CMasterBuffer[1] = ACC_Z_HI;
+  I2CMasterBuffer[1] = ACC_X_HI; // gyro x axis
+//  I2CMasterBuffer[1] = 0x43; // gyro x axis
  // //I2CMasterBuffer[1] = 0x75;
  //I2CMasterBuffer[1] = ACC_CONFIG;
 //  I2CMasterBuffer[1] = ACC_X_LOW;
@@ -136,6 +137,33 @@ int main (void)
 #endif
   for(delay=0; delay<20000; delay++);
 
+  //y axis
+  if(I2CSlaveBuffer[2] <= 50 && I2CSlaveBuffer[3] >150){
+	  //turn on led backward:
+	  LPC_GPIO0 ->DATA &= ~(1<<7 | 1<<8);
+  }
+  else if(I2CSlaveBuffer[2] > 74 && I2CSlaveBuffer[2] < 230){
+//turn on led forwrd: red
+	  LPC_GPIO0 ->DATA &= ~(1<<7);
+  }
+  else if(I2CSlaveBuffer[0] <= 60  ){
+	  //turn on led LEFT: BLUE
+	  LPC_GPIO0 ->DATA &= ~(1<<9);
+  }
+  else if(I2CSlaveBuffer[0] > 60 && I2CSlaveBuffer[0] < 225){
+//turn on led RIGHT: GREEN
+	  LPC_GPIO0 ->DATA &= ~(1<<8);
+  }
+  else
+  {
+	  //turn off led
+	  LPC_GPIO0 ->DATA |= 0xffff;
+  }
+
+
+//#define bonus
+#ifdef bonus
+  /* z up down bonus*/
   if(I2CSlaveBuffer[0] >= 70){
 	  //turn on led
 	  LPC_GPIO0 ->DATA = 0x0000;
@@ -145,8 +173,8 @@ int main (void)
 	  //turn off led
 	  LPC_GPIO0 ->DATA |= 0xffff;
   }
-
-
+  /* z up down bonus*/
+#endif
   }
 
 
