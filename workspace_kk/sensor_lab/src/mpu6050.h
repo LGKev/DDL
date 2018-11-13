@@ -44,8 +44,9 @@
 /*******************************************************************************
 **	functions
 *******************************************************************************/
-extern void mpu6050Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer);
+//extern volatile void mpu6050Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer);
 extern void mpu6050Write(uint8_t regAdd,uint8_t regValue);
 extern void mpu6050CommTest(void);
+//extern volatile void getData(void);
 
 #endif /* MPU6050_H_ */
