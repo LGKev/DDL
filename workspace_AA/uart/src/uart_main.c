@@ -95,6 +95,7 @@ int main (void) {
 	   * in the CMSIS system_<part family>.c file.
 	   */
 
+
 #ifdef part1
 UARTBuffer[0]='h';
 UARTBuffer[1]='E';
