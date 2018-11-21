@@ -80,18 +80,11 @@ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
          I2CMasterBuffer[0] = BNO055_ADDR;
          I2CMasterBuffer[1] = startRegAddr; // gyro x axis
 
-        // Clear buffers
-      /* for (i = 0; i < BUFSIZE; i++) {
-            I2CMasterBuffer[i] = 0x00;
-            I2CSlaveBuffer[i] = 0x00;
-        }
-*/
-
         // Write to MPU6050 sensor: start to read
         // And tell the senor how many bytes you want to read from
         // TO-DO
        I2CMasterBuffer[2] = BNO055_ADDR|0b1; //repeated start
-  I2CEngine();
+       I2CEngine();
 
 
         // Store data to acc buffers
@@ -173,23 +166,24 @@ void initBNO055(void){
 
 int main (void)
 {
-	initTimer32();
-	initLED();
-	initBNO055();
-   //UARTInit(UART_BAUD);
+//	initTimer32();
+	//initLED();
+	//initBNO055();
+    UARTInit(UART_BAUD);
 
-  /* configure led gpio */
+    uint32_t delay;
 
-        // NO need for interrupt stuff
+    while(1){
+	UARTSend("1. Control LED \n",strlen("1. Control LED \n"));
+    for(delay=0; delay<30000; delay++);
+    }
+
 /* ======================================= */
-
 
   if ( I2CInit( (uint32_t)I2CMASTER ) == FALSE )	/* initialize I2c */
   {
 	while ( 1 );				/* Fatal error */
   }
-
-
 
 	  #ifdef correctWrite
   I2CWriteLength = 3;
@@ -211,32 +205,20 @@ int main (void)
   I2CMasterBuffer[2] = MPU6050_ADDR|0b1; //repeated start
   I2CEngine();
 #endif
-
-
   uint8_t dataACCL[6];
 
-  uint32_t delay;
 
 setTunings(0,0,0);
 Setpoint = 0;
 
   while(1){
-
-
 	 bno055Read(0x1C, 2, dataACCL);
-
 	 Input = dataACCL[0];
-
-
 	  compute();
 
 	  //Output should be calculated
 	  //if statements.
-
-
   }
-
-
  return 0;
 } //end of main
 
