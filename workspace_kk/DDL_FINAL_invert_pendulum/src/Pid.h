@@ -8,7 +8,7 @@
 #ifndef PID_H_
 #define PID_H_
 
-void Compute(void);
-void SetTunings(double Kp, double Ki, double Kd);
+void compute(void);
+void setTunings(double Kp, double Ki, double Kd);
 
 #endif /* PID_H_ */

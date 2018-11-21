@@ -167,23 +167,28 @@ void initBNO055(void){
 int main (void)
 {
 //	initTimer32();
-	//initLED();
+	initLED();
 	//initBNO055();
-    UARTInit(UART_BAUD);
+   // UARTInit(UART_BAUD);
+	  if ( I2CInit( (uint32_t)I2CMASTER ) == FALSE )	/* initialize I2c */
+	  {
+		while ( 1 );				/* Fatal error */
+	  }
 
+	  /* i2c write to register: imu mode config */
+	  // using the default values of power on reset
+	  I2CWriteLength = 3; //is equal to , # of bytes,: counting: slave addr, register addres, data
+	  I2CReadLength = 0;
+	  I2CMasterBuffer[0] = BNO055_ADDR;
+	  I2CMasterBuffer[1] = 0x3D;	 //operation mode register	/* address */
+	  I2CMasterBuffer[2] = 0x08; // IMU mode 0b1000	/* all  */
+	  I2CEngine();
     uint32_t delay;
 
-    while(1){
-	UARTSend("1. Control LED \n",strlen("1. Control LED \n"));
-    for(delay=0; delay<30000; delay++);
-    }
+
 
 /* ======================================= */
 
-  if ( I2CInit( (uint32_t)I2CMASTER ) == FALSE )	/* initialize I2c */
-  {
-	while ( 1 );				/* Fatal error */
-  }
 
 	  #ifdef correctWrite
   I2CWriteLength = 3;
@@ -207,17 +212,20 @@ int main (void)
 #endif
   uint8_t dataACCL[6];
 
-
-setTunings(0,0,0);
+setTunings(50,0,0);
 Setpoint = 0;
 
   while(1){
 	 bno055Read(0x1C, 2, dataACCL);
-	 Input = dataACCL[0];
-	  compute();
+	  for(delay = 0; delay <10000; delay++);
+
+	// Input = (double) dataACCL[0];
+	  //compute();
 
 	  //Output should be calculated
 	  //if statements.
+	 // UARTSend(BufferPtr, )
+	  //printf("output: %f \n", Output);
   }
  return 0;
 } //end of main
