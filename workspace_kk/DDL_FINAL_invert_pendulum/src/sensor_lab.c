@@ -28,13 +28,13 @@
 #include "Pid.h"
 #include "uart.h"
 #include "string.h"
+#include "timer32.h"
 
+#include "type.h"
 
 /* Data Buffer */
 int16_t accBuffer[3];
 
-#include "type.h"
-#include "i2c.h"
 
 extern volatile uint32_t I2CCount;
 extern volatile uint8_t I2CMasterBuffer[BUFSIZE];
@@ -47,8 +47,17 @@ extern volatile uint32_t I2CReadLength, I2CWriteLength;
 extern volatile uint32_t UARTCount;
 extern volatile uint8_t UARTBuffer[BUFSIZE];
 
+//timer
+extern volatile uint32_t timer32_0_counter;
 
- volatile uint8_t  uartCharReceived = 0;
+//pid
+extern unsigned long lastTime;
+extern double Input, Output, Setpoint;
+extern double errSum, lastErr;
+extern double kp, ki, kd;
+
+
+volatile uint8_t  uartCharReceived = 0;
 volatile uint8_t currentState =0;
 volatile uint8_t oldState =0;
 
@@ -94,17 +103,53 @@ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
 
  } //end of mpu6050 read
 
-int main (void)
-{
+uint32_t millis(void);
 
-   //UARTInit(UART_BAUD);
+uint32_t millis(void){
+	return timer32_0_counter;
+}
+
+void initTimer32(void){
+	//init_timer32(0, TIME_INTERVAL);
+		//enable_timer32(0);
+		// check 7.4 for pins for the 32 bit timer, IOCONFIG, some are used for jtag
+			// check table 21/20 for power and peripheral blocks
+
+			//enable clocks for timer32
+			LPC_SYSCON -> SYSAHBCLKCTRL |= (1<<9); //bit 9 is timer32_0
+
+			// we want interrupts, so TMR32B0_IR
 
 
+			// we want to set the prescale divisor to get .5 mS resolution
+				// 	recall, system clock is feeding APB
+			LPC_TMR32B0 -> TCR |= (1<<0); // enable timer
+			LPC_TMR32B0 -> TCR |= (1<<1); //reset timer
+			LPC_TMR32B0 -> TCR &= ~(1<<1); //set bit 1 to zero.
+			LPC_TMR32B0 -> TC = 0; // reset counter
+
+			//set for 0.5ms tick count? lets not for now, maybe later,
+			// currently we tick counter each time, and were at 1/12Mhz per tick.
+
+			// we want to set what happens on a match, so TMR32B0_MCR and MCR0
+			LPC_TMR32B0 -> MCR |= (1<<1); // enable reset of TC on match MR0
+			LPC_TMR32B0 -> MCR |= (1<<0); // enable interrupt for TMR32b0, when match0
 
 
+			//TODO: once the GPIO handler can calculate frequency, / or main. we
+			// can set the MR0 to be a value, recalculate the 10s tick period.
+			LPC_TMR32B0 -> MR0 = 24000; //value we count up to
+			// TODO: fully remove eventually LPC_TMR32B0 -> MR1 = 24000000; //value we count up to
 
+			// NOTE: not using the mr1 so need to reset the TC when MR0 is matched
+			//LPC_TMR32B0 -> MCR |= (1<<4) | (1<<3); // disable reset for TMR32b0, when match0, so we can do the toggling.
 
-  /* configure led gpio */
+			LPC_TMR32B0 -> IR = 0;
+			NVIC_EnableIRQ(TIMER_32_0_IRQn); //timer32b timer0 interrupt
+}
+
+void initLED(){
+
 	LPC_SYSCON -> SYSAHBCLKCTRL |= (1<<6) | (1<<16); //bit is the gpio enable
 
 	//iocon_pio0.7 led
@@ -113,55 +158,36 @@ int main (void)
 	LPC_GPIO0 -> DIR |= 0xFFF; //output red led btw make them all outputs!
 	// the led's configured such that a GPIO:0 is on, and GPIO:1 is off.
 	LPC_GPIO0 -> DATA |= 0xfff; //turn  all off
+}
+
+void initBNO055(void){
+	  /* i2c write to register: imu mode config */
+	  // using the default values of power on reset
+	  I2CWriteLength = 3; //is equal to , # of bytes,: counting: slave addr, register addres, data
+	  I2CReadLength = 0;
+	  I2CMasterBuffer[0] = BNO055_ADDR;
+	  I2CMasterBuffer[1] = 0x3D;	 //operation mode register	/* address */
+	  I2CMasterBuffer[2] = 0x08; // IMU mode 0b1000	/* all  */
+	  I2CEngine();
+}
+
+int main (void)
+{
+	initTimer32();
+	initLED();
+	initBNO055();
+   //UARTInit(UART_BAUD);
+
+  /* configure led gpio */
+
         // NO need for interrupt stuff
 /* ======================================= */
 
-	  /* Basic chip initialization is taken care of in SystemInit() called
-	   * from the startup code. SystemInit() and chip settings are defined
-	   * in the CMSIS system_<part family>.c file.
-	   */
-
-  uint32_t i;
 
   if ( I2CInit( (uint32_t)I2CMASTER ) == FALSE )	/* initialize I2c */
   {
 	while ( 1 );				/* Fatal error */
   }
-
-  /* In order to start the I2CEngine, the all the parameters
-  must be set in advance, including I2CWriteLength, I2CReadLength,
-  I2CCmd, and the I2cMasterBuffer which contains the stream
-  command/data to the I2c slave device.
-  (1) If it's a I2C write only, the number of bytes to be written is
-  I2CWriteLength, I2CReadLength is zero, the content will be filled
-  in the I2CMasterBuffer.
-  (2) If it's a I2C read only, the number of bytes to be read is
-  I2CReadLength, I2CWriteLength is 0, the read value will be filled
-  in the I2CMasterBuffer.
-  (3) If it's a I2C Write/Read with repeated start, specify the
-  I2CWriteLength, fill the content of bytes to be written in
-  I2CMasterBuffer, specify the I2CReadLength, after the repeated
-  start and the device address with RD bit set, the content of the
-  reading will be filled in I2CMasterBuffer index at
-  I2CMasterBuffer[I2CWriteLength+2].
-
-  e.g. Start, DevAddr(W), WRByte1...WRByteN, Repeated-Start, DevAddr(R),
-  RDByte1...RDByteN Stop. The content of the reading will be filled
-  after (I2CWriteLength + two devaddr) bytes. */
-
-  /* Write SLA(W), address and one data byte */
-
-  /* i2c write to register: imu mode config */
-  // using the default values of power on reset
-  I2CWriteLength = 3; //is equal to , # of bytes,: counting: slave addr, register addres, data
-  I2CReadLength = 0;
-  I2CMasterBuffer[0] = BNO055_ADDR;
-  I2CMasterBuffer[1] = 0x3D;	 //operation mode register	/* address */
-  I2CMasterBuffer[2] = 0x08; // IMU mode 0b1000	/* all  */
-  I2CEngine();
-
-
-
 
 
 
@@ -191,11 +217,23 @@ int main (void)
 
   uint32_t delay;
 
-
+setTunings(0,0,0);
+Setpoint = 0;
 
   while(1){
-	  bno055Read(0x1C, 2, dataACCL);
-	  for(delay = 0; delay <10000; delay++);
+
+
+	 bno055Read(0x1C, 2, dataACCL);
+
+	 Input = dataACCL[0];
+
+
+	  compute();
+
+	  //Output should be calculated
+	  //if statements.
+
+
   }
 
 

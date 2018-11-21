@@ -98,6 +98,7 @@ void TIMER32_0_IRQHandler(void)
 {  
   if ( LPC_TMR32B0->IR & 0x01 )
   {  
+	LPC_GPIO0->DATA ^=(1<<7);
 	LPC_TMR32B0->IR = 1;				/* clear interrupt flag */
 	timer32_0_counter++;
   }

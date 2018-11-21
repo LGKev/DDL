@@ -5,12 +5,16 @@
  *      Author: http://brettbeauregard.com/blog/2011/04/improving-the-beginners-pid-introduction/
  */
 #include "Pid.h"
+#include "type.h"
+
+extern uint32_t millis();
+
 /*working variables*/
 unsigned long lastTime;
 double Input, Output, Setpoint;
 double errSum, lastErr;
 double kp, ki, kd;
-void Compute()
+void compute()
 {
    /*How long since we last calculated*/
    unsigned long now = millis();
@@ -29,7 +33,7 @@ void Compute()
    lastTime = now;
 }
 
-void SetTunings(double Kp, double Ki, double Kd)
+void setTunings(double Kp, double Ki, double Kd)
 {
    kp = Kp;
    ki = Ki;
