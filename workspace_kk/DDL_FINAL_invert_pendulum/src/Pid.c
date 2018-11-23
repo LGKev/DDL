@@ -11,7 +11,7 @@ extern uint32_t millis();
 
 /*working variables*/
 unsigned long lastTime;
-double Input, Output, Setpoint;
+float Input, Output, Setpoint;
 double errSum, lastErr;
 double kp, ki, kd;
 void compute()

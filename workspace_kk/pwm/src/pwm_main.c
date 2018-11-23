@@ -27,45 +27,34 @@
 
 extern volatile uint32_t timer32_0_counter;
 
-volatile uint32_t period = 1000;  //48Khz PWM frequency
+volatile uint32_t period = 500;  //48Khz PWM frequency
 
 
 /* Main Program */
 
 int main (void) {
 	/* Initialize 32-bits timer 0 */
-	init_timer32(0, TIME_INTERVAL);
-	enable_timer32(0);
+//	init_timer32(0, TIME_INTERVAL);
+	//enable_timer32(0);
 	
 	/* Initialize the PWM in timer32_1 enabling match0 output */
-	init_timer32PWM(1, period, MATCH0);
-	setMatch_timer32PWM (1, 0, period/4);
-	enable_timer32(1);
+	//init_timer32PWM(1, period, MATCH0);
+	//setMatch_timer32PWM (1, 0, period/4);
+	//enable_timer32(1);
 
 	/* Initialize the PWM in timer16_1 enabling match1 output */
-	init_timer16PWM(1, period, MATCH1, 0);
-	setMatch_timer16PWM (1, 1, period/8);
-	enable_timer16(1);
+	init_timer16(0, TIME_INTERVAL);
+	init_timer16PWM(0, period, MATCH0, 0);
+	//setMatch_timer16PWM (0, 1, period/8);
+	enable_timer16(0);
 
 	/* Enable AHB clock to the GPIO domain. */
 	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6);
 	
 	/* Set port 2_0 to output */
-	GPIOSetDir( 2, 0, 1 );
+	//GPIOSetDir( 2,0, 1 );
 	
 	while (1)                                /* Loop forever */
 	{
-		/* I/O configuration and LED setting pending. */
-		if ( (timer32_0_counter > 0) && (timer32_0_counter <= 50) )
-		{
-			GPIOSetValue( 2, 0, 0 );
-		}
-		if ( (timer32_0_counter > 50) && (timer32_0_counter <= 100) )
-		{
-			GPIOSetValue( 2, 0, 1 );
-		}
-		else 
-			while ( timer32_0_counter < 100 ); //wait for 
-	  	timer32_0_counter = 0;
 	}
 }

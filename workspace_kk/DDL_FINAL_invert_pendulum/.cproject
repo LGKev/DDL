@@ -105,7 +105,7 @@
 						<entry excluding="config|cmsis|startup|driver|src|linker" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="cmsis"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="config"/>
-						<entry excluding="adc.h|ssp.h|i2cslave.c|timer16.h|wdt.c|rs485.c|small_gpio.h|clkconfig.h|i2cslave.h|debug_printf.c|timer16.c|ssp.c|type.h|adc.c|wdt.h|small_gpio.c|lpc_swu.h|clkconfig.c|debug_printf.h|lpc_swu.c|rs485.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="driver"/>
+						<entry excluding="adc.h|ssp.h|i2cslave.c|wdt.c|rs485.c|small_gpio.h|clkconfig.h|i2cslave.h|debug_printf.c|ssp.c|type.h|adc.c|wdt.h|small_gpio.c|lpc_swu.h|clkconfig.c|debug_printf.h|lpc_swu.c|rs485.h" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="driver"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="linker"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup"/>

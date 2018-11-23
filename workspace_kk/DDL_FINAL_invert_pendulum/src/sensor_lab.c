@@ -1,22 +1,3 @@
-/****************************************************************************
- *   $Id:: i2c_main.c 4785 2010-09-03 22:39:27Z nxp21346                    $
- *   Project: NXP LPC11xx I2C example
- *
- *   Description:
- *     This file contains I2C test modules, main entry, to test I2C APIs.
- *
- ****************************************************************************
- * Software that is described herein is for illustrative purposes only
- * which provides customers with programming information regarding the
- * products. This software is supplied "AS IS" without any warranties.
- * NXP Semiconductors assumes no responsibility or liability for the
- * use of the software, conveys no license or title under any patent,
- * copyright, or mask work right to the product. NXP Semiconductors
- * reserves the right to make changes in the software without
- * notification. NXP Semiconductors also make no representation or
- * warranty that such application will be suitable for the specified
- * use without further testing or modification.
-****************************************************************************/
 #include "driver_config.h"
 #include "target_config.h"
 #include "BNO055.h"
@@ -29,6 +10,7 @@
 #include "uart.h"
 #include "string.h"
 #include "timer32.h"
+#include "timer16.h"
 
 #include "type.h"
 
@@ -47,12 +29,17 @@ extern volatile uint32_t I2CReadLength, I2CWriteLength;
 extern volatile uint32_t UARTCount;
 extern volatile uint8_t UARTBuffer[BUFSIZE];
 
-//timer
+//timer32
 extern volatile uint32_t timer32_0_counter;
+extern volatile uint32_t timer32_1_counter;
+
+//timer16
+volatile uint32_t period = 500;  //48Khz PWM frequency
+
 
 //pid
 extern unsigned long lastTime;
-extern double Input, Output, Setpoint;
+extern float Input, Output, Setpoint;
 extern double errSum, lastErr;
 extern double kp, ki, kd;
 
@@ -164,12 +151,62 @@ void initBNO055(void){
 	  I2CEngine();
 }
 
+void initGPIO_PWM_LEFT(void){
+	//AHB clock set with initLED();
+	LPC_GPIO1 -> DIR |= (1<<9);
+	LPC_GPIO1 -> DATA &= ~(1<<9); //off
+
+	//Input 1 and input 2 set up GPIO output
+	//port 3 pin1 and port 3 pin2
+	LPC_GPIO3 -> DIR |= (1<<1 | 1<<2);
+	LPC_GPIO3 -> DATA &= ~(1<<1 | 1<<2); //off
+
+}
+
 int main (void)
 {
-//	initTimer32();
+
+	init_timer16(0, TIME_INTERVAL);
+	init_timer16PWM(0, period, MATCH0, 0);
+	//setMatch_timer16PWM (0, 1, period/8);
+	enable_timer16(0);
+
+
+
+	initTimer32();
+//	init_timer32(0, TIME_INTERVAL);
+	//enable_timer32(0);
+
 	initLED();
-	//initBNO055();
-   // UARTInit(UART_BAUD);
+	initBNO055();
+   UARTInit(UART_BAUD);
+
+	//init_timer32PWM(0, 1000, MATCH1);
+	//setMatch_timer32PWM(1,0, 1000/4);
+	//enable_timer32(1);
+
+	initGPIO_PWM_LEFT();
+	//GPIOSetDir(1,9,1);
+
+		LPC_GPIO3->DATA |= (1<<2);
+		LPC_GPIO3->DATA &= ~(1<<1);
+
+	while(1){
+		if(timer32_0_counter >= 0 && timer32_0_counter < 50){
+			//LPC_GPIO1 ->DATA &=~(1<<9); //on
+			GPIOSetValue(1,9,1);
+		}
+		else if(timer32_0_counter >=50 && timer32_0_counter < 100){
+		//	LPC_GPIO1 ->DATA |= (1<<9); //off
+			GPIOSetValue(1,9,0);
+		}
+		else{
+			timer32_0_counter = 0;
+		}
+	}
+
+
+
 	  if ( I2CInit( (uint32_t)I2CMASTER ) == FALSE )	/* initialize I2c */
 	  {
 		while ( 1 );				/* Fatal error */
@@ -213,19 +250,23 @@ int main (void)
   uint8_t dataACCL[6];
 
 setTunings(50,0,0);
-Setpoint = 0;
+Setpoint = -5.0;
 
   while(1){
 	 bno055Read(0x1C, 2, dataACCL);
 	  for(delay = 0; delay <10000; delay++);
 
-	// Input = (double) dataACCL[0];
-	  //compute();
+	 Input = (float)(((I2CSlaveBuffer[1]<<24) | I2CSlaveBuffer[0] <<16))/65536.0;
+	 double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+	  compute();
 
 	  //Output should be calculated
 	  //if statements.
 	 // UARTSend(BufferPtr, )
-	  //printf("output: %f \n", Output);
+	  printf("output: %f \t", Output);
+	  printf("input: %f \t \n", Input);
+	  //float test = -32.53;
+	 // printf("hardcoded: %f \n", test);
   }
  return 0;
 } //end of main
