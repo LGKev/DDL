@@ -14,6 +14,7 @@ unsigned long lastTime;
 float Input, Output, Setpoint;
 double errSum, lastErr;
 double kp, ki, kd;
+double lastOutput;
 void compute()
 {
    /*How long since we last calculated*/
@@ -27,6 +28,17 @@ void compute()
 
    /*Compute PID Output*/
    Output = kp * error + ki * errSum + kd * dErr;
+   lastOutput = Output;
+
+  /* if(Output >= 2300){
+	   Output = 2300;
+   }else if(Output <= -3400){
+	   Output =-3400;
+   }
+   else{
+	   Output = lastOutput;
+   }
+*/
 
    /*Remember some variables for next time*/
    lastErr = error;

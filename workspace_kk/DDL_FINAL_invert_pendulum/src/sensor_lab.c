@@ -34,8 +34,8 @@ extern volatile uint32_t timer32_0_counter;
 extern volatile uint32_t timer32_1_counter;
 
 //timer16
-volatile uint32_t period = 500;  //48Khz PWM frequency
-
+volatile uint32_t period = 1000;  //1khz PWM frequency, 500 is 2khz
+volatile uint8_t dutyCycle = 0;
 
 //pid
 extern unsigned long lastTime;
@@ -141,6 +141,11 @@ void initLED(){
 }
 
 void initBNO055(void){
+
+	  if ( I2CInit( (uint32_t)I2CMASTER ) == FALSE )	/* initialize I2c */
+	  {
+		while ( 1 );				/* Fatal error */
+	  }
 	  /* i2c write to register: imu mode config */
 	  // using the default values of power on reset
 	  I2CWriteLength = 3; //is equal to , # of bytes,: counting: slave addr, register addres, data
@@ -153,8 +158,8 @@ void initBNO055(void){
 
 void initGPIO_PWM_LEFT(void){
 	//AHB clock set with initLED();
-	LPC_GPIO1 -> DIR |= (1<<9);
-	LPC_GPIO1 -> DATA &= ~(1<<9); //off
+//	LPC_GPIO1 -> DIR |= (1<<9);
+	//LPC_GPIO1 -> DATA &= ~(1<<9); //off
 
 	//Input 1 and input 2 set up GPIO output
 	//port 3 pin1 and port 3 pin2
@@ -162,71 +167,110 @@ void initGPIO_PWM_LEFT(void){
 	LPC_GPIO3 -> DATA &= ~(1<<1 | 1<<2); //off
 
 }
+void initGPIO_PWM_RIGHT(void){
+	//AHB clock set with initLED();
 
-int main (void)
-{
+	//Input 3 and input 4 set up GPIO output
+	//port 2 pin1 and port 3 pin2
+	LPC_GPIO2 -> DIR |= (1<<1 | 1<<2);
+	LPC_GPIO2 -> DATA &= ~(1<<1 | 1<<2); //off
+
+}
+
+void setDutyCycle16_0(uint8_t dutyCycle){ //pass in a percentage from 0 to 99;
+
+	float dutyCycleCalculated = (float)(1.0)/(1.0-((float)dutyCycle/100.0));
+
+	uint32_t result = (uint32_t)((float) period/dutyCycleCalculated);
+
+	LPC_TMR16B0->MR0 = result;
+
+}
+
+
+
+int main (void){
+    uint32_t delay;
 
 	init_timer16(0, TIME_INTERVAL);
 	init_timer16PWM(0, period, MATCH0, 0);
-	//setMatch_timer16PWM (0, 1, period/8);
 	enable_timer16(0);
 
-
-
 	initTimer32();
-//	init_timer32(0, TIME_INTERVAL);
-	//enable_timer32(0);
 
 	initLED();
+
 	initBNO055();
-   UARTInit(UART_BAUD);
-
-	//init_timer32PWM(0, 1000, MATCH1);
-	//setMatch_timer32PWM(1,0, 1000/4);
-	//enable_timer32(1);
-
+    //UARTInit(UART_BAUD);
 	initGPIO_PWM_LEFT();
-	//GPIOSetDir(1,9,1);
+	initGPIO_PWM_RIGHT();
 
-		LPC_GPIO3->DATA |= (1<<2);
-		LPC_GPIO3->DATA &= ~(1<<1);
-
-	while(1){
-		if(timer32_0_counter >= 0 && timer32_0_counter < 50){
-			//LPC_GPIO1 ->DATA &=~(1<<9); //on
-			GPIOSetValue(1,9,1);
-		}
-		else if(timer32_0_counter >=50 && timer32_0_counter < 100){
-		//	LPC_GPIO1 ->DATA |= (1<<9); //off
-			GPIOSetValue(1,9,0);
-		}
-		else{
-			timer32_0_counter = 0;
-		}
-	}
-
-
-
-	  if ( I2CInit( (uint32_t)I2CMASTER ) == FALSE )	/* initialize I2c */
-	  {
-		while ( 1 );				/* Fatal error */
-	  }
-
-	  /* i2c write to register: imu mode config */
-	  // using the default values of power on reset
-	  I2CWriteLength = 3; //is equal to , # of bytes,: counting: slave addr, register addres, data
-	  I2CReadLength = 0;
-	  I2CMasterBuffer[0] = BNO055_ADDR;
-	  I2CMasterBuffer[1] = 0x3D;	 //operation mode register	/* address */
-	  I2CMasterBuffer[2] = 0x08; // IMU mode 0b1000	/* all  */
-	  I2CEngine();
-    uint32_t delay;
+	setDutyCycle16_0(66);
 
 
 
 /* ======================================= */
+ uint8_t dataACCL[6];
 
 
+double kp1 = 1;
+double kd1 = 0;// 1.2;
+double ki1 = 0;
+double addDuty = 30;
+double window =4;
+double range = 3000;
+double maxRange = 300;
+setTunings(kp1,ki1, kd1);
+Setpoint = -22.0;
+  while(1){
+	 bno055Read(0x1C, 2, dataACCL);
+	 //for(delay = 0; delay <10000; delay++);
+	 Input = (float)(((I2CSlaveBuffer[1]<<24) | I2CSlaveBuffer[0] <<16))/65536.0;
+	 double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+	  compute();
+
+	  //Output should be calculated
+	  //if statements.
+	 // UARTSend(BufferPtr, )
+	  printf("output: %f \t", Output);
+	  printf("input: %f \t \n", Input);
+	  if(Output >= window)
+	  {
+		  dutyCycle = (uint32_t)((Output) / range *100.0) +addDuty;
+			//LEFT
+				LPC_GPIO3->DATA |= (1<<2);
+				LPC_GPIO3->DATA &= ~(1<<1);
+
+			//RIGHT
+				LPC_GPIO2->DATA |= (1<<2);
+				LPC_GPIO2->DATA &= ~(1<<1);
+
+				if(Output > maxRange){
+					dutyCycle = 99;
+				}
+	  }
+	  else if(Output < -window)
+	  {
+		  dutyCycle = (uint32_t)(Output / -range * 100.0) +addDuty;
+			//LEFT
+				LPC_GPIO3->DATA |= (1<<1);
+				LPC_GPIO3->DATA &= ~(1<<2);
+
+			//RIGHT
+				LPC_GPIO2->DATA |= (1<<1);
+				LPC_GPIO2->DATA &= ~(1<<2);
+
+				if(Output < -maxRange){
+					dutyCycle = 99;
+				}
+	  }
+	  setDutyCycle16_0(dutyCycle);
+  }
+ return 0;
+} //end of main
+/******************************************************************************
+**                            End Of File
+******************************************************************************/
 	  #ifdef correctWrite
   I2CWriteLength = 3;
   I2CReadLength = 0;
@@ -247,30 +291,3 @@ int main (void)
   I2CMasterBuffer[2] = MPU6050_ADDR|0b1; //repeated start
   I2CEngine();
 #endif
-  uint8_t dataACCL[6];
-
-setTunings(50,0,0);
-Setpoint = -5.0;
-
-  while(1){
-	 bno055Read(0x1C, 2, dataACCL);
-	  for(delay = 0; delay <10000; delay++);
-
-	 Input = (float)(((I2CSlaveBuffer[1]<<24) | I2CSlaveBuffer[0] <<16))/65536.0;
-	 double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
-	  compute();
-
-	  //Output should be calculated
-	  //if statements.
-	 // UARTSend(BufferPtr, )
-	  printf("output: %f \t", Output);
-	  printf("input: %f \t \n", Input);
-	  //float test = -32.53;
-	 // printf("hardcoded: %f \n", test);
-  }
- return 0;
-} //end of main
-
-/******************************************************************************
-**                            End Of File
-******************************************************************************/
