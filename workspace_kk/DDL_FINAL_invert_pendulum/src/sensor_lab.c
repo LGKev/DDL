@@ -6,13 +6,22 @@
 #include "gpio.h"
 #include "LPC11xx.h"
 #include <cr_section_macros.h>
-#include "Pid.h"
+//#include "Pid.h"
+//#include "PID_v1.h"
 #include "uart.h"
 #include "string.h"
 #include "timer32.h"
 #include "timer16.h"
 
+#include "pid_team.h"
+
 #include "type.h"
+
+#define newPID
+
+
+
+
 
 /* Data Buffer */
 int16_t accBuffer[3];
@@ -37,12 +46,21 @@ extern volatile uint32_t timer32_1_counter;
 volatile uint32_t period = 1000;  //1khz PWM frequency, 500 is 2khz
 volatile uint8_t dutyCycle = 0;
 
+#ifdef oldPID
 //pid
 extern unsigned long lastTime;
 extern float Input, Output, Setpoint;
 extern double errSum, lastErr;
 extern double kp, ki, kd;
+#endif
 
+#ifdef newPID
+float Input, Output, SetPoint;
+float kp = 0.1;
+float ki = 0;
+float kd = 0;
+
+#endif
 
 volatile uint8_t  uartCharReceived = 0;
 volatile uint8_t currentState =0;
@@ -188,10 +206,12 @@ void setDutyCycle16_0(uint8_t dutyCycle){ //pass in a percentage from 0 to 99;
 }
 
 
+#ifdef newPID
+PidType pidObject;
+#endif
 
 int main (void){
     uint32_t delay;
-
 	init_timer16(0, TIME_INTERVAL);
 	init_timer16PWM(0, period, MATCH0, 0);
 	enable_timer16(0);
@@ -205,14 +225,14 @@ int main (void){
 	initGPIO_PWM_LEFT();
 	initGPIO_PWM_RIGHT();
 
-	setDutyCycle16_0(66);
+	setDutyCycle16_0(50);
 
 
 
 /* ======================================= */
  uint8_t dataACCL[6];
 
-
+#ifdef oldPID
 double kp1 = 1;
 double kd1 = 0;// 1.2;
 double ki1 = 0;
@@ -222,21 +242,116 @@ double range = 3000;
 double maxRange = 300;
 setTunings(kp1,ki1, kd1);
 Setpoint = -22.0;
-  while(1){
-	 bno055Read(0x1C, 2, dataACCL);
-	 //for(delay = 0; delay <10000; delay++);
-	 Input = (float)(((I2CSlaveBuffer[1]<<24) | I2CSlaveBuffer[0] <<16))/65536.0;
-	 double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
-	  compute();
+#endif
 
+#ifdef newPID
+
+
+	  				PID_init(&pidObject, kp, ki, kd, PID_Direction_Direct);
+	  				PID_SetMode(&pidObject, PID_Mode_Automatic);
+	  				PID_SetOutputLimits(&pidObject, -99, 99);
+	  				PID_SetSampleTime(&pidObject, 5); //5 milliseconds
+
+	  				pidObject.mySetpoint = -45;//faling towards heat sink.
+	  				//-35 for falling away from heat sink
+
+#endif
+  while(1){
+
+
+	 bno055Read(0x1C, 2, dataACCL);
+
+#ifdef newPID
+	 Input = (float)(((I2CSlaveBuffer[1]<<24) | I2CSlaveBuffer[0] <<16))/65536.0;
+#endif
+
+	 pidObject.myInput = Input;
+	 pidObject.kd = kd;
+	 pidObject.kp = kp;
+	 pidObject.ki = ki;
+
+	 printf("input: %f \t \t", pidObject.myInput);
+
+
+	 //for(delay = 0; delay <10000; delay++);
+
+#ifdef oldPID
+	 Input = (float)(((I2CSlaveBuffer[1]<<24) | I2CSlaveBuffer[0] <<16))/65536.0;
+#endif
+	 double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+
+
+
+#ifdef oldPID
+	 compute();
+#endif
+
+
+#ifdef newPID
+#endif
 	  //Output should be calculated
 	  //if statements.
 	 // UARTSend(BufferPtr, )
-	  printf("output: %f \t", Output);
+
+#ifdef oldPId
+	 printf("output: %f \t", Output);
 	  printf("input: %f \t \n", Input);
-	  if(Output >= window)
+
+#endif
+	  //LEFT
+
+#ifdef newPID
+
+PID_Compute(&pidObject);
+
+printf("pidObject->myOutput: %f \n", pidObject.myOutput);
+
+#endif
+
+
+//#define stupid
+#ifdef stupid
+	  		if(Input >-10)
+	  		{
+	  			//LEFT
+	  				  							LPC_GPIO3->DATA |= (1<<1);
+	  				  							LPC_GPIO3->DATA &= ~(1<<2);
+
+	  				  						//RIGHT
+	  				  							LPC_GPIO2->DATA |= (1<<1);
+	  				  							LPC_GPIO2->DATA &= ~(1<<2);
+
+
+
+	  		}
+	  		else if(Input < -30)
+	  		{
+	  			//LEFT
+	  				  							LPC_GPIO3->DATA |= (1<<2);
+	  				  							LPC_GPIO3->DATA &= ~(1<<1);
+
+	  				  						//RIGHT
+	  				  							LPC_GPIO2->DATA |= (1<<2);
+	  				  							LPC_GPIO2->DATA &= ~(1<<1);
+	  		}
+	  		else
+	  		{
+	  			initGPIO_PWM_LEFT();
+	  				initGPIO_PWM_RIGHT();
+	  		}
+#endif
+
+#define normal
+#ifdef normal
+
+
+
+
+	  		float offsetOutput = 200 + pidObject.myOutput;
+
+	  if(pidObject.myOutput > 0.0)
 	  {
-		  dutyCycle = (uint32_t)((Output) / range *100.0) +addDuty;
+		  //dutyCycle = (uint32_t)((Output) / range *100.0) +addDuty;
 			//LEFT
 				LPC_GPIO3->DATA |= (1<<2);
 				LPC_GPIO3->DATA &= ~(1<<1);
@@ -245,29 +360,94 @@ Setpoint = -22.0;
 				LPC_GPIO2->DATA |= (1<<2);
 				LPC_GPIO2->DATA &= ~(1<<1);
 
-				if(Output > maxRange){
-					dutyCycle = 99;
-				}
+
+	 	  setDutyCycle16_0((1.0)*pidObject.myOutput); //checked out on scope, looks correct
 	  }
-	  else if(Output < -window)
+	  else if(pidObject.myOutput < 0)
 	  {
-		  dutyCycle = (uint32_t)(Output / -range * 100.0) +addDuty;
-			//LEFT
+
+			LPC_GPIO3->DATA &= ~(1<<2);
+			LPC_GPIO3->DATA |= (1<<1);
+
+		//RIGHT
+			LPC_GPIO2->DATA &= ~(1<<2);
+			LPC_GPIO2->DATA |= (1<<1);
+
+		 // dutyCycle = (uint32_t)(Output / -range * 100.0) +addDuty;
+			/*//LEFT
 				LPC_GPIO3->DATA |= (1<<1);
 				LPC_GPIO3->DATA &= ~(1<<2);
 
 			//RIGHT
 				LPC_GPIO2->DATA |= (1<<1);
 				LPC_GPIO2->DATA &= ~(1<<2);
+				*/
 
-				if(Output < -maxRange){
-					dutyCycle = 99;
-				}
+				float offsetOutput = 200 + pidObject.myOutput;
+
+				float dutyTest =(-1.0)*(pidObject.myOutput);
+
+	 	  setDutyCycle16_0(dutyTest);
 	  }
-	  setDutyCycle16_0(dutyCycle);
+		//  setDutyCycle16_0(0);
+
+#endif
+
+//#define test2
+#ifdef test2
+
+		float offsetOutput = 200 + pidObject.myOutput;
+
+while(pidObject.myOutput > 0.0)
+{
+PID_Compute(&pidObject);
+	  //dutyCycle = (uint32_t)((Output) / range *100.0) +addDuty;
+		//LEFT
+			LPC_GPIO3->DATA |= (1<<2);
+			LPC_GPIO3->DATA &= ~(1<<1);
+
+		//RIGHT
+			LPC_GPIO2->DATA |= (1<<2);
+			LPC_GPIO2->DATA &= ~(1<<1);
+
+
+	  setDutyCycle16_0((1.0)*pidObject.myOutput); //checked out on scope, looks correct
+}
+while(pidObject.myOutput < 0)
+{
+
+PID_Compute(&pidObject);
+		LPC_GPIO3->DATA &= ~(1<<2);
+		LPC_GPIO3->DATA |= (1<<1);
+
+	//RIGHT
+		LPC_GPIO2->DATA &= ~(1<<2);
+		LPC_GPIO2->DATA |= (1<<1);
+
+	 // dutyCycle = (uint32_t)(Output / -range * 100.0) +addDuty;
+		/*//LEFT
+			LPC_GPIO3->DATA |= (1<<1);
+			LPC_GPIO3->DATA &= ~(1<<2);
+
+		//RIGHT
+			LPC_GPIO2->DATA |= (1<<1);
+			LPC_GPIO2->DATA &= ~(1<<2);
+			*/
+
+			float offsetOutput = 200 + pidObject.myOutput;
+
+			float dutyTest =(-1.0)*(pidObject.myOutput);
+
+	  setDutyCycle16_0(dutyTest);
+}
+	//  setDutyCycle16_0(0);
+
+#endif
   }
- return 0;
-} //end of main
+return 0;
+
+}
+//end of main
 /******************************************************************************
 **                            End Of File
 ******************************************************************************/
