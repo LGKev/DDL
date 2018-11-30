@@ -7,7 +7,7 @@
  Description : main definition
 ===============================================================================
 */
-<<<<<<< HEAD
+
 
 #ifdef __USE_CMSIS
 #include "LPC11xx.h"
@@ -26,7 +26,7 @@
 #define LED_OFF			(0xFFF)
 
 
-=======
+
 #ifdef __USE_CMSIS
 #include "LPC11xx.h"
 #endif
@@ -42,7 +42,6 @@
 #define LED_OFF         (0xFFF)
 uint32_t numberOfMatchesIn_10s = 0;
 uint32_t tenSecondTimer_ms = 0;
->>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
 /* Useful small tests */
 /* Uncomment one test at a time.
  * If all tests are commented out, normal application code executes.
@@ -101,7 +100,6 @@ void TIMER32Init(void);
  */
 // TODO: you're going to need some jumper cables to do a test for interrupt
 void PIOINT2_IRQHandler(void);
-<<<<<<< HEAD
 
 /**
  * @brief Configured to trigger every 1ms (0.5ms tbd).
@@ -450,4 +448,3 @@ void TIMER32_0_IRQHandler(void){
             LPC_TMR32B0 -> IR &= ~(1<<1); //clear flag
     }//end of match1
 }
->>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a

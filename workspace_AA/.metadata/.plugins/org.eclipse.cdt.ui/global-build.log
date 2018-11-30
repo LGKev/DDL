@@ -6154,3 +6154,349 @@ make: Nothing to be done for `all'.
 14:19:36 **** Incremental Build of configuration Debug for project uart ****
 make -r all 
 make: Nothing to be done for `all'.
+12:07:41 **** Build of configuration Debug for project DDLfinalProject ****
+make -r all 
+Building file: ../src/DDLfinalProject.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDLfinalProject.d" -MT"src/DDLfinalProject.o" -MT"src/DDLfinalProject.d" -o "src/DDLfinalProject.o" "../src/DDLfinalProject.c"
+../src/DDLfinalProject.c:12:21: fatal error: LPC11xx.h: No such file or directory
+compilation terminated.
+make: *** [src/DDLfinalProject.o] Error 1
+12:08:06 **** Incremental Build of configuration Debug for project DDLfinalProject ****
+make -r all 
+Building file: ../src/DDLfinalProject.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDLfinalProject.d" -MT"src/DDLfinalProject.o" -MT"src/DDLfinalProject.d" -o "src/DDLfinalProject.o" "../src/DDLfinalProject.c"
+../src/DDLfinalProject.c:12:21: fatal error: LPC11xx.h: No such file or directory
+compilation terminated.
+make: *** [src/DDLfinalProject.o] Error 1
+12:09:08 **** Clean-only build of configuration Debug for project DDLfinalProject ****
+make -r clean 
+rm -rf  ./src/DDLfinalProject.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./src/DDLfinalProject.d ./src/cr_startup_lpc11xx.d ./src/crp.d  DDLfinalProject.axf
+ 
+12:09:09 **** Incremental Build of configuration Debug for project DDLfinalProject ****
+make -r all 
+Building file: ../src/DDLfinalProject.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDLfinalProject.d" -MT"src/DDLfinalProject.o" -MT"src/DDLfinalProject.d" -o "src/DDLfinalProject.o" "../src/DDLfinalProject.c"
+../src/DDLfinalProject.c:12:21: fatal error: LPC11xx.h: No such file or directory
+compilation terminated.
+make: *** [src/DDLfinalProject.o] Error 1
+12:13:29 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11xx -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSIS_CORE_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11xx.a"  ./src/system_LPC11xx.o   
+Finished building target: libCMSIS_CORE_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11xx.a" >"libCMSIS_CORE_LPC11xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    388	      4	      0	    392	    188	system_LPC11xx.o (ex libCMSIS_CORE_LPC11xx.a)
+ 
+12:13:32 **** Incremental Build of configuration Debug for project DDLfinalProject ****
+make -r all 
+Building file: ../src/DDLfinalProject.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDLfinalProject.d" -MT"src/DDLfinalProject.o" -MT"src/DDLfinalProject.d" -o "src/DDLfinalProject.o" "../src/DDLfinalProject.c"
+Finished building: ../src/DDLfinalProject.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+../driver/adc.c:22:27: fatal error: driver_config.h: No such file or directory
+compilation terminated.
+make: *** [driver/adc.o] Error 1
+12:15:14 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:15:15 **** Incremental Build of configuration Debug for project DDLfinalProject ****
+make -r all 
+Building file: ../src/DDLfinalProject.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDLfinalProject.d" -MT"src/DDLfinalProject.o" -MT"src/DDLfinalProject.d" -o "src/DDLfinalProject.o" "../src/DDLfinalProject.c"
+Finished building: ../src/DDLfinalProject.c
+ 
+Building file: ../src/cr_startup_lpc11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11xx.d" -MT"src/cr_startup_lpc11xx.o" -MT"src/cr_startup_lpc11xx.d" -o "src/cr_startup_lpc11xx.o" "../src/cr_startup_lpc11xx.c"
+Finished building: ../src/cr_startup_lpc11xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/clkconfig.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.o" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
+Finished building: ../driver/clkconfig.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
+Finished building: ../driver/i2c.c
+ 
+Building file: ../driver/i2cslave.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.o" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
+Finished building: ../driver/i2cslave.c
+ 
+Building file: ../driver/lpc_swu.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.o" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
+Finished building: ../driver/lpc_swu.c
+ 
+Building file: ../driver/rs485.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.o" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
+Finished building: ../driver/rs485.c
+ 
+Building file: ../driver/small_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.o" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
+Finished building: ../driver/small_gpio.c
+ 
+Building file: ../driver/ssp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.o" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
+Finished building: ../driver/ssp.c
+ 
+Building file: ../driver/timer16.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.o" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+Finished building: ../driver/timer16.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../driver/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
+Finished building: ../driver/uart.c
+ 
+Building file: ../driver/wdt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.o" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
+Finished building: ../driver/wdt.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.o" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\config" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\Debug" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\driver" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\linker" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\DDLfinalProject\cmsis" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.o" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: DDLfinalProject.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\Debug" -Xlinker -Map="DDLfinalProject.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "DDLfinalProject_Debug.ld" -o "DDLfinalProject.axf"  ./src/DDLfinalProject.o ./src/cr_startup_lpc11xx.o ./src/crp.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -lCMSIS_CORE_LPC11xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash64:        2920 B        64 KB      4.46%
+./driver/crp.o:(.crp+0x0): multiple definition of `CRP_WORD'
+         RamLoc8:         236 B         8 KB      2.88%
+./src/crp.o:(.crp+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [DDLfinalProject.axf] Error 1
+12:26:25 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+12:26:27 **** Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+../src/DDL4.c:29:1: error: expected identifier or '(' before '==' token
+ =======
+ ^
+../src/DDL4.c:45:1: error: expected identifier or '(' before '>>' token
+ >>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
+ ^
+../src/DDL4.c:45:9: error: invalid suffix "b4a6602cee0785ee77f8f719dcac9c887c4a" on integer constant
+ >>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
+         ^
+../src/DDL4.c:80:1: warning: "/*" within comment [-Wcomment]
+ /**
+ ^
+../src/DDL4.c:104:1: error: expected identifier or '(' before '<<' token
+ <<<<<<< HEAD
+ ^
+../src/DDL4.c:292:1: error: expected identifier or '(' before '==' token
+ =======
+ ^
+../src/DDL4.c:300:7: error: conflicting types for 'startTime'
+ float startTime;
+       ^
+../src/DDL4.c:218:10: note: previous declaration of 'startTime' was here
+ uint32_t startTime;
+          ^
+../src/DDL4.c:301:7: error: conflicting types for 'endTime'
+ float endTime;
+       ^
+../src/DDL4.c:219:10: note: previous declaration of 'endTime' was here
+ uint32_t endTime;
+          ^
+../src/DDL4.c:302:7: error: conflicting types for 'elapsedTime'
+ float elapsedTime;
+       ^
+../src/DDL4.c:220:10: note: previous declaration of 'elapsedTime' was here
+ uint32_t elapsedTime;
+          ^
+../src/DDL4.c:307:10: error: conflicting types for 'quartlet'
+ uint32_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
+          ^
+../src/DDL4.c:244:9: note: previous definition of 'quartlet' was here
+ uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
+         ^
+../src/DDL4.c:308:9: error: redefinition of 'toggleDuty'
+ uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
+         ^
+../src/DDL4.c:245:9: note: previous definition of 'toggleDuty' was here
+ uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
+         ^
+../src/DDL4.c:311:5: error: redefinition of 'main'
+ int main(void) {
+     ^
+../src/DDL4.c:117:5: note: previous definition of 'main' was here
+ int main(void) {
+     ^
+../src/DDL4.c:359:6: error: redefinition of 'GPIOInit'
+ void GPIOInit(void){
+      ^
+../src/DDL4.c:125:6: note: previous definition of 'GPIOInit' was here
+ void GPIOInit(void){
+      ^
+../src/DDL4.c:395:6: error: redefinition of 'TIMER32Init'
+ void TIMER32Init(void){
+      ^
+../src/DDL4.c:166:6: note: previous definition of 'TIMER32Init' was here
+ void TIMER32Init(void){
+      ^
+../src/DDL4.c:425:6: error: redefinition of 'PIOINT2_IRQHandler'
+ void PIOINT2_IRQHandler(void){
+      ^
+../src/DDL4.c:221:6: note: previous definition of 'PIOINT2_IRQHandler' was here
+ void PIOINT2_IRQHandler(void)
+      ^
+../src/DDL4.c:441:6: error: redefinition of 'TIMER32_0_IRQHandler'
+ void TIMER32_0_IRQHandler(void){
+      ^
+../src/DDL4.c:249:6: note: previous definition of 'TIMER32_0_IRQHandler' was here
+ void TIMER32_0_IRQHandler(void)
+      ^
+../src/DDL4.c:453:1: error: expected identifier or '(' before '>>' token
+ >>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
+ ^
+../src/DDL4.c:453:9: error: invalid suffix "b4a6602cee0785ee77f8f719dcac9c887c4a" on integer constant
+ >>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
+         ^
+make: *** [src/DDL4.o] Error 1
+15:18:56 **** Clean-only build of configuration Debug for project pwm ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/pwm_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/pwm_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/timer16.d ./driver/timer32.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  pwm.axf
+ 
+15:18:57 **** Build of configuration Debug for project pwm ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/pwm_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/pwm_main.d" -MT"src/pwm_main.o" -MT"src/pwm_main.d" -o "src/pwm_main.o" "../src/pwm_main.c"
+Finished building: ../src/pwm_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/timer16.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.o" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+Finished building: ../driver/timer16.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.o" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: pwm.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=pwm.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "pwm.axf"  ./startup/cr_startup_lpc11.o  ./src/pwm_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: pwm.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size pwm.axf; arm-none-eabi-objcopy -O binary pwm.axf pwm.bin ; checksum -p LPC1114_302 -d pwm.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3924	      8	     40	   3972	    f84	pwm.axf
+Written checksum 0xefffd635 at offset 0x1c in file pwm.bin
+Previous value 0x00000000 at offset 0x1c in file pwm.bin
+ 

@@ -19,9 +19,6 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC11xx"/>
 					</resource>
 					<resource project-relative-path="src/DDL4.c">
-						<entry kind="includePath" name="/${ProjName}/inc">
-							<flag value="VALUE_WORKSPACE_PATH"/>
-						</entry>
 						<entry kind="includePath" name="/CMSIS_CORE_LPC11xx/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
