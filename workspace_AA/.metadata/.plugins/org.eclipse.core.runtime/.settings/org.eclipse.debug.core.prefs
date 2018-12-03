@@ -6,4 +6,4 @@
 >>>>>>>=3280b4a6602cee0785ee77f8f719dcac9c887c4a
 eclipse.preferences.version=1
 org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="PCF8594_ADDR"/>\r\n</watchExpressions>\r\n
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="kp"/>\r\n<expression enabled\="true" text\="ki"/>\r\n<expression enabled\="true" text\="kd"/>\r\n</watchExpressions>\r\n

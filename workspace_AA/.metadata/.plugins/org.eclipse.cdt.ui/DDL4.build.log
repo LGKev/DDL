@@ -1,93 +1,84 @@
-12:26:27 **** Build of configuration Debug for project DDL4 ****
+11:54:02 **** Build of configuration Debug for project DDL4 ****
 make -r all 
 Building file: ../src/DDL4.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
-../src/DDL4.c:29:1: error: expected identifier or '(' before '==' token
- =======
- ^
-../src/DDL4.c:45:1: error: expected identifier or '(' before '>>' token
- >>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
- ^
-../src/DDL4.c:45:9: error: invalid suffix "b4a6602cee0785ee77f8f719dcac9c887c4a" on integer constant
- >>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
-         ^
-../src/DDL4.c:80:1: warning: "/*" within comment [-Wcomment]
- /**
- ^
-../src/DDL4.c:104:1: error: expected identifier or '(' before '<<' token
+../src/DDL4.c:49:1: error: expected identifier or '(' before '<<' token
  <<<<<<< HEAD
  ^
-../src/DDL4.c:292:1: error: expected identifier or '(' before '==' token
+../src/DDL4.c:79:1: warning: "/*" within comment [-Wcomment]
+ /**
+ ^
+../src/DDL4.c:240:10: error: redefinition of 'numberOfMatchesIn_10s'
+ uint32_t numberOfMatchesIn_10s = 100;
+          ^
+../src/DDL4.c:43:10: note: previous definition of 'numberOfMatchesIn_10s' was here
+ uint32_t numberOfMatchesIn_10s = 0;
+          ^
+../src/DDL4.c:290:1: error: expected identifier or '(' before '==' token
  =======
  ^
-../src/DDL4.c:300:7: error: conflicting types for 'startTime'
+../src/DDL4.c:298:7: error: conflicting types for 'startTime'
  float startTime;
        ^
-../src/DDL4.c:218:10: note: previous declaration of 'startTime' was here
+../src/DDL4.c:216:10: note: previous declaration of 'startTime' was here
  uint32_t startTime;
           ^
-../src/DDL4.c:301:7: error: conflicting types for 'endTime'
+../src/DDL4.c:299:7: error: conflicting types for 'endTime'
  float endTime;
        ^
-../src/DDL4.c:219:10: note: previous declaration of 'endTime' was here
+../src/DDL4.c:217:10: note: previous declaration of 'endTime' was here
  uint32_t endTime;
           ^
-../src/DDL4.c:302:7: error: conflicting types for 'elapsedTime'
+../src/DDL4.c:300:7: error: conflicting types for 'elapsedTime'
  float elapsedTime;
        ^
-../src/DDL4.c:220:10: note: previous declaration of 'elapsedTime' was here
+../src/DDL4.c:218:10: note: previous declaration of 'elapsedTime' was here
  uint32_t elapsedTime;
           ^
-../src/DDL4.c:307:10: error: conflicting types for 'quartlet'
+../src/DDL4.c:305:10: error: conflicting types for 'quartlet'
  uint32_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
           ^
-../src/DDL4.c:244:9: note: previous definition of 'quartlet' was here
+../src/DDL4.c:242:9: note: previous definition of 'quartlet' was here
  uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
          ^
-../src/DDL4.c:308:9: error: redefinition of 'toggleDuty'
+../src/DDL4.c:306:9: error: redefinition of 'toggleDuty'
  uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
          ^
-../src/DDL4.c:245:9: note: previous definition of 'toggleDuty' was here
+../src/DDL4.c:243:9: note: previous definition of 'toggleDuty' was here
  uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
          ^
-../src/DDL4.c:311:5: error: redefinition of 'main'
+../src/DDL4.c:309:5: error: redefinition of 'main'
  int main(void) {
      ^
-../src/DDL4.c:117:5: note: previous definition of 'main' was here
+../src/DDL4.c:115:5: note: previous definition of 'main' was here
  int main(void) {
      ^
-../src/DDL4.c:359:6: error: redefinition of 'GPIOInit'
+../src/DDL4.c:357:6: error: redefinition of 'GPIOInit'
  void GPIOInit(void){
       ^
-../src/DDL4.c:125:6: note: previous definition of 'GPIOInit' was here
+../src/DDL4.c:123:6: note: previous definition of 'GPIOInit' was here
  void GPIOInit(void){
       ^
-../src/DDL4.c:395:6: error: redefinition of 'TIMER32Init'
+../src/DDL4.c:393:6: error: redefinition of 'TIMER32Init'
  void TIMER32Init(void){
       ^
-../src/DDL4.c:166:6: note: previous definition of 'TIMER32Init' was here
+../src/DDL4.c:164:6: note: previous definition of 'TIMER32Init' was here
  void TIMER32Init(void){
       ^
-../src/DDL4.c:425:6: error: redefinition of 'PIOINT2_IRQHandler'
+../src/DDL4.c:423:6: error: redefinition of 'PIOINT2_IRQHandler'
  void PIOINT2_IRQHandler(void){
       ^
-../src/DDL4.c:221:6: note: previous definition of 'PIOINT2_IRQHandler' was here
+../src/DDL4.c:219:6: note: previous definition of 'PIOINT2_IRQHandler' was here
  void PIOINT2_IRQHandler(void)
       ^
-../src/DDL4.c:441:6: error: redefinition of 'TIMER32_0_IRQHandler'
+../src/DDL4.c:439:6: error: redefinition of 'TIMER32_0_IRQHandler'
  void TIMER32_0_IRQHandler(void){
       ^
-../src/DDL4.c:249:6: note: previous definition of 'TIMER32_0_IRQHandler' was here
+../src/DDL4.c:247:6: note: previous definition of 'TIMER32_0_IRQHandler' was here
  void TIMER32_0_IRQHandler(void)
       ^
-../src/DDL4.c:453:1: error: expected identifier or '(' before '>>' token
- >>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
- ^
-../src/DDL4.c:453:9: error: invalid suffix "b4a6602cee0785ee77f8f719dcac9c887c4a" on integer constant
- >>>>>>> 3280b4a6602cee0785ee77f8f719dcac9c887c4a
-         ^
 make: *** [src/DDL4.o] Error 1
 
-12:26:27 Build Finished (took 392ms)
+11:54:02 Build Finished (took 448ms)
 

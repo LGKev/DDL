@@ -6500,3 +6500,653 @@ arm-none-eabi-size pwm.axf; arm-none-eabi-objcopy -O binary pwm.axf pwm.bin ; ch
 Written checksum 0xefffd635 at offset 0x1c in file pwm.bin
 Previous value 0x00000000 at offset 0x1c in file pwm.bin
  
+11:51:31 **** Build of configuration Debug for project sensor_lab ****
+make -r all 
+Building file: ../src/mpu6050.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/mpu6050.d" -MT"src/mpu6050.o" -MT"src/mpu6050.d" -o "src/mpu6050.o" "../src/mpu6050.c"
+../src/mpu6050.c: In function 'mpu6050CommTest':
+../src/mpu6050.c:83:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+         printf("Who_am_I = 0x%X ?\n",I2CSlaveBuffer[0]);
+         ^
+Finished building: ../src/mpu6050.c
+ 
+Building file: ../src/pid_team.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/pid_team.d" -MT"src/pid_team.o" -MT"src/pid_team.d" -o "src/pid_team.o" "../src/pid_team.c"
+Finished building: ../src/pid_team.c
+ 
+Building file: ../src/sensor_lab.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/sensor_lab.d" -MT"src/sensor_lab.o" -MT"src/sensor_lab.d" -o "src/sensor_lab.o" "../src/sensor_lab.c"
+../src/sensor_lab.c:3:20: fatal error: BNO055.h: No such file or directory
+compilation terminated.
+make: *** [src/sensor_lab.o] Error 1
+11:54:00 **** Build of configuration Debug for project CMSIS_CORE_LPC11xx ****
+make -r all 
+make: Nothing to be done for `all'.
+11:54:02 **** Build of configuration Debug for project DDL4 ****
+make -r all 
+Building file: ../src/DDL4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0 -D__USE_CMSIS=CMSIS_CORE_LPC11xx -D__LPC11XX__ -D__REDLIB__ -I"C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\CMSIS_CORE_LPC11xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/DDL4.d" -MT"src/DDL4.o" -MT"src/DDL4.d" -o "src/DDL4.o" "../src/DDL4.c"
+../src/DDL4.c:49:1: error: expected identifier or '(' before '<<' token
+ <<<<<<< HEAD
+ ^
+../src/DDL4.c:79:1: warning: "/*" within comment [-Wcomment]
+ /**
+ ^
+../src/DDL4.c:240:10: error: redefinition of 'numberOfMatchesIn_10s'
+ uint32_t numberOfMatchesIn_10s = 100;
+          ^
+../src/DDL4.c:43:10: note: previous definition of 'numberOfMatchesIn_10s' was here
+ uint32_t numberOfMatchesIn_10s = 0;
+          ^
+../src/DDL4.c:290:1: error: expected identifier or '(' before '==' token
+ =======
+ ^
+../src/DDL4.c:298:7: error: conflicting types for 'startTime'
+ float startTime;
+       ^
+../src/DDL4.c:216:10: note: previous declaration of 'startTime' was here
+ uint32_t startTime;
+          ^
+../src/DDL4.c:299:7: error: conflicting types for 'endTime'
+ float endTime;
+       ^
+../src/DDL4.c:217:10: note: previous declaration of 'endTime' was here
+ uint32_t endTime;
+          ^
+../src/DDL4.c:300:7: error: conflicting types for 'elapsedTime'
+ float elapsedTime;
+       ^
+../src/DDL4.c:218:10: note: previous declaration of 'elapsedTime' was here
+ uint32_t elapsedTime;
+          ^
+../src/DDL4.c:305:10: error: conflicting types for 'quartlet'
+ uint32_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
+          ^
+../src/DDL4.c:242:9: note: previous definition of 'quartlet' was here
+ uint8_t quartlet = 0; //quarter of the peirod because 25% and 75% are multiples of 1/4
+         ^
+../src/DDL4.c:306:9: error: redefinition of 'toggleDuty'
+ uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
+         ^
+../src/DDL4.c:243:9: note: previous definition of 'toggleDuty' was here
+ uint8_t toggleDuty = 0; //this value is changed by the Match1 interrupt
+         ^
+../src/DDL4.c:309:5: error: redefinition of 'main'
+ int main(void) {
+     ^
+../src/DDL4.c:115:5: note: previous definition of 'main' was here
+ int main(void) {
+     ^
+../src/DDL4.c:357:6: error: redefinition of 'GPIOInit'
+ void GPIOInit(void){
+      ^
+../src/DDL4.c:123:6: note: previous definition of 'GPIOInit' was here
+ void GPIOInit(void){
+      ^
+../src/DDL4.c:393:6: error: redefinition of 'TIMER32Init'
+ void TIMER32Init(void){
+      ^
+../src/DDL4.c:164:6: note: previous definition of 'TIMER32Init' was here
+ void TIMER32Init(void){
+      ^
+../src/DDL4.c:423:6: error: redefinition of 'PIOINT2_IRQHandler'
+ void PIOINT2_IRQHandler(void){
+      ^
+../src/DDL4.c:219:6: note: previous definition of 'PIOINT2_IRQHandler' was here
+ void PIOINT2_IRQHandler(void)
+      ^
+../src/DDL4.c:439:6: error: redefinition of 'TIMER32_0_IRQHandler'
+ void TIMER32_0_IRQHandler(void){
+      ^
+../src/DDL4.c:247:6: note: previous definition of 'TIMER32_0_IRQHandler' was here
+ void TIMER32_0_IRQHandler(void)
+      ^
+make: *** [src/DDL4.o] Error 1
+11:54:03 **** Build of configuration Default for project DDL_Lab4 ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/nxp/LPCXpresso_8.2.2_650/lpcxpresso/jre/bin/client;C:/nxp/LPCXpresso_8.2.2_650/lpcxpresso/jre/bin;C:/nxp/LPCXpresso_8.2.2_650/lpcxpresso/jre/lib/i386;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Wolfram Research\WolframScript\;C:\Program Files\MATLAB\R2018a\bin;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Users\dell\AppData\Local\Microsoft\WindowsApps;C:\Users\dell\AppData\Local\atom\bin;C:\PYTHON27;C:\Users\dell\AppData\Local\Microsoft\WindowsApps;C:\altera\16.0\modelsim_ase\win32aloem;C:\intelFPGA\16.1\modelsim_ase\win32aloem;C:\intelFPGA_lite\16.1\modelsim_ase\win32aloem;C:\Users\dell\AppData\Local\GitHubDesktop\bin;C:\nxp\LPCXpresso_8.2.2_650\lpcxpresso;]
+11:54:03 **** Build of configuration Debug for project blinky ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/blinky_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/blinky_main.d" -MT"src/blinky_main.o" -MT"src/blinky_main.d" -o "src/blinky_main.o" "../src/blinky_main.c"
+Finished building: ../src/blinky_main.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/clkconfig.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.o" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
+Command canceled
+11:54:08 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+Building file: ../src/sensor_lab.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/sensor_lab.d" -MT"src/sensor_lab.o" -MT"src/sensor_lab.d" -o "src/sensor_lab.o" "../src/sensor_lab.c"
+In file included from ../src/sensor_lab.c:11:0:
+../driver/uart.h:39:0: warning: "BUFSIZE" redefined
+ #define BUFSIZE  0x40
+ ^
+In file included from ../src/sensor_lab.c:5:0:
+../driver/i2c.h:29:0: note: this is the location of the previous definition
+ #define BUFSIZE             64
+ ^
+../src/sensor_lab.c: In function 'main':
+../src/sensor_lab.c:262:23: warning: passing argument 3 of 'bno055Read' from incompatible pointer type [-Wincompatible-pointer-types]
+   bno055Read(0x1C, 2, dataACCL);
+                       ^
+../src/sensor_lab.c:74:6: note: expected 'int16_t * {aka short int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
+      ^
+../src/sensor_lab.c:273:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("input: %f \t \t", pidObject.myInput);
+   ^
+../src/sensor_lab.c:386:11: warning: unused variable 'offsetOutput' [-Wunused-variable]
+     float offsetOutput = 200 + pidObject.myOutput;
+           ^
+../src/sensor_lab.c:350:12: warning: unused variable 'offsetOutput' [-Wunused-variable]
+      float offsetOutput = 200 + pidObject.myOutput;
+            ^
+../src/sensor_lab.c:281:10: warning: unused variable 'Input_dataaccl' [-Wunused-variable]
+   double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+          ^
+../src/sensor_lab.c:214:14: warning: unused variable 'delay' [-Wunused-variable]
+     uint32_t delay;
+              ^
+Finished building: ../src/sensor_lab.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
+Finished building: ../driver/i2c.c
+ 
+Building target: sensor_lab.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=sensor_lab.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "sensor_lab.axf"  ./startup/cr_startup_lpc11.o  ./src/mpu6050.o ./src/pid_team.o ./src/sensor_lab.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+./src/sensor_lab.o: In function `main':
+C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\sensor_lab\Debug/../src/sensor_lab.c:215: undefined reference to `init_timer16'
+C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\sensor_lab\Debug/../src/sensor_lab.c:216: undefined reference to `init_timer16PWM'
+C:\Users\dell\Documents\GitHub\DDLLatest\workspace_AA\sensor_lab\Debug/../src/sensor_lab.c:217: undefined reference to `enable_timer16'
+collect2.exe: error: ld returned 1 exit status
+make: *** [sensor_lab.axf] Error 1
+11:59:12 **** Clean-only build of configuration Debug for project sensor_lab ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/mpu6050.o ./src/pid_team.o ./src/sensor_lab.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/mpu6050.d ./src/pid_team.d ./src/sensor_lab.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/i2c.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  sensor_lab.axf
+ 
+11:59:13 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/mpu6050.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/mpu6050.d" -MT"src/mpu6050.o" -MT"src/mpu6050.d" -o "src/mpu6050.o" "../src/mpu6050.c"
+../src/mpu6050.c: In function 'mpu6050CommTest':
+../src/mpu6050.c:83:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+         printf("Who_am_I = 0x%X ?\n",I2CSlaveBuffer[0]);
+         ^
+Finished building: ../src/mpu6050.c
+ 
+Building file: ../src/pid_team.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/pid_team.d" -MT"src/pid_team.o" -MT"src/pid_team.d" -o "src/pid_team.o" "../src/pid_team.c"
+Finished building: ../src/pid_team.c
+ 
+Building file: ../src/sensor_lab.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/sensor_lab.d" -MT"src/sensor_lab.o" -MT"src/sensor_lab.d" -o "src/sensor_lab.o" "../src/sensor_lab.c"
+In file included from ../src/sensor_lab.c:11:0:
+../driver/uart.h:39:0: warning: "BUFSIZE" redefined
+ #define BUFSIZE  0x40
+ ^
+In file included from ../src/sensor_lab.c:5:0:
+../driver/i2c.h:29:0: note: this is the location of the previous definition
+ #define BUFSIZE             64
+ ^
+../src/sensor_lab.c: In function 'main':
+../src/sensor_lab.c:262:23: warning: passing argument 3 of 'bno055Read' from incompatible pointer type [-Wincompatible-pointer-types]
+   bno055Read(0x1C, 2, dataACCL);
+                       ^
+../src/sensor_lab.c:74:6: note: expected 'int16_t * {aka short int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
+      ^
+../src/sensor_lab.c:273:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("input: %f \t \t", pidObject.myInput);
+   ^
+../src/sensor_lab.c:386:11: warning: unused variable 'offsetOutput' [-Wunused-variable]
+     float offsetOutput = 200 + pidObject.myOutput;
+           ^
+../src/sensor_lab.c:350:12: warning: unused variable 'offsetOutput' [-Wunused-variable]
+      float offsetOutput = 200 + pidObject.myOutput;
+            ^
+../src/sensor_lab.c:281:10: warning: unused variable 'Input_dataaccl' [-Wunused-variable]
+   double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+          ^
+../src/sensor_lab.c:214:14: warning: unused variable 'delay' [-Wunused-variable]
+     uint32_t delay;
+              ^
+Finished building: ../src/sensor_lab.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
+Finished building: ../driver/i2c.c
+ 
+Building file: ../driver/timer16.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.o" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+Finished building: ../driver/timer16.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../driver/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
+Finished building: ../driver/uart.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: sensor_lab.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=sensor_lab.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "sensor_lab.axf"  ./startup/cr_startup_lpc11.o  ./src/mpu6050.o ./src/pid_team.o ./src/sensor_lab.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: sensor_lab.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size sensor_lab.axf; arm-none-eabi-objcopy -O binary sensor_lab.axf sensor_lab.bin ; checksum -p LPC1114_302 -d sensor_lab.bin;
+   text	   data	    bss	    dec	    hex	filename
+  18208	     16	    692	  18916	   49e4	sensor_lab.axf
+Written checksum 0xefffd635 at offset 0x1c in file sensor_lab.bin
+Previous value 0x00000000 at offset 0x1c in file sensor_lab.bin
+ 
+11:59:45 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
+11:59:47 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
+12:11:21 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
+12:11:23 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
+13:54:48 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+Building file: ../src/sensor_lab.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/sensor_lab.d" -MT"src/sensor_lab.o" -MT"src/sensor_lab.d" -o "src/sensor_lab.o" "../src/sensor_lab.c"
+In file included from ../src/sensor_lab.c:11:0:
+../driver/uart.h:39:0: warning: "BUFSIZE" redefined
+ #define BUFSIZE  0x40
+ ^
+In file included from ../src/sensor_lab.c:5:0:
+../driver/i2c.h:29:0: note: this is the location of the previous definition
+ #define BUFSIZE             64
+ ^
+../src/sensor_lab.c: In function 'main':
+../src/sensor_lab.c:262:23: warning: passing argument 3 of 'bno055Read' from incompatible pointer type [-Wincompatible-pointer-types]
+   bno055Read(0x1C, 2, dataACCL);
+                       ^
+../src/sensor_lab.c:74:6: note: expected 'int16_t * {aka short int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
+      ^
+../src/sensor_lab.c:386:11: warning: unused variable 'offsetOutput' [-Wunused-variable]
+     float offsetOutput = 200 + pidObject.myOutput;
+           ^
+../src/sensor_lab.c:350:12: warning: unused variable 'offsetOutput' [-Wunused-variable]
+      float offsetOutput = 200 + pidObject.myOutput;
+            ^
+../src/sensor_lab.c:281:10: warning: unused variable 'Input_dataaccl' [-Wunused-variable]
+   double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+          ^
+../src/sensor_lab.c:214:14: warning: unused variable 'delay' [-Wunused-variable]
+     uint32_t delay;
+              ^
+Finished building: ../src/sensor_lab.c
+ 
+Building target: sensor_lab.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=sensor_lab.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "sensor_lab.axf"  ./startup/cr_startup_lpc11.o  ./src/mpu6050.o ./src/pid_team.o ./src/sensor_lab.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: sensor_lab.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size sensor_lab.axf; arm-none-eabi-objcopy -O binary sensor_lab.axf sensor_lab.bin ; checksum -p LPC1114_302 -d sensor_lab.bin;
+   text	   data	    bss	    dec	    hex	filename
+   9280	     16	    360	   9656	   25b8	sensor_lab.axf
+Written checksum 0xefffd635 at offset 0x1c in file sensor_lab.bin
+Previous value 0x00000000 at offset 0x1c in file sensor_lab.bin
+ 
+13:54:51 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
+14:15:54 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+Building file: ../src/sensor_lab.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/sensor_lab.d" -MT"src/sensor_lab.o" -MT"src/sensor_lab.d" -o "src/sensor_lab.o" "../src/sensor_lab.c"
+In file included from ../src/sensor_lab.c:11:0:
+../driver/uart.h:39:0: warning: "BUFSIZE" redefined
+ #define BUFSIZE  0x40
+ ^
+In file included from ../src/sensor_lab.c:5:0:
+../driver/i2c.h:29:0: note: this is the location of the previous definition
+ #define BUFSIZE             64
+ ^
+../src/sensor_lab.c: In function 'main':
+../src/sensor_lab.c:262:23: warning: passing argument 3 of 'bno055Read' from incompatible pointer type [-Wincompatible-pointer-types]
+   bno055Read(0x1C, 2, dataACCL);
+                       ^
+../src/sensor_lab.c:74:6: note: expected 'int16_t * {aka short int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
+      ^
+../src/sensor_lab.c:386:11: warning: unused variable 'offsetOutput' [-Wunused-variable]
+     float offsetOutput = 200 + pidObject.myOutput;
+           ^
+../src/sensor_lab.c:350:12: warning: unused variable 'offsetOutput' [-Wunused-variable]
+      float offsetOutput = 200 + pidObject.myOutput;
+            ^
+../src/sensor_lab.c:281:10: warning: unused variable 'Input_dataaccl' [-Wunused-variable]
+   double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+          ^
+../src/sensor_lab.c:214:14: warning: unused variable 'delay' [-Wunused-variable]
+     uint32_t delay;
+              ^
+Finished building: ../src/sensor_lab.c
+ 
+Building target: sensor_lab.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=sensor_lab.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "sensor_lab.axf"  ./startup/cr_startup_lpc11.o  ./src/mpu6050.o ./src/pid_team.o ./src/sensor_lab.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: sensor_lab.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size sensor_lab.axf; arm-none-eabi-objcopy -O binary sensor_lab.axf sensor_lab.bin ; checksum -p LPC1114_302 -d sensor_lab.bin;
+   text	   data	    bss	    dec	    hex	filename
+   9280	     16	    360	   9656	   25b8	sensor_lab.axf
+Written checksum 0xefffd635 at offset 0x1c in file sensor_lab.bin
+Previous value 0x00000000 at offset 0x1c in file sensor_lab.bin
+ 
+14:15:57 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
+14:26:56 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+Building file: ../src/sensor_lab.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/sensor_lab.d" -MT"src/sensor_lab.o" -MT"src/sensor_lab.d" -o "src/sensor_lab.o" "../src/sensor_lab.c"
+In file included from ../src/sensor_lab.c:11:0:
+../driver/uart.h:39:0: warning: "BUFSIZE" redefined
+ #define BUFSIZE  0x40
+ ^
+In file included from ../src/sensor_lab.c:5:0:
+../driver/i2c.h:29:0: note: this is the location of the previous definition
+ #define BUFSIZE             64
+ ^
+../src/sensor_lab.c: In function 'main':
+../src/sensor_lab.c:262:23: warning: passing argument 3 of 'bno055Read' from incompatible pointer type [-Wincompatible-pointer-types]
+   bno055Read(0x1C, 2, dataACCL);
+                       ^
+../src/sensor_lab.c:74:6: note: expected 'int16_t * {aka short int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
+      ^
+../src/sensor_lab.c:386:11: warning: unused variable 'offsetOutput' [-Wunused-variable]
+     float offsetOutput = 200 + pidObject.myOutput;
+           ^
+../src/sensor_lab.c:350:12: warning: unused variable 'offsetOutput' [-Wunused-variable]
+      float offsetOutput = 200 + pidObject.myOutput;
+            ^
+../src/sensor_lab.c:281:10: warning: unused variable 'Input_dataaccl' [-Wunused-variable]
+   double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+          ^
+../src/sensor_lab.c:214:14: warning: unused variable 'delay' [-Wunused-variable]
+     uint32_t delay;
+              ^
+Finished building: ../src/sensor_lab.c
+ 
+Building target: sensor_lab.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=sensor_lab.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "sensor_lab.axf"  ./startup/cr_startup_lpc11.o  ./src/mpu6050.o ./src/pid_team.o ./src/sensor_lab.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: sensor_lab.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size sensor_lab.axf; arm-none-eabi-objcopy -O binary sensor_lab.axf sensor_lab.bin ; checksum -p LPC1114_302 -d sensor_lab.bin;
+   text	   data	    bss	    dec	    hex	filename
+   9280	     20	    356	   9656	   25b8	sensor_lab.axf
+Written checksum 0xefffd635 at offset 0x1c in file sensor_lab.bin
+Previous value 0x00000000 at offset 0x1c in file sensor_lab.bin
+ 
+14:27:00 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
+14:31:37 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+Building file: ../src/sensor_lab.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/sensor_lab.d" -MT"src/sensor_lab.o" -MT"src/sensor_lab.d" -o "src/sensor_lab.o" "../src/sensor_lab.c"
+In file included from ../src/sensor_lab.c:11:0:
+../driver/uart.h:39:0: warning: "BUFSIZE" redefined
+ #define BUFSIZE  0x40
+ ^
+In file included from ../src/sensor_lab.c:5:0:
+../driver/i2c.h:29:0: note: this is the location of the previous definition
+ #define BUFSIZE             64
+ ^
+../src/sensor_lab.c: In function 'main':
+../src/sensor_lab.c:262:23: warning: passing argument 3 of 'bno055Read' from incompatible pointer type [-Wincompatible-pointer-types]
+   bno055Read(0x1C, 2, dataACCL);
+                       ^
+../src/sensor_lab.c:74:6: note: expected 'int16_t * {aka short int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
+      ^
+../src/sensor_lab.c:273:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("input: %f \t \t", pidObject.myInput);
+   ^
+../src/sensor_lab.c:386:11: warning: unused variable 'offsetOutput' [-Wunused-variable]
+     float offsetOutput = 200 + pidObject.myOutput;
+           ^
+../src/sensor_lab.c:350:12: warning: unused variable 'offsetOutput' [-Wunused-variable]
+      float offsetOutput = 200 + pidObject.myOutput;
+            ^
+../src/sensor_lab.c:281:10: warning: unused variable 'Input_dataaccl' [-Wunused-variable]
+   double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+          ^
+../src/sensor_lab.c:214:14: warning: unused variable 'delay' [-Wunused-variable]
+     uint32_t delay;
+              ^
+Finished building: ../src/sensor_lab.c
+ 
+Building target: sensor_lab.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=sensor_lab.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "sensor_lab.axf"  ./startup/cr_startup_lpc11.o  ./src/mpu6050.o ./src/pid_team.o ./src/sensor_lab.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: sensor_lab.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size sensor_lab.axf; arm-none-eabi-objcopy -O binary sensor_lab.axf sensor_lab.bin ; checksum -p LPC1114_302 -d sensor_lab.bin;
+   text	   data	    bss	    dec	    hex	filename
+  18152	     20	    688	  18860	   49ac	sensor_lab.axf
+Written checksum 0xefffd635 at offset 0x1c in file sensor_lab.bin
+Previous value 0x00000000 at offset 0x1c in file sensor_lab.bin
+ 
+14:31:41 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
+14:32:28 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+Building file: ../src/sensor_lab.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/sensor_lab.d" -MT"src/sensor_lab.o" -MT"src/sensor_lab.d" -o "src/sensor_lab.o" "../src/sensor_lab.c"
+In file included from ../src/sensor_lab.c:11:0:
+../driver/uart.h:39:0: warning: "BUFSIZE" redefined
+ #define BUFSIZE  0x40
+ ^
+In file included from ../src/sensor_lab.c:5:0:
+../driver/i2c.h:29:0: note: this is the location of the previous definition
+ #define BUFSIZE             64
+ ^
+../src/sensor_lab.c: In function 'main':
+../src/sensor_lab.c:262:23: warning: passing argument 3 of 'bno055Read' from incompatible pointer type [-Wincompatible-pointer-types]
+   bno055Read(0x1C, 2, dataACCL);
+                       ^
+../src/sensor_lab.c:74:6: note: expected 'int16_t * {aka short int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
+      ^
+../src/sensor_lab.c:273:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("input: %f \n", pidObject.myInput);
+   ^
+../src/sensor_lab.c:386:11: warning: unused variable 'offsetOutput' [-Wunused-variable]
+     float offsetOutput = 200 + pidObject.myOutput;
+           ^
+../src/sensor_lab.c:350:12: warning: unused variable 'offsetOutput' [-Wunused-variable]
+      float offsetOutput = 200 + pidObject.myOutput;
+            ^
+../src/sensor_lab.c:281:10: warning: unused variable 'Input_dataaccl' [-Wunused-variable]
+   double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+          ^
+../src/sensor_lab.c:214:14: warning: unused variable 'delay' [-Wunused-variable]
+     uint32_t delay;
+              ^
+Finished building: ../src/sensor_lab.c
+ 
+Building target: sensor_lab.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=sensor_lab.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "sensor_lab.axf"  ./startup/cr_startup_lpc11.o  ./src/mpu6050.o ./src/pid_team.o ./src/sensor_lab.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: sensor_lab.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size sensor_lab.axf; arm-none-eabi-objcopy -O binary sensor_lab.axf sensor_lab.bin ; checksum -p LPC1114_302 -d sensor_lab.bin;
+   text	   data	    bss	    dec	    hex	filename
+  18144	     20	    688	  18852	   49a4	sensor_lab.axf
+Written checksum 0xefffd635 at offset 0x1c in file sensor_lab.bin
+Previous value 0x00000000 at offset 0x1c in file sensor_lab.bin
+ 
+14:32:32 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
+14:35:54 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+Building file: ../src/sensor_lab.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/sensor_lab.d" -MT"src/sensor_lab.o" -MT"src/sensor_lab.d" -o "src/sensor_lab.o" "../src/sensor_lab.c"
+In file included from ../src/sensor_lab.c:11:0:
+../driver/uart.h:39:0: warning: "BUFSIZE" redefined
+ #define BUFSIZE  0x40
+ ^
+In file included from ../src/sensor_lab.c:5:0:
+../driver/i2c.h:29:0: note: this is the location of the previous definition
+ #define BUFSIZE             64
+ ^
+../src/sensor_lab.c: In function 'main':
+../src/sensor_lab.c:262:23: warning: passing argument 3 of 'bno055Read' from incompatible pointer type [-Wincompatible-pointer-types]
+   bno055Read(0x1C, 2, dataACCL);
+                       ^
+../src/sensor_lab.c:74:6: note: expected 'int16_t * {aka short int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ void bno055Read(uint8_t startRegAddr, uint8_t length, int16_t *accBuffer) {
+      ^
+../src/sensor_lab.c:386:11: warning: unused variable 'offsetOutput' [-Wunused-variable]
+     float offsetOutput = 200 + pidObject.myOutput;
+           ^
+../src/sensor_lab.c:350:12: warning: unused variable 'offsetOutput' [-Wunused-variable]
+      float offsetOutput = 200 + pidObject.myOutput;
+            ^
+../src/sensor_lab.c:281:10: warning: unused variable 'Input_dataaccl' [-Wunused-variable]
+   double Input_dataaccl = (double)( (dataACCL[2]<<8) | dataACCL[0]);
+          ^
+../src/sensor_lab.c:214:14: warning: unused variable 'delay' [-Wunused-variable]
+     uint32_t delay;
+              ^
+Finished building: ../src/sensor_lab.c
+ 
+Building target: sensor_lab.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=sensor_lab.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "sensor_lab.axf"  ./startup/cr_startup_lpc11.o  ./src/mpu6050.o ./src/pid_team.o ./src/sensor_lab.o  ./driver/adc.o ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: sensor_lab.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size sensor_lab.axf; arm-none-eabi-objcopy -O binary sensor_lab.axf sensor_lab.bin ; checksum -p LPC1114_302 -d sensor_lab.bin;
+   text	   data	    bss	    dec	    hex	filename
+   9276	     20	    356	   9652	   25b4	sensor_lab.axf
+Written checksum 0xefffd635 at offset 0x1c in file sensor_lab.bin
+Previous value 0x00000000 at offset 0x1c in file sensor_lab.bin
+ 
+14:35:57 **** Incremental Build of configuration Debug for project sensor_lab ****
+make -r all 
+make: Nothing to be done for `all'.
