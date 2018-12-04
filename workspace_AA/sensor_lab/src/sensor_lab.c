@@ -58,7 +58,7 @@ extern double kp, ki, kd;
 float Input, Output, SetPoint;
 float kp = 0.75;
 float ki = 0;
-float kd = 0.55;
+float kd = 0.65;
 
 #endif
 
@@ -252,7 +252,7 @@ Setpoint = -22.0;
 	  				PID_SetOutputLimits(&pidObject, -99, 99);
 	  				PID_SetSampleTime(&pidObject, 5); //5 milliseconds
 
-	  				pidObject.mySetpoint = 0;//faling towards heat sink.
+	  				pidObject.mySetpoint = -45;//faling towards heat sink.
 	  				//-35 for falling away from heat sink
 
 #endif

@@ -1,9 +1,0 @@
- 	.syntax unified
- 	.cpu cortex-m0
- 	.align	2
- 	.global	asm_sum
- 	.thumb
- 	.thumb_func
- GetFib:
-		push	{r7, lr}
-		pop	{r7, pc}
